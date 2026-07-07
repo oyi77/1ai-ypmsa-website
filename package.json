@@ -1,0 +1,9 @@
+{
+  "name": "1ai-ypmsa-website",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "build": "mkdir -p dist && cp -fR public/* dist/",
+    "clean": "rm -rf dist"
+  }
+}
