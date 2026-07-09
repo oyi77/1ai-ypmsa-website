@@ -1,0 +1,73 @@
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7723KTXZBG"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-7723KTXZBG');
+
+  // Custom event tracking
+  document.addEventListener('DOMContentLoaded', function() {
+    // Track WhatsApp donation clicks
+    document.querySelectorAll('a[href*="wa.me"]').forEach(function(link) {
+      link.addEventListener('click', function() {
+        var tier = this.closest('.tier-card') ? this.closest('.tier-card').querySelector('h3').textContent : 'General';
+        gtag('event', 'donate_click', {
+          'event_category': 'Donation',
+          'event_label': tier,
+          'transport_type': 'beacon'
+        });
+        gtag('event', 'whatsapp_click', {
+          'event_category': 'Engagement',
+          'event_label': tier,
+          'transport_type': 'beacon'
+        });
+      });
+    });
+
+    // Track QRIS scan intent
+    var qrisCard = document.querySelector('.qris-card');
+    if (qrisCard) {
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting && entry.intersectionRatio > 0.5) {
+            gtag('event', 'qris_scan', {
+              'event_category': 'Payment',
+              'event_label': 'QRIS Card Viewed',
+              'transport_type': 'beacon'
+            });
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.5 });
+      observer.observe(qrisCard);
+    }
+
+    // Track tier card clicks
+    document.querySelectorAll('.tier-card').forEach(function(card) {
+      card.addEventListener('click', function() {
+        var tier = this.querySelector('h3').textContent;
+        gtag('event', 'tier_select', {
+          'event_category': 'Funnel',
+          'event_label': tier,
+          'transport_type': 'beacon'
+        });
+      });
+    });
+
+    // Track blog reading (scroll >50%)
+    if (document.body.classList.contains('blog-post')) {
+      var scrolled = false;
+      window.addEventListener('scroll', function() {
+        if (!scrolled && (window.scrollY / document.body.scrollHeight) > 0.5) {
+          gtag('event', 'blog_read', {
+            'event_category': 'Content',
+            'event_label': document.title,
+            'transport_type': 'beacon'
+          });
+          scrolled = true;
+        }
+      });
+    }
+  });
+</script>

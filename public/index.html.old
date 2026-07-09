@@ -3,7 +3,6 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="google-site-verification" content="GrTNsSV9UUTLJuu-x0AmFto_t8ExmWpxzSiBwjzR5lY" />
   <title>YPSMA — Yayasan Pendidikan &amp; Sosial Ma'arif Jombang</title>
   <meta name="description" content="Membangun pendidikan Islam berkualitas, unggul, dan mandiri di Gondek, Mojowarno, Jombang sejak 1966. Kelola RA Fajrul Islam, MI Sulamuddiniyah, SMP YPM Mojowarno, dan PPTQ Darussalam." />
   <link rel="canonical" href="https://ypsma.org/" />
@@ -42,25 +41,32 @@
         "contactPoint": [
           {
             "@type": "ContactPoint",
-            "telephone": "+62-321-493147",
+            "telephone": "+62-321-493147", "contactPoint": [{"@type": "ContactPoint", "telephone": "+62-822-3455-1160", "contactType": "administrative"}],
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+62-822-3455-1160",
+          "contactType": "administrative"
+        },
             "contactType": "customer service",
             "areaServed": "ID",
             "availableLanguage": "Indonesian"
           },
           {
             "@type": "ContactPoint",
-            "telephone": "+62-822-3455-1160",
-            "contactType": "administrative",
+            "telephone": "+62-858-5173-7308",
+            "contactType": "donations",
             "areaServed": "ID",
             "availableLanguage": "Indonesian"
           }
         ],
-      "sameAs": [
-        "https://www.tiktok.com/@pptqdarussalamjombang",
-        "https://www.instagram.com/pptqdarussalamofficial",
-        "https://www.youtube.com/@YayasanPendidikanSosialMaarifD"
-      ],
+        "sameAs": [
+          "https://www.youtube.com/@YPSMAJombang",
+          "https://www.instagram.com/yayasan.ypsma",
+          "https://www.facebook.com/profile.php?id=61567098697530",
+          "https://www.tiktok.com/@yayasan.ypsma"
+        ],
         "email": "info@ypsma.org",
+      "areaServed": {"@type": "AdministrativeArea", "name": "Jombang Regency"}
         "areaServed": {
           "@type": "Place",
           "name": "Jombang, Jawa Timur"
@@ -75,115 +81,10 @@
           "target": "https://ypsma.org/?s={search_term_string}",
           "query-input": "required name=search_term_string"
         }
-      },
-      {
-        "@type": "FAQPage",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "Berapa donasi minimum untuk mendukung YPSMA?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Donasi minimum adalah Rp 50.000/bulan untuk program Sahabat Pendidikan (ATK santri). Untuk program Adopsi Santri (beasiswa penuh), donasi minimum adalah Rp 250.000/bulan per santri."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Bagaimana YPSMA memastikan transparansi donasi?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Setiap bulan kami mengirim laporan lengkap via WhatsApp kepada 237 donatur aktif. Laporan mencakup penerimaan dana, penggunaan dana per program, dan update kondisi santri yang didukung."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Bagaimana cara berdonasi via QRIS?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Scan kode QRIS di website, masukkan nominal donasi, pilih metode pembayaran (GoPay/OVO/Dana/Bank), konfirmasi pembayaran. Setelah transaksi berhasil, kirim bukti transfer via WhatsApp ke 082234551160 untuk pencatatan."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Apakah YPSMA terdaftar secara resmi?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Ya, YPSMA terdaftar resmi sejak 15 Maret 1966 dengan SK Kemenkumham AHU-0003327.AH.01.04.TAHUN 2017. Kami mengelola 4 unit pendidikan: RA Fajrul Islam, MI Sulamuddiniyah, SMP YPM Mojowarno, dan PPTQ Darussalam."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Apa itu program Wakaf Produktif Koperasi?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Wakaf Produktif Koperasi adalah program dengan target Rp 50 juta untuk membangun koperasi simpan pinjam syariah yang akan memberikan pinjaman modal usaha tanpa riba kepada keluarga santri. Saat ini terkumpul Rp 12 juta (24%). Dana koperasi akan menghasilkan profit berkelanjutan untuk beasiswa santri."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Bagaimana cara menjadi donatur rutin?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Hubungi kami via WhatsApp di 082234551160 dengan pesan 'Saya ingin menjadi donatur rutin'. Tim kami akan membantu setup reminder otomatis setiap bulan dan mengirimkan laporan perkembangan santri yang Anda dukung."
-            }
-          }
-        ]
       }
     ]
   }
   </script>
-
-  <!-- Google Analytics 4 -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-7723KTXZBG"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag("js", new Date());
-    gtag("config", "G-7723KTXZBG");
-
-    // Custom event tracking
-    document.addEventListener("DOMContentLoaded", function() {
-      // Track donation CTA clicks
-      document.querySelectorAll("a[href*=\"wa.me\"]").forEach(function(btn) {
-        btn.addEventListener("click", function(e) {
-          var tierName = this.closest(".tier")?.querySelector("h3")?.textContent || "unknown";
-          gtag("event", "donate_click", {
-            tier_name: tierName,
-            button_text: this.textContent.trim()
-          });
-          gtag("event", "whatsapp_click", {
-            tier_name: tierName
-          });
-        });
-      });
-
-      // Track tier selection (tier card clicks)
-      document.querySelectorAll(".tier").forEach(function(tier) {
-        tier.addEventListener("click", function() {
-          var tierName = this.querySelector("h3")?.textContent || "unknown";
-          gtag("event", "tier_select", {
-            tier_name: tierName
-          });
-        });
-      });
-
-      // Track QRIS scan intent (visibility tracking)
-      var qrisObserver = new IntersectionObserver(function(entries) {
-        entries.forEach(function(entry) {
-          if (entry.isIntersecting && entry.intersectionRatio > 0.5) {
-            gtag("event", "qris_scan", {
-              visibility: "above_50_percent"
-            });
-            qrisObserver.disconnect();
-          }
-        });
-      }, { threshold: 0.5 });
-
-      var qrisEl = document.querySelector(".qris-card");
-      if (qrisEl) qrisObserver.observe(qrisEl);
-    });
-  </script>
-
 </head>
 <body>
 
@@ -272,73 +173,36 @@
   </div>
 </section>
 
-    <!-- Vision and Trust Section -->
-    <section class="section" id="visi-misi">
-        <div class="container">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-gray-900 mb-4">Jembatan Mimpi untuk 237 Santri</h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    Dari Sawah ke Surga: Membangun Jembatan bagi Anak-anak Petani Jombang untuk Menghafal Al-Qur'an dan Meraih Pendidikan Tinggi
-                </p>
-            </div>
+<!-- ═══════════════════════ VISION & TRUST ═══════════════════════ -->
+<section class="section section-dark" id="about">
+  <div class="container">
+    <div class="section-header-center">
+      <p class="section-label">Sejarah &amp; Visi Utama</p>
+      <h2 class="section-h2">Mencetak insan unggul, berakhlak mulia, dan mandiri</h2>
+    </div>
 
-            <div class="grid md:grid-cols-2 gap-12 mb-12">
-                <div class="bg-gradient-to-br from-emerald-50 to-white p-8 rounded-xl border border-emerald-100">
-                    <div class="flex items-start mb-4">
-                        <span class="text-4xl mr-4">🌾</span>
-                        <div>
-                            <h3 class="text-2xl font-bold text-gray-900 mb-2">Sang Pahlawan</h3>
-                            <p class="text-gray-700 leading-relaxed">
-                                <strong>237 santri penghafal Al-Qur'an</strong> dari keluarga petani Jombang. 
-                                Mereka bangun subuh, ikut ke sawah, lalu hadir di pesantren dengan semangat menghafal 30 juz. 
-                                Keluarga mereka hanya punya Rp 300.000/bulan untuk biaya pendidikan — sering tidak cukup.
-                            </p>
-                        </div>
-                    </div>
-                </div>
+    <div class="problem-grid">
+      <div class="problem-card">
+        <div class="prob-num">1966</div>
+        <p class="prob-stat">Dirintis oleh <strong>KH. Muhammad Hatta Qodir</strong> untuk menjawab minimnya akses pendidikan Islam berkualitas bagi masyarakat miskin di Gondek.</p>
+      </div>
+      <div class="problem-card">
+        <div class="prob-num">99%</div>
+        <p class="prob-stat">Santri di Pondok Pesantren Tahfidz Qur'an Darussalam dibantu beasiswa agar dapat menghafal Al-Qur'an 30 Juz gratis tanpa halangan finansial.</p>
+      </div>
+      <div class="problem-card">
+        <div class="prob-num">Koperasi</div>
+        <p class="prob-stat">Dirancang untuk menopang kekurangan pembiayaan operasional yayasan guna melahirkan lembaga sosial yang mandiri secara finansial.</p>
+      </div>
+    </div>
 
-                <div class="bg-gradient-to-br from-amber-50 to-white p-8 rounded-xl border border-amber-100">
-                    <div class="flex items-start mb-4">
-                        <span class="text-4xl mr-4">💔</span>
-                        <div>
-                            <h3 class="text-2xl font-bold text-gray-900 mb-2">Tembok Penghalang</h3>
-                            <p class="text-gray-700 leading-relaxed">
-                                Tanpa donasi, <strong>40+ santri terancam putus sekolah setiap tahun</strong>. 
-                                Biaya Rp 300.000/bulan untuk ATK, seragam, dan kegiatan santri terlalu berat bagi petani 
-                                yang penghasilannya Rp 1,5 juta/bulan untuk keluarga 5 orang.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="bg-gradient-to-br from-emerald-50 to-white p-8 rounded-xl border border-emerald-100">
-                    <div class="flex items-start mb-4">
-                        <span class="text-4xl mr-4">🌉</span>
-                        <div>
-                            <h3 class="text-2xl font-bold text-gray-900 mb-2">Jembatan Anda</h3>
-                            <p class="text-gray-700 leading-relaxed">
-                                Donasi <strong>mulai dari Rp 50.000/bulan</strong> membangun jembatan untuk 1 santri. 
-                                <strong>237 donor aktif sejak 2020</strong> telah menyalurkan Rp 420 juta, 
-                                menutup 60% kebutuhan operasional 4 lembaga pendidikan kami.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="bg-gradient-to-br from-amber-50 to-white p-8 rounded-xl border border-amber-100">
-                    <div class="flex items-start mb-4">
-                        <span class="text-4xl mr-4">✨</span>
-                        <div>
-                            <h3 class="text-2xl font-bold text-gray-900 mb-2">Transformasi Nyata</h3>
-                            <p class="text-gray-700 leading-relaxed">
-                                <strong>28 alumni hafal 30 juz</strong> kini menjadi ustadz dan guru di Jombang. 
-                                <strong>15 lulusan S1</strong> dari keluarga petani kembali mengabdi di desa. 
-                                Dari sawah ke surga — mereka adalah bukti jembatan mimpi yang Anda bangun bekerja.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <div class="problem-desc">
+      <strong>Visi Yayasan:</strong> Terwujudnya lembaga pendidikan Islam yang unggul, mandiri, dan berdaya saing. 
+      Di bawah kepemimpinan Ketua Yayasan saat ini, <strong>Drs. H. Syamsun Huda Amir</strong>, kami berkomitmen untuk melahirkan 
+      generasi berilmu dan berakhlak mulia sekaligus menguatkan kemandirian ekonomi pesantren.
+    </div>
+  </div>
+</section>
 
 <!-- ═══════════════════════ INSTITUTIONS ═════════════════════ -->
 <section class="section" id="institutions">

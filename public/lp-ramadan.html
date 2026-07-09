@@ -86,6 +86,58 @@
 
     @media (max-width: 500px) { .tier { flex-direction: column; } .tier-amt { min-width: unset; } }
   </style>
+
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-7723KTXZBG"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag("js", new Date());
+    gtag("config", "G-7723KTXZBG");
+
+    // Custom event tracking
+    document.addEventListener("DOMContentLoaded", function() {
+      // Track donation CTA clicks
+      document.querySelectorAll("a[href*=\"wa.me\"]").forEach(function(btn) {
+        btn.addEventListener("click", function(e) {
+          var tierName = this.closest(".tier")?.querySelector("h3")?.textContent || "unknown";
+          gtag("event", "donate_click", {
+            tier_name: tierName,
+            button_text: this.textContent.trim()
+          });
+          gtag("event", "whatsapp_click", {
+            tier_name: tierName
+          });
+        });
+      });
+
+      // Track tier selection (tier card clicks)
+      document.querySelectorAll(".tier").forEach(function(tier) {
+        tier.addEventListener("click", function() {
+          var tierName = this.querySelector("h3")?.textContent || "unknown";
+          gtag("event", "tier_select", {
+            tier_name: tierName
+          });
+        });
+      });
+
+      // Track QRIS scan intent (visibility tracking)
+      var qrisObserver = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting && entry.intersectionRatio > 0.5) {
+            gtag("event", "qris_scan", {
+              visibility: "above_50_percent"
+            });
+            qrisObserver.disconnect();
+          }
+        });
+      }, { threshold: 0.5 });
+
+      var qrisEl = document.querySelector(".qris-card");
+      if (qrisEl) qrisObserver.observe(qrisEl);
+    });
+  </script>
+
 </head>
 <body>
 
