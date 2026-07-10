@@ -1,0 +1,566 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="google-site-verification" content="GrTNsSV9UUTLJuu-x0AmFto_t8ExmWpxzSiBwjzR5lY" />
+  <title>Sedekah Sehat YPSMA — Program Kebersihan & Pengelolaan Sampah Pondok</title>
+  <meta name="description" content="Bantu 600+ santri PPTQ Darussalam Jombang hidup sehat dengan sistem pengelolaan sampah yang layak. Target Rp 40 juta untuk bangunan TPS, tong sampah, dan mesin kompos." />
+  <link rel="canonical" href="https://ypsma.org/lp-sedekah-sehat.html" />
+  <meta property="og:title" content="Sedekah Sehat YPSMA — Wujudkan Lingkungan Pondok yang Bersih & Higienis" />
+  <meta property="og:description" content="Bantu 600+ santri Jombang dengan sistem pengelolaan sampah layak. Rp 25.000 sudah berkontribusi pada kesehatan mereka." />
+  <meta property="og:url" content="https://ypsma.org/lp-sedekah-sehat.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://ypsma.org/images/campaigns/IMG_1875.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --green: #059669; --green-dark: #047857; --green-deeper: #065f46;
+      --green-light: #d1fae5; --green-bg: #ecfdf5;
+      --accent: #f59e0b; --accent-dark: #d97706;
+      --ink: #1c1917; --muted: #57534e; --muted-l: #a8a29e;
+      --line: #e5e7eb; --bg: #fafaf9; --white: #ffffff;
+      --r: 14px; --max: 760px;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--ink); line-height: 1.6; }
+    .container { max-width: var(--max); margin: 0 auto; padding: 0 20px; }
+    a { color: var(--green-dark); }
+    p { margin-bottom: 1em; }
+    p:last-child { margin-bottom: 0; }
+    img { max-width: 100%; display: block; }
+
+    /* Header */
+    .lp-header { background: var(--green-deeper); color: #fff; text-align: center; padding: 12px 20px; font-size: 13px; }
+    .lp-header a { color: rgba(255,255,255,0.75); }
+
+    /* Hero */
+    .lp-hero {
+      background: linear-gradient(150deg, #065f46 0%, #059669 55%, #10b981 100%);
+      color: #fff; padding: 72px 20px 56px; text-align: center;
+      position: relative; overflow: hidden;
+    }
+    .lp-hero::before {
+      content: ''; position: absolute; inset: 0;
+      background: url('/images/campaigns/IMG_1875.jpg') center/cover no-repeat;
+      opacity: 0.12; z-index: 0;
+    }
+    .lp-hero > * { position: relative; z-index: 1; }
+    .lp-badge { display: inline-block; background: rgba(255,255,255,0.18); border: 1px solid rgba(255,255,255,0.35); font-size: 13px; font-weight: 700; padding: 6px 18px; border-radius: 100px; margin-bottom: 22px; }
+    .lp-hero h1 { font-size: clamp(28px, 5.5vw, 50px); font-weight: 800; line-height: 1.1; letter-spacing: -0.8px; margin-bottom: 20px; }
+    .lp-hero h1 em { font-style: normal; color: #a7f3d0; }
+    .lp-hero p { font-size: clamp(15px, 2vw, 18px); opacity: 0.9; max-width: 560px; margin: 0 auto 32px; }
+    .lp-hero .btn-main { display: inline-block; background: #fff; color: var(--green-deeper); text-decoration: none; font-weight: 800; padding: 14px 28px; border-radius: 14px; font-size: 16px; transition: transform 0.15s; }
+    .lp-hero .btn-main:hover { transform: translateY(-2px); }
+    .hero-meta { display: flex; flex-wrap: wrap; gap: 16px; justify-content: center; margin-top: 28px; font-size: 14px; font-weight: 600; }
+    .hero-meta span { background: rgba(255,255,255,0.12); padding: 6px 14px; border-radius: 8px; }
+
+    /* Sections */
+    .section { padding: 60px 0; }
+    .section-alt { background: var(--green-bg); }
+    .section h2 { font-size: clamp(22px, 3.5vw, 32px); font-weight: 800; margin-bottom: 12px; letter-spacing: -0.3px; }
+    .section h2 em { font-style: normal; color: var(--green); }
+    .lead { font-size: 15px; color: var(--muted); line-height: 1.7; margin-bottom: 28px; }
+
+    /* Story */
+    .story-card { background: #fff; border-left: 5px solid var(--green); border-radius: var(--r); padding: 24px; margin-bottom: 24px; box-shadow: 0 4px 20px -6px rgba(5,150,105,0.12); }
+    .story-card blockquote { font-size: 16px; font-style: italic; color: #1c1917; line-height: 1.65; }
+    .story-card footer { margin-top: 12px; font-size: 12px; color: var(--muted); font-weight: 600; font-style: normal; }
+    .stat-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 14px; margin: 24px 0; }
+    .stat-box { background: #fff; border: 1px solid var(--line); border-radius: var(--r); padding: 20px; text-align: center; }
+    .stat-num { font-size: 28px; font-weight: 900; color: var(--green); }
+    .stat-label { font-size: 12px; color: var(--muted); margin-top: 4px; font-weight: 600; }
+
+    /* Budget */
+    .budget-card { background: #fff; border: 1px solid var(--line); border-radius: var(--r); overflow: hidden; }
+    .budget-row { display: flex; justify-content: space-between; align-items: center; padding: 16px 20px; border-bottom: 1px solid var(--line); font-size: 14px; }
+    .budget-row:last-child { border-bottom: none; }
+    .budget-name { font-weight: 600; }
+    .budget-amt { font-weight: 800; color: var(--green-deeper); font-family: 'Inter', monospace; }
+    .budget-row.sub { background: var(--green-bg); }
+    .budget-row.total { background: var(--green-deeper); color: #fff; font-size: 16px; }
+    .budget-row.total .budget-amt { color: #fff; font-size: 18px; }
+
+    /* Progress bar simulation */
+    .progress-wrap { margin: 20px 0; }
+    .progress-bar { height: 10px; background: var(--line); border-radius: 20px; overflow: hidden; }
+    .progress-fill { height: 100%; background: linear-gradient(90deg, var(--green), #10b981); border-radius: 20px; width: 0%; }
+    .progress-label { display: flex; justify-content: space-between; font-size: 13px; font-weight: 600; color: var(--muted); margin-top: 6px; }
+
+    /* Gallery */
+    .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px; }
+    .gallery-grid figure { border-radius: var(--r); overflow: hidden; background: #fff; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+    .gallery-grid img { width: 100%; height: 180px; object-fit: cover; }
+    .gallery-grid figcaption { padding: 8px 12px; font-size: 12px; color: var(--muted); font-weight: 500; }
+
+    /* Tiers */
+    .tiers-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 12px; }
+    .tier { background: #fff; border: 2px solid var(--line); border-radius: var(--r); padding: 20px 16px; text-align: center; cursor: pointer; transition: border-color 0.15s, transform 0.15s; }
+    .tier:hover { border-color: var(--green); transform: translateY(-2px); }
+    .tier.featured { border-color: var(--green); background: var(--green-bg); }
+    .tier-icon { font-size: 28px; margin-bottom: 8px; }
+    .tier h3 { font-size: 20px; font-weight: 800; color: var(--green-deeper); }
+    .tier p { font-size: 12px; color: var(--muted); margin-top: 4px; }
+    .tier .wa-link { display: inline-block; margin-top: 10px; font-size: 12px; font-weight: 700; color: var(--green); text-decoration: none; }
+    .tier.custom { grid-column: 1 / -1; display: flex; align-items: center; justify-content: center; gap: 12px; padding: 16px 20px; }
+    .tier.custom span { font-size: 14px; font-weight: 600; }
+
+    /* Sponsor block */
+    .sponsor-block { background: var(--green-deeper); color: #fff; border-radius: 20px; padding: 40px 28px; text-align: center; }
+    .sponsor-block h2 { font-size: clamp(20px, 3.2vw, 28px); margin-bottom: 14px; }
+    .sponsor-block p { opacity: 0.88; margin-bottom: 28px; font-size: 15px; }
+    .bank-box { background: rgba(255,255,255,0.10); border-radius: 12px; padding: 16px 20px; max-width: 420px; margin: 0 auto 24px; text-align: left; font-size: 14px; display: grid; gap: 8px; }
+    .bank-r { display: flex; gap: 12px; }
+    .bank-l { min-width: 60px; font-weight: 600; opacity: 0.7; }
+    .btn-white { display: inline-block; background: #fff; color: var(--green-deeper); text-decoration: none; font-weight: 800; padding: 13px 26px; border-radius: 12px; font-size: 15px; transition: transform 0.15s; }
+    .btn-white:hover { transform: translateY(-2px); }
+    .btn-wa { background: #25D366 !important; color: #fff !important; }
+    .btn-wa:hover { background: #1da851 !important; }
+    .cta-row { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
+
+    /* FAQ */
+    .faq-list { display: grid; gap: 12px; }
+    .faq-item { background: #fff; border: 1px solid var(--line); border-radius: var(--r); overflow: hidden; }
+    .faq-q { padding: 16px 20px; font-weight: 700; font-size: 15px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; user-select: none; }
+    .faq-q::after { content: '+'; font-size: 20px; font-weight: 400; color: var(--green); transition: transform 0.2s; }
+    .faq-q.open::after { content: '−'; }
+    .faq-a { padding: 0 20px; max-height: 0; overflow: hidden; transition: max-height 0.25s ease, padding 0.25s ease; }
+    .faq-a.open { max-height: 300px; padding: 0 20px 16px; }
+    .faq-a p { font-size: 14px; color: var(--muted); line-height: 1.7; }
+
+    /* Trust */
+    .trust-chips { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-top: 20px; }
+    .chip { background: rgba(255,255,255,0.12); border-radius: 100px; padding: 5px 14px; font-size: 12px; font-weight: 600; }
+
+    /* Footer */
+    .lp-footer { border-top: 1px solid var(--line); padding: 24px 0; text-align: center; font-size: 12px; color: var(--muted); }
+    .lp-footer a { color: var(--green-dark); font-weight: 600; }
+
+    @media (max-width: 480px) {
+      .tiers-grid { grid-template-columns: repeat(2, 1fr); }
+      .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+      .gallery-grid img { height: 130px; }
+      .budget-row { padding: 12px 16px; font-size: 13px; }
+      .tier.custom { flex-direction: column; }
+    }
+  </style>
+
+  <!-- Structured Data: DonateAction -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "DonateAction",
+    "agent": {
+      "@type": "Organization",
+      "name": "Yayasan Pendidikan & Sosial Ma'arif Jombang",
+      "alternateName": "YPSMA",
+      "url": "https://ypsma.org"
+    },
+    "object": {
+      "@type": "ActionAccessSpecification",
+      "category": "Waste management campaign for Islamic boarding school",
+      "description": "Program Sedekah Sehat — pembangunan TPS terpilah, pengadaan tong sampah, dan mesin kompos untuk PPTQ Darussalam Jombang"
+    },
+    "target": {
+      "@type": "EntryPoint",
+      "url": "https://wa.me/6282234551160?text=Assalamu%27alaikum%2C+saya+ingin+berdonasi+untuk+program+Sedekah+Sehat+YPSMA",
+      "actionPlatform": ["https://schema.org/DesktopWebPlatform", "https://schema.org/MobileWebPlatform"]
+    },
+    "potentialAction": {
+      "@type": "Action",
+      "name": "Donasi Sedekah Sehat",
+      "target": {
+        "@type": "EntryPoint",
+        "url": "https://wa.me/6282234551160",
+        "description": "Hubungi kami via WhatsApp untuk informasi donasi"
+      }
+    }
+  }
+  </script>
+
+  <!-- Structured Data: FAQ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Apa itu program Sedekah Sehat YPSMA?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Program kebersihan dan pengelolaan sampah untuk PPTQ Darussalam Jombang. Target Rp 40 juta untuk membangun TPS terpilah, mengadakan 50 tong sampah, dan membeli mesin pencacah/kompos."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Kapan target penggalangan dana ini selesai?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Kami targetkan dana terkumpul dalam 3 bulan ke depan. Setelah dana mencukupi, pembangunan TPS dan pengadaan fasilitas akan dilakukan secara bertahap."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Apakah saya bisa berdonasi rutin setiap bulan?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Tentu! Anda bisa menjadi donatur tetap dengan nominal Rp 25.000/bulan atau sesuai kemampuan. Kami akan mengirimkan laporan perkembangan program secara berkala."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Bagaimana cara transfer donasi?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Transfer ke rekening YPSMA BRI/BSI a.n. Yayasan Pendidikan dan Sosial Mamba'ul Maarif. Konfirmasi bukti transfer via WhatsApp ke 0822-3455-1160."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Apakah YPSMA terdaftar secara resmi?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ya, YPSMA terdaftar resmi dengan SK Kemenkumham AHU-0026672.AH.01.04.Tahun 2020 dan telah beroperasi sejak 1966. Laporan keuangan dan program diberikan secara transparan kepada donatur."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-7723KTXZBG"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag("js", new Date());
+    gtag("config", "G-7723KTXZBG");
+
+    document.addEventListener("DOMContentLoaded", function() {
+      // Track donation CTA clicks
+      document.querySelectorAll("a[href*=\"wa.me\"]").forEach(function(btn) {
+        btn.addEventListener("click", function(e) {
+          var tierName = this.closest(".tier")?.querySelector("h3")?.textContent || "unknown";
+          gtag("event", "donate_click", {
+            tier_name: tierName,
+            button_text: this.textContent.trim()
+          });
+          gtag("event", "whatsapp_click", {
+            tier_name: tierName
+          });
+        });
+      });
+
+      // Track tier selection
+      document.querySelectorAll(".tier").forEach(function(tier) {
+        tier.addEventListener("click", function() {
+          var tierName = this.querySelector("h3")?.textContent || "unknown";
+          gtag("event", "tier_select", {
+            tier_name: tierName
+          });
+        });
+      });
+
+      // FAQ accordion
+      document.querySelectorAll(".faq-q").forEach(function(q) {
+        q.addEventListener("click", function() {
+          var answer = this.nextElementSibling;
+          var isOpen = answer.classList.contains("open");
+          answer.classList.toggle("open");
+          this.classList.toggle("open");
+        });
+      });
+    });
+  </script>
+</head>
+<body>
+
+  <!-- ══════════ HEADER ══════════ -->
+  <div class="lp-header">
+    <p>💚 Program Sedekah Sehat YPSMA Jombang · <a href="/">ypsma.org</a> · <a href="https://berkahkarya.org" rel="external noopener" target="_blank">Berkah Karya</a></p>
+  </div>
+
+  <!-- ══════════ HERO ══════════ -->
+  <section class="lp-hero">
+    <div class="container">
+      <div class="lp-badge">🌱 Program Kebersihan 2025</div>
+      <h1>Wujudkan Lingkungan Pondok<br>yang <em>Bersih, Sehat, Berkah</em></h1>
+      <p>
+        600+ santri PPTQ Darussalam Jombang membutuhkan sistem pengelolaan sampah yang layak.
+        Bantu mereka hidup lebih sehat dengan donasi Rp 25.000 dari Anda.
+      </p>
+      <a href="#donate" class="btn-main">💚 Donasi Sekarang</a>
+      <div class="hero-meta">
+        <span>🎯 Target: Rp 40.000.000</span>
+        <span>👥 600+ Santri</span>
+        <span>📍 PPTQ Darussalam, Jombang</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ STORY ══════════ -->
+  <section class="section">
+    <div class="container">
+      <h2>Realita yang <em>Harus Diubah</em></h2>
+      <p class="lead">
+        Setiap hari, 600 jiwa di lingkungan PPTQ Darussalam menghasilkan limbah rumah tangga dalam jumlah besar — mulai dari sisa makanan, plastik, hingga sampah kering. Tanpa sistem pengelolaan yang memadai, tumpukan sampah menjadi sumber penyakit, bau tak sedap, dan pencemaran lingkungan.
+      </p>
+
+      <div class="stat-row">
+        <div class="stat-box">
+          <div class="stat-num">600+</div>
+          <div class="stat-label">Jiwa di Lingkungan Pondok</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num">50+</div>
+          <div class="stat-label">Kelas & Asrama</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num">0</div>
+          <div class="stat-label">Sistem Kelola Sampah Layak</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num">4</div>
+          <div class="stat-label">Lembaga dalam 1 Area</div>
+        </div>
+      </div>
+
+      <div class="story-card">
+        <blockquote>
+          <p>"Setiap habis makan, sampah menumpuk di belakang asrama. Kalau tidak segera diangkut, baunya menyengat dan lalat beterbangan. Kami ingin punya tempat sampah yang layak dan pengelolaan yang higienis."</p>
+          <footer>— Pengurus Pondok PPTQ Darussalam, 2025</footer>
+        </blockquote>
+      </div>
+
+      <div class="story-card">
+        <blockquote>
+          <p>"Dulu saya kira sampah ya dibuang saja. Tapi setelah belajar tentang lingkungan, saya sadar sampah bisa jadi berkah kalau dikelola dengan benar. Kami butuh alat untuk mengolahnya."</p>
+          <footer>— Santri kelas 6 MI Sulamuddiniyah</footer>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ GALLERY ══════════ -->
+  <section class="section section-alt">
+    <div class="container">
+      <h2>Kondisi <em>di Lapangan</em></h2>
+      <p class="lead">Dokumentasi kondisi lingkungan pondok dan kegiatan santri sehari-hari.</p>
+      <div class="gallery-grid">
+        <figure>
+          <img src="/images/campaigns/IMG_1875.jpg" alt="Lingkungan pondok PPTQ Darussalam" loading="lazy" />
+          <figcaption>Area sekitar pondok PPTQ Darussalam</figcaption>
+        </figure>
+        <figure>
+          <img src="/images/campaigns/IMG_1878.jpg" alt="Aktivitas santri di lingkungan pondok" loading="lazy" />
+          <figcaption>Aktivitas harian santri di area pondok</figcaption>
+        </figure>
+        <figure>
+          <img src="/images/campaigns/IMG_1883.jpg" alt="Kondisi tempat pembuangan sampah sementara" loading="lazy" />
+          <figcaption>Area yang membutuhkan TPS terpilah</figcaption>
+        </figure>
+        <figure>
+          <img src="/images/campaigns/IMG_1885.jpg" alt="Santri beraktivitas di luar ruangan" loading="lazy" />
+          <figcaption>Santri beraktivitas di halaman pondok</figcaption>
+        </figure>
+        <figure>
+          <img src="/images/campaigns/IMG_1865.jpg" alt="Suasana kelas belajar santri" loading="lazy" />
+          <figcaption>Suasana kegiatan belajar mengajar</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ BUDGET ══════════ -->
+  <section class="section">
+    <div class="container">
+      <h2>Rincian <em>Anggaran</em></h2>
+      <p class="lead">Setiap rupiah donasi Anda dialokasikan dengan transparan untuk kebutuhan berikut:</p>
+
+      <div class="budget-card">
+        <div class="budget-row">
+          <span class="budget-name">🏗️ Pembangunan Bangunan TPS Terpilah</span>
+          <span class="budget-amt">Rp 15.000.000</span>
+        </div>
+        <div class="budget-row">
+          <span class="budget-name">🗑️ 50 Tong Sampah Kelas & Asrama</span>
+          <span class="budget-amt">Rp 7.500.000</span>
+        </div>
+        <div class="budget-row">
+          <span class="budget-name">⚙️ Alat Pencacah/Mesin Kompos</span>
+          <span class="budget-amt">Rp 11.500.000</span>
+        </div>
+        <div class="budget-row sub">
+          <span class="budget-name">Total Kebutuhan (85%)</span>
+          <span class="budget-amt">Rp 34.000.000</span>
+        </div>
+        <div class="budget-row sub">
+          <span class="budget-name">Biaya Operasional & Iklan (15%)</span>
+          <span class="budget-amt">Rp 6.000.000</span>
+        </div>
+        <div class="budget-row total">
+          <span class="budget-name">🎯 TOTAL TARGET</span>
+          <span class="budget-amt">Rp 40.000.000</span>
+        </div>
+      </div>
+
+      <div class="progress-wrap">
+        <div class="progress-bar">
+          <div class="progress-fill" style="width: 0%;"></div>
+        </div>
+        <div class="progress-label">
+          <span>Rp 0 terkumpul</span>
+          <span>Rp 40.000.000 target</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ DONATION TIERS ══════════ -->
+  <section id="donate" class="section section-alt">
+    <div class="container">
+      <h2>Pilih <em>Nominal Donasi</em></h2>
+      <p class="lead">Klik nominal di bawah, Anda akan diarahkan ke WhatsApp untuk konfirmasi.</p>
+
+      <div class="tiers-grid">
+        <div class="tier" role="button" tabindex="0">
+          <div class="tier-icon">☕</div>
+          <h3>Rp 25.000</h3>
+          <p>1 kantong semen untuk bangunan TPS</p>
+          <a href="https://wa.me/6282234551160?text=Assalamu%27alaikum%2C+saya+ingin+donasi+Sedekah+Sehat+YPSMA+sebesar+Rp+25.000" class="wa-link" target="_blank" rel="noopener">Donasi via WA →</a>
+        </div>
+        <div class="tier" role="button" tabindex="0">
+          <div class="tier-icon">🍱</div>
+          <h3>Rp 50.000</h3>
+          <p>1 tong sampah kelas (subsidi)</p>
+          <a href="https://wa.me/6282234551160?text=Assalamu%27alaikum%2C+saya+ingin+donasi+Sedekah+Sehat+YPSMA+sebesar+Rp+50.000" class="wa-link" target="_blank" rel="noopener">Donasi via WA →</a>
+        </div>
+        <div class="tier featured" role="button" tabindex="0">
+          <div class="tier-icon">🌱</div>
+          <h3>Rp 100.000</h3>
+          <p>Paket kebersihan 1 asrama</p>
+          <a href="https://wa.me/6282234551160?text=Assalamu%27alaikum%2C+saya+ingin+donasi+Sedekah+Sehat+YPSMA+sebesar+Rp+100.000" class="wa-link" target="_blank" rel="noopener">Donasi via WA →</a>
+        </div>
+        <div class="tier" role="button" tabindex="0">
+          <div class="tier-icon">🏗️</div>
+          <h3>Rp 250.000</h3>
+          <p>Material bangunan TPS</p>
+          <a href="https://wa.me/6282234551160?text=Assalamu%27alaikum%2C+saya+ingin+donasi+Sedekah+Sehat+YPSMA+sebesar+Rp+250.000" class="wa-link" target="_blank" rel="noopener">Donasi via WA →</a>
+        </div>
+        <div class="tier" role="button" tabindex="0">
+          <div class="tier-icon">⚙️</div>
+          <h3>Rp 500.000</h3>
+          <p>Subsidi mesin pencacah kompos</p>
+          <a href="https://wa.me/6282234551160?text=Assalamu%27alaikum%2C+saya+ingin+donasi+Sedekah+Sehat+YPSMA+sebesar+Rp+500.000" class="wa-link" target="_blank" rel="noopener">Donasi via WA →</a>
+        </div>
+        <div class="tier custom" role="button" tabindex="0">
+          <span>💰</span>
+          <span>Nominal Lainnya (Rp 10.000 – Rp 5.000.000+)</span>
+          <a href="https://wa.me/6282234551160?text=Assalamu%27alaikum%2C+saya+ingin+donasi+Sedekah+Sehat+YPSMA.+Saya+akan+mentransfer+sebesar+" class="wa-link" target="_blank" rel="noopener">Hubungi Kami →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ SPONSOR / BANK ══════════ -->
+  <section class="section">
+    <div class="container">
+      <div class="sponsor-block">
+        <h2>💚 Salurkan Donasi Anda</h2>
+        <p>Transfer ke rekening resmi YPSMA. Setelah transfer, konfirmasi via WhatsApp agar kami catat dan doakan.</p>
+        <div class="bank-box">
+          <div class="bank-r"><span class="bank-l">Bank</span><span>BRI / BSI (hubungi sekretariat)</span></div>
+          <div class="bank-r"><span class="bank-l">A.n.</span><span>Yayasan Pendidikan dan Sosial Mamba'ul Maarif</span></div>
+          <div class="bank-r"><span class="bank-l">Telp</span><span>0321-493147</span></div>
+          <div class="bank-r"><span class="bank-l">WA</span><span>0822-3455-1160</span></div>
+        </div>
+        <div class="cta-row">
+          <a href="https://wa.me/6282234551160?text=Assalamu%27alaikum%2C+saya+ingin+berdonasi+untuk+program+Sedekah+Sehat+YPSMA" class="btn-white btn-wa" target="_blank" rel="noopener">
+            💬 Konfirmasi via WhatsApp
+          </a>
+          <a href="mailto:info@ypsma.org?subject=Donasi%20Sedekah%20Sehat%20YPSMA&body=Assalamu%27alaikum%2C%20saya%20ingin%20berdonasi%20untuk%20program%20Sedekah%20Sehat%20YPSMA." class="btn-white" rel="noopener">
+            ✉️ Kirim Email
+          </a>
+        </div>
+        <div class="trust-chips">
+          <span class="chip">✓ SK Kemenkumham RI</span>
+          <span class="chip">✓ 59 tahun berkhidmat</span>
+          <span class="chip">✓ Laporan transparan</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ FAQ ══════════ -->
+  <section class="section section-alt">
+    <div class="container">
+      <h2>Pertanyaan <em>Umum</em></h2>
+      <p class="lead">Hal-hal yang sering ditanyakan tentang program Sedekah Sehat YPSMA.</p>
+
+      <div class="faq-list">
+        <div class="faq-item">
+          <div class="faq-q">Apa itu program Sedekah Sehat YPSMA?</div>
+          <div class="faq-a">
+            <p>Program kebersihan dan pengelolaan sampah terpadu untuk PPTQ Darussalam Jombang. Dengan target Rp 40 juta, kami akan membangun Tempat Pembuangan Sementara (TPS) terpilah, mengadakan 50 tong sampah untuk setiap kelas dan asrama, serta membeli mesin pencacah untuk produksi kompos.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Kapan target penggalangan dana ini selesai?</div>
+          <div class="faq-a">
+            <p>Kami menargetkan dana terkumpul dalam 3 bulan ke depan. Setelah dana mencukupi, pembangunan TPS dan pengadaan fasilitas akan dilakukan secara bertahap dengan prioritas pada area yang paling membutuhkan.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Apakah saya bisa berdonasi rutin setiap bulan?</div>
+          <div class="faq-a">
+            <p>Tentu! Anda bisa menjadi donatur tetap Sedekah Sehat dengan nominal Rp 25.000/bulan atau sesuai kemampuan. Kami akan mengirimkan laporan perkembangan program secara berkala via WhatsApp agar Anda tahu dampak donasi Anda.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Bagaimana cara transfer donasi?</div>
+          <div class="faq-a">
+            <p>Transfer ke rekening YPSMA di BRI atau BSI atas nama Yayasan Pendidikan dan Sosial Mamba'ul Maarif. Setelah transfer, konfirmasi bukti pembayaran ke WhatsApp 0822-3455-1160 untuk pencatatan dan didoakan oleh para santri.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Apakah donasi saya bisa digunakan untuk program lain?</div>
+          <div class="faq-a">
+            <p>Donasi yang masuk khusus untuk program Sedekah Sehat akan dialokasikan 85% untuk kebutuhan fisik (TPS, tong sampah, mesin kompos) dan 15% untuk biaya operasional serta publikasi program. Jika ada kelebihan dana, akan digunakan untuk perawatan dan pengembangan program kebersihan pondok.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ FINAL CTA ══════════ -->
+  <section class="section">
+    <div class="container">
+      <div class="sponsor-block" style="background: linear-gradient(150deg, #065f46 0%, #059669 55%, #10b981 100%);">
+        <h2>💚 Satu Tong Sampah, Ribuan Pahala</h2>
+        <p>Setiap Rp 25.000 yang Anda donasikan mengalirkan pahala jariyah — setiap sampah yang terkelola dengan baik, setiap lingkungan yang bersih, setiap santri yang sehat. Ajak keluarga dan teman untuk berpartisipasi.</p>
+        <div class="cta-row">
+          <a href="https://wa.me/6282234551160?text=Assalamu%27alaikum%2C+saya+tertarik+donasi+program+Sedekah+Sehat+YPSMA.+Mohon+info+lebih+lanjut." class="btn-white btn-wa" target="_blank" rel="noopener">
+            💬 Donasi via WhatsApp
+          </a>
+          <a href="/" class="btn-white">
+            🏠 Kembali ke Beranda
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ FOOTER ══════════ -->
+  <footer class="lp-footer">
+    <div class="container">
+      <p>YPSMA · Jl. Diponegoro No. 34, Gondek, Mojowarno, Jombang · <a href="/">ypsma.org</a> · <a href="https://berkahkarya.org" rel="external noopener" target="_blank">berkahkarya.org</a></p>
+      <p style="margin-top: 4px;">© <span id="yr"></span> YPSMA · AHU-0026672.AH.01.04 Tahun 2020</p>
+    </div>
+  </footer>
+
+  <script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+</body>
+</html>

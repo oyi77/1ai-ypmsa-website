@@ -1,0 +1,910 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="google-site-verification" content="GrTNsSV9UUTLJuu-x0AmFto_t8ExmWpxzSiBwjzR5lY" />
+  <title>Wakaf Sumur Bor YPSMA — Alirkan Air Bersih</title>
+  <meta name="description" content="Wakaf sumur bor YPSMA Jombang. Bantu 600+ santri dan warga dapat akses air bersih untuk wudhu, mandi, minum. Target Rp 60 juta." />
+  <link rel="canonical" href="https://ypsma.org/lp-wakaf-sumur.html" />
+  <meta property="og:title" content="Wakaf Sumur Bor YPSMA — Alirkan Air Bersih untuk 600+ Santri" />
+  <meta property="og:description" content="Setiap hari 600 orang butuh air bersih. Bantu wakaf sumur bor di Jombang. Target Rp 60 juta." />
+  <meta property="og:image" content="https://ypsma.org/images/campaigns/IMG_1875.jpg" />
+  <meta property="og:url" content="https://ypsma.org/lp-wakaf-sumur.html" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles/main.css" />
+
+  <style>
+    /* ─── LP-specific overrides ─── */
+    :root {
+      --lp-primary: #059669;
+      --lp-secondary: #10b981;
+      --lp-accent: #f59e0b;
+      --lp-primary-dark: #047857;
+      --lp-primary-darker: #065f46;
+      --lp-primary-light: #ecfdf5;
+      --lp-primary-glow: rgba(5, 150, 105, 0.08);
+    }
+
+    /* Hero */
+    .lp-hero {
+      background: linear-gradient(160deg, var(--lp-primary-darker) 0%, var(--lp-primary) 55%, #059669 100%);
+      color: #fff;
+      padding: 80px 20px 64px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .lp-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url('/images/campaigns/IMG_1875.jpg') center / cover no-repeat;
+      opacity: 0.12;
+      z-index: 0;
+    }
+    .lp-hero > * { position: relative; z-index: 1; }
+    .lp-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(255,255,255,0.15);
+      backdrop-filter: blur(6px);
+      border: 1px solid rgba(255,255,255,0.3);
+      font-size: 13px; font-weight: 700;
+      padding: 7px 20px; border-radius: 100px;
+      margin-bottom: 24px;
+    }
+    .lp-badge-dot {
+      display: inline-block; width: 8px; height: 8px;
+      border-radius: 50%; background: var(--lp-accent);
+      animation: pulse-dot 1.8s ease-in-out infinite;
+    }
+    .lp-hero h1 {
+      font-size: clamp(30px, 6vw, 52px);
+      font-weight: 900; line-height: 1.1;
+      letter-spacing: -1px; margin-bottom: 18px;
+    }
+    .lp-hero h1 em { font-style: normal; color: #6ee7b7; }
+    .lp-hero .hero-sub {
+      font-size: clamp(15px, 2vw, 18px);
+      opacity: 0.92; max-width: 580px;
+      margin: 0 auto 36px; line-height: 1.7;
+    }
+    .lp-hero-metrics {
+      display: flex; flex-wrap: wrap; gap: 32px;
+      justify-content: center; margin-top: 36px;
+    }
+    .lp-hero-metrics .metric-item { text-align: center; }
+    .lp-hero-metrics .metric-val {
+      font-size: 28px; font-weight: 800;
+      display: block; line-height: 1.2;
+    }
+    .lp-hero-metrics .metric-val span { color: var(--lp-accent); }
+    .lp-hero-metrics .metric-lbl {
+      font-size: 13px; opacity: 0.75;
+    }
+
+    /* Sections */
+    .lp-section { padding: 64px 0; }
+    .lp-section-alt { background: var(--lp-primary-light); }
+    .lp-section h2 {
+      font-size: clamp(24px, 3.5vw, 34px);
+      font-weight: 800; margin-bottom: 14px;
+      letter-spacing: -0.4px; color: var(--lp-primary-darker);
+    }
+    .lp-section h2 em { font-style: normal; color: var(--lp-primary); }
+    .lp-lead {
+      font-size: 15px; color: var(--text-2);
+      line-height: 1.7; margin-bottom: 32px;
+      max-width: 680px;
+    }
+
+    /* Story cards */
+    .story-card {
+      background: #fff; border-radius: 14px; padding: 28px;
+      border-left: 5px solid var(--lp-primary);
+      box-shadow: 0 4px 24px -8px var(--lp-primary-glow);
+      margin-bottom: 20px;
+    }
+    .story-card p { font-size: 16px; line-height: 1.7; color: var(--text); }
+    .story-card .story-stat {
+      display: block; margin-top: 14px;
+      font-size: 14px; font-weight: 700; color: var(--lp-primary);
+    }
+
+    /* Need grid */
+    .need-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 16px; }
+    .need-card {
+      background: #fff; border: 1px solid rgba(5, 150, 105, 0.15);
+      border-radius: 14px; padding: 24px 20px; text-align: center;
+      transition: transform .15s;
+    }
+    .need-card:hover { transform: translateY(-3px); }
+    .need-icon { font-size: 32px; margin-bottom: 10px; display: block; }
+    .need-amt { font-size: 20px; font-weight: 800; color: var(--lp-primary-dark); }
+    .need-desc { font-size: 13px; color: var(--text-2); margin-top: 4px; line-height: 1.5; }
+
+    /* Budget table */
+    .budget-wrap {
+      max-width: 640px; margin: 0 auto;
+      background: #fff; border-radius: 16px;
+      box-shadow: 0 4px 28px -10px var(--lp-primary-glow);
+      overflow: hidden;
+    }
+    .budget-table { width: 100%; border-collapse: collapse; }
+    .budget-table th {
+      background: var(--lp-primary); color: #fff;
+      text-align: left; padding: 14px 20px;
+      font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: .04em;
+    }
+    .budget-table th:last-child { text-align: right; }
+    .budget-table td {
+      padding: 14px 20px; border-bottom: 1px solid #f0f0f0;
+      font-size: 14px;
+    }
+    .budget-table td:last-child { text-align: right; font-weight: 700; white-space: nowrap; }
+    .budget-table tr.sub td { font-weight: 600; color: var(--text-2); }
+    .budget-table tr.total td { font-weight: 800; color: var(--lp-primary-dark); font-size: 16px; border-bottom: none; }
+    .budget-table tr.highlight td { background: var(--lp-primary-light); font-weight: 800; color: var(--lp-primary-darker); }
+    .budget-note {
+      padding: 16px 20px; font-size: 13px; color: var(--text-3);
+      background: var(--lp-primary-light);
+      text-align: center;
+    }
+
+    /* Photo gallery */
+    .gallery-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 12px;
+    }
+    .gallery-grid figure {
+      border-radius: 12px; overflow: hidden;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    }
+    .gallery-grid img {
+      width: 100%; height: 200px; object-fit: cover;
+      display: block; transition: transform .3s;
+    }
+    .gallery-grid img:hover { transform: scale(1.04); }
+    .gallery-grid figcaption {
+      padding: 8px 12px; font-size: 12px; color: var(--text-3);
+      background: #fff; text-align: center;
+    }
+
+    /* Tiers */
+    .tier-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px; margin-bottom: 28px;
+    }
+    .tier-card {
+      background: #fff; border: 1px solid rgba(5, 150, 105, 0.15);
+      border-radius: 14px; padding: 28px 20px;
+      text-align: center; cursor: pointer;
+      transition: transform .15s, box-shadow .15s;
+    }
+    .tier-card:hover { transform: translateY(-3px); box-shadow: 0 8px 28px -8px var(--lp-primary-glow); }
+    .tier-card.featured {
+      border: 2px solid var(--lp-accent);
+      position: relative;
+    }
+    .tier-card.featured::before {
+      content: '⚡ Paling Populer';
+      position: absolute; top: -12px; left: 50%; transform: translateX(-50%);
+      background: var(--lp-accent); color: #fff;
+      font-size: 11px; font-weight: 800; padding: 3px 14px; border-radius: 100px;
+      white-space: nowrap;
+    }
+    .tier-icon { font-size: 32px; margin-bottom: 10px; display: block; }
+    .tier-card h3 { font-size: 18px; font-weight: 800; margin-bottom: 6px; color: var(--lp-primary-darker); }
+    .tier-amount { font-size: 26px; font-weight: 900; color: var(--lp-primary); margin-bottom: 8px; }
+    .tier-amount span { font-size: 14px; font-weight: 500; color: var(--text-3); }
+    .tier-desc { font-size: 13px; color: var(--text-2); line-height: 1.6; margin-bottom: 16px; }
+    .tier .btn { width: 100%; }
+
+    /* Sponsor block */
+    .sponsor-block {
+      background: linear-gradient(150deg, var(--lp-primary-darker), var(--lp-primary));
+      color: #fff; border-radius: 20px; padding: 44px 28px; text-align: center;
+    }
+    .sponsor-block h2 { color: #fff !important; }
+    .sponsor-block p { opacity: 0.88; margin-bottom: 28px; font-size: 15px; }
+    .bank-box {
+      background: rgba(255,255,255,0.10);
+      backdrop-filter: blur(8px);
+      border-radius: 12px; padding: 16px 20px;
+      max-width: 420px; margin: 0 auto 24px;
+      text-align: left; font-size: 14px; display: grid; gap: 8px;
+    }
+    .bank-r { display: flex; gap: 12px; }
+    .bank-l { min-width: 60px; font-weight: 600; opacity: 0.7; }
+    .btn-white {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: #fff; color: var(--lp-primary-dark);
+      text-decoration: none; font-weight: 800;
+      padding: 13px 26px; border-radius: 12px; font-size: 15px;
+      transition: transform .15s;
+    }
+    .btn-white:hover { transform: translateY(-2px); }
+    .trust-chips { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-top: 20px; }
+    .chip {
+      background: rgba(255,255,255,0.12);
+      border-radius: 100px; padding: 5px 14px; font-size: 12px; font-weight: 600;
+    }
+
+    /* FAQ */
+    .faq-list { max-width: 680px; margin: 0 auto; }
+    .faq-item {
+      border: 1px solid rgba(5, 150, 105, 0.12);
+      border-radius: 12px; margin-bottom: 12px; overflow: hidden;
+    }
+    .faq-q {
+      width: 100%; display: flex; justify-content: space-between; align-items: center;
+      padding: 16px 20px; font-size: 15px; font-weight: 600;
+      background: #fff; cursor: pointer; text-align: left;
+      color: var(--text); transition: background .15s;
+    }
+    .faq-q:hover { background: var(--lp-primary-light); }
+    .faq-q::after {
+      content: '+'; font-size: 22px; font-weight: 300;
+      color: var(--lp-primary); transition: transform .2s;
+      flex-shrink: 0; margin-left: 12px;
+    }
+    .faq-q[aria-expanded="true"]::after { content: '−'; }
+    .faq-a {
+      max-height: 0; overflow: hidden;
+      transition: max-height .25s ease;
+      padding: 0 20px;
+      font-size: 14px; color: var(--text-2); line-height: 1.7;
+    }
+    .faq-a-inner { padding: 0 0 16px; }
+
+    /* CTA banner */
+    .cta-banner {
+      background: linear-gradient(150deg, var(--lp-primary-darker), #047857);
+      padding: 52px 20px; text-align: center; color: #fff;
+    }
+    .cta-banner h2 { color: #fff !important; font-size: clamp(22px, 3vw, 30px) !important; }
+    .cta-banner p { opacity: 0.9; max-width: 520px; margin: 0 auto 28px; font-size: 15px; }
+    .btn-wa {
+      display: inline-flex; align-items: center; gap: 10px;
+      background: #25D366; color: #fff;
+      text-decoration: none; font-weight: 800;
+      padding: 16px 34px; border-radius: 14px; font-size: 17px;
+      transition: transform .15s, box-shadow .15s;
+      box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+    }
+    .btn-wa:hover { transform: translateY(-2px); box-shadow: 0 6px 28px rgba(37, 211, 102, 0.5); }
+
+    /* Urgency bar */
+    .progress-bar {
+      max-width: 600px; margin: 0 auto 28px;
+    }
+    .progress-info { display: flex; justify-content: space-between; font-size: 14px; margin-bottom: 8px; }
+    .progress-track {
+      height: 12px; background: rgba(255,255,255,0.20);
+      border-radius: 100px; overflow: hidden;
+    }
+    .progress-fill {
+      height: 100%; background: var(--lp-accent);
+      border-radius: 100px; width: 0%;
+      transition: width 1s ease;
+    }
+
+    /* Responsive */
+    @media (max-width: 640px) {
+      .lp-hero { padding: 60px 16px 44px; }
+      .lp-section { padding: 44px 0; }
+      .need-grid { grid-template-columns: repeat(2, 1fr); }
+      .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+      .tier-grid { grid-template-columns: 1fr; }
+      .budget-table th, .budget-table td { padding: 10px 14px; font-size: 13px; }
+      .btn-wa { width: 100%; justify-content: center; }
+    }
+    @media (max-width: 400px) {
+      .need-grid { grid-template-columns: 1fr; }
+      .gallery-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-7723KTXZBG"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag("js", new Date());
+    gtag("config", "G-7723KTXZBG");
+
+    document.addEventListener("DOMContentLoaded", function() {
+      // Track donation CTA clicks
+      document.querySelectorAll("a[href*=\"wa.me\"]").forEach(function(btn) {
+        btn.addEventListener("click", function(e) {
+          var tierName = this.closest(".tier-card")?.querySelector("h3")?.textContent || "wa-cta";
+          gtag("event", "donate_click", { tier_name: tierName, button_text: this.textContent.trim() });
+          gtag("event", "whatsapp_click", { tier_name: tierName });
+        });
+      });
+
+      // Track tier clicks
+      document.querySelectorAll(".tier-card").forEach(function(tier) {
+        tier.addEventListener("click", function() {
+          var tierName = this.querySelector("h3")?.textContent || "unknown";
+          gtag("event", "tier_select", { tier_name: tierName });
+        });
+      });
+
+      // FAQ accordion
+      document.querySelectorAll(".faq-q").forEach(function(btn) {
+        btn.addEventListener("click", function() {
+          var expanded = this.getAttribute("aria-expanded") === "true";
+          this.setAttribute("aria-expanded", !expanded);
+          var answer = this.nextElementSibling;
+          answer.style.maxHeight = expanded ? "0" : answer.scrollHeight + "px";
+        });
+      });
+    });
+  </script>
+
+  <!-- Schema.org DonateAction -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "name": "Yayasan Pendidikan & Sosial Ma'arif Jombang",
+        "alternateName": "YPSMA",
+        "url": "https://ypsma.org",
+        "logo": "https://ypsma.org/favicon.svg",
+        "description": "Yayasan pendidikan Islam berkualitas yang mengelola 4 unit pendidikan di Jombang sejak 1966",
+        "foundingDate": "1966-03-15",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Jl. Diponegoro No. 34, Gondek",
+          "addressLocality": "Mojowarno",
+          "addressRegion": "Jawa Timur",
+          "postalCode": "61475",
+          "addressCountry": "ID"
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+62-822-3455-1160",
+          "contactType": "customer service",
+          "areaServed": "ID",
+          "availableLanguage": "Indonesian"
+        }
+      },
+      {
+        "@type": "DonateAction",
+        "name": "Wakaf Sumur Bor YPSMA",
+        "description": "Wakaf sumur bor untuk menyediakan akses air bersih bagi 600+ santri dan warga di Jombang",
+        "url": "https://ypsma.org/lp-wakaf-sumur.html",
+        "target": {
+          "@type": "EntryPoint",
+          "url": "https://wa.me/6282234551160?text=Assalamu%27alaikum%2C+saya+tertarik+program+Wakaf+Sumur+Bor.+Mohon+info+lebih+lanjut.",
+          "actionPlatform": "http://schema.org/DesktopWebPlatform"
+        },
+        "agent": {
+          "@type": "Organization",
+          "name": "Yayasan Pendidikan & Sosial Ma'arif Jombang",
+          "url": "https://ypsma.org"
+        },
+        "recipient": {
+          "@type": "Audience",
+          "name": "Santri dan warga sekitar YPSMA Jombang"
+        },
+        "potentialAction": {
+          "@type": "DonateAction",
+          "name": "Donasi Wakaf Sumur",
+          "target": {
+            "@type": "EntryPoint",
+            "url": "https://wa.me/6282234551160"
+          }
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Apa itu program Wakaf Sumur Bor YPSMA?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Program wakaf untuk membangun sumur bor di lingkungan YPSMA Jombang yang akan menyediakan akses air bersih bagi 600+ santri, guru, dan warga sekitar untuk kebutuhan wudhu, mandi, minum, dan MCK setiap hari."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Berapa target dana yang dibutuhkan?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Target total Rp 60.000.000 yang terdiri dari: Pengeboran Sumur Dalam Rp 20 juta, Pompa Submersible & Instalasi Rp 10 juta, 2x Toren Air 5.000L + Menara Rp 21 juta, dan Biaya Operasional & Publikasi Rp 9 juta."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Bagaimana cara berdonasi?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Donasi dapat disalurkan melalui transfer bank ke rekening YPSMA atau melalui WhatsApp di 0822-3455-1160. Setiap donatur akan mendapatkan laporan perkembangan proyek."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Apakah donasi bisa dicicil?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Ya, Anda bisa berdonasi secara bertahap. Hubungi kami via WhatsApp untuk mengatur jadwal donasi yang nyaman bagi Anda."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Apada saja item yang didanai?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Dana digunakan untuk: 1) Pengeboran sumur dalam, 2) Pompa submersible dan instalasi listrik, 3) Dua unit toren air 5.000 liter beserta menara, 4) Operasional dan publikasi program."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+<!-- ═══════════════════════ TICKER ═══════════════════════ -->
+<div class="ticker">
+  <div class="ticker-inner">
+    <span class="ticker-dot"></span>
+    <span>Wakaf Sumur Bor — Alirkan air bersih untuk 600+ santri &amp; warga Jombang —</span>
+    <a href="#donate" class="ticker-link">Dukung Sekarang &rarr;</a>
+  </div>
+</div>
+
+<!-- ═══════════════════════ NAV ═══════════════════════════ -->
+<header class="nav-wrap" id="nav-wrap">
+  <nav class="nav container">
+    <a href="/" class="nav-logo" aria-label="YPSMA beranda">
+      <div class="logo-mark">YM</div>
+      <span class="logo-text">YPSMA Jombang</span>
+    </a>
+
+    <ul class="nav-links" id="nav-links">
+      <li><a href="/">Home</a></li>
+      <li><a href="/#visi-misi">Profile</a></li>
+      <li><a href="/#institutions">Programs</a></li>
+      <li><a href="/blog/">Blog</a></li>
+      <li><a href="/#donate">Donasi</a></li>
+    </ul>
+
+    <a href="#donate" class="btn btn-accent btn-sm nav-cta">Donasi / Wakaf</a>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Buka menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+</header>
+
+<!-- ═══════════════════════ HERO ═══════════════════════════ -->
+<section class="lp-hero">
+  <div class="container">
+    <div class="lp-badge">
+      <span class="lp-badge-dot"></span>
+      Program Wakaf — Sumur Bor YPSMA Jombang
+    </div>
+
+    <h1>Alirkan Air Bersih<br><em> untuk 600+ Santri &amp; Warga</em></h1>
+
+    <p class="hero-sub">
+      Setiap hari 600 orang membutuhkan air bersih untuk wudhu, mandi, dan minum.
+      Bantu wakaf sumur bor agar mereka tak lagi kesulitan air.
+    </p>
+
+    <a href="#donate" class="btn btn-accent btn-lg" style="background:var(--lp-accent);color:#fff;border-color:var(--lp-accent)">💧 Donasi Sekarang</a>
+
+    <div class="lp-hero-metrics">
+      <div class="metric-item">
+        <span class="metric-val"><span>Rp</span> 60 Jt</span>
+        <span class="metric-lbl">Target Dana</span>
+      </div>
+      <div class="metric-item">
+        <span class="metric-val"><span>600+</span></span>
+        <span class="metric-lbl">Penerima Manfaat</span>
+      </div>
+      <div class="metric-item">
+        <span class="metric-val"><span>Sumur</span> Bor</span>
+        <span class="metric-lbl">Jenis Program</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ STORY ═════════════════════════ -->
+<section class="lp-section">
+  <div class="container">
+    <div class="text-center" style="max-width:720px;margin:0 auto">
+      <h2>Cerita di Balik <em>Krisis Air</em></h2>
+      <p class="lp-lead">
+        Di lingkungan YPSMA Jombang, akses air bersih masih menjadi tantangan harian.
+        600+ santri, guru, dan warga sekitar harus berbagi sumber air yang terbatas.
+      </p>
+    </div>
+
+    <div class="story-card">
+      <p>
+        Setiap pagi, sebelum memulai aktivitas belajar dan menghafal Al-Qur'an, para santri
+        bergantian mengambil air wudhu. Sumber air yang ada seringkali tidak mencukupi,
+        terutama di musim kemarau. Antrean panjang terjadi, waktu belajar terpotong,
+        dan kebersihan kurang terjaga.
+      </p>
+      <span class="story-stat">📊 600+ orang butuh air setiap hari</span>
+    </div>
+
+    <div class="story-card">
+      <p>
+        Bukan hanya untuk wudhu dan minum — air bersih juga diperlukan untuk MCK harian,
+        kebersihan pondok, masjid, sekolah, dan dapur. Dengan sumur bor yang memadai,
+        seluruh kebutuhan ini akan tercukupi untuk puluhan tahun ke depan,
+        <strong>menjadi amal jariyah yang pahalanya terus mengalir</strong>.
+      </p>
+      <span class="story-stat">🤲 Amal Jariyah — pahala terus mengalir selama sumur digunakan</span>
+    </div>
+
+    <div style="text-align:center;margin-top:24px">
+      <h3 style="font-size:18px;font-weight:700;color:var(--lp-primary-dark)">Apa Saja Kebutuhan Air Setiap Hari?</h3>
+      <div class="need-grid" style="margin-top:20px">
+        <div class="need-card">
+          <span class="need-icon">🕌</span>
+          <div class="need-desc">Wudhu 5 waktu untuk 600+ santri &amp; jamaah</div>
+        </div>
+        <div class="need-card">
+          <span class="need-icon">🚿</span>
+          <div class="need-desc">Mandi &amp; MCK harian santri putra &amp; putri</div>
+        </div>
+        <div class="need-card">
+          <span class="need-icon">🥤</span>
+          <div class="need-desc">Air minum untuk pesantren &amp; sekolah</div>
+        </div>
+        <div class="need-card">
+          <span class="need-icon">🍳</span>
+          <div class="need-desc">Dapur &amp; masak untuk konsumsi harian</div>
+        </div>
+        <div class="need-card">
+          <span class="need-icon">🧹</span>
+          <div class="need-desc">Kebersihan masjid, kelas &amp; lingkungan</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ BUDGET ═════════════════════════ -->
+<section class="lp-section lp-section-alt">
+  <div class="container">
+    <div class="text-center">
+      <h2>Rincian <em>Anggaran</em></h2>
+      <p class="lp-lead">
+        Setiap rupiah donasi Anda digunakan secara transparan untuk kebutuhan berikut:
+      </p>
+    </div>
+
+    <div class="budget-wrap">
+      <table class="budget-table">
+        <thead>
+          <tr><th>Item</th><th>Jumlah</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>🔧 Pengeboran Sumur Dalam</td><td>Rp 20.000.000</td></tr>
+          <tr><td>⚙️ Pompa Submersible &amp; Instalasi</td><td>Rp 10.000.000</td></tr>
+          <tr><td>💧 2x Toren Air 5.000L + Menara</td><td>Rp 21.000.000</td></tr>
+          <tr class="sub"><td colspan="2" style="padding:4px 20px"></td></tr>
+          <tr class="total highlight">
+            <td>✅ Total Kebutuhan (85%)</td>
+            <td>Rp 51.000.000</td>
+          </tr>
+          <tr class="sub" style="opacity:0.7">
+            <td>📢 Biaya Operasional &amp; Publikasi (15%)</td>
+            <td>Rp 9.000.000</td>
+          </tr>
+          <tr style="border-top:2px solid var(--lp-primary)">
+            <td style="font-weight:900;font-size:16px;color:var(--lp-primary-darker)">🎯 TOTAL TARGET</td>
+            <td style="font-weight:900;font-size:18px;color:var(--lp-primary-darker)">Rp 60.000.000</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="budget-note">
+        🤲 Biaya operasional (15%) digunakan untuk publikasi program, biaya administrasi, dan monitoring.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ GALLERY ═════════════════════════ -->
+<section class="lp-section">
+  <div class="container">
+    <div class="text-center">
+      <h2>Dokumentasi <em>Lokasi</em></h2>
+      <p class="lp-lead">
+        Berikut kondisi lingkungan dan fasilitas air yang ada di sekitar YPSMA.
+      </p>
+    </div>
+
+    <div class="gallery-grid">
+      <figure>
+        <img src="/images/campaigns/IMG_1875.jpg" alt="Lingkungan pondok pesantren YPSMA" loading="lazy" width="400" height="300" />
+        <figcaption>Lingkungan Pondok Pesantren YPSMA</figcaption>
+      </figure>
+      <figure>
+        <img src="/images/campaigns/IMG_1878.jpg" alt="Fasilitas air yang ada saat ini" loading="lazy" width="400" height="300" />
+        <figcaption>Fasilitas air yang ada saat ini</figcaption>
+      </figure>
+      <figure>
+        <img src="/images/campaigns/IMG_1879.jpg" alt="Area yang membutuhkan sumur bor" loading="lazy" width="400" height="300" />
+        <figcaption>Area yang akan dibangun sumur bor</figcaption>
+      </figure>
+      <figure>
+        <img src="/images/campaigns/kamar%20mandi.png" alt="Kamar mandi santri" loading="lazy" width="400" height="300" />
+        <figcaption>Kamar mandi santri — butuh pasokan air bersih</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ DONATION TIERS ═════════════════════════ -->
+<section id="donate" class="lp-section lp-section-alt">
+  <div class="container">
+    <div class="text-center">
+      <h2>Pilih <em>Nominal Donasi</em></h2>
+      <p class="lp-lead">
+        Setiap partisipasi Anda sangat berarti. Pilih nominal yang nyaman atau donasi bebas.
+      </p>
+    </div>
+
+    <div class="tier-grid">
+      <div class="tier-card">
+        <span class="tier-icon">💧</span>
+        <h3>Rintis</h3>
+        <div class="tier-amount">Rp 50.000 <span>/ sekali</span></div>
+        <p class="tier-desc">Membantu 1 hari kebutuhan air minum untuk 30 santri</p>
+        <a href="https://wa.me/6282234551160?text=Assalamu%27alaikum%2C+saya+ingin+donasi+Wakaf+Sumur+Bor+%F0%9F%92%A7+sebesar+Rp+50.000" target="_blank" rel="noopener" class="btn btn-outline" style="--btn-b:var(--lp-primary);--btn-c:var(--lp-primary)">Donasi via WA</a>
+      </div>
+
+      <div class="tier-card">
+        <span class="tier-icon">🚿</span>
+        <h3>Mitra Air</h3>
+        <div class="tier-amount">Rp 200.000 <span>/ sekali</span></div>
+        <p class="tier-desc">Membantu biaya instalasi pipa air ke kamar mandi</p>
+        <a href="https://wa.me/6282234551160?text=Assalamu%27alaikum%2C+saya+ingin+donasi+Wakaf+Sumur+Bor+%F0%9F%92%A7+sebesar+Rp+200.000" target="_blank" rel="noopener" class="btn btn-outline" style="--btn-b:var(--lp-primary);--btn-c:var(--lp-primary)">Donasi via WA</a>
+      </div>
+
+      <div class="tier-card featured">
+        <span class="tier-icon">🫂</span>
+        <h3>Wakif</h3>
+        <div class="tier-amount">Rp 500.000 <span>/ sekali</span></div>
+        <p class="tier-desc">Membantu 1 meter pengeboran sumur dalam</p>
+        <a href="https://wa.me/6282234551160?text=Assalamu%27alaikum%2C+saya+tertarik+program+Wakaf+Sumur+Bor+%F0%9F%92%A7+sebesar+Rp+500.000" target="_blank" rel="noopener" class="btn" style="background:var(--lp-primary);color:#fff">Donasi via WA</a>
+      </div>
+
+      <div class="tier-card">
+        <span class="tier-icon">🏗️</span>
+        <h3>Kontributor Utama</h3>
+        <div class="tier-amount">Rp 1.000.000 <span>/ sekali</span></div>
+        <p class="tier-desc">Membantu pembelian 1 unit pompa submersible</p>
+        <a href="https://wa.me/6282234551160?text=Assalamu%27alaikum%2C+saya+ingin+donasi+Wakaf+Sumur+Bor+%F0%9F%92%A7+sebesar+Rp+1.000.000" target="_blank" rel="noopener" class="btn btn-outline" style="--btn-b:var(--lp-primary);--btn-c:var(--lp-primary)">Donasi via WA</a>
+      </div>
+
+      <div class="tier-card" style="border-color:var(--lp-accent)">
+        <span class="tier-icon">👑</span>
+        <h3>Donatur Utama</h3>
+        <div class="tier-amount">Rp 5.000.000+ <span>/ sekali</span></div>
+        <p class="tier-desc">Bagi yang ingin memberikan kontribusi besar — nama diabadikan di prasasti wakaf</p>
+        <a href="https://wa.me/6282234551160?text=Assalamu%27alaikum%2C+saya+tertarik+jadi+Donatur+Utama+Wakaf+Sumur+Bor+%F0%9F%92%A7" target="_blank" rel="noopener" class="btn" style="background:var(--lp-accent);color:#fff">Hubungi Kami</a>
+      </div>
+    </div>
+
+    <!-- Bank Info -->
+    <div class="donate-alt" style="text-align:center;margin-top:12px">
+      <div class="bank-info" style="display:inline-block;text-align:left">
+        <div style="display:flex;gap:12px;padding:6px 0">
+          <span style="min-width:70px;font-weight:700;color:var(--text-3)">Bank</span>
+          <span class="bank-name">BRI / BSI</span>
+        </div>
+        <div style="display:flex;gap:12px;padding:6px 0">
+          <span style="min-width:70px;font-weight:700;color:var(--text-3)">A.n.</span>
+          <span class="bank-account">Yayasan Pendidikan dan Sosial Mamba'ul Maarif</span>
+        </div>
+        <div style="display:flex;gap:12px;padding:6px 0">
+          <span style="min-width:70px;font-weight:700;color:var(--text-3)">Konfirmasi</span>
+          <span>WA <a href="https://wa.me/6282234551160" target="_blank" rel="noopener" class="wa-link" style="color:var(--lp-primary);font-weight:600;border-bottom:1px dotted">0822-3455-1160</a></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ FAQ ═════════════════════════ -->
+<section class="lp-section">
+  <div class="container">
+    <div class="text-center">
+      <h2>Pertanyaan <em>Umum</em></h2>
+      <p class="lp-lead">Temukan jawaban atas pertanyaan seputar program Wakaf Sumur Bor.</p>
+    </div>
+
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">Apa itu program Wakaf Sumur Bor YPSMA?</button>
+        <div class="faq-a"><div class="faq-a-inner">Program wakaf untuk membangun sumur bor di lingkungan YPSMA Jombang yang akan menyediakan akses air bersih bagi 600+ santri, guru, dan warga sekitar untuk kebutuhan wudhu, mandi, minum, dan MCK setiap hari.</div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">Berapa target dana yang dibutuhkan?</button>
+        <div class="faq-a"><div class="faq-a-inner">Target total Rp 60.000.000. Terdiri dari: Pengeboran Sumur Dalam Rp 20 juta, Pompa Submersible &amp; Instalasi Rp 10 juta, 2x Toren Air 5.000L + Menara Rp 21 juta, dan Biaya Operasional &amp; Publikasi Rp 9 juta.</div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">Bagaimana cara berdonasi?</button>
+        <div class="faq-a"><div class="faq-a-inner">Donasi dapat disalurkan melalui transfer bank ke rekening YPSMA (BRI/BSI — hubungi kami untuk nomor rekening) atau melalui WhatsApp di <a href="https://wa.me/6282234551160" style="color:var(--lp-primary);font-weight:600">0822-3455-1160</a>. Setiap donatur akan mendapatkan laporan perkembangan proyek.</div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">Apakah donasi bisa dicicil?</button>
+        <div class="faq-a"><div class="faq-a-inner">Ya, Anda bisa berdonasi secara bertahap. Hubungi kami via WhatsApp untuk mengatur jadwal donasi yang paling nyaman bagi Anda.</div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">Apa keutamaan wakaf sumur?</button>
+        <div class="faq-a"><div class="faq-a-inner">Wakaf sumur termasuk amal jariyah yang pahalanya terus mengalir selama airnya digunakan. Rasulullah ﷺ bersabda: "Sebaik-baik sedekah adalah memberi minum air." Seluruh santri, guru, dan warga yang menggunakan air dari sumur ini akan menjadi sumber pahala yang tak terputus bagi para wakif.</div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">Apakah YPSMA terdaftar resmi?</button>
+        <div class="faq-a"><div class="faq-a-inner">Ya, YPSMA terdaftar resmi sejak 15 Maret 1966 dengan SK Kemenkumham AHU-0026672.AH.01.04.Tahun 2020. Kami mengelola 4 unit pendidikan: RA Fajrul Islam, MI Sulamuddiniyah, SMP YPM Mojowarno, dan PPTQ Darussalam.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ CTA BANNER ═════════════════════════ -->
+<section class="cta-banner">
+  <div class="container">
+    <h2>Mulai Alirkan <em>Kebaikan</em> Sekarang</h2>
+    <p>
+      Satu sumur — ribuan kebaikan yang terus mengalir. Jadilah bagian dari amal jariyah ini.
+    </p>
+
+    <div class="progress-bar">
+      <div class="progress-info">
+        <span style="font-weight:700">Terkumpul: <span id="raised">Rp 0</span></span>
+        <span style="opacity:0.8">Target: Rp 60.000.000</span>
+      </div>
+      <div class="progress-track">
+        <div class="progress-fill" id="progressFill" style="width:0%"></div>
+      </div>
+    </div>
+
+    <a href="https://wa.me/6282234551160?text=Assalamu%27alaikum%2C+saya+tertarik+program+Wakaf+Sumur+Bor.+Mohon+info+lebih+lanjut." target="_blank" rel="noopener" class="btn-wa">
+      💬 Konsultasi via WhatsApp
+    </a>
+
+    <div class="trust-chips" style="justify-content:center;margin-top:24px">
+      <span class="chip">✓ AHU-0026672.AH.01.04</span>
+      <span class="chip">✓ 58 tahun beroperasi</span>
+      <span class="chip">✓ Laporan transparan</span>
+      <span class="chip">✓ Amal Jariyah</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ FOOTER ═══════════════════════════ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <div class="logo-mark">YM</div>
+          <span class="logo-text">YPSMA Jombang</span>
+        </div>
+        <p class="footer-tagline">
+          <strong>Yayasan Pendidikan dan Sosial Ma'arif (YPSM)</strong><br>
+          Gondek, Mojowarno, Jombang. Mengasuh &amp; melahirkan generasi emas Qur'ani sejak 1966.
+        </p>
+        <address class="footer-address" style="font-style:normal">
+          Jl. Diponegoro Nomor 34, Ngelo<br>
+          Ds. Gondek, Kec. Mojowarno, Kab. Jombang<br>
+          Jawa Timur 61475, Indonesia
+        </address>
+      </div>
+
+      <div class="footer-col">
+        <strong>Lembaga Kami</strong>
+        <ul>
+          <li><a href="/#institutions">PPTQ Darussalam</a></li>
+          <li><a href="/#institutions">MI Sulamuddiniyah</a></li>
+          <li><a href="/#institutions">SMP YPM Mojowarno</a></li>
+          <li><a href="/#institutions">RA Fajrul Islam</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <strong>Blog &amp; Artikel</strong>
+        <ul>
+          <li><a href="/blog/">Semua Artikel</a></li>
+          <li><a href="/blog/beasiswa-santri-jombang.html">Beasiswa Santri</a></li>
+          <li><a href="/blog/wakaf-pendidikan-vs-sedekah.html">Wakaf vs Sedekah</a></li>
+          <li><a href="/blog/yayasan-pendidikan-jombang.html">Profil Yayasan</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <strong>Program &amp; Info</strong>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/#visi-misi">Tentang Kami</a></li>
+          <li><a href="/#coop">Usaha Koperasi</a></li>
+          <li><a href="/#donate">Donasi Pembiayaan</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <strong>Hubungi Kami</strong>
+        <ul>
+          <li><a href="https://wa.me/6282234551160" target="_blank" rel="noopener">WA Admin Putra/Yayasan</a></li>
+          <li><a href="https://wa.me/62895377773100" target="_blank" rel="noopener">WA Hub. Santri Putri</a></li>
+          <li><a href="mailto:pptqdarussalamgondek@gmail.com">Kirim Surel Resmi</a></li>
+          <li><a href="https://berkahkarya.org" target="_blank" rel="noopener">Partner: BerkahKarya.org ↗</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>
+        &copy; <span id="yr"></span> Yayasan Pendidikan dan Sosial Ma'arif Jombang (@ypsma.org) &middot; Bagian dari ekosistem
+        <a href="https://berkahkarya.org" target="_blank" rel="noopener">BerkahKarya.org</a>
+      </span>
+      <span class="footer-legal">
+        Legal AHU-0026672.AH.01.04.Tahun 2020 &middot; Akreditasi BAN-S/M A &amp; B
+      </span>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Nav scroll behaviour
+const nav = document.getElementById('nav-wrap');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('nav-scrolled', window.scrollY > 15);
+}, { passive: true });
+
+// Mobile menu toggle
+const toggle = document.getElementById('nav-toggle');
+const links  = document.getElementById('nav-links');
+toggle?.addEventListener('click', () => {
+  const open = links.classList.toggle('nav-open');
+  toggle.setAttribute('aria-expanded', String(open));
+});
+links?.querySelectorAll('a').forEach(a => {
+  a.addEventListener('click', () => {
+    links.classList.remove('nav-open');
+    toggle?.setAttribute('aria-expanded', 'false');
+  });
+});
+
+// Current year
+document.getElementById('yr').textContent = new Date().getFullYear();
+
+// Progress bar animation (demo — update the percentage as donations come in)
+(function() {
+  var fill = document.getElementById('progressFill');
+  var label = document.getElementById('raised');
+  if (!fill || !label) return;
+  var pct = 0; // ← UPDATE THIS PERCENTAGE as funds are collected
+  fill.style.width = pct + '%';
+  label.textContent = 'Rp ' + (pct * 600000).toLocaleString('id-ID');
+})();
+</script>
+
+</body>
+</html>

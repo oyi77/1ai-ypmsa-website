@@ -1,0 +1,982 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="google-site-verification" content="GrTNsSV9UUTLJuu-x0AmFto_t8ExmWpxzSiBwjzR5lY" />
+  <title>Beasiswa Santri Dhuafa YPSMA — Bantu Mereka Lulus</title>
+  <meta name="description" content="Jadi Orang Tua Asuh untuk 1 santri dhuafa dengan Rp 10jt/tahun. SPP, asrama, seragam, buku — semua tercover. Santri berprestasi tidak boleh putus sekolah karena biaya." />
+  <link rel="canonical" href="https://ypsma.org/lp-beasiswa-santri.html" />
+  <meta property="og:title" content="Beasiswa Santri Dhuafa YPSMA — Bantu Mereka Lulus" />
+  <meta property="og:description" content="Rp 10jt/anak/tahun untuk 1 santri dhuafa. Jadi Orang Tua Asuh dan ubah masa depan mereka." />
+  <meta property="og:image" content="https://ypsma.org/images/campaigns/Berdoa.png" />
+  <meta property="og:url" content="https://ypsma.org/lp-beasiswa-santri.html" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles/main.css" />
+
+  <style>
+    /* ── LP-specific overrides & page styles ── */
+    :root {
+      --green: #059669;
+      --green-dark: #047857;
+      --green-light: #ecfdf5;
+      --green-glow: rgba(5, 150, 105, 0.08);
+      --gold: #f59e0b;
+      --gold-bg: #fffbeb;
+    }
+
+    .lp-hero {
+      position: relative;
+      background: linear-gradient(160deg, #022c1a 0%, #065f46 50%, #047857 100%);
+      color: #fff;
+      padding: 0;
+      overflow: hidden;
+    }
+    .lp-hero-bg {
+      position: absolute;
+      inset: 0;
+      background: url('/images/campaigns/Berdoa.png') center center / cover no-repeat;
+      opacity: 0.18;
+      z-index: 0;
+    }
+    .lp-hero .container {
+      position: relative;
+      z-index: 1;
+      padding-block: clamp(5rem, 12vw, 9rem) clamp(4rem, 8vw, 6rem);
+    }
+    .lp-hero-inner {
+      max-width: 680px;
+    }
+    .lp-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: .5rem;
+      background: rgba(255,255,255,0.15);
+      border: 1px solid rgba(255,255,255,0.3);
+      font-size: .8rem;
+      font-weight: 700;
+      padding: .4em 1.1em;
+      border-radius: 100px;
+      margin-bottom: 1.25rem;
+      letter-spacing: .02em;
+      color: #a7f3d0;
+    }
+    .lp-hero h1 {
+      font-size: clamp(2rem, 5.5vw, 3.5rem);
+      font-weight: 900;
+      line-height: 1.12;
+      letter-spacing: -.03em;
+      margin-bottom: 1rem;
+    }
+    .lp-hero h1 em { font-style: normal; color: #6ee7b7; }
+    .lp-hero-sub {
+      font-size: clamp(1rem, 2vw, 1.15rem);
+      opacity: .9;
+      line-height: 1.65;
+      margin-bottom: 1.75rem;
+      max-width: 540px;
+    }
+    .lp-hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .75rem;
+    }
+    .btn-hero {
+      display: inline-flex;
+      align-items: center;
+      gap: .5em;
+      background: var(--gold);
+      color: #1c1917;
+      font-weight: 800;
+      padding: .85em 1.75em;
+      border-radius: 14px;
+      font-size: 1rem;
+      text-decoration: none;
+      transition: transform .15s, box-shadow .15s;
+    }
+    .btn-hero:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(245,158,11,0.3); }
+    .btn-hero-outline {
+      display: inline-flex;
+      align-items: center;
+      gap: .5em;
+      background: transparent;
+      color: #fff;
+      font-weight: 600;
+      padding: .85em 1.75em;
+      border-radius: 14px;
+      font-size: 1rem;
+      text-decoration: none;
+      border: 1px solid rgba(255,255,255,0.3);
+      transition: all .15s;
+    }
+    .btn-hero-outline:hover { border-color: #fff; background: rgba(255,255,255,0.08); }
+    .hero-metric-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      margin-top: 2.5rem;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(255,255,255,0.12);
+    }
+    .hero-metric-val {
+      font-size: 1.75rem;
+      font-weight: 800;
+      color: #6ee7b7;
+      line-height: 1;
+    }
+    .hero-metric-lbl {
+      font-size: .75rem;
+      opacity: .7;
+      margin-top: .25rem;
+      text-transform: uppercase;
+      letter-spacing: .05em;
+    }
+
+    /* Sections */
+    .lp-section { padding-block: clamp(3.5rem, 6vw, 5.5rem); }
+    .lp-section-dark { background: var(--green-light); }
+    .lp-section h2 {
+      font-size: clamp(1.75rem, 3.5vw, 2.25rem);
+      font-weight: 800;
+      letter-spacing: -.03em;
+      margin-bottom: .75rem;
+      color: var(--text);
+    }
+    .lp-section h2 em { font-style: normal; color: var(--green); }
+    .lp-lead {
+      font-size: 1rem;
+      color: var(--text-2);
+      line-height: 1.7;
+      margin-bottom: 2rem;
+      max-width: 640px;
+    }
+
+    /* Story */
+    .story-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+    }
+    @media (max-width: 640px) { .story-grid { grid-template-columns: 1fr; } }
+    .story-card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 1.75rem;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.02);
+    }
+    .story-card .icon { font-size: 2rem; margin-bottom: .75rem; display: block; }
+    .story-card h3 { font-size: 1.2rem; font-weight: 700; margin-bottom: .6rem; }
+    .story-card p { font-size: .95rem; color: var(--text-2); line-height: 1.65; }
+    .story-card footer {
+      margin-top: 1rem;
+      font-size: .8rem;
+      color: var(--text-3);
+      font-style: italic;
+    }
+
+    /* Budget */
+    .budget-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      max-width: 600px;
+    }
+    @media (max-width: 480px) { .budget-grid { grid-template-columns: 1fr; } }
+    .budget-item {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.25rem;
+      text-align: center;
+    }
+    .budget-item.total {
+      background: var(--green);
+      color: #fff;
+      border-color: var(--green);
+      grid-column: 1 / -1;
+    }
+    .budget-amt { font-size: 1.25rem; font-weight: 800; display: block; }
+    .budget-item.total .budget-amt { font-size: 1.5rem; }
+    .budget-label { font-size: .8rem; color: var(--text-3); margin-top: .25rem; }
+    .budget-item.total .budget-label { color: rgba(255,255,255,0.8); }
+    .budget-pct {
+      font-size: .7rem;
+      font-weight: 600;
+      color: var(--green);
+      background: var(--green-light);
+      display: inline-block;
+      padding: .15em .6em;
+      border-radius: 100px;
+      margin-top: .4rem;
+    }
+    .budget-item.total .budget-pct { background: rgba(255,255,255,0.15); color: #fff; }
+
+    /* Gallery */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+    }
+    @media (max-width: 640px) { .gallery-grid { grid-template-columns: 1fr 1fr; gap: .6rem; } }
+    @media (max-width: 400px) { .gallery-grid { grid-template-columns: 1fr; } }
+    .gallery-item {
+      border-radius: var(--radius);
+      overflow: hidden;
+      aspect-ratio: 4 / 3;
+      background: var(--bg-3);
+    }
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform .4s;
+    }
+    .gallery-item:hover img { transform: scale(1.06); }
+
+    /* Tiers */
+    .tier-subtitle { margin-bottom: 2rem; font-size: .95rem; color: var(--text-2); }
+    .tier-flex {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+    }
+    @media (max-width: 700px) { .tier-flex { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 400px) { .tier-flex { grid-template-columns: 1fr; } }
+    .tier-card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem 1rem;
+      text-align: center;
+      transition: all .2s;
+      cursor: default;
+    }
+    .tier-card:hover {
+      border-color: var(--green);
+      box-shadow: 0 4px 20px var(--green-glow);
+      transform: translateY(-2px);
+    }
+    .tier-card.featured {
+      border-color: var(--green);
+      background: var(--green-light);
+    }
+    .tier-amt {
+      font-size: 1.35rem;
+      font-weight: 900;
+      color: var(--green);
+      letter-spacing: -.02em;
+    }
+    .tier-amt span { font-size: .85rem; font-weight: 600; color: var(--text-3); }
+    .tier-label {
+      font-size: .85rem;
+      color: var(--text-2);
+      margin-top: .5rem;
+      line-height: 1.5;
+      min-height: 3em;
+    }
+    .tier-badge {
+      display: inline-block;
+      font-size: .7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .05em;
+      padding: .25em .8em;
+      border-radius: 100px;
+      margin-bottom: .75rem;
+    }
+    .tier-badge.popular {
+      background: var(--gold-bg);
+      color: #92400e;
+      border: 1px solid rgba(245,158,11,0.25);
+    }
+    .tier-badge.default {
+      background: var(--bg-2);
+      color: var(--text-3);
+      border: 1px solid var(--border);
+    }
+    .tier-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: .4em;
+      margin-top: 1rem;
+      font-size: .85rem;
+      font-weight: 700;
+      padding: .7em 1.2em;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: all .15s;
+      width: 100%;
+    }
+    .tier-btn.green {
+      background: var(--green);
+      color: #fff;
+    }
+    .tier-btn.green:hover { background: var(--green-dark); }
+    .tier-btn.outline {
+      background: transparent;
+      color: var(--green);
+      border: 1px solid rgba(5,150,105,0.25);
+    }
+    .tier-btn.outline:hover { background: var(--green-glow); border-color: var(--green); }
+
+    /* FAQ */
+    .faq-list { max-width: 700px; margin: 0 auto; display: grid; gap: .75rem; }
+    .faq-item {
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+    .faq-q {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      padding: 1.1rem 1.25rem;
+      font-size: .95rem;
+      font-weight: 600;
+      text-align: left;
+      background: #fff;
+      color: var(--text);
+      cursor: pointer;
+      border: none;
+      transition: background .15s;
+    }
+    .faq-q:hover { background: var(--bg-2); }
+    .faq-q .arrow {
+      flex-shrink: 0;
+      font-size: .7rem;
+      color: var(--text-3);
+      transition: transform .2s;
+    }
+    .faq-item.open .faq-q .arrow { transform: rotate(180deg); }
+    .faq-a {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height .3s ease, padding .3s ease;
+    }
+    .faq-item.open .faq-a {
+      max-height: 300px;
+      padding: 0 1.25rem 1.1rem;
+    }
+    .faq-a p {
+      font-size: .9rem;
+      color: var(--text-2);
+      line-height: 1.65;
+    }
+
+    /* CTA block */
+    .cta-wrap {
+      background: linear-gradient(160deg, #022c1a 0%, #065f46 50%, #047857 100%);
+      border-radius: var(--radius-xl);
+      padding: clamp(2.5rem, 6vw, 4rem) clamp(1.5rem, 4vw, 3rem);
+      text-align: center;
+      color: #fff;
+    }
+    .cta-wrap h2 {
+      font-size: clamp(1.5rem, 3.5vw, 2rem);
+      font-weight: 800;
+      color: #fff !important;
+      margin-bottom: .75rem;
+    }
+    .cta-wrap p { opacity: .9; margin-bottom: 1.5rem; font-size: .95rem; max-width: 520px; margin-inline: auto; }
+    .cta-bank {
+      background: rgba(255,255,255,0.1);
+      border-radius: var(--radius);
+      padding: 1.25rem 1.5rem;
+      max-width: 440px;
+      margin: 0 auto 1.5rem;
+      text-align: left;
+      font-size: .9rem;
+      display: grid;
+      gap: .5rem;
+    }
+    .cta-bank-row { display: flex; gap: .75rem; }
+    .cta-bank-l { min-width: 70px; font-weight: 600; opacity: .7; font-size: .8rem; }
+    .cta-trust {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .6rem;
+      justify-content: center;
+      margin-top: 1.5rem;
+    }
+    .cta-trust-item {
+      background: rgba(255,255,255,0.12);
+      border-radius: 100px;
+      padding: .3em 1em;
+      font-size: .75rem;
+      font-weight: 600;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      .hero-metric-row { gap: 1.25rem; }
+    }
+  </style>
+
+  <!-- Structured Data: DonateAction -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "DonateAction",
+    "name": "Beasiswa Santri Dhuafa YPSMA",
+    "description": "Program Orang Tua Asuh — Rp 10jt/tahun untuk 1 santri dhuafa. Mencakup SPP, asrama, seragam, buku, dan kitab.",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": "https://wa.me/6282234551160?text=Assalamualaikum%2C%20saya%20ingin%20menjadi%20Orang%20Tua%20Asuh%20untuk%20program%20beasiswa%20santri%20dhuafa.%20Mohon%20info%20selengkapnya."
+    },
+    "priceCurrency": "IDR",
+    "price": "10000000",
+    "priceRange": "Rp 100.000 – Rp 10.000.000",
+    "agent": {
+      "@type": "Organization",
+      "name": "Yayasan Pendidikan & Sosial Ma'arif Jombang",
+      "url": "https://ypsma.org"
+    },
+    "recipient": {
+      "@type": "EducationalOrganization",
+      "name": "PPTQ Darussalam Jombang"
+    },
+    "potentialAction": [
+      {
+        "@type": "DonateAction",
+        "name": "Donasi Bulanan",
+        "price": "100000",
+        "priceCurrency": "IDR",
+        "description": "Donasi Rp 100.000/bulan"
+      },
+      {
+        "@type": "DonateAction",
+        "name": "Donasi Bulanan",
+        "price": "250000",
+        "priceCurrency": "IDR",
+        "description": "Donasi Rp 250.000/bulan"
+      },
+      {
+        "@type": "DonateAction",
+        "name": "Donasi Bulanan",
+        "price": "500000",
+        "priceCurrency": "IDR",
+        "description": "Donasi Rp 500.000/bulan"
+      },
+      {
+        "@type": "DonateAction",
+        "name": "Donasi Bulanan",
+        "price": "1000000",
+        "priceCurrency": "IDR",
+        "description": "Donasi Rp 1.000.000/bulan"
+      }
+    ]
+  }
+  </script>
+
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-7723KTXZBG"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag("js", new Date());
+    gtag("config", "G-7723KTXZBG");
+
+    document.addEventListener("DOMContentLoaded", function() {
+      // Track donation CTA clicks
+      document.querySelectorAll("a[href*=\"wa.me\"]").forEach(function(btn) {
+        btn.addEventListener("click", function(e) {
+          var tierName = this.closest(".tier-card")?.querySelector(".tier-amt")?.textContent || "unknown";
+          gtag("event", "donate_click", {
+            tier_name: tierName,
+            button_text: this.textContent.trim()
+          });
+          gtag("event", "whatsapp_click", {
+            tier_name: tierName
+          });
+        });
+      });
+
+      // Track tier selection
+      document.querySelectorAll(".tier-card").forEach(function(tier) {
+        tier.addEventListener("click", function() {
+          var tierName = this.querySelector(".tier-amt")?.textContent || "unknown";
+          gtag("event", "tier_select", {
+            tier_name: tierName
+          });
+        });
+      });
+
+      // Track QRIS scan intent
+      var qrisObserver = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting && entry.intersectionRatio > 0.5) {
+            gtag("event", "qris_scan", {
+              visibility: "above_50_percent"
+            });
+            qrisObserver.disconnect();
+          }
+        });
+      }, { threshold: 0.5 });
+      var qrisEl = document.querySelector(".qris-card");
+      if (qrisEl) qrisObserver.observe(qrisEl);
+
+      // FAQ toggle
+      document.querySelectorAll(".faq-q").forEach(function(btn) {
+        btn.addEventListener("click", function() {
+          var item = this.closest(".faq-item");
+          item.classList.toggle("open");
+        });
+      });
+    });
+  </script>
+</head>
+<body>
+
+<!-- ═══════════════════════ NAV ═══════════════════════════ -->
+<header class="nav-wrap" id="nav-wrap">
+  <nav class="nav container">
+    <a href="/" class="nav-logo" aria-label="YPSMA beranda">
+      <div class="logo-mark">YM</div>
+      <span class="logo-text">YPSMA Jombang</span>
+    </a>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="/#about">Profile</a></li>
+      <li><a href="/#institutions">Program</a></li>
+      <li><a href="/blog/">Blog</a></li>
+      <li><a href="/?donate=1" class="nav-cta btn btn-accent btn-sm">Donasi</a></li>
+    </ul>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Buka menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+</header>
+
+<!-- ═══════════════════════ HERO ═══════════════════════════ -->
+<section class="lp-hero">
+  <div class="lp-hero-bg"></div>
+  <div class="container">
+    <div class="lp-hero-inner">
+      <div class="lp-badge">🎓 Program Beasiswa Santri Dhuafa 2025</div>
+      <h1>Jadi <em>Orang Tua Asuh</em> untuk 1 Santri Dhuafa</h1>
+      <p class="lp-hero-sub">
+        Rp 10 juta/tahun — satu keputusan Anda hari ini bisa mengubah masa depan seorang
+        santri penghafal Qur'an dari keluarga petani di Jombang.
+      </p>
+      <div class="lp-hero-actions">
+        <a href="#donasi" class="btn-hero">🎯 Jadi Orang Tua Asuh</a>
+        <a href="#cerita" class="btn-hero-outline">Baca Kisah Mereka</a>
+      </div>
+      <div class="hero-metric-row">
+        <div>
+          <div class="hero-metric-val">237</div>
+          <div class="hero-metric-lbl">Santri Aktif</div>
+        </div>
+        <div>
+          <div class="hero-metric-val">Rp 10jt</div>
+          <div class="hero-metric-lbl">Target per Santri/Tahun</div>
+        </div>
+        <div>
+          <div class="hero-metric-val">100%</div>
+          <div class="hero-metric-lbl">Laporan Transparan</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ STORY ═══════════════════════════ -->
+<section class="lp-section" id="cerita">
+  <div class="container">
+    <h2>Konsep <em>Orang Tua Asuh</em></h2>
+    <p class="lp-lead">
+      Orang Tua Asuh adalah donatur yang berkomitmen membiayai kebutuhan pendidikan dan
+      hidup seorang santri dhuafa selama satu tahun penuh. Anda bukan sekadar memberi —
+      Anda menjadi bagian dari perjalanan hidupnya.
+    </p>
+
+    <div class="story-grid">
+      <div class="story-card">
+        <span class="icon">🌾</span>
+        <h3>Realita yang Tak Terlihat</h3>
+        <p>
+          Sebagian besar orang tua santri adalah petani dan buruh harian. Saat gagal panen
+          atau penghasilan menyusut, biaya SPP dan asrama adalah pengeluaran pertama yang
+          terpaksa mereka tunda. Banyak santri potensial hampir putus sekolah.
+        </p>
+      </div>
+
+      <div class="story-card">
+        <span class="icon">🤲</span>
+        <h3>Satu Keputusan, Setahun Penuh</span></h3>
+          <p>
+            Dengan Rp 10 juta/tahun, Anda menanggung seluruh biaya pendidikan 1 santri:
+            SPP, asrama, seragam, buku, dan kitab. Santri bisa fokus belajar dan menghafal
+            tanpa beban biaya.
+          </p>
+        </div>
+
+        <div class="story-card">
+          <span class="icon">📈</span>
+          <h3>Dampak Nyata & Terukur</h3>
+          <p>
+            Setiap Orang Tua Asuh mendapat laporan perkembangan santri — nilai ujian,
+            capaian hafalan, dan kabar terbaru. Anda bisa melihat langsung dampak dari
+            donasi Anda.
+          </p>
+        </div>
+
+        <div class="story-card">
+          <span class="icon">🕌</span>
+          <h3>Investasi Akhirat</h3>
+          <p>
+            Setiap ayat yang dihafal santri, setiap doa yang mereka panjatkan, pahalanya
+            mengalir untuk Anda. Rasulullah SAW bersabda sebaik-baik manusia adalah yang
+            paling bermanfaat bagi sesama.
+          </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ BUDGET ═══════════════════════════ -->
+<section class="lp-section lp-section-dark" id="anggaran">
+  <div class="container">
+    <h2>Rincian <em>Anggaran per Santri/Tahun</em></h2>
+    <p class="lp-lead">
+      Setiap rupiah yang Anda donasikan digunakan dengan transparan dan amanah untuk
+      kebutuhan pendidikan santri.
+    </p>
+
+    <div class="budget-grid">
+      <div class="budget-item">
+        <span class="budget-amt">Rp 6.000.000</span>
+        <span class="budget-label">SPP &amp; Asrama (12 bulan)</span>
+        <span class="budget-pct">60%</span>
+      </div>
+      <div class="budget-item">
+        <span class="budget-amt">Rp 2.500.000</span>
+        <span class="budget-label">Seragam, Buku, Kitab</span>
+        <span class="budget-pct">25%</span>
+      </div>
+      <div class="budget-item" style="background:var(--green-light);border-color:rgba(5,150,105,0.2)">
+        <span class="budget-amt" style="color:var(--green)">Rp 8.500.000</span>
+        <span class="budget-label">Total Kebutuhan (85%)</span>
+        <span class="budget-pct" style="background:var(--green)">85%</span>
+      </div>
+      <div class="budget-item" style="background:var(--gold-bg);border-color:rgba(245,158,11,0.2)">
+        <span class="budget-amt" style="color:#92400e">Rp 1.500.000</span>
+        <span class="budget-label">Biaya Ops &amp; Iklan (15%)</span>
+        <span class="budget-pct" style="background:var(--gold);color:#fff">15%</span>
+      </div>
+      <div class="budget-item total">
+        <span class="budget-amt">Rp 10.000.000</span>
+        <span class="budget-label">TOTAL TARGET per Santri/Tahun</span>
+        <span class="budget-pct">100%</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ GALLERY ═══════════════════════════ -->
+<section class="lp-section">
+  <div class="container">
+    <h2>Galery <em>Santri-Santri Kita</em></h2>
+    <p class="lp-lead">
+      Mereka adalah calon hafidz dan hafidzah yang setiap hari berjuang menuntut ilmu
+      di PPTQ Darussalam Jombang. Dengan dukungan Anda, mimpi mereka bisa tercapai.
+    </p>
+
+    <div class="gallery-grid">
+      <div class="gallery-item">
+        <img src="/images/campaigns/Berdoa.png" alt="Santri sedang berdoa" loading="lazy" />
+      </div>
+      <div class="gallery-item">
+        <img src="/images/campaigns/IMG_1829.jpg" alt="Santri belajar bersama" loading="lazy" />
+      </div>
+      <div class="gallery-item">
+        <img src="/images/campaigns/IMG_1834.jpg" alt="Suasana kelas santri" loading="lazy" />
+      </div>
+      <div class="gallery-item">
+        <img src="/images/campaigns/IMG_1883.jpg" alt="Santri di pondok" loading="lazy" />
+      </div>
+      <div class="gallery-item">
+        <img src="/images/campaigns/IMG_1885.jpg" alt="Kegiatan santri" loading="lazy" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ TIERS ═══════════════════════════ -->
+<section class="lp-section lp-section-dark" id="donasi">
+  <div class="container">
+    <h2>Pilih <em>Cara Donasi</em></h2>
+    <p class="lp-lead">Anda bisa menjadi Orang Tua Asuh penuh, atau berdonasi sesuai kemampuan secara bulanan.</p>
+
+    <div class="tier-flex">
+      <div class="tier-card">
+        <div class="tier-badge default">Santri</div>
+        <div class="tier-amt">Rp 100rb<span>/bln</span></div>
+        <div class="tier-label">Donasi rutin — membantu kebutuhan ATK dan buku santri</div>
+        <a href="https://wa.me/6282234551160?text=Assalamualaikum%2C%20saya%20ingin%20berdonasi%20Rp%20100.000%2Fbulan%20untuk%20beasiswa%20santri%20dhuafa%20YPSMA." class="tier-btn outline" target="_blank" rel="noopener">💬 Donasi via WA</a>
+      </div>
+
+      <div class="tier-card featured">
+        <div class="tier-badge popular">⭐ Terpopuler</div>
+        <div class="tier-amt">Rp 250rb<span>/bln</span></div>
+        <div class="tier-label">Mitra Orang Tua Asuh — mencukupi SPP &amp; asrama 1 santri</div>
+        <a href="https://wa.me/6282234551160?text=Assalamualaikum%2C%20saya%20ingin%20berdonasi%20Rp%20250.000%2Fbulan%20sebagai%20Orang%20Tua%20Asuh%20santri%20YPSMA." class="tier-btn green" target="_blank" rel="noopener">💬 Saya Ikut</a>
+      </div>
+
+      <div class="tier-card">
+        <div class="tier-badge default">Peduli</div>
+        <div class="tier-amt">Rp 500rb<span>/bln</span></div>
+        <div class="tier-label">Donasi plus — membantu biaya hidup &amp; pendidikan santri</div>
+        <a href="https://wa.me/6282234551160?text=Assalamualaikum%2C%20saya%20ingin%20berdonasi%20Rp%20500.000%2Fbulan%20untuk%20beasiswa%20santri%20dhuafa%20YPSMA." class="tier-btn outline" target="_blank" rel="noopener">💬 Donasi via WA</a>
+      </div>
+
+      <div class="tier-card">
+        <div class="tier-badge default">Sponsor</div>
+        <div class="tier-amt">Rp 1jt<span>/bln</span></div>
+        <div class="tier-label">Orang Tua Asuh penuh — mendanai 1 santri penuh setara Rp 10jt/tahun</div>
+        <a href="https://wa.me/6282234551160?text=Assalamualaikum%2C%20saya%20ingin%20menjadi%20Orang%20Tua%20Asuh%20penuh%20dengan%20donasi%20Rp%201.000.000%2Fbulan%20untuk%20santri%20YPSMA." class="tier-btn green" target="_blank" rel="noopener">💬 Jadi Sponsor</a>
+      </div>
+    </div>
+
+    <div style="text-align:center;margin-top:2rem;padding-top:2rem;border-top:1px solid var(--border)">
+      <p style="font-size:.9rem;color:var(--text-2);margin-bottom:.75rem">
+        Atau transfer langsung ke rekening resmi yayasan:
+      </p>
+      <div style="background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:1.25rem 1.5rem;display:inline-grid;gap:.5rem;text-align:left;font-size:.9rem;">
+        <div style="display:flex;gap:.75rem;">
+          <span style="min-width:80px;font-weight:600;color:var(--text-3)">Bank</span>
+          <span>Bank Syariah Indonesia (BSI)</span>
+        </div>
+        <div style="display:flex;gap:.75rem;">
+          <span style="min-width:80px;font-weight:600;color:var(--text-3)">No. Rek</span>
+          <span style="font-weight:700;font-family:var(--font-mono);color:var(--green)">0321-493147</span>
+        </div>
+        <div style="display:flex;gap:.75rem;">
+          <span style="min-width:80px;font-weight:600;color:var(--text-3)">A.n.</span>
+          <span>YPSMA Jombang — Yayasan Pendidikan &amp; Sosial Ma'arif</span>
+        </div>
+      </div>
+      <p style="font-size:.85rem;color:var(--text-3);margin-top:.75rem">
+        Setelah transfer, mohon konfirmasi ke WhatsApp untuk pencatatan dan laporan.
+      </p>
+
+      <!-- QRIS -->
+      <div class="qris-card" style="margin-top:1.5rem;display:inline-block;background:#fff;border:2px dashed var(--green);border-radius:var(--radius-lg);padding:1.5rem 2rem;">
+        <p style="font-size:.9rem;font-weight:600;color:var(--green);margin-bottom:.75rem">💳 Scan QRIS untuk Donasi</p>
+        <img src="/images/qris-ypsma.png" alt="QRIS YPSMA Jombang" style="width:200px;height:200px;object-fit:contain;margin:0 auto;display:block;border-radius:8px" loading="lazy" />
+        <p style="font-size:.75rem;color:var(--text-3);margin-top:.6rem">Scan dengan mobile banking atau e-wallet apapun</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ FAQ ═══════════════════════════ -->
+<section class="lp-section">
+  <div class="container">
+    <h2>Pertanyaan <em>yang Sering Diajukan</em></h2>
+    <p class="lp-lead">Pertanyaan seputar program Orang Tua Asuh dan beasiswa santri dhuafa.</p>
+
+    <div class="faq-list">
+      <div class="faq-item open">
+        <button class="faq-q">
+          Berapa minimal donasi untuk menjadi Orang Tua Asuh?
+          <span class="arrow">▼</span>
+        </button>
+        <div class="faq-a">
+          <p>Anda bisa menjadi Orang Tua Asuh mulai dari <strong>Rp 250.000/bulan</strong> (setara Rp 3.000.000/tahun) sebagai donasi partial. Untuk menjadi sponsor penuh 1 santri, donasi <strong>Rp 1.000.000/bulan</strong> (Rp 10.000.000/tahun).</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">
+          Apakah saya bisa memilih santri yang akan didukung?
+          <span class="arrow">▼</span>
+        </button>
+        <div class="faq-a">
+          <p>Ya. Setelah konfirmasi donasi, kami akan memperkenalkan profil santri yang Anda dukung termasuk nama, kelas, capaian hafalan, dan latar belakang keluarganya.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">
+          Bagaimana laporan perkembangan santri?
+          <span class="arrow">▼</span>
+        </button>
+        <div class="faq-a">
+          <p>Setiap bulan Anda menerima laporan via WhatsApp mencakup: capaian hafalan, nilai ujian, kehadiran, dan kabar terbaru santri. Setiap 6 bulan ada laporan evaluasi lengkap dengan foto perkembangan.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">
+          Apakah donasi bisa dilakukan satu kali (tidak rutin)?
+          <span class="arrow">▼</span>
+        </button>
+        <div class="faq-a">
+          <p>Tentu. Anda bisa berdonasi kapan saja dalam nominal berapapun. Meskipun donasi rutin (bulanan) sangat membantu keberlangsungan program, setiap rupiah dari donasi satu kali juga kami salurkan sepenuhnya untuk kebutuhan santri.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">
+          Bagaimana transparansi penggunaan dana?
+          <span class="arrow">▼</span>
+        </button>
+        <div class="faq-a">
+          <p>Kami menerbitkan laporan keuangan bulanan yang dikirim ke 237 donatur aktif. Laporan mencakup penerimaan dana, penggunaan dana per program, dan saldo. Kami juga terbuka untuk kunjungan langsung ke pondok pesantren.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">
+          Apakah YPSMA terdaftar resmi?
+          <span class="arrow">▼</span>
+        </button>
+        <div class="faq-a">
+          <p>Ya. YPSMA terdaftar resmi dengan <strong>SK Kemenkumham AHU-0026672.AH.01.04.Tahun 2020</strong> dan telah beroperasi sejak <strong>15 Maret 1966</strong> — lebih dari 58 tahun mengabdi di bidang pendidikan dan sosial di Jombang.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ FINAL CTA ═══════════════════════════ -->
+<section class="lp-section lp-section-dark">
+  <div class="container">
+    <div class="cta-wrap">
+      <h2>Jadi Bagian dari Perjalanan Mereka</h2>
+      <p>
+        Satu santri tidak boleh putus sekolah hanya karena biaya. Dengan Rp 10 juta/tahun,
+        Anda mengubah masa depan seorang penghafal Qur'an selamanya.
+      </p>
+      <div class="cta-bank">
+        <div class="cta-bank-row">
+          <span class="cta-bank-l">Bank</span>
+          <span>Bank Syariah Indonesia (BSI)</span>
+        </div>
+        <div class="cta-bank-row">
+          <span class="cta-bank-l">No. Rek</span>
+          <span style="font-weight:700;font-family:var(--font-mono);color:#6ee7b7">0321-493147</span>
+        </div>
+        <div class="cta-bank-row">
+          <span class="cta-bank-l">A.n.</span>
+          <span>YPSMA Jombang — Yayasan Pendidikan &amp; Sosial Ma'arif</span>
+        </div>
+      </div>
+      <a href="https://wa.me/6282234551160?text=Assalamualaikum%2C%20saya%20ingin%20menjadi%20Orang%20Tua%20Asuh%20untuk%20program%20beasiswa%20santri%20dhuafa.%20Mohon%20info%20selengkapnya." class="btn-hero" style="display:inline-flex" target="_blank" rel="noopener">
+        💬 Hubungi via WhatsApp
+      </a>
+      <div class="cta-trust">
+        <span class="cta-trust-item">✓ SK Kemenkumham RI</span>
+        <span class="cta-trust-item">✓ 58 Tahun Berkhidmat</span>
+        <span class="cta-trust-item">✓ Laporan Transparan Bulanan</span>
+        <span class="cta-trust-item">✓ Boleh Dikunjungi Langsung</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ FOOTER ═══════════════════════════ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <div class="logo-mark">YM</div>
+          <span class="logo-text">YPSMA Jombang</span>
+        </div>
+        <p class="footer-tagline">
+          <strong>Yayasan Pendidikan dan Sosial Ma'arif (YPSM)</strong><br>
+          Gondek, Mojowarno, Jombang. Mengasuh &amp; melahirkan generasi emas Qur'ani sejak 1966.
+        </p>
+        <address class="footer-address" style="font-style:normal">
+          Jl. Diponegoro Nomor 34, Ngelo<br>
+          Ds. Gondek, Kec. Mojowarno, Kab. Jombang<br>
+          Jawa Timur 61475, Indonesia
+        </address>
+      </div>
+
+      <div class="footer-col">
+        <strong>Lembaga Kami</strong>
+        <ul>
+          <li><a href="/#institutions">PPTQ Darussalam</a></li>
+          <li><a href="/#institutions">MI Sulamuddiniyah</a></li>
+          <li><a href="/#institutions">SMP YPM Mojowarno</a></li>
+          <li><a href="/#institutions">RA Fajrul Islam</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <strong>Blog &amp; Artikel</strong>
+        <ul>
+          <li><a href="/blog/">Semua Artikel</a></li>
+          <li><a href="/blog/beasiswa-santri-jombang.html">Beasiswa Santri</a></li>
+          <li><a href="/blog/wakaf-pendidikan-vs-sedekah.html">Wakaf vs Sedekah</a></li>
+          <li><a href="/blog/yayasan-pendidikan-jombang.html">Profil Yayasan</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <strong>Program &amp; Info</strong>
+        <ul>
+          <li><a href="/#about">Visi &amp; Misi</a></li>
+          <li><a href="/#coop">Usaha Koperasi</a></li>
+          <li><a href="/#impact">Traksi Dampak</a></li>
+          <li><a href="/#donate">Donasi Pembiayaan</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <strong>Hubungi Kami</strong>
+        <ul>
+          <li><a href="https://wa.me/6282234551160" target="_blank" rel="noopener">WA Admin Putra/Yayasan</a></li>
+          <li><a href="https://wa.me/62895377773100" target="_blank" rel="noopener">WA Hub. Santri Putri</a></li>
+          <li><a href="mailto:pptqdarussalamgondek@gmail.com">Kirim Surel Resmi</a></li>
+          <li><a href="https://berkahkarya.org" target="_blank" rel="noopener">Partner: BerkahKarya.org ↗</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>
+        &copy; 2026 Yayasan Pendidikan dan Sosial Ma'arif Jombang (@ypsma.org) &middot; Bagian dari ekosistem
+        <a href="https://berkahkarya.org" target="_blank" rel="noopener">BerkahKarya.org</a>
+      </span>
+      <span class="footer-legal">
+        Legal AHU-0026672.AH.01.04.Tahun 2020 &middot; Akreditasi BAN-S/M A &amp; B
+      </span>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Nav scroll behaviour
+var nav = document.getElementById('nav-wrap');
+window.addEventListener('scroll', function() {
+  nav.classList.toggle('nav-scrolled', window.scrollY > 15);
+}, { passive: true });
+
+// Mobile menu toggle
+var toggle = document.getElementById('nav-toggle');
+var links  = document.getElementById('nav-links');
+toggle?.addEventListener('click', function() {
+  var open = links.classList.toggle('nav-open');
+  toggle.setAttribute('aria-expanded', String(open));
+});
+links?.querySelectorAll('a').forEach(function(a) {
+  a.addEventListener('click', function() {
+    links.classList.remove('nav-open');
+    toggle?.setAttribute('aria-expanded', 'false');
+  });
+});
+</script>
+
+</body>
+</html>
