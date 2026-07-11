@@ -742,28 +742,28 @@
         <div class="tier-badge default">Santri</div>
         <div class="tier-amt">Rp 100rb<span>/bln</span></div>
         <div class="tier-label">Donasi rutin — membantu kebutuhan ATK dan buku santri</div>
-        <a href="https://wa.me/6282234551160?text=Assalamualaikum%2C%20saya%20ingin%20berdonasi%20Rp%20100.000%2Fbulan%20untuk%20beasiswa%20santri%20dhuafa%20YPSMA." class="tier-btn outline" target="_blank" rel="noopener">💬 Donasi via WA</a>
+        <button class="tier-btn outline" data-midtrans="1" data-amount="100000" data-campaign="Beasiswa Santri" data-wa="6282234551160">💳 Donasi via WA</button>
       </div>
 
       <div class="tier-card featured">
         <div class="tier-badge popular">⭐ Terpopuler</div>
         <div class="tier-amt">Rp 250rb<span>/bln</span></div>
         <div class="tier-label">Mitra Orang Tua Asuh — mencukupi SPP &amp; asrama 1 santri</div>
-        <a href="https://wa.me/6282234551160?text=Assalamualaikum%2C%20saya%20ingin%20berdonasi%20Rp%20250.000%2Fbulan%20sebagai%20Orang%20Tua%20Asuh%20santri%20YPSMA." class="tier-btn green" target="_blank" rel="noopener">💬 Saya Ikut</a>
+        <button class="tier-btn green" data-midtrans="1" data-amount="250000" data-campaign="Beasiswa Santri" data-wa="6282234551160">💳 Saya Ikut</button>
       </div>
 
       <div class="tier-card">
         <div class="tier-badge default">Peduli</div>
         <div class="tier-amt">Rp 500rb<span>/bln</span></div>
         <div class="tier-label">Donasi plus — membantu biaya hidup &amp; pendidikan santri</div>
-        <a href="https://wa.me/6282234551160?text=Assalamualaikum%2C%20saya%20ingin%20berdonasi%20Rp%20500.000%2Fbulan%20untuk%20beasiswa%20santri%20dhuafa%20YPSMA." class="tier-btn outline" target="_blank" rel="noopener">💬 Donasi via WA</a>
+        <button class="tier-btn outline" data-midtrans="1" data-amount="500000" data-campaign="Beasiswa Santri" data-wa="6282234551160">💳 Donasi via WA</button>
       </div>
 
       <div class="tier-card">
         <div class="tier-badge default">Sponsor</div>
         <div class="tier-amt">Rp 1jt<span>/bln</span></div>
         <div class="tier-label">Orang Tua Asuh penuh — mendanai 1 santri penuh setara Rp 10jt/tahun</div>
-        <a href="https://wa.me/6282234551160?text=Assalamualaikum%2C%20saya%20ingin%20menjadi%20Orang%20Tua%20Asuh%20penuh%20dengan%20donasi%20Rp%201.000.000%2Fbulan%20untuk%20santri%20YPSMA." class="tier-btn green" target="_blank" rel="noopener">💬 Jadi Sponsor</a>
+        <button class="tier-btn green" data-midtrans="1" data-amount="1000000" data-campaign="Beasiswa Santri" data-wa="6282234551160">💳 Jadi Sponsor</button>
       </div>
     </div>
 
@@ -797,7 +797,7 @@
             <p style="font-weight:700;color:#064e3b;font-size:.85rem;">QRIS Siap Scan</p>
           </div>
           <p style="font-size:.75rem;color:var(--text-3);margin-top:.6rem">Minta QRIS live via WhatsApp admin</p>
-          <a href="https://wa.me/6282234551160?text=Assalamualaikum%2C%20mohon%20QRIS%20untuk%20donasi%20YPSMA." class="btn" target="_blank" style="display:inline-block;margin-top:.75rem;background:var(--green);color:#fff;padding:.6em 1.2em;border-radius:8px;font-size:.85rem;font-weight:600;">💬 Minta QRIS via WA →</a>
+          <a href="https://wa.me/6282234551160?text=Assalamualaikum%2C%20saya%20ingin%20info%20program%20Beasiswa%20Santri%20YPSMA." target="_blank" rel="noopener" class="btn" style="display:inline-block;margin-top:.75rem;background:var(--green);color:#fff;padding:.6em 1.2em;border-radius:8px;font-size:.85rem;font-weight:600;">💬 Minta QRIS via WA →</a>
         </div>
     </div>
   </div>
@@ -896,9 +896,7 @@
           <span>YPSMA Jombang — Yayasan Pendidikan &amp; Sosial Ma'arif</span>
         </div>
       </div>
-      <a href="https://wa.me/6282234551160?text=Assalamualaikum%2C%20saya%20ingin%20menjadi%20Orang%20Tua%20Asuh%20untuk%20program%20beasiswa%20santri%20dhuafa.%20Mohon%20info%20selengkapnya." class="btn-hero" style="display:inline-flex" target="_blank" rel="noopener">
-        💬 Hubungi via WhatsApp
-      </a>
+      <a href="https://wa.me/6282234551160?text=Assalamualaikum%2C%20saya%20ingin%20info%20program%20Beasiswa%20Santri%20YPSMA." target="_blank" rel="noopener" class="btn-hero" style="display:inline-flex">💬 Hubungi via WhatsApp</a>
       <div class="cta-trust">
         <span class="cta-trust-item">✓ SK Kemenkumham RI</span>
         <span class="cta-trust-item">✓ 58 Tahun Berkhidmat</span>
@@ -1003,6 +1001,86 @@ links?.querySelectorAll('a').forEach(function(a) {
   });
 });
 </script>
+
+
+<!-- Midtrans Snap -->
+<script src="https://app.midtrans.com/snap/snap.js" data-client-key="Mid-client-bmsuCQQOdxgsx82_"></script>
+<script>
+(function () {
+  // Parse amount from label text like "Rp 50rb" / "Rp 100rb" / "Rp 500rb" / "Rp 1 Juta" / "Rp 1.500.000"
+  function parseAmount(raw) {
+    var s = raw.replace(/[^0-9a-zA-Z.]/g, '').toLowerCase();
+    if (s.includes('juta')) { var n = parseFloat(s); return Math.round(n * 1000000); }
+    if (s.includes('rb'))   { var n = parseFloat(s); return Math.round(n * 1000); }
+    var clean = raw.replace(/[^0-9]/g, '');
+    return parseInt(clean, 10) || 0;
+  }
+
+  function donate(btn) {
+    // Support data-amount-from for custom input fields
+    var amountFrom = btn.getAttribute('data-amount-from');
+    var amountInt;
+    if (amountFrom) {
+      var inputEl = document.getElementById(amountFrom);
+      if (!inputEl || !inputEl.value) { alert('Masukkan nominal donasi terlebih dahulu'); return; }
+      amountInt = parseInt(inputEl.value.replace(/[^0-9]/g, ''), 10);
+    } else {
+      amountInt = parseInt(btn.getAttribute('data-amount'), 10);
+    }
+    var campaign   = btn.getAttribute('data-campaign');
+    var waNum      = btn.getAttribute('data-wa');
+    if (!amountInt || amountInt < 1000) { alert('Nominal tidak valid'); return; }
+
+    // Disable button + show loading
+    btn.disabled = true;
+    var origHtml = btn.innerHTML;
+    btn.innerHTML = '<span style="display:inline-flex;align-items:center;gap:8px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="animation:spin .8s linear infinite"><path d="M21 12a9 9 0 1 1-6.219-8.56"/></svg>Memuat…</span>';
+
+    fetch('/api/donate', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ amount: amountInt, campaign: campaign, wa_number: waNum })
+    })
+    .then(function(r) { return r.json(); })
+    .then(function(data) {
+      if (!data.token) throw new Error(data.error || 'Token tidak tersedia');
+      window.snap.pay(data.token, {
+        onSuccess: function(res) {
+          var waText = encodeURIComponent('Assalamualaikum, saya baru selesai donasi ' + campaign + ' sebesar Rp ' + amountInt.toLocaleString('id-ID') + ' via Midtrans. Order ID: ' + (res.order_id || data.order_id) + '. Mohon konfirmasi. Jazakallahu khairan 🤲');
+          window.location.href = 'https://wa.me/' + waNum + '?text=' + waText;
+        },
+        onPending: function(res) {
+          var waText = encodeURIComponent('Assalamualaikum, saya donasi ' + campaign + ' Rp ' + amountInt.toLocaleString('id-ID') + ' masih pending. Order ID: ' + (res.order_id || data.order_id) + '. Mohon bantu konfirmasi.');
+          window.location.href = 'https://wa.me/' + waNum + '?text=' + waText;
+        },
+        onError: function() {
+          btn.disabled = false;
+          btn.innerHTML = origHtml;
+          alert('Pembayaran gagal. Silakan coba lagi.');
+        },
+        onClose: function() {
+          btn.disabled = false;
+          btn.innerHTML = origHtml;
+        }
+      });
+    })
+    .catch(function(err) {
+      btn.disabled = false;
+      btn.innerHTML = origHtml;
+      alert('Gagal memuat payment: ' + err.message);
+    });
+  }
+
+  document.addEventListener('click', function(e) {
+    var btn = e.target.closest('[data-midtrans]');
+    if (btn) { e.preventDefault(); donate(btn); }
+  });
+})();
+</script>
+<style>
+@keyframes spin { to { transform: rotate(360deg); } }
+[data-midtrans]:disabled { opacity: .7; cursor: not-allowed; pointer-events: none; }
+</style>
 
 </body>
 </html>

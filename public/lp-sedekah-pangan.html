@@ -988,7 +988,7 @@
         <p class="tier-label">Sedekah Pangan</p>
         <h3>Rp 50.000</h3>
         <p class="impact">Setara 2 kg beras untuk santri<br>— 1 hari makan 1 santri</p>
-        <a href="https://wa.me/6282234551160?text=Assalamualaikum%2C%20saya%20ingin%20donasi%20Sedekah%20Pangan%20Rp%2050.000.%20Mohon%20info%20rekening%20atau%20QRIS%20untuk%20transfer." target="_blank" rel="noopener" class="btn btn-outline">💬 Donasi Rp 50rb</a>
+        <button class="btn btn-outline" data-midtrans="1" data-amount="50000" data-campaign="Sedekah Pangan" data-wa="6282234551160">💳 Donasi Rp 50rb</button>
       </div>
 
       <!-- Rp 100rb -->
@@ -997,7 +997,7 @@
         <p class="tier-label">Sedekah Lauk</p>
         <h3>Rp 100.000</h3>
         <p class="impact">Setara lauk protein untuk 5 santri<br>— 1 hari lauk bergizi</p>
-        <a href="https://wa.me/6282234551160?text=Assalamualaikum%2C%20saya%20ingin%20donasi%20Sedekah%20Pangan%20Rp%20100.000.%20Mohon%20info%20rekening%20atau%20QRIS%20untuk%20transfer." target="_blank" rel="noopener" class="btn btn-outline">💬 Donasi Rp 100rb</a>
+        <button class="btn btn-outline" data-midtrans="1" data-amount="100000" data-campaign="Sedekah Pangan" data-wa="6282234551160">💳 Donasi Rp 100rb</button>
       </div>
 
       <!-- Rp 500rb (featured) -->
@@ -1006,7 +1006,7 @@
         <p class="tier-label" style="color:var(--campaign);font-weight:700">Paling Populer</p>
         <h3>Rp 500.000</h3>
         <p class="impact">Setara 20 kg beras + lauk<br>— Cukup untuk 10 santri/hari</p>
-        <a href="https://wa.me/6282234551160?text=Assalamualaikum%2C%20saya%20ingin%20donasi%20Sedekah%20Pangan%20Rp%20500.000.%20Mohon%20info%20rekening%20atau%20QRIS%20untuk%20transfer." target="_blank" rel="noopener" class="btn" style="background:var(--campaign);color:#fff;font-weight:700;width:100%">💛 Donasi Rp 500rb</a>
+        <button class="btn" style="background:var(--campaign);color:#fff;font-weight:700;width:100%" data-midtrans="1" data-amount="500000" data-campaign="Sedekah Pangan" data-wa="6282234551160">💛 Donasi Rp 500rb</button>
       </div>
 
       <!-- Rp 1jt -->
@@ -1015,13 +1015,23 @@
         <p class="tier-label">Sedekah Beras</p>
         <h3>Rp 1.000.000</h3>
         <p class="impact">Setara 40 kg beras + lauk &amp; sayur<br>— Cukup 20 santri/hari</p>
-        <a href="https://wa.me/6282234551160?text=Assalamualaikum%2C%20saya%20ingin%20donasi%20Sedekah%20Pangan%20Rp%201.000.000.%20Mohon%20info%20rekening%20atau%20QRIS%20untuk%20transfer." target="_blank" rel="noopener" class="btn btn-outline">💬 Donasi Rp 1 Juta</a>
+        <button class="btn btn-outline" data-midtrans="1" data-amount="1000000" data-campaign="Sedekah Pangan" data-wa="6282234551160">💳 Donasi Rp 1 Juta</button>
       </div>
     </div>
 
     <!-- Custom -->
     <div style="text-align:center;margin-bottom:2.5rem">
-      <a href="https://wa.me/6282234551160?text=Assalamualaikum%2C%20saya%20ingin%20berdonasi%20untuk%20program%20Sedekah%20Pangan%20250%20santri.%20Mohon%20info%20nominal%20dan%20cara%20transfer." target="_blank" rel="noopener" class="btn" style="background:var(--accent-amber);color:#78350f;font-weight:700;padding:0.85em 2em;border-radius:var(--radius);font-size:1rem">✏️ Donasi Nominal Lain →</a>
+      <span style="display:inline-flex;align-items:center;gap:8px;flex-wrap:wrap;justify-content:center">
+  <input id="custom-amount" type="text" inputmode="numeric"
+    placeholder="Nominal lain (min Rp 10.000)"
+    style="border:1px solid var(--campaign-border,#d1d5db);border-radius:8px;padding:.6em 1em;font-size:.95rem;width:220px;outline:none;font-family:inherit"
+    oninput="this.value=this.value.replace(/[^0-9]/g,'')"
+  />
+  <button class="btn" style="background:var(--accent-amber,#f59e0b);color:#78350f;font-weight:700;padding:.7em 1.6em;border-radius:8px;font-size:.95rem"
+    data-midtrans="1" data-amount-from="custom-amount" data-campaign="Sedekah Pangan" data-wa="6282234551160">
+    ✏️ Donasi Nominal Lain →
+  </button>
+</span>
     </div>
 
     <!-- Bank & QRIS -->
@@ -1108,9 +1118,9 @@
     <div class="cta-block">
       <h2>💛 Satu Piring, Sejuta Berkah</h2>
       <p>Setiap Rp 50.000 yang Anda donasikan hari ini mengubah perut kosong 2 santri menjadi kenyang — dan mengubah konsentrasi mereka dari rasa lapar menjadi hafalan baru.</p>
-      <a href="https://wa.me/6282234551160?text=Assalamualaikum%2C%20saya%20ingin%20berdonasi%20untuk%20program%20Sedekah%20Pangan%20250%20santri%20di%20PPTQ%20Darussalam.%20Mohon%20info%20cara%20transfer." target="_blank" rel="noopener" class="btn-cta">
-        💬 Donasi via WhatsApp Sekarang
-      </a>
+      <button class="btn-cta" data-midtrans="1" data-amount="100000" data-campaign="Sedekah Pangan" data-wa="6282234551160">
+          💳 Donasi Sekarang
+        </button>
       <div>
         <a href="#donate" class="btn-cta-sub">← Atau transfer via rekening / QRIS</a>
       </div>
@@ -1272,6 +1282,86 @@ var io = new IntersectionObserver(function(entries) {
 }, { threshold: 0.3 });
 counters.forEach(function(el) { io.observe(el); });
 </script>
+
+
+<!-- Midtrans Snap -->
+<script src="https://app.midtrans.com/snap/snap.js" data-client-key="Mid-client-bmsuCQQOdxgsx82_"></script>
+<script>
+(function () {
+  // Parse amount from label text like "Rp 50rb" / "Rp 100rb" / "Rp 500rb" / "Rp 1 Juta" / "Rp 1.500.000"
+  function parseAmount(raw) {
+    var s = raw.replace(/[^0-9a-zA-Z.]/g, '').toLowerCase();
+    if (s.includes('juta')) { var n = parseFloat(s); return Math.round(n * 1000000); }
+    if (s.includes('rb'))   { var n = parseFloat(s); return Math.round(n * 1000); }
+    var clean = raw.replace(/[^0-9]/g, '');
+    return parseInt(clean, 10) || 0;
+  }
+
+  function donate(btn) {
+    // Support data-amount-from for custom input fields
+    var amountFrom = btn.getAttribute('data-amount-from');
+    var amountInt;
+    if (amountFrom) {
+      var inputEl = document.getElementById(amountFrom);
+      if (!inputEl || !inputEl.value) { alert('Masukkan nominal donasi terlebih dahulu'); return; }
+      amountInt = parseInt(inputEl.value.replace(/[^0-9]/g, ''), 10);
+    } else {
+      amountInt = parseInt(btn.getAttribute('data-amount'), 10);
+    }
+    var campaign   = btn.getAttribute('data-campaign');
+    var waNum      = btn.getAttribute('data-wa');
+    if (!amountInt || amountInt < 1000) { alert('Nominal tidak valid'); return; }
+
+    // Disable button + show loading
+    btn.disabled = true;
+    var origHtml = btn.innerHTML;
+    btn.innerHTML = '<span style="display:inline-flex;align-items:center;gap:8px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="animation:spin .8s linear infinite"><path d="M21 12a9 9 0 1 1-6.219-8.56"/></svg>Memuat…</span>';
+
+    fetch('/api/donate', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ amount: amountInt, campaign: campaign, wa_number: waNum })
+    })
+    .then(function(r) { return r.json(); })
+    .then(function(data) {
+      if (!data.token) throw new Error(data.error || 'Token tidak tersedia');
+      window.snap.pay(data.token, {
+        onSuccess: function(res) {
+          var waText = encodeURIComponent('Assalamualaikum, saya baru selesai donasi ' + campaign + ' sebesar Rp ' + amountInt.toLocaleString('id-ID') + ' via Midtrans. Order ID: ' + (res.order_id || data.order_id) + '. Mohon konfirmasi. Jazakallahu khairan 🤲');
+          window.location.href = 'https://wa.me/' + waNum + '?text=' + waText;
+        },
+        onPending: function(res) {
+          var waText = encodeURIComponent('Assalamualaikum, saya donasi ' + campaign + ' Rp ' + amountInt.toLocaleString('id-ID') + ' masih pending. Order ID: ' + (res.order_id || data.order_id) + '. Mohon bantu konfirmasi.');
+          window.location.href = 'https://wa.me/' + waNum + '?text=' + waText;
+        },
+        onError: function() {
+          btn.disabled = false;
+          btn.innerHTML = origHtml;
+          alert('Pembayaran gagal. Silakan coba lagi.');
+        },
+        onClose: function() {
+          btn.disabled = false;
+          btn.innerHTML = origHtml;
+        }
+      });
+    })
+    .catch(function(err) {
+      btn.disabled = false;
+      btn.innerHTML = origHtml;
+      alert('Gagal memuat payment: ' + err.message);
+    });
+  }
+
+  document.addEventListener('click', function(e) {
+    var btn = e.target.closest('[data-midtrans]');
+    if (btn) { e.preventDefault(); donate(btn); }
+  });
+})();
+</script>
+<style>
+@keyframes spin { to { transform: rotate(360deg); } }
+[data-midtrans]:disabled { opacity: .7; cursor: not-allowed; pointer-events: none; }
+</style>
 
 </body>
 </html>

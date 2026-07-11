@@ -518,9 +518,9 @@
           <div class="bank-row"><span class="bank-l">Kantor</span><span>0321-493147 · Jl. Diponegoro 34, Gondek, Mojowarno</span></div>
         </div>
         <div class="cta-row-btns">
-          <a href="https://wa.me/6282234551160?text=Assalamu%27alaikum%2C+saya+ingin+berdonasi+untuk+kampanye+Patungan+Listrik+Pondok+YPSMA.+Mohon+info+nominal+dan+rekening+aktifnya." class="btn-cta" rel="noopener" target="_blank">
-            💬 Donasi via WhatsApp
-          </a>
+          <button class="btn-cta" data-midtrans="1" data-amount="100000" data-campaign="Patungan Listrik" data-wa="6282234551160">
+          💳 Donasi Sekarang
+        </button>
           <a href="mailto:donasi@ypsma.org?subject=Donasi%20Listrik%20Pondok%20YPSMA&body=Assalamu%27alaikum%2C%20saya%20ingin%20berdonasi%20untuk%20subsidi%20listrik%20YPSMA.%20Mohon%20info%20rekening%20aktif." class="btn-cta-outline" rel="noopener">
             ✉️ Email Sekretariat
           </a>
@@ -545,5 +545,85 @@
   <script>
     document.getElementById('yr').textContent = new Date().getFullYear();
   </script>
+
+<!-- Midtrans Snap -->
+<script src="https://app.midtrans.com/snap/snap.js" data-client-key="Mid-client-bmsuCQQOdxgsx82_"></script>
+<script>
+(function () {
+  // Parse amount from label text like "Rp 50rb" / "Rp 100rb" / "Rp 500rb" / "Rp 1 Juta" / "Rp 1.500.000"
+  function parseAmount(raw) {
+    var s = raw.replace(/[^0-9a-zA-Z.]/g, '').toLowerCase();
+    if (s.includes('juta')) { var n = parseFloat(s); return Math.round(n * 1000000); }
+    if (s.includes('rb'))   { var n = parseFloat(s); return Math.round(n * 1000); }
+    var clean = raw.replace(/[^0-9]/g, '');
+    return parseInt(clean, 10) || 0;
+  }
+
+  function donate(btn) {
+    // Support data-amount-from for custom input fields
+    var amountFrom = btn.getAttribute('data-amount-from');
+    var amountInt;
+    if (amountFrom) {
+      var inputEl = document.getElementById(amountFrom);
+      if (!inputEl || !inputEl.value) { alert('Masukkan nominal donasi terlebih dahulu'); return; }
+      amountInt = parseInt(inputEl.value.replace(/[^0-9]/g, ''), 10);
+    } else {
+      amountInt = parseInt(btn.getAttribute('data-amount'), 10);
+    }
+    var campaign   = btn.getAttribute('data-campaign');
+    var waNum      = btn.getAttribute('data-wa');
+    if (!amountInt || amountInt < 1000) { alert('Nominal tidak valid'); return; }
+
+    // Disable button + show loading
+    btn.disabled = true;
+    var origHtml = btn.innerHTML;
+    btn.innerHTML = '<span style="display:inline-flex;align-items:center;gap:8px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="animation:spin .8s linear infinite"><path d="M21 12a9 9 0 1 1-6.219-8.56"/></svg>Memuat…</span>';
+
+    fetch('/api/donate', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ amount: amountInt, campaign: campaign, wa_number: waNum })
+    })
+    .then(function(r) { return r.json(); })
+    .then(function(data) {
+      if (!data.token) throw new Error(data.error || 'Token tidak tersedia');
+      window.snap.pay(data.token, {
+        onSuccess: function(res) {
+          var waText = encodeURIComponent('Assalamualaikum, saya baru selesai donasi ' + campaign + ' sebesar Rp ' + amountInt.toLocaleString('id-ID') + ' via Midtrans. Order ID: ' + (res.order_id || data.order_id) + '. Mohon konfirmasi. Jazakallahu khairan 🤲');
+          window.location.href = 'https://wa.me/' + waNum + '?text=' + waText;
+        },
+        onPending: function(res) {
+          var waText = encodeURIComponent('Assalamualaikum, saya donasi ' + campaign + ' Rp ' + amountInt.toLocaleString('id-ID') + ' masih pending. Order ID: ' + (res.order_id || data.order_id) + '. Mohon bantu konfirmasi.');
+          window.location.href = 'https://wa.me/' + waNum + '?text=' + waText;
+        },
+        onError: function() {
+          btn.disabled = false;
+          btn.innerHTML = origHtml;
+          alert('Pembayaran gagal. Silakan coba lagi.');
+        },
+        onClose: function() {
+          btn.disabled = false;
+          btn.innerHTML = origHtml;
+        }
+      });
+    })
+    .catch(function(err) {
+      btn.disabled = false;
+      btn.innerHTML = origHtml;
+      alert('Gagal memuat payment: ' + err.message);
+    });
+  }
+
+  document.addEventListener('click', function(e) {
+    var btn = e.target.closest('[data-midtrans]');
+    if (btn) { e.preventDefault(); donate(btn); }
+  });
+})();
+</script>
+<style>
+@keyframes spin { to { transform: rotate(360deg); } }
+[data-midtrans]:disabled { opacity: .7; cursor: not-allowed; pointer-events: none; }
+</style>
+
 </body>
 </html>

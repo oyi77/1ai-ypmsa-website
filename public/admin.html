@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin — 1ai × YPSMA Dashboard</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    /* ── RESET & VARIABLES (matches main site) ── */
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --c1: #f8fafc; --c2: #e2e8f0; --c3: #94a3b8; --c4: #475569;
+      --c5: #1e293b; --c6: #0f172a; --c7: #020617;
+      --blue: #3b82f6; --blue-l: #60a5fa; --blue-d: #2563eb;
+      --cyan: #06b6d4; --emerald: #10b981; --amber: #f59e0b; --rose: #f43f5e;
+      --purple: #8b5cf6; --indigo: #6366f1;
+      --mono: 'JetBrains Mono', monospace;
+      --sans: 'Inter', system-ui, -apple-system, sans-serif;
+      --ease: cubic-bezier(.4, 0, .2, 1);
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--sans);
+      background: var(--c7);
+      color: var(--c2);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      min-height: 100vh;
+    }
+
+    /* ── PASSWORD GATE ── */
+    #gate {
+      position: fixed; inset: 0; z-index: 9999;
+      display: flex; align-items: center; justify-content: center;
+      background: var(--c7);
+      transition: opacity .4s var(--ease);
+    }
+    #gate.hidden { opacity: 0; pointer-events: none; }
+    .gate-card {
+      background: var(--c6);
+      border: 1px solid var(--c5);
+      border-radius: 16px;
+      padding: 48px 40px;
+      width: 100%; max-width: 400px;
+      text-align: center;
+    }
+    .gate-card h1 {
+      font-size: 20px; font-weight: 700; color: var(--c1);
+      margin-bottom: 8px;
+    }
+    .gate-card p {
+      font-size: 14px; color: var(--c3); margin-bottom: 28px;
+    }
+    .gate-input {
+      width: 100%; padding: 14px 16px;
+      background: var(--c7); border: 1px solid var(--c5);
+      border-radius: 10px; color: var(--c1);
+      font-family: var(--mono); font-size: 15px;
+      letter-spacing: .05em;
+      outline: none; transition: border-color .2s;
+    }
+    .gate-input:focus { border-color: var(--blue); }
+    .gate-btn {
+      width: 100%; margin-top: 16px; padding: 14px;
+      background: var(--blue); color: #fff;
+      border: none; border-radius: 10px;
+      font-family: var(--sans); font-size: 15px; font-weight: 600;
+      cursor: pointer; transition: background .2s;
+    }
+    .gate-btn:hover { background: var(--blue-d); }
+    .gate-error {
+      color: var(--rose); font-size: 13px; margin-top: 12px;
+      min-height: 20px;
+    }
+
+    /* ── DASHBOARD ── */
+    #dashboard { display: none; }
+    #dashboard.visible { display: block; }
+
+    .dash-header {
+      padding: 24px 0;
+      border-bottom: 1px solid var(--c5);
+      background: var(--c6);
+      position: sticky; top: 0; z-index: 100;
+    }
+    .dash-header .inner {
+      max-width: 1200px; margin: 0 auto; padding: 0 24px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .dash-header h1 {
+      font-size: 18px; font-weight: 700; color: var(--c1);
+      display: flex; align-items: center; gap: 10px;
+    }
+    .dash-header h1 span { color: var(--blue-l); }
+    .dash-header .status {
+      display: flex; align-items: center; gap: 8px;
+      font-size: 13px; color: var(--c3);
+    }
+    .status-dot {
+      width: 8px; height: 8px; border-radius: 50%;
+      background: var(--emerald);
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: .4; }
+    }
+
+    .dash-content {
+      max-width: 1200px; margin: 0 auto; padding: 32px 24px 64px;
+    }
+
+    /* ── METRIC CARDS ── */
+    .metrics-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+      margin-bottom: 32px;
+    }
+    .metric-card {
+      background: var(--c6);
+      border: 1px solid var(--c5);
+      border-radius: 12px;
+      padding: 24px;
+      position: relative;
+      overflow: hidden;
+    }
+    .metric-card::before {
+      content: '';
+      position: absolute; top: 0; left: 0; right: 0;
+      height: 3px;
+    }
+    .metric-card.blue::before { background: var(--blue); }
+    .metric-card.cyan::before { background: var(--cyan); }
+    .metric-card.emerald::before { background: var(--emerald); }
+    .metric-card.amber::before { background: var(--amber); }
+    .metric-card.rose::before { background: var(--rose); }
+    .metric-card.purple::before { background: var(--purple); }
+    .metric-label {
+      font-size: 12px; font-weight: 500; color: var(--c3);
+      text-transform: uppercase; letter-spacing: .06em;
+      margin-bottom: 8px;
+    }
+    .metric-value {
+      font-family: var(--mono);
+      font-size: 28px; font-weight: 700; color: var(--c1);
+      line-height: 1;
+    }
+    .metric-sub {
+      font-size: 12px; color: var(--c3); margin-top: 6px;
+    }
+    .metric-good { color: var(--emerald); }
+    .metric-warn { color: var(--amber); }
+    .metric-bad { color: var(--rose); }
+
+    /* ── PANELS ── */
+    .panel {
+      background: var(--c6);
+      border: 1px solid var(--c5);
+      border-radius: 12px;
+      padding: 28px;
+      margin-bottom: 24px;
+    }
+    .panel-title {
+      font-size: 15px; font-weight: 600; color: var(--c1);
+      margin-bottom: 20px;
+      display: flex; align-items: center; gap: 8px;
+    }
+    .panel-title .icon {
+      font-size: 16px;
+    }
+
+    /* ── TABLE ── */
+    .dash-table {
+      width: 100%; border-collapse: collapse;
+    }
+    .dash-table th {
+      text-align: left; padding: 10px 12px;
+      font-size: 11px; font-weight: 600;
+      color: var(--c3); text-transform: uppercase;
+      letter-spacing: .06em;
+      border-bottom: 1px solid var(--c5);
+    }
+    .dash-table td {
+      padding: 10px 12px; font-size: 14px;
+      color: var(--c2); border-bottom: 1px solid rgba(30,41,59,.4);
+    }
+    .dash-table tr:last-child td { border-bottom: none; }
+    .dash-table .mono { font-family: var(--mono); font-size: 13px; }
+
+    /* ── BAR CHART ── */
+    .bar-chart { display: flex; flex-direction: column; gap: 12px; }
+    .bar-row {
+      display: flex; align-items: center; gap: 12px;
+    }
+    .bar-label {
+      width: 100px; font-size: 13px; color: var(--c3);
+      text-align: right; flex-shrink: 0;
+    }
+    .bar-track {
+      flex: 1; height: 28px; background: var(--c7);
+      border-radius: 6px; overflow: hidden;
+      position: relative;
+    }
+    .bar-fill {
+      height: 100%; border-radius: 6px;
+      transition: width .6s var(--ease);
+      display: flex; align-items: center;
+      padding-left: 10px;
+      font-family: var(--mono); font-size: 12px; font-weight: 500;
+      color: #fff; min-width: fit-content;
+    }
+    .bar-fill.blue { background: var(--blue); }
+    .bar-fill.cyan { background: var(--cyan); }
+    .bar-fill.emerald { background: var(--emerald); }
+    .bar-fill.amber { background: var(--amber); }
+    .bar-fill.rose { background: var(--rose); }
+    .bar-fill.purple { background: var(--purple); }
+    .bar-fill.indigo { background: var(--indigo); }
+
+    /* ── GRID LAYOUTS ── */
+    .grid-2 {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 24px;
+    }
+    @media (max-width: 768px) {
+      .grid-2 { grid-template-columns: 1fr; }
+    }
+
+    /* ── UPTIME LINE ── */
+    .uptime-bars {
+      display: flex; gap: 2px; align-items: flex-end;
+      height: 40px; margin-top: 12px;
+    }
+    .uptime-bar {
+      flex: 1; border-radius: 2px;
+      transition: background .2s;
+      cursor: default;
+      position: relative;
+    }
+    .uptime-bar.up { background: var(--emerald); }
+    .uptime-bar.slow { background: var(--amber); }
+    .uptime-bar.down { background: var(--rose); }
+    .uptime-bar:hover::after {
+      content: attr(data-tip);
+      position: absolute; bottom: calc(100% + 6px); left: 50%;
+      transform: translateX(-50%);
+      background: var(--c5); color: var(--c1);
+      font-size: 11px; padding: 4px 8px;
+      border-radius: 4px; white-space: nowrap;
+      pointer-events: none; z-index: 10;
+    }
+    .uptime-legend {
+      display: flex; gap: 16px; margin-top: 10px;
+      font-size: 12px; color: var(--c3);
+    }
+    .uptime-legend span {
+      display: flex; align-items: center; gap: 5px;
+    }
+    .uptime-legend .dot {
+      width: 8px; height: 8px; border-radius: 2px;
+    }
+
+    /* ── SECTION DIVIDER ── */
+    .section-label {
+      font-family: var(--mono);
+      font-size: 11px; font-weight: 500;
+      color: var(--blue-l);
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      margin-bottom: 16px;
+      display: flex; align-items: center; gap: 8px;
+    }
+    .section-label::after {
+      content: ''; flex: 1; height: 1px;
+      background: var(--c5);
+    }
+
+    /* ── TIMESTAMP ── */
+    .ts {
+      font-family: var(--mono); font-size: 12px; color: var(--c3);
+    }
+
+    /* ── REFRESH BTN ── */
+    .btn-refresh {
+      background: var(--c7); border: 1px solid var(--c5);
+      color: var(--c3); padding: 8px 14px;
+      border-radius: 8px; font-size: 13px;
+      cursor: pointer; transition: all .2s;
+      display: flex; align-items: center; gap: 6px;
+    }
+    .btn-refresh:hover { border-color: var(--blue); color: var(--blue-l); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 640px) {
+      .metrics-row { grid-template-columns: 1fr 1fr; }
+      .metric-value { font-size: 22px; }
+      .gate-card { margin: 16px; padding: 32px 24px; }
+      .panel { padding: 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ═══ PASSWORD GATE ═══ -->
+  <div id="gate">
+    <div class="gate-card">
+      <h1>🔒 Admin Dashboard</h1>
+      <p>1ai × YPSMA Performance Monitor</p>
+      <input id="pwInput" class="gate-input" type="password"
+             placeholder="Masukkan password" autofocus />
+      <button class="gate-btn" onclick="unlock()">Masuk</button>
+      <div class="gate-error" id="gateErr"></div>
+    </div>
+  </div>
+
+  <!-- ═══ DASHBOARD ═══ -->
+  <div id="dashboard">
+    <header class="dash-header">
+      <div class="inner">
+        <h1><span>1ai</span> × YPSMA Dashboard</h1>
+        <div class="status">
+          <div class="status-dot"></div>
+          <span id="statusText">Monitoring aktif</span>
+          <span class="ts" id="lastUpdate"></span>
+          <button class="btn-refresh" onclick="refreshAll()">↻ Refresh</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="dash-content">
+
+      <!-- ── CORE WEB VITALS ── -->
+      <div class="section-label">Core Web Vitals</div>
+      <div class="metrics-row">
+        <div class="metric-card blue">
+          <div class="metric-label">LCP</div>
+          <div class="metric-value" id="vLcp">—</div>
+          <div class="metric-sub" id="vLcpStatus">&nbsp;</div>
+        </div>
+        <div class="metric-card cyan">
+          <div class="metric-label">FID</div>
+          <div class="metric-value" id="vFid">—</div>
+          <div class="metric-sub" id="vFidStatus">&nbsp;</div>
+        </div>
+        <div class="metric-card emerald">
+          <div class="metric-label">CLS</div>
+          <div class="metric-value" id="vCls">—</div>
+          <div class="metric-sub" id="vClsStatus">&nbsp;</div>
+        </div>
+        <div class="metric-card amber">
+          <div class="metric-label">TTFB</div>
+          <div class="metric-value" id="vTtfb">—</div>
+          <div class="metric-sub" id="vTtfbStatus">&nbsp;</div>
+        </div>
+        <div class="metric-card purple">
+          <div class="metric-label">FCP</div>
+          <div class="metric-value" id="vFcp">—</div>
+          <div class="metric-sub" id="vFcpStatus">&nbsp;</div>
+        </div>
+      </div>
+
+      <!-- ── VISITOR METRICS ── -->
+      <div class="section-label">Visitor Metrics</div>
+      <div class="metrics-row">
+        <div class="metric-card emerald">
+          <div class="metric-label">Page Views</div>
+          <div class="metric-value" id="mViews">—</div>
+          <div class="metric-sub">Total kunjungan</div>
+        </div>
+        <div class="metric-card blue">
+          <div class="metric-label">Unique Visitors</div>
+          <div class="metric-value" id="mUnique">—</div>
+          <div class="metric-sub">Visitor unik</div>
+        </div>
+        <div class="metric-card purple">
+          <div class="metric-label">Sessions</div>
+          <div class="metric-value" id="mSessions">—</div>
+          <div class="metric-sub">Sesi aktif</div>
+        </div>
+        <div class="metric-card amber">
+          <div class="metric-label">Avg. Duration</div>
+          <div class="metric-value" id="mDuration">—</div>
+          <div class="metric-sub">Waktu di halaman</div>
+        </div>
+      </div>
+
+      <!-- ── TWO-COLUMN: UPTIME + PERFORMANCE HISTORY ── -->
+      <div class="grid-2">
+        <!-- Uptime (last 30 checks) -->
+        <div class="panel">
+          <div class="panel-title"><span class="icon">⏱</span> Uptime — 30 Menit Terakhir</div>
+          <div class="uptime-bars" id="uptimeBars"></div>
+          <div class="uptime-legend">
+            <span><span class="dot" style="background:var(--emerald)"></span> Normal</span>
+            <span><span class="dot" style="background:var(--amber)"></span> Lambat (&gt;2s)</span>
+            <span><span class="dot" style="background:var(--rose)"></span> Timeout</span>
+          </div>
+          <div style="margin-top:14px; display:flex; justify-content:space-between; align-items:center">
+            <span class="ts" id="uptimePct"></span>
+            <span class="ts" id="avgResponse"></span>
+          </div>
+        </div>
+
+        <!-- Response Time History -->
+        <div class="panel">
+          <div class="panel-title"><span class="icon">📈</span> Response Time History</div>
+          <div id="responseHistory" style="font-family:var(--mono); font-size:13px; color:var(--c3)">
+            <table class="dash-table">
+              <thead>
+                <tr><th>Waktu</th><th>Response</th><th>Status</th></tr>
+              </thead>
+              <tbody id="responseTable"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── DEVICE / BROWSER BREAKDOWN ── -->
+      <div class="grid-2">
+        <div class="panel">
+          <div class="panel-title"><span class="icon">📱</span> Device Breakdown</div>
+          <div class="bar-chart" id="deviceChart"></div>
+        </div>
+        <div class="panel">
+          <div class="panel-title"><span class="icon">🌐</span> Browser Breakdown</div>
+          <div class="bar-chart" id="browserChart"></div>
+        </div>
+      </div>
+
+      <!-- ── OS BREAKDOWN ── -->
+      <div class="panel">
+        <div class="panel-title"><span class="icon">💻</span> Operating System</div>
+        <div class="bar-chart" id="osChart"></div>
+      </div>
+
+      <!-- ── VISITOR LOG ── -->
+      <div class="panel">
+        <div class="panel-title"><span class="icon">📋</span> Recent Visitors</div>
+        <table class="dash-table">
+          <thead>
+            <tr><th>Waktu</th><th>Device</th><th>Browser</th><th>OS</th><th>LCP</th></tr>
+          </thead>
+          <tbody id="visitorLog"></tbody>
+        </table>
+      </div>
+
+    </main>
+  </div>
+
+  <script>
+    // ═══════════════════════════════════════════
+    //  PASSWORD GATE
+    // ═══════════════════════════════════════════
+    const PASS_HASH = '5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8'; // sha256("admin")
+
+    function sha256(str) {
+      return crypto.subtle.digest('SHA-256', new TextEncoder().encode(str))
+        .then(buf => Array.from(new Uint8Array(buf)).map(b => b.toString(16).padStart(2, '0')).join(''));
+    }
+
+    async function unlock() {
+      const pw = document.getElementById('pwInput').value;
+      const hash = await sha256(pw);
+      if (hash === PASS_HASH) {
+        document.getElementById('gate').classList.add('hidden');
+        document.getElementById('dashboard').classList.add('visible');
+        initDashboard();
+      } else {
+        document.getElementById('gateErr').textContent = 'Password salah';
+        document.getElementById('pwInput').value = '';
+        document.getElementById('pwInput').focus();
+      }
+    }
+
+    document.getElementById('pwInput').addEventListener('keydown', e => {
+      if (e.key === 'Enter') unlock();
+    });
+
+    // ═══════════════════════════════════════════
+    //  STORAGE HELPERS
+    // ═══════════════════════════════════════════
+    const LS = {
+      get(k, d) { try { return JSON.parse(localStorage.getItem(k)) ?? d; } catch { return d; } },
+      set(k, v) { localStorage.setItem(k, JSON.stringify(v)); }
+    };
+
+    function genId() {
+      return Date.now().toString(36) + Math.random().toString(36).slice(2, 8);
+    }
+
+    function getVisitorId() {
+      let id = LS.get('ypsma_vid', null);
+      if (!id) { id = genId(); LS.set('ypsma_vid', id); }
+      return id;
+    }
+
+    function now() { return new Date().toLocaleString('id-ID', { hour12: false }); }
+
+    // ═══════════════════════════════════════════
+    //  VISITOR TRACKING
+    // ═══════════════════════════════════════════
+    function detectDevice() {
+      const ua = navigator.userAgent;
+      if (/Mobi|Android|iPhone|iPad/i.test(ua)) return /iPad|Tablet/i.test(ua) ? 'Tablet' : 'Mobile';
+      return 'Desktop';
+    }
+
+    function detectBrowser() {
+      const ua = navigator.userAgent;
+      if (ua.includes('Firefox/')) return 'Firefox';
+      if (ua.includes('Edg/')) return 'Edge';
+      if (ua.includes('Chrome/')) return 'Chrome';
+      if (ua.includes('Safari/') && !ua.includes('Chrome')) return 'Safari';
+      return 'Other';
+    }
+
+    function detectOS() {
+      const ua = navigator.userAgent;
+      if (ua.includes('Windows')) return 'Windows';
+      if (ua.includes('Mac OS X')) return 'macOS';
+      if (ua.includes('Linux')) return 'Linux';
+      if (ua.includes('Android')) return 'Android';
+      if (ua.includes('iPhone') || ua.includes('iPad')) return 'iOS';
+      return 'Other';
+    }
+
+    function recordVisit() {
+      const vid = getVisitorId();
+      const visits = LS.get('ypsma_visits', []);
+      const devices = LS.get('ypsma_devices', {});
+      const browsers = LS.get('ypsma_browsers', {});
+      const oses = LS.get('ypsma_oses', {});
+      const uniqueSet = LS.get('ypsma_unique', []);
+
+      // Read CWV from parent page if available
+      const perf = performance.getEntriesByType('navigation')[0];
+      const ttfb = perf ? Math.round(perf.responseStart) : null;
+      const fcpEntry = performance.getEntriesByName('first-contentful-paint')[0];
+      const fcp = fcpEntry ? Math.round(fcpEntry.startTime) : null;
+
+      const d = detectDevice();
+      const b = detectBrowser();
+      const os = detectOS();
+
+      // Record visit
+      visits.push({ ts: now(), device: d, browser: b, os, ttfb, fcp, vid });
+      if (visits.length > 500) visits.splice(0, visits.length - 500);
+      LS.set('ypsma_visits', visits);
+
+      // Counters
+      LS.set('ypsma_pageviews', (LS.get('ypsma_pageviews', 0)) + 1);
+
+      if (!uniqueSet.includes(vid)) {
+        uniqueSet.push(vid);
+        LS.set('ypsma_unique', uniqueSet);
+      }
+
+      // Device/Browser/OS tallies
+      devices[d] = (devices[d] || 0) + 1;
+      browsers[b] = (browsers[b] || 0) + 1;
+      oses[os] = (oses[os] || 0) + 1;
+      LS.set('ypsma_devices', devices);
+      LS.set('ypsma_browsers', browsers);
+      LS.set('ypsma_oses', oses);
+
+      // Session
+      const lastSession = LS.get('ypsma_last_session', 0);
+      const now2 = Date.now();
+      if (now2 - lastSession > 30 * 60 * 1000) {
+        LS.set('ypsma_sessions', (LS.get('ypsma_sessions', 0)) + 1);
+      }
+      LS.set('ypsma_last_session', now2);
+    }
+
+    // ═══════════════════════════════════════════
+    //  UPTIME / RESPONSE TIME TRACKING
+    // ═══════════════════════════════════════════
+    async function checkUptime() {
+      const t0 = performance.now();
+      try {
+        const resp = await fetch('index.html', { cache: 'no-store' });
+        const ms = Math.round(performance.now() - t0);
+        const status = ms > 2000 ? 'slow' : 'up';
+        recordUptimeCheck(ms, resp.ok ? status : 'down');
+        return { ms, ok: resp.ok };
+      } catch {
+        const ms = Math.round(performance.now() - t0);
+        recordUptimeCheck(ms, 'down');
+        return { ms: null, ok: false };
+      }
+    }
+
+    function recordUptimeCheck(ms, status) {
+      const checks = LS.get('ypsma_uptime', []);
+      checks.push({ ts: now(), ms, status });
+      if (checks.length > 30) checks.splice(0, checks.length - 30);
+      LS.set('ypsma_uptime', checks);
+    }
+
+    // ═══════════════════════════════════════════
+    //  CORE WEB VITALS (from Performance API)
+    // ═══════════════════════════════════════════
+    function getWebVitals() {
+      const nav = performance.getEntriesByType('navigation')[0];
+      const ttfb = nav ? Math.round(nav.responseStart) : null;
+
+      const fcpEntry = performance.getEntriesByName('first-contentful-paint')[0];
+      const fcp = fcpEntry ? Math.round(fcpEntry.startTime) : null;
+
+      // LCP
+      let lcp = null;
+      const lcpEntries = performance.getEntriesByType('largest-contentful-paint');
+      if (lcpEntries.length > 0) {
+        lcp = Math.round(lcpEntries[lcpEntries.length - 1].startTime);
+      }
+
+      // CLS
+      let cls = null;
+      try {
+        const clsEntries = performance.getEntriesByType('layout-shift');
+        cls = clsEntries.reduce((sum, e) => sum + (e.hadRecentInput ? 0 : e.value), 0);
+      } catch {}
+
+      // FID
+      let fid = null;
+      try {
+        const fidEntry = performance.getEntriesByType('first-input')[0];
+        if (fidEntry) fid = Math.round(fidEntry.processingStart - fidEntry.startTime);
+      } catch {}
+
+      return { ttfb, fcp, lcp, cls, fid };
+    }
+
+    function gradeMetric(name, value) {
+      const thresholds = {
+        lcp:  [2500, 4000],
+        fid:  [100, 300],
+        cls:  [0.1, 0.25],
+        ttfb: [800, 1800],
+        fcp:  [1800, 3000]
+      };
+      const [good, bad] = thresholds[name] || [0, 0];
+      if (value === null) return { text: 'N/A', cls: '' };
+      if (value <= good) return { text: 'Good', cls: 'metric-good' };
+      if (value <= bad) return { text: 'Needs Improvement', cls: 'metric-warn' };
+      return { text: 'Poor', cls: 'metric-bad' };
+    }
+
+    function setMetric(id, value, name, formatter) {
+      const el = document.getElementById(id);
+      const statusEl = document.getElementById(id + 'Status');
+      if (value === null) {
+        el.textContent = '—';
+        statusEl.textContent = '';
+        return;
+      }
+      el.textContent = formatter(value);
+      const g = gradeMetric(name, value);
+      statusEl.textContent = g.text;
+      statusEl.className = 'metric-sub ' + g.cls;
+    }
+
+    // ═══════════════════════════════════════════
+    //  RENDER DASHBOARD
+    // ═══════════════════════════════════════════
+    function renderWebVitals() {
+      const v = getWebVitals();
+      setMetric('vLcp', v.lcp, 'lcp', ms => ms + 'ms');
+      setMetric('vFid', v.fid, 'fid', ms => ms + 'ms');
+      setMetric('vCls', v.cls, 'cls', v => v.toFixed(3));
+      setMetric('vTtfb', v.ttfb, 'ttfb', ms => ms + 'ms');
+      setMetric('vFcp', v.fcp, 'fcp', ms => ms + 'ms');
+    }
+
+    function renderVisitors() {
+      const pv = LS.get('ypsma_pageviews', 0);
+      const uv = (LS.get('ypsma_unique', [])).length;
+      const sess = LS.get('ypsma_sessions', 0);
+
+      document.getElementById('mViews').textContent = pv.toLocaleString('id-ID');
+      document.getElementById('mUnique').textContent = uv.toLocaleString('id-ID');
+      document.getElementById('mSessions').textContent = sess.toLocaleString('id-ID');
+      document.getElementById('mDuration').textContent = calcAvgDuration();
+    }
+
+    function calcAvgDuration() {
+      const vis = LS.get('ypsma_visits', []);
+      if (vis.length < 2) return '0d';
+      const totalMs = Date.now() - new Date(vis[0].ts).getTime();
+      const mins = Math.round(totalMs / 60000);
+      if (mins < 60) return mins + 'm';
+      if (mins < 1440) return Math.round(mins / 60) + 'h';
+      return Math.round(mins / 1440) + 'd';
+    }
+
+    function renderUptime() {
+      const checks = LS.get('ypsma_uptime', []);
+      const container = document.getElementById('uptimeBars');
+      container.innerHTML = '';
+
+      if (checks.length === 0) {
+        container.innerHTML = '<div style="color:var(--c3);font-size:13px;width:100%;text-align:center;padding:12px">Belum ada data uptime</div>';
+        return;
+      }
+
+      const maxMs = Math.max(...checks.map(c => c.ms || 0), 1);
+
+      checks.forEach(c => {
+        const pct = Math.max(15, (c.ms || 0) / maxMs * 100);
+        const bar = document.createElement('div');
+        bar.className = 'uptime-bar ' + c.status;
+        bar.style.height = pct + '%';
+        bar.dataset.tip = c.ts + ' — ' + (c.ms !== null ? c.ms + 'ms' : 'timeout');
+        container.appendChild(bar);
+      });
+
+      // Stats
+      const ups = checks.filter(c => c.status === 'up').length;
+      const pct = Math.round(ups / checks.length * 100);
+      document.getElementById('uptimePct').textContent = 'Uptime: ' + pct + '%';
+
+      const times = checks.filter(c => c.ms !== null).map(c => c.ms);
+      const avg = times.length ? Math.round(times.reduce((a, b) => a + b, 0) / times.length) : '—';
+      document.getElementById('avgResponse').textContent = 'Avg: ' + avg + 'ms';
+
+      // Response time table
+      const tbody = document.getElementById('responseTable');
+      tbody.innerHTML = '';
+      checks.slice(-10).reverse().forEach(c => {
+        const tr = document.createElement('tr');
+        tr.innerHTML = `<td class="mono">${c.ts}</td><td class="mono">${c.ms !== null ? c.ms + 'ms' : '—'}</td><td class="${c.status === 'up' ? 'metric-good' : c.status === 'slow' ? 'metric-warn' : 'metric-bad'}">${c.status === 'up' ? '✓' : c.status === 'slow' ? '⚠' : '✗'}</td>`;
+        tbody.appendChild(tr);
+      });
+    }
+
+    function renderBarChart(containerId, data, colorClass) {
+      const container = document.getElementById(containerId);
+      container.innerHTML = '';
+      const entries = Object.entries(data).sort((a, b) => b[1] - a[1]);
+      const max = entries.length ? entries[0][1] : 1;
+      const colors = ['blue', 'cyan', 'emerald', 'amber', 'rose', 'purple', 'indigo'];
+
+      entries.forEach(([label, count], i) => {
+        const pct = Math.max(8, (count / max) * 100);
+        const row = document.createElement('div');
+        row.className = 'bar-row';
+        row.innerHTML = `
+          <div class="bar-label">${label}</div>
+          <div class="bar-track">
+            <div class="bar-fill ${colors[i % colors.length]}" style="width:${pct}%">${count}</div>
+          </div>`;
+        container.appendChild(row);
+      });
+
+      if (entries.length === 0) {
+        container.innerHTML = '<div style="color:var(--c3);font-size:13px;text-align:center;padding:12px">Belum ada data</div>';
+      }
+    }
+
+    function renderVisitorLog() {
+      const visits = LS.get('ypsma_visits', []);
+      const tbody = document.getElementById('visitorLog');
+      tbody.innerHTML = '';
+
+      visits.slice(-20).reverse().forEach(v => {
+        const tr = document.createElement('tr');
+        tr.innerHTML = `<td class="mono">${v.ts}</td><td>${v.device}</td><td>${v.browser}</td><td>${v.os}</td><td class="mono">${v.ttfb !== null ? v.ttfb + 'ms' : '—'}</td>`;
+        tbody.appendChild(tr);
+      });
+
+      if (visits.length === 0) {
+        tbody.innerHTML = '<tr><td colspan="5" style="text-align:center;color:var(--c3);padding:20px">Belum ada visitor</td></tr>';
+      }
+    }
+
+    // ═══════════════════════════════════════════
+    //  INIT
+    // ═══════════════════════════════════════════
+    async function refreshAll() {
+      document.getElementById('lastUpdate').textContent = '— ' + now();
+      renderWebVitals();
+      renderVisitors();
+      renderUptime();
+      renderBarChart('deviceChart', LS.get('ypsma_devices', {}));
+      renderBarChart('browserChart', LS.get('ypsma_browsers', {}));
+      renderBarChart('osChart', LS.get('ypsma_oses', {}));
+      renderVisitorLog();
+      await checkUptime();
+      renderUptime();
+      document.getElementById('lastUpdate').textContent = '— ' + now();
+    }
+
+    function initDashboard() {
+      recordVisit();
+      refreshAll();
+      // Auto-refresh every 60s
+      setInterval(refreshAll, 60000);
+    }
+  </script>
+</body>
+</html>
