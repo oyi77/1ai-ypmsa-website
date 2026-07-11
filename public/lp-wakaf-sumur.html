@@ -318,6 +318,9 @@
     gtag("js", new Date());
     gtag("config", "G-7723KTXZBG");
 
+
+
+
     document.addEventListener("DOMContentLoaded", function() {
       // Track donation CTA clicks
       document.querySelectorAll("a[href*=\"wa.me\"]").forEach(function(btn) {
@@ -453,6 +456,25 @@
     ]
   }
   </script>
+
+  <!-- Meta Pixel Code -->
+  <script>
+    !function(f,b,e,v,n,t,s){
+      if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+    fbq("init", "771021905629860");
+    fbq("track", "PageView");
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=771021905629860&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Meta Pixel Code -->
+
 </head>
 <body>
 
@@ -646,7 +668,7 @@
         <figcaption>Area yang akan dibangun sumur bor</figcaption>
       </figure>
       <figure>
-        <img src="/images/campaigns/kamar%20mandi.png" alt="Kamar mandi santri" loading="lazy" width="400" height="300" />
+        <img src="/images/campaigns/kamar-mandi.png" alt="Kamar mandi santri" loading="lazy" width="400" height="300" />
         <figcaption>Kamar mandi santri — butuh pasokan air bersih</figcaption>
       </figure>
     </div>

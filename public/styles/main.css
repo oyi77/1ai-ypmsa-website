@@ -417,6 +417,17 @@ body {
   margin-top: .5rem;
 }
 
+/* ---------- SECTION DESCRIPTION ---------- */
+.section-desc {
+  font-size: 1rem;
+  color: var(--text-2);
+  line-height: 1.7;
+  max-width: 620px;
+  margin: .75rem auto 0;
+}
+.section-desc + .section-desc { margin-top: .5rem; }
+.text-center { text-align: center; }
+
 /* ---------- PROBLEM / MISSION ---------- */
 .problem-grid {
   display: grid;
@@ -830,6 +841,72 @@ body {
   font-weight: 700;
   color: var(--accent);
   letter-spacing: .08em;
+}
+
+/* ---------- TRUST SIGNALS ---------- */
+.trust-signals {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin: 0 auto 2.5rem;
+  max-width: 920px;
+}
+.trust-item {
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+  background: var(--bg-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1rem 1.25rem;
+}
+.trust-icon {
+  flex-shrink: 0;
+  color: var(--accent);
+}
+.trust-item strong { display: block; font-size: .9375rem; color: var(--text); }
+.trust-item span { font-size: .8125rem; color: var(--text-3); }
+
+/* ---------- NARRATIVE / JEMBATAN MIMPI ---------- */
+.narrative {
+  background: linear-gradient(135deg, #f0fdf4 0%, #ffffff 100%);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+.narrative-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+.narrative-card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem;
+  box-shadow: 0 1px 3px rgba(28,25,23,.04);
+  transition: transform .2s var(--ease), box-shadow .2s var(--ease);
+}
+.narrative-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0,91,65,.08);
+}
+.narrative-icon {
+  font-size: 2rem;
+  line-height: 1;
+  margin-bottom: .75rem;
+}
+.narrative-card h3 {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--text);
+  margin-bottom: .5rem;
+  letter-spacing: -.01em;
+}
+.narrative-card p {
+  font-size: .9375rem;
+  color: var(--text-2);
+  line-height: 1.7;
 }
 .bank-account { color: var(--text-2); }
 

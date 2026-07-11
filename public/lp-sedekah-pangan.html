@@ -133,6 +133,9 @@
     gtag("js", new Date());
     gtag("config", "G-7723KTXZBG");
 
+
+
+
     document.addEventListener("DOMContentLoaded", function() {
       document.querySelectorAll("a[href*=\"wa.me\"]").forEach(function(btn) {
         btn.addEventListener("click", function(e) {
@@ -165,6 +168,25 @@
       if (qrisEl) qrisObserver.observe(qrisEl);
     });
   </script>
+
+  <!-- Meta Pixel Code -->
+  <script>
+    !function(f,b,e,v,n,t,s){
+      if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+    fbq("init", "771021905629860");
+    fbq("track", "PageView");
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=771021905629860&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Meta Pixel Code -->
+
 
   <!-- Page-specific styles -->
   <style>
@@ -1016,9 +1038,13 @@
       </p>
 
       <!-- QRIS -->
-      <div class="qris-card" style="background:#fff;border:1px solid var(--campaign-border)">
-        <img src="/images/qris-ypsma.png" alt="QRIS YPSMA Jombang" loading="lazy" />
-        <p class="qris-note" style="color:var(--text-3)">Scan QRIS dengan mobile banking atau e-wallet apapun</p>
+      <div class="qris-card" style="background:#fff;border:1px solid var(--campaign-border);text-align:center;">
+        <div style="width:200px;height:200px;margin:0 auto;display:flex;flex-direction:column;align-items:center;justify-content:center;background:#f0fdf4;border-radius:8px;">
+          <div style="font-size:2.5rem;margin-bottom:.25rem;">📱</div>
+          <p style="font-weight:700;color:#064e3b;font-size:.85rem;">QRIS Siap Scan</p>
+        </div>
+        <p class="qris-note" style="color:var(--text-3)">Minta QRIS live via WhatsApp admin</p>
+        <a href="https://wa.me/6282234551160?text=Assalamualaikum%2C%20mohon%20QRIS%20untuk%20donasi%20YPSMA." target="_blank" rel="noopener" style="display:inline-block;margin-top:.5rem;background:var(--campaign);color:#fff;padding:.6em 1.2em;border-radius:8px;font-size:.85rem;font-weight:700;">💬 Minta QRIS via WA →</a>
       </div>
     </div>
   </div>
