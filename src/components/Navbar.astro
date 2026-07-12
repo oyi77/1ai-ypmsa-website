@@ -1,0 +1,208 @@
+---
+/**
+ * Navbar.astro — Fixed top navbar with CSS-only mobile menu
+ * Transparent on top, blurred background on scroll
+ * Mobile hamburger uses checkbox-hack: no JS required for open/close
+ */
+---
+
+<header id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+  <!-- Hidden checkbox — must be a direct child of header for CSS sibling selectors -->
+  <input
+    type="checkbox"
+    id="mobile-menu-toggle"
+    class="peer sr-only"
+    aria-label="Toggle menu navigasi"
+  />
+
+  <nav class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="flex h-16 items-center justify-between lg:h-20">
+      <!-- Logo -->
+      <a href="/" class="flex items-center gap-3 group" aria-label="YPSMA — Beranda">
+        <img
+          src="/images/logoypma.png"
+          alt="Logo YPSMA"
+          class="h-10 w-10 rounded-lg object-cover lg:h-12 lg:w-12"
+          loading="eager"
+        />
+        <div class="flex flex-col leading-tight">
+          <span class="font-heading text-lg font-extrabold tracking-tight text-white lg:text-xl">
+            YPSMA
+          </span>
+          <span class="hidden text-[0.65rem] font-medium tracking-wide text-primary-300/80 sm:inline">
+            Yayasan Pendidikan Sinar Matahari
+          </span>
+        </div>
+      </a>
+
+      <!-- Desktop nav links -->
+      <div class="hidden items-center gap-1 lg:flex">
+        <a href="#beranda" class="nav-link rounded-lg px-4 py-2 text-sm font-medium text-white/80 transition-colors hover:bg-white/10 hover:text-white focus-visible:outline-2 focus-visible:outline-primary-400 focus-visible:outline-offset-2">
+          Beranda
+        </a>
+        <a href="#tentang" class="nav-link rounded-lg px-4 py-2 text-sm font-medium text-white/80 transition-colors hover:bg-white/10 hover:text-white focus-visible:outline-2 focus-visible:outline-primary-400 focus-visible:outline-offset-2">
+          Tentang
+        </a>
+        <a href="#program" class="nav-link rounded-lg px-4 py-2 text-sm font-medium text-white/80 transition-colors hover:bg-white/10 hover:text-white focus-visible:outline-2 focus-visible:outline-primary-400 focus-visible:outline-offset-2">
+          Program
+        </a>
+        <a href="#galeri" class="nav-link rounded-lg px-4 py-2 text-sm font-medium text-white/80 transition-colors hover:bg-white/10 hover:text-white focus-visible:outline-2 focus-visible:outline-primary-400 focus-visible:outline-offset-2">
+          Galeri
+        </a>
+        <a href="#testimoni" class="nav-link rounded-lg px-4 py-2 text-sm font-medium text-white/80 transition-colors hover:bg-white/10 hover:text-white focus-visible:outline-2 focus-visible:outline-primary-400 focus-visible:outline-offset-2">
+          Testimoni
+        </a>
+        <a href="#donasi" class="nav-link rounded-lg px-4 py-2 text-sm font-medium text-white/80 transition-colors hover:bg-white/10 hover:text-white focus-visible:outline-2 focus-visible:outline-primary-400 focus-visible:outline-offset-2">
+          Donasi
+        </a>
+      </div>
+
+      <!-- CTA + Hamburger -->
+      <div class="flex items-center gap-3">
+        <a
+          href="#daftar"
+          class="hidden rounded-lg bg-primary-500 px-5 py-2.5 text-sm font-semibold text-white shadow-md transition-all duration-200 hover:bg-primary-600 hover:shadow-lg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-400 sm:inline-block"
+        >
+          Gabung Sekarang
+        </a>
+
+        <!-- Hamburger label — visually triggers the checkbox -->
+        <label
+          for="mobile-menu-toggle"
+          class="hamburger-label relative z-50 flex h-10 w-10 cursor-pointer flex-col items-center justify-center gap-1.5 rounded-lg transition-colors hover:bg-white/10 lg:hidden"
+          aria-hidden="true"
+        >
+          <span class="hamburger-line h-0.5 w-6 rounded-full bg-white transition-all duration-300"></span>
+          <span class="hamburger-line h-0.5 w-6 rounded-full bg-white transition-all duration-300"></span>
+          <span class="hamburger-line h-0.5 w-6 rounded-full bg-white transition-all duration-300"></span>
+        </label>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile menu panel — toggled via CSS sibling selector on the checkbox -->
+  <div
+    class="mobile-menu pointer-events-none max-h-0 overflow-hidden opacity-0 transition-all duration-300 ease-in-out lg:hidden"
+  >
+    <div class="space-y-1 border-t border-white/10 bg-neutral-900/95 px-4 pb-4 pt-3 backdrop-blur-lg">
+      <a href="#beranda" class="block rounded-lg px-4 py-3 text-sm font-medium text-white/80 transition-colors hover:bg-white/10 hover:text-white focus-visible:outline-2 focus-visible:outline-primary-400 focus-visible:outline-offset-2">
+        Beranda
+      </a>
+      <a href="#tentang" class="block rounded-lg px-4 py-3 text-sm font-medium text-white/80 transition-colors hover:bg-white/10 hover:text-white focus-visible:outline-2 focus-visible:outline-primary-400 focus-visible:outline-offset-2">
+        Tentang
+      </a>
+      <a href="#program" class="block rounded-lg px-4 py-3 text-sm font-medium text-white/80 transition-colors hover:bg-white/10 hover:text-white focus-visible:outline-2 focus-visible:outline-primary-400 focus-visible:outline-offset-2">
+        Program
+      </a>
+      <a href="#galeri" class="block rounded-lg px-4 py-3 text-sm font-medium text-white/80 transition-colors hover:bg-white/10 hover:text-white focus-visible:outline-2 focus-visible:outline-primary-400 focus-visible:outline-offset-2">
+        Galeri
+      </a>
+      <a href="#testimoni" class="block rounded-lg px-4 py-3 text-sm font-medium text-white/80 transition-colors hover:bg-white/10 hover:text-white focus-visible:outline-2 focus-visible:outline-primary-400 focus-visible:outline-offset-2">
+        Testimoni
+      </a>
+      <a href="#donasi" class="block rounded-lg px-4 py-3 text-sm font-medium text-white/80 transition-colors hover:bg-white/10 hover:text-white focus-visible:outline-2 focus-visible:outline-primary-400 focus-visible:outline-offset-2">
+        Donasi
+      </a>
+      <a
+        href="#daftar"
+        class="mt-2 block rounded-lg bg-primary-500 px-5 py-3 text-center text-sm font-semibold text-white shadow-md transition-all hover:bg-primary-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-400"
+      >
+        Gabung Sekarang
+      </a>
+    </div>
+  </div>
+</header>
+
+<style>
+  /* =========================================================
+     Navbar — scroll-state styling (injected by inline script)
+     ========================================================= */
+
+  /* Default: transparent top bar */
+  #navbar {
+    background: transparent;
+  }
+
+  /* Scrolled state: dark blurred background */
+  #navbar.scrolled {
+    background: rgba(6, 78, 59, 0.85); /* primary-900 at 85% */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 1px 20px rgba(0, 0, 0, 0.25);
+  }
+
+  /* Active nav link highlight */
+  .nav-link-active {
+    color: #ffffff !important;
+    background: rgba(255, 255, 255, 0.1);
+  }
+
+  /* =========================================================
+     CSS-only hamburger toggle (checkbox hack)
+     The checkbox is a direct child of #navbar, so we use
+     the ~ general sibling combinator to reach both the menu
+     panel and the label's hamburger lines.
+     ========================================================= */
+
+  /* Mobile menu: open state */
+  #mobile-menu-toggle:checked ~ .mobile-menu {
+    max-height: 500px;
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  /* Hamburger X animation: line 1 → rotate down */
+  #mobile-menu-toggle:checked ~ nav .hamburger-line:first-child {
+    transform: translateY(0.4rem) rotate(45deg);
+  }
+
+  /* Hamburger X animation: line 2 → fade out */
+  #mobile-menu-toggle:checked ~ nav .hamburger-line:nth-child(2) {
+    opacity: 0;
+  }
+
+  /* Hamburger X animation: line 3 → rotate up */
+  #mobile-menu-toggle:checked ~ nav .hamburger-line:last-child {
+    transform: translateY(-0.4rem) rotate(-45deg);
+  }
+</style>
+
+<script>
+  /* ---------------------------------------------------------
+     Minimal inline script — scroll detection + active link
+     No framework; runs once per page load
+     --------------------------------------------------------- */
+  (function () {
+    const navbar = document.getElementById('navbar');
+    if (!navbar) return;
+
+    /* Scroll: toggle .scrolled class */
+    function onScroll() {
+      navbar.classList.toggle('scrolled', window.scrollY > 50);
+    }
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll(); // initial check
+
+    /* Active nav link on scroll */
+    const sections = document.querySelectorAll<HTMLElement>('section[id]');
+    const navLinks = document.querySelectorAll<HTMLAnchorElement>('.nav-link');
+
+    function updateActiveLink() {
+      const scrollY = window.scrollY + 120;
+      sections.forEach((section) => {
+        const top = section.offsetTop;
+        const height = section.offsetHeight;
+        const id = section.getAttribute('id');
+        if (scrollY >= top && scrollY < top + height) {
+          navLinks.forEach((link) => {
+            link.classList.remove('nav-link-active');
+            if (link.getAttribute('href') === `#${id}`) {
+              link.classList.add('nav-link-active');
+            }
+          });
+        }
+      });
+    }
+    window.addEventListener('scroll', updateActiveLink, { passive: true });
+  })();
+</script>

@@ -1,0 +1,147 @@
+---
+/**
+ * GallerySection — Galeri Kegiatan
+ * CSS-only filter tabs via radio buttons (sibling selector for filtering)
+ * Masonry-like grid with varying spans
+ * CSS-only lightbox via :target
+ * Zero client-side JS
+ */
+
+const images = [
+  { src: '/images/masjid.png', alt: 'Masjid YPSMA untuk kegiatan ibadah', span: 'sm:col-span-1 sm:row-span-2', tab: 'kegiatan' },
+  { src: '/images/kelas1.png', alt: 'Suasana pembelajaran di kelas', span: 'sm:col-span-1 sm:row-span-1', tab: 'kelas' },
+  { src: '/images/perpustakaan.png', alt: 'Perpustakaan YPSMA', span: 'sm:col-span-1 sm:row-span-1', tab: 'kelas' },
+  { src: '/images/upacara.png', alt: 'Upacara bendera di YPSMA', span: 'sm:col-span-1 sm:row-span-1', tab: 'kegiatan' },
+  { src: '/images/senam.png', alt: 'Kegiatan senam pagi bersama', span: 'sm:col-span-1 sm:row-span-1', tab: 'kegiatan' },
+  { src: '/images/pramuka.png', alt: 'Kegiatan pramuka YPSMA', span: 'sm:col-span-1 sm:row-span-2', tab: 'kegiatan' },
+  { src: '/images/Tahfidz.png', alt: 'Kegiatan Tahfidz Al-Qur\'an', span: 'sm:col-span-1 sm:row-span-1', tab: 'kelas' },
+  { src: '/images/kelas2.png', alt: 'Pembelajaran interaktif di kelas', span: 'sm:col-span-1 sm:row-span-1', tab: 'kelas' },
+  { src: '/images/labkomputer.png', alt: 'Lab komputer modern YPSMA', span: 'sm:col-span-1 sm:row-span-1', tab: 'kelas' },
+  { src: '/images/kelashaf.png', alt: 'Kelas hafalan santri berprestasi', span: 'sm:col-span-1 sm:row-span-1', tab: 'prestasi' },
+];
+---
+
+<section id="galeri" class="bg-white py-16 md:py-24">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+
+    <!-- Section Header -->
+    <div class="mx-auto mb-10 max-w-2xl text-center md:mb-14">
+      <span class="mb-3 inline-block rounded-full bg-[var(--color-primary-50)] px-4 py-1.5 font-[var(--font-heading)] text-sm font-semibold tracking-wide text-[var(--color-primary-600)]">
+        Galeri
+      </span>
+      <h2 class="mb-3 font-[var(--font-heading)] text-3xl font-extrabold tracking-tight text-[var(--color-neutral-900)] sm:text-4xl">
+        Galeri Kegiatan
+      </h2>
+      <div class="mx-auto h-1 w-16 rounded-full bg-[var(--color-secondary-500)]"></div>
+    </div>
+
+    <!--
+      CSS-only filter: radio inputs + labels + tabpanel all siblings.
+      Tab active state and item visibility handled entirely in <style>.
+    -->
+    <div class="gallery-filter-root">
+      <!-- Radio inputs + labels as direct siblings -->
+      <input type="radio" name="gallery-filter" id="filter-semua" class="sr-only" checked />
+      <label for="filter-semua" class="gallery-tab mr-2 inline-flex cursor-pointer items-center rounded-full border border-[var(--color-neutral-200)] bg-white px-5 py-2 text-sm font-medium text-[var(--color-neutral-600)] transition-all hover:border-[var(--color-primary-300)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-primary-500)]">Semua</label>
+
+      <input type="radio" name="gallery-filter" id="filter-kelas" class="sr-only" />
+      <label for="filter-kelas" class="gallery-tab mr-2 inline-flex cursor-pointer items-center rounded-full border border-[var(--color-neutral-200)] bg-white px-5 py-2 text-sm font-medium text-[var(--color-neutral-600)] transition-all hover:border-[var(--color-primary-300)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-primary-500)]">Kelas</label>
+
+      <input type="radio" name="gallery-filter" id="filter-kegiatan" class="sr-only" />
+      <label for="filter-kegiatan" class="gallery-tab mr-2 inline-flex cursor-pointer items-center rounded-full border border-[var(--color-neutral-200)] bg-white px-5 py-2 text-sm font-medium text-[var(--color-neutral-600)] transition-all hover:border-[var(--color-primary-300)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-primary-500)]">Kegiatan</label>
+
+      <input type="radio" name="gallery-filter" id="filter-prestasi" class="sr-only" />
+      <label for="filter-prestasi" class="gallery-tab inline-flex cursor-pointer items-center rounded-full border border-[var(--color-neutral-200)] bg-white px-5 py-2 text-sm font-medium text-[var(--color-neutral-600)] transition-all hover:border-[var(--color-primary-300)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-primary-500)]">Prestasi</label>
+
+      <!-- Image grid — sibling of radio inputs for ~ selector -->
+      <div class="gallery-grid mt-2 grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-4 md:grid-cols-4" role="tabpanel">
+        {images.map((img, i) => (
+          <a
+            href={`#gallery-${i}`}
+            class={`gallery-item group relative block overflow-hidden rounded-lg ${img.span} focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-primary-500)]`}
+            data-tab={img.tab}
+          >
+            <img
+              src={img.src}
+              alt={img.alt}
+              class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+              loading="lazy"
+            />
+            <div class="absolute inset-0 flex items-end bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+              <div class="w-full p-3">
+                <p class="text-xs font-medium text-white sm:text-sm">{img.alt}</p>
+              </div>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+
+    <!-- CSS-only Lightbox via :target -->
+    {images.map((img, i) => (
+      <div
+        id={`gallery-${i}`}
+        class="lightbox-overlay fixed inset-0 z-[1050] flex items-center justify-center bg-black/80 p-4 opacity-0 pointer-events-none transition-opacity duration-300 backdrop-blur-sm"
+        role="dialog"
+        aria-modal="true"
+        aria-label={img.alt}
+      >
+        <a href="#galeri" class="absolute inset-0 z-10" aria-label="Tutup galeri">
+          <span class="sr-only">Tutup</span>
+        </a>
+        <div class="relative z-20 max-h-[85vh] max-w-[90vw]">
+          <img
+            src={img.src}
+            alt={img.alt}
+            class="max-h-[85vh] rounded-lg object-contain shadow-2xl"
+          />
+          <p class="mt-3 text-center text-sm font-medium text-white/90">{img.alt}</p>
+        </div>
+        <a
+          href="#galeri"
+          class="absolute right-4 top-4 z-30 flex h-10 w-10 items-center justify-center rounded-full bg-white/20 text-white backdrop-blur-sm transition-colors hover:bg-white/40 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+          aria-label="Tutup lightbox"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M18 6 6 18"/><path d="m6 6 12 12"/>
+          </svg>
+        </a>
+      </div>
+    ))}
+
+  </div>
+
+  <!-- Pure CSS: filter tabs + grid visibility + lightbox activation -->
+  <style is:global>
+    /* ---- Tab layout ---- */
+    .gallery-filter-root {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.5rem;
+    }
+
+    /* ---- Tab active state (CSS-only via :has) ---- */
+    #filter-semua:checked ~ .gallery-tab[for="filter-semua"],
+    #filter-kelas:checked ~ .gallery-tab[for="filter-kelas"],
+    #filter-kegiatan:checked ~ .gallery-tab[for="filter-kegiatan"],
+    #filter-prestasi:checked ~ .gallery-tab[for="filter-prestasi"] {
+      border-color: var(--color-primary-500);
+      background-color: var(--color-primary-500);
+      color: white;
+    }
+
+    /* ---- Grid filtering (hide non-matching items) ---- */
+    #filter-kelas:checked ~ .gallery-grid .gallery-item:not([data-tab="kelas"]),
+    #filter-kegiatan:checked ~ .gallery-grid .gallery-item:not([data-tab="kegiatan"]),
+    #filter-prestasi:checked ~ .gallery-grid .gallery-item:not([data-tab="prestasi"]) {
+      display: none;
+    }
+
+    /* ---- Lightbox activation ---- */
+    .lightbox-overlay:target {
+      opacity: 1;
+      pointer-events: auto;
+    }
+  </style>
+</section>

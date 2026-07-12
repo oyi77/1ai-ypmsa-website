@@ -1,0 +1,159 @@
+---
+/**
+ * Hero.astro — Full viewport hero section
+ * Emerald gradient background, Arabic quote, stats, floating decorations
+ * All entrance animations are CSS-only (Tailwind animate + custom keyframes)
+ */
+---
+
+<section
+  id="beranda"
+  class="relative flex min-h-screen items-center overflow-hidden bg-gradient-to-br from-primary-900 via-primary-800 to-primary-900"
+>
+  <!-- ============================================================
+       Background: layered gradient overlay on emerald
+       ============================================================ -->
+  <div class="pointer-events-none absolute inset-0 bg-gradient-to-b from-primary-900/90 via-primary-800/80 to-primary-900/90" aria-hidden="true"></div>
+
+  <!-- ============================================================
+       Floating decorative circles (CSS-only animation)
+       ============================================================ -->
+  <div class="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden="true">
+    <!-- Large gold circle top-right -->
+    <div
+      class="absolute -right-32 -top-32 h-96 w-96 rounded-full bg-secondary-500/10 animate-float"
+    ></div>
+    <!-- Medium emerald circle bottom-left -->
+    <div
+      class="absolute -bottom-24 -left-24 h-72 w-72 rounded-full bg-primary-400/10 animate-float-delayed"
+    ></div>
+    <!-- Small gold circle center-left -->
+    <div
+      class="absolute left-1/4 top-1/3 h-20 w-20 rounded-full bg-secondary-400/15 animate-float"
+    ></div>
+    <!-- Tiny emerald circle top-left -->
+    <div
+      class="absolute left-12 top-24 h-12 w-12 rounded-full bg-primary-300/10 animate-float-delayed"
+    ></div>
+    <!-- Large rose circle bottom-right -->
+    <div
+      class="absolute -bottom-16 right-1/4 h-48 w-48 rounded-full bg-accent-500/5 animate-float"
+    ></div>
+  </div>
+
+  <!-- ============================================================
+       Content
+       ============================================================ -->
+  <div class="relative z-10 mx-auto max-w-7xl px-4 py-32 sm:px-6 sm:py-40 lg:px-8 lg:py-48">
+    <div class="mx-auto max-w-3xl text-center">
+
+      <!-- Arabic quote -->
+      <p
+        class="mb-6 font-arabic text-3xl font-bold text-secondary-400/90 sm:text-4xl lg:text-5xl animate-fade-in-up"
+        dir="rtl"
+      >
+        رَبِّ زِدْنِي عِلْمًا
+      </p>
+
+      <!-- Main heading -->
+      <h1
+        class="font-heading text-4xl font-extrabold leading-tight tracking-tight text-white sm:text-5xl lg:text-6xl xl:text-7xl animate-fade-in-up"
+        style="animation-delay: 0.15s"
+      >
+        Mendidik Generasi Qurani
+        <span class="block text-secondary-400">Berakhlak Mulia</span>
+      </h1>
+
+      <!-- Subheading -->
+      <p
+        class="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-white/70 sm:text-xl lg:mt-8 animate-fade-in-up"
+        style="animation-delay: 0.3s"
+      >
+        Yayasan Pendidikan Sinar Matahari hadir sebagai lembaga pendidikan Islam terpadu
+        yang menggabungkan kurikulum nasional dengan pendidikan Al-Quran dan pembinaan
+        akhlak mulia bagi generasi muda Indonesia.
+      </p>
+
+      <!-- CTA buttons -->
+      <div
+        class="mt-8 flex flex-col gap-4 sm:flex-row sm:justify-start lg:mt-10 animate-fade-in-up"
+        style="animation-delay: 0.45s"
+      >
+        <a
+          href="#program"
+          class="inline-flex items-center justify-center rounded-lg bg-primary-500 px-8 py-3.5 text-base font-semibold text-white shadow-lg shadow-primary-500/25 transition-all duration-200 hover:bg-primary-600 hover:shadow-xl hover:shadow-primary-500/30 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-400"
+        >
+          Lihat Program
+          <svg class="ml-2 h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+          </svg>
+        </a>
+        <a
+          href="#daftar"
+          class="inline-flex items-center justify-center rounded-lg border-2 border-secondary-500 bg-secondary-500/10 px-8 py-3.5 text-base font-semibold text-secondary-400 transition-all duration-200 hover:bg-secondary-500 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-secondary-400"
+        >
+          Daftar Sekarang
+        </a>
+      </div>
+
+      <!-- Stats row -->
+      <div
+        class="mt-16 grid max-w-3xl grid-cols-2 gap-8 border-t border-white/10 pt-10 sm:grid-cols-4 sm:gap-6 lg:mt-20 animate-fade-in-up"
+        style="animation-delay: 0.6s"
+      >
+        <!-- Stat: Siswa -->
+        <div class="text-center sm:text-left">
+          <span class="block text-3xl font-extrabold text-white sm:text-4xl" data-count="500">
+            500<span class="text-primary-400">+</span>
+          </span>
+          <span class="mt-1 block text-sm font-medium text-white/50">Siswa</span>
+        </div>
+        <!-- Stat: Guru -->
+        <div class="text-center sm:text-left">
+          <span class="block text-3xl font-extrabold text-white sm:text-4xl" data-count="50">
+            50<span class="text-primary-400">+</span>
+          </span>
+          <span class="mt-1 block text-sm font-medium text-white/50">Guru</span>
+        </div>
+        <!-- Stat: Tahun -->
+        <div class="text-center sm:text-left">
+          <span class="block text-3xl font-extrabold text-white sm:text-4xl" data-count="15">
+            15<span class="text-primary-400">+</span>
+          </span>
+          <span class="mt-1 block text-sm font-medium text-white/50">Tahun</span>
+        </div>
+        <!-- Stat: Qurani -->
+        <div class="text-center sm:text-left">
+          <span class="block text-3xl font-extrabold text-white sm:text-4xl">
+            100<span class="text-secondary-400">%</span>
+          </span>
+          <span class="mt-1 block text-sm font-medium text-white/50">Qurani</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       Bottom gradient fade into next section
+       ============================================================ -->
+  <div class="pointer-events-none absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white to-transparent" aria-hidden="true"></div>
+</section>
+
+<style>
+  /* Ensure animations only play once in viewport */
+  .animate-fade-in-up {
+    opacity: 0;
+    animation: fadeInUp 0.7s ease-out forwards;
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>

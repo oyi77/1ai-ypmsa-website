@@ -1,0 +1,150 @@
+---
+/**
+ * AboutSection — Tentang YPSMA
+ * Two-column: content left, image right
+ * Mission cards with inline SVG icons
+ */
+---
+
+<section id="tentang" class="bg-white py-16 md:py-24">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 items-start gap-12 lg:grid-cols-2 lg:gap-16">
+
+      <!-- Left: Content -->
+      <div>
+        <span
+          class="mb-3 inline-block rounded-full bg-[var(--color-primary-50)] px-4 py-1.5 font-[var(--font-heading)] text-sm font-semibold tracking-wide text-[var(--color-primary-600)]"
+        >
+          Tentang Kami
+        </span>
+
+        <h2 class="mb-2 font-[var(--font-heading)] text-3xl font-extrabold tracking-tight text-[var(--color-neutral-900)] sm:text-4xl">
+          Tentang YPSMA
+        </h2>
+        <!-- Gold underline decoration -->
+        <div class="mb-6 h-1 w-16 rounded-full bg-[var(--color-secondary-500)]"></div>
+
+        <p class="mb-4 font-[var(--font-heading)] text-lg font-medium text-[var(--color-secondary-600)]">
+          Visi &amp; Misi Pendidikan Islam Terpadu
+        </p>
+
+        <div class="space-y-4 text-[var(--color-neutral-700)] leading-relaxed">
+          <p>
+            Yayasan Pendidikan Shafiyyatul Amaliyyah (YPSMA) didirikan dengan visi mewujudkan
+            lembaga pendidikan Islam unggulan yang mengintegrasikan ilmu umum dan keagamaan.
+            Kami berkomitmen mencetak generasi qur'ani yang berakhlak mulia, berilmu, dan siap
+            menjadi pemimpin masa depan.
+          </p>
+          <p>
+            Berlokasi di jantung Jombang, kami menyediakan lingkungan belajar yang aman, nyaman,
+            dan kondusif bagi santri dari TK hingga jenjang pendidikan menengah. Dengan tenaga
+            pengajar profesional dan kurikulum yang terintegrasi antara kurikulum nasional,
+            pesantren, dan digital, YPSMA menjadi pilihan terbaik bagi keluarga yang menginginkan
+            pendidikan holistik bagi putra-putri mereka.
+          </p>
+          <p>
+            Setiap program dirancang untuk mengembangkan potensi santri secara menyeluruh —
+            akademik, spiritual, sosial, dan keterampilan hidup — sehingga mereka siap
+            menghadapi tantangan zaman dengan pegangan ilmu dan iman.
+          </p>
+        </div>
+
+        <!-- Mission Cards -->
+        <div class="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-3">
+          <!-- Pendidikan Qurani -->
+          <div class="group rounded-lg border border-[var(--color-primary-100)] bg-[var(--color-primary-50)] p-5 transition-shadow hover:shadow-[var(--shadow-md)]">
+            <div class="mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-[var(--color-primary-500)] text-white">
+              <!-- Book / Qur'an icon -->
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/>
+                <path d="M8 7h6"/>
+                <path d="M8 11h4"/>
+              </svg>
+            </div>
+            <h3 class="font-[var(--font-heading)] text-sm font-bold text-[var(--color-neutral-900)]">
+              Pendidikan Qurani
+            </h3>
+            <p class="mt-1 text-xs text-[var(--color-neutral-600)]">
+              Hafalan Al-Qur'an dengan metode terbukti efektif
+            </p>
+          </div>
+
+          <!-- Akhlak Mulia -->
+          <div class="group rounded-lg border border-[var(--color-secondary-100)] bg-[var(--color-secondary-50)] p-5 transition-shadow hover:shadow-[var(--shadow-md)]">
+            <div class="mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-[var(--color-secondary-500)] text-white">
+              <!-- Handshake icon -->
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M11 17a4 4 0 0 1-4-4V7a4 4 0 0 1 8 0v6a4 4 0 0 1-4 4z"/>
+                <path d="M7 11h10"/>
+                <path d="M9 15h6"/>
+              </svg>
+            </div>
+            <h3 class="font-[var(--font-heading)] text-sm font-bold text-[var(--color-neutral-900)]">
+              Akhlak Mulia
+            </h3>
+            <p class="mt-1 text-xs text-[var(--color-neutral-600)]">
+              Pembentukan karakter islami sehari-hari
+            </p>
+          </div>
+
+          <!-- Prestasi Gemilang -->
+          <div class="group rounded-lg border border-[var(--color-primary-100)] bg-[var(--color-primary-50)] p-5 transition-shadow hover:shadow-[var(--shadow-md)]">
+            <div class="mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-[var(--color-primary-500)] text-white">
+              <!-- Star / Trophy icon -->
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+              </svg>
+            </div>
+            <h3 class="font-[var(--font-heading)] text-sm font-bold text-[var(--color-neutral-900)]">
+              Prestasi Gemilang
+            </h3>
+            <p class="mt-1 text-xs text-[var(--color-neutral-600)]">
+              Berprestasi di tingkat nasional &amp; internasional
+            </p>
+          </div>
+        </div>
+
+        <!-- CTA -->
+        <div class="mt-8">
+          <a
+            href="/tentang"
+            class="inline-flex items-center gap-2 font-[var(--font-heading)] text-sm font-semibold text-[var(--color-primary-600)] transition-colors hover:text-[var(--color-primary-700)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-primary-500)]"
+          >
+            Pelajari Lebih Lanjut
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M5 12h14"/>
+              <path d="m12 5 7 7-7 7"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Right: Image -->
+      <div class="relative">
+        <div class="relative overflow-hidden rounded-xl">
+          <img
+            src="/images/guruidaman.png"
+            alt="Guru YPSMA sedang membimbing siswa dalam kegiatan belajar mengajar"
+            class="h-auto w-full object-cover"
+            loading="lazy"
+          />
+          <!-- Overlay stat badge -->
+          <div class="absolute bottom-4 right-4 rounded-lg bg-[var(--color-primary-800)]/90 px-5 py-3 text-white backdrop-blur-sm">
+            <span class="block font-[var(--font-heading)] text-2xl font-extrabold text-[var(--color-secondary-400)]">15+</span>
+            <span class="text-xs font-medium text-[var(--color-primary-100)]">Tahun Mengabdi</span>
+          </div>
+        </div>
+
+        <!-- Decorative corner image -->
+        <div class="absolute -bottom-6 -left-6 hidden w-28 rounded-xl shadow-lg lg:block">
+          <img
+            src="/images/kelas2.png"
+            alt="Suasana kelas YPSMA yang kondusif"
+            class="h-auto w-full rounded-xl object-cover"
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

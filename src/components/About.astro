@@ -1,0 +1,169 @@
+---
+/**
+ * About.astro — Tentang YPSMA (#tentang)
+ * Two-column: images left, content right
+ * 4 mission points with check icons, fade-in-up animation
+ */
+---
+
+<section id="tentang" class="bg-white py-16 md:py-24">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+
+    <!-- ============================================================
+         Section heading
+         ============================================================ -->
+    <div class="mb-12 text-center animate-fade-in-up md:mb-16">
+      <span
+        class="mb-3 inline-block rounded-full bg-primary-50 px-4 py-1.5 font-heading text-sm font-semibold tracking-wide text-primary-700"
+      >
+        Tentang Kami
+      </span>
+      <h2 class="mt-2 font-heading text-3xl font-extrabold tracking-tight text-neutral-900 sm:text-4xl">
+        Tentang YPSMA
+      </h2>
+      <!-- Decorative green underline -->
+      <div class="mx-auto mt-4 h-1 w-20 rounded-full bg-primary-500"></div>
+    </div>
+
+    <!-- ============================================================
+         Two-column layout
+         ============================================================ -->
+    <div class="grid grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-16">
+
+      <!-- ---- Left column: 2 placeholder image slots ---- -->
+      <div class="relative grid grid-cols-2 gap-4 animate-fade-in-up" style="animation-delay: 0.15s">
+        <!-- Primary image slot -->
+        <div class="relative overflow-hidden rounded-xl bg-primary-50">
+          <img
+            src="/images/ypsma-kampus.png"
+            alt="Gedung utama YPSMA di Sumba Timur — kampus pendidikan Islam yang asri dan modern"
+            class="h-auto w-full object-cover"
+            loading="lazy"
+            width="400"
+            height="300"
+          />
+        </div>
+
+        <!-- Secondary image slot (offset downward) -->
+        <div class="relative mt-12 overflow-hidden rounded-xl bg-primary-50">
+          <img
+            src="/images/ypsma-siswa.png"
+            alt="Siswa-siswi YPSMA sedang mengikuti kegiatan belajar mengajar di kelas"
+            class="h-auto w-full object-cover"
+            loading="lazy"
+            width="400"
+            height="300"
+          />
+        </div>
+
+        <!-- Decorative accent bar -->
+        <div
+          class="absolute -right-3 top-1/2 hidden h-24 w-1 -translate-y-1/2 rounded-full bg-secondary-500 lg:block"
+          aria-hidden="true"
+        ></div>
+      </div>
+
+      <!-- ---- Right column: content & mission points ---- -->
+      <div class="animate-fade-in-up" style="animation-delay: 0.3s">
+        <p class="mb-4 font-heading text-lg font-medium text-primary-700">
+          Pendidikan Islam Terpadu di Sumba Timur
+        </p>
+
+        <div class="space-y-4 text-base leading-relaxed text-neutral-700">
+          <p>
+            Yayasan Pembina Sumba Membangun Asih (YPSMA) merupakan lembaga pendidikan
+            Islam terpadu yang berlokasi di Sumba Timur, Nusa Tenggara Timur. Didirikan
+            pada tahun 2020, YPSMA hadir sebagai jawaban atas kebutuhan masyarakat akan
+            pendidikan yang mengintegrasikan kurikulum nasional dengan nilai-nilai keislaman.
+          </p>
+          <p>
+            Dengan semangat "Membangun Asih", kami berkomitmen mencetak generasi muda
+            yang cerdas, berakhlak mulia, dan siap menjadi pemimpin masa depan. YPSMA
+            menyediakan lingkungan belajar yang aman, nyaman, dan kondusif bagi para
+            siswa dari jenjang pendidikan dasar hingga menengah.
+          </p>
+        </div>
+
+        <!-- Mission points with check icons -->
+        <div class="mt-8 space-y-4">
+          <h3 class="font-heading text-sm font-bold uppercase tracking-wider text-primary-700">
+            Misi Kami
+          </h3>
+
+          <ul class="space-y-3" role="list">
+            <!-- 1 -->
+            <li class="flex items-start gap-3">
+              <span class="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-primary-500" aria-hidden="true">
+                <svg class="h-3.5 w-3.5 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"/>
+                </svg>
+              </span>
+              <span class="text-base font-medium text-neutral-800">Berakhlakul Karimah</span>
+            </li>
+            <!-- 2 -->
+            <li class="flex items-start gap-3">
+              <span class="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-primary-500" aria-hidden="true">
+                <svg class="h-3.5 w-3.5 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"/>
+                </svg>
+              </span>
+              <span class="text-base font-medium text-neutral-800">Cerdas Berkarakter</span>
+            </li>
+            <!-- 3 -->
+            <li class="flex items-start gap-3">
+              <span class="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-primary-500" aria-hidden="true">
+                <svg class="h-3.5 w-3.5 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"/>
+                </svg>
+              </span>
+              <span class="text-base font-medium text-neutral-800">Peduli Lingkungan</span>
+            </li>
+            <!-- 4 -->
+            <li class="flex items-start gap-3">
+              <span class="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-primary-500" aria-hidden="true">
+                <svg class="h-3.5 w-3.5 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"/>
+                </svg>
+              </span>
+              <span class="text-base font-medium text-neutral-800">Berwawasan Global</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- CTA -->
+        <div class="mt-8">
+          <a
+            href="#program"
+            class="inline-flex items-center gap-2 rounded-lg bg-primary-500 px-6 py-3 font-heading text-sm font-semibold text-white shadow-md shadow-primary-500/20 transition-all duration-200 hover:bg-primary-600 hover:shadow-lg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-400"
+          >
+            Lihat Program Kami
+            <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M5 12h14"/>
+              <path d="m12 5 7 7-7 7"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Scroll-triggered fade-in animation (matches Hero.astro pattern) */
+  .animate-fade-in-up {
+    opacity: 0;
+    animation: fadeInUp 0.7s ease-out forwards;
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>

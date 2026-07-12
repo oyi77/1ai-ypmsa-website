@@ -1,0 +1,134 @@
+---
+/**
+ * VisionMission.astro — Visi & Misi section
+ * Two-column layout: Vision card (green gradient) + Mission card (white bg)
+ * CSS-only fade-in animations, mobile-first responsive (stacks on mobile)
+ */
+---
+
+<section id="visi-misi" class="py-16 md:py-24 bg-[var(--color-neutral-50)]">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+
+    <!-- ============================================================
+         Section heading — centered with gold underline
+         ============================================================ -->
+    <div class="text-center animate-fade-in-up">
+      <h2 class="section-heading section-heading-center font-[var(--font-heading)] text-3xl font-extrabold text-[var(--color-neutral-800)] sm:text-4xl">
+        Visi &amp; Misi
+      </h2>
+      <p class="mx-auto mt-6 max-w-2xl text-lg text-[var(--color-neutral-500)]">
+        Landasan perjuangan kami dalam membentuk generasi masa depan yang unggul dan berakhlak mulia
+      </p>
+    </div>
+
+    <!-- ============================================================
+         Two-column grid: Vision + Mission
+         ============================================================ -->
+    <div class="mt-12 grid grid-cols-1 gap-8 md:mt-16 lg:grid-cols-2 lg:gap-10">
+
+      <!-- ─── Vision Card ─── -->
+      <div class="card-hover rounded-2xl bg-gradient-to-br from-[var(--color-primary-800)] via-[var(--color-primary-700)] to-[var(--color-primary-900)] p-8 shadow-[var(--shadow-medium)] sm:p-10 animate-fade-in-up" style="animation-delay: 0.15s">
+        <!-- Compass icon -->
+        <div class="mb-6 flex h-14 w-14 items-center justify-center rounded-xl bg-white/10 backdrop-blur-sm">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-[var(--color-secondary-400)]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="10"/>
+            <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/>
+          </svg>
+        </div>
+
+        <h3 class="font-[var(--font-heading)] text-2xl font-bold text-white">
+          Visi Kami
+        </h3>
+
+        <p class="mt-4 leading-relaxed text-white/80 sm:text-lg">
+          Mewujudkan generasi muslim yang cerdas, beriman, bertaqwa, berakhlak mulia,
+          serta pelestari lingkungan hidup yang siap menghadapi tantangan masa depan.
+        </p>
+
+        <!-- Decorative bottom accent -->
+        <div class="mt-8 h-1 w-16 rounded-full bg-[var(--color-secondary-400)] opacity-60"></div>
+      </div>
+
+      <!-- ─── Mission Card ─── -->
+      <div class="card-hover rounded-2xl border border-[var(--color-neutral-200)] bg-white p-8 shadow-[var(--shadow-soft)] sm:p-10 animate-fade-in-up" style="animation-delay: 0.3s">
+        <!-- Book icon -->
+        <div class="mb-6 flex h-14 w-14 items-center justify-center rounded-xl bg-[var(--color-primary-50)]">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-[var(--color-primary-700)]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/>
+          </svg>
+        </div>
+
+        <h3 class="font-[var(--font-heading)] text-2xl font-bold text-[var(--color-neutral-800)]">
+          Misi Kami
+        </h3>
+
+        <ol class="mt-6 space-y-4" role="list">
+          <li class="flex items-start gap-3">
+            <span class="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[var(--color-primary-600)] text-xs font-bold text-white">
+              1
+            </span>
+            <span class="leading-relaxed text-[var(--color-neutral-600)]">
+              Mewujudkan pendidikan berkualitas berbasis iman dan takwa
+            </span>
+          </li>
+
+          <li class="flex items-start gap-3">
+            <span class="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[var(--color-primary-600)] text-xs font-bold text-white">
+              2
+            </span>
+            <span class="leading-relaxed text-[var(--color-neutral-600)]">
+              Mengembangkan potensi siswa melalui pembelajaran inovatif
+            </span>
+          </li>
+
+          <li class="flex items-start gap-3">
+            <span class="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[var(--color-primary-600)] text-xs font-bold text-white">
+              3
+            </span>
+            <span class="leading-relaxed text-[var(--color-neutral-600)]">
+              Membina karakter Islami dalam kehidupan sehari-hari
+            </span>
+          </li>
+
+          <li class="flex items-start gap-3">
+            <span class="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[var(--color-primary-600)] text-xs font-bold text-white">
+              4
+            </span>
+            <span class="leading-relaxed text-[var(--color-neutral-600)]">
+              Melestarikan lingkungan hidup melalui pendidikan konservasi
+            </span>
+          </li>
+
+          <li class="flex items-start gap-3">
+            <span class="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[var(--color-primary-600)] text-xs font-bold text-white">
+              5
+            </span>
+            <span class="leading-relaxed text-[var(--color-neutral-600)]">
+              Menyiapkan siswa bersaing di era global
+            </span>
+          </li>
+        </ol>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Fade-in-up animation — same pattern as Hero.astro */
+  .animate-fade-in-up {
+    opacity: 0;
+    animation: fadeInUp 0.7s ease-out forwards;
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>

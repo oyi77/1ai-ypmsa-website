@@ -2,19 +2,20 @@
    YPSMA — main.css
    Font: Plus Jakarta Sans (Google Fonts)
    Palette:
-     --green-900  #1a3a2a  (hero overlay, section-green bg)
-     --green-700  #236b40
-     --green-500  #2d8a54
-     --green-400  #3aa066
-     --green-100  #e6f4ec
-     --gold-500   #c8973a
-     --gold-100   #fdf6e8
-     --neutral-900 #111827
-     --neutral-700 #374151
-     --neutral-500 #6b7280
-     --neutral-100 #f3f4f6
+     --green-900  #064e3b  (hero overlay, section-green bg)
+     --green-700  #047857
+     --green-500  #10B981
+     --green-400  #34d399
+     --green-100  #d1fae5
+     --gold-500   #D4AF37
+     --gold-100   #faf4ec
+     --n900 #111827
+     --n700 #374151
+     --n500 #6b7280
+     --n100 #f3f4f6
      --white       #ffffff
    ============================================================ */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
 
 /* ---------- RESET & BASE ---------- */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -39,13 +40,13 @@ ul { list-style: none; }
 
 /* ---------- TOKENS ---------- */
 :root {
-  --green-900: #1a3a2a;
-  --green-700: #236b40;
-  --green-500: #2d8a54;
-  --green-400: #3aa066;
-  --green-100: #e6f4ec;
-  --gold-500:  #c8973a;
-  --gold-100:  #fdf6e8;
+  --green-900: #064e3b;
+  --green-700: #047857;
+  --green-500: #10B981;
+  --green-400: #34d399;
+  --green-100: #d1fae5;
+  --gold-500:  #D4AF37;
+  --gold-100:  #faf4ec;
   --n900: #111827;
   --n700: #374151;
   --n500: #6b7280;

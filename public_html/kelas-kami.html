@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Kelas Kami - YPSMA. Mengenal kelas dan program pendidikan di Yayasan Pendidikan Shafiyyatul Amaliyyah dari TK hingga Sekolah Dasar.">
+  <meta name="keywords" content="YPSMA, Kelas Kami, TK, Sekolah Dasar, Pendidikan Islam, Sekolah Islam">
+  <meta name="author" content="YPSMA">
+  <meta property="og:title" content="Kelas Kami - YPSMA">
+  <meta property="og:description" content="Mengenal kelas dan program pendidikan di YPSMA dari TK hingga Sekolah Dasar.">
+  <meta property="og:type" content="website">
+  <title>Kelas Kami - YPSMA</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../css/design-tokens.css">
+  <link rel="stylesheet" href="../css/layout.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/animations.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+
+  <style>
+    /* ═══════════════════════════════════════════════════════════
+         PAGE-SPECIFIC: Kelas Kami
+         Colors: Primary #00336B, Secondary #F97316, Accent #D4A843
+         ═══════════════════════════════════════════════════════════ */
+    :root {
+      --ypsma-primary: #00336B;
+      --ypsma-secondary: #F97316;
+      --ypsma-accent: #D4A843;
+      --ypsma-primary-light: #004a9e;
+      --ypsma-primary-dark: #00254d;
+      --ypsma-bg: #f8fafc;
+      --ypsma-bg-alt: #ffffff;
+      --ypsma-text: #1e293b;
+      --ypsma-text-muted: #64748b;
+      --ypsma-radius: 12px;
+      --ypsma-shadow: 0 4px 24px rgba(0,51,107,0.08);
+      --ypsma-shadow-hover: 0 8px 32px rgba(0,51,107,0.14);
+    }
+
+    /* ── HERO ── */
+    .kelaskami-hero {
+      position: relative;
+      min-height: 420px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background: linear-gradient(135deg, var(--ypsma-primary) 0%, var(--ypsma-primary-light) 50%, var(--ypsma-primary-dark) 100%);
+      color: #fff;
+      padding: 140px 24px 80px;
+      overflow: hidden;
+    }
+    .kelaskami-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        radial-gradient(circle at 20% 80%, rgba(249,115,22,0.15) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(212,168,67,0.12) 0%, transparent 50%);
+      pointer-events: none;
+    }
+    .kelaskami-hero__content {
+      position: relative;
+      z-index: 2;
+      max-width: 700px;
+    }
+    .kelaskami-hero__badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 20px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.2);
+      background: rgba(255,255,255,0.1);
+      backdrop-filter: blur(8px);
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+    }
+    .kelaskami-hero__title {
+      font-size: clamp(36px, 6vw, 56px);
+      font-weight: 800;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      margin-bottom: 16px;
+    }
+    .kelaskami-hero__title span {
+      color: var(--ypsma-accent);
+    }
+    .kelaskami-hero__subtitle {
+      font-size: 18px;
+      line-height: 1.7;
+      opacity: 0.9;
+      max-width: 560px;
+      margin: 0 auto;
+    }
+
+    /* ── SECTION COMMON ── */
+    .kelaskami-section {
+      padding: 80px 24px;
+    }
+    .kelaskami-section--alt {
+      background: var(--ypsma-bg-alt);
+    }
+    .kelaskami-section--primary {
+      background: var(--ypsma-primary);
+      color: #fff;
+    }
+    .kelaskami-container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .kelaskami-section-header {
+      text-align: center;
+      margin-bottom: 56px;
+    }
+    .kelaskami-section-header__badge {
+      display: inline-block;
+      padding: 6px 16px;
+      border-radius: 999px;
+      background: rgba(0,51,107,0.08);
+      color: var(--ypsma-primary);
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+    .kelaskami-section--primary .kelaskami-section-header__badge {
+      background: rgba(255,255,255,0.15);
+      color: #fff;
+    }
+    .kelaskami-section-header__title {
+      font-size: clamp(28px, 4vw, 40px);
+      font-weight: 800;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      color: var(--ypsma-primary);
+      margin-bottom: 12px;
+    }
+    .kelaskami-section--primary .kelaskami-section-header__title {
+      color: #fff;
+    }
+    .kelaskami-section-header__desc {
+      font-size: 16px;
+      color: var(--ypsma-text-muted);
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+    .kelaskami-section--primary .kelaskami-section-header__desc {
+      color: rgba(255,255,255,0.8);
+    }
+
+    /* ── CLASS CARDS GRID ── */
+    .class-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 28px;
+    }
+    .class-card {
+      background: #fff;
+      border-radius: var(--ypsma-radius);
+      box-shadow: var(--ypsma-shadow);
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      display: flex;
+      flex-direction: column;
+    }
+    .class-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--ypsma-shadow-hover);
+    }
+    .class-card__image {
+      position: relative;
+      height: 200px;
+      overflow: hidden;
+    }
+    .class-card__image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .class-card__placeholder {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 48px;
+      color: rgba(255,255,255,0.9);
+    }
+    .class-card__placeholder--tk-a {
+      background: linear-gradient(135deg, #F97316 0%, #FB923C 100%);
+    }
+    .class-card__placeholder--tk-b {
+      background: linear-gradient(135deg, #D4A843 0%, #E5BE6A 100%);
+    }
+    .class-card__placeholder--kls-1 {
+      background: linear-gradient(135deg, #00336B 0%, #004a9e 100%);
+    }
+    .class-card__placeholder--kls-2 {
+      background: linear-gradient(135deg, #10b981 0%, #34d399 100%);
+    }
+    .class-card__placeholder--kls-3 {
+      background: linear-gradient(135deg, #6366f1 0%, #818cf8 100%);
+    }
+    .class-card__placeholder--kls-4 {
+      background: linear-gradient(135deg, #ec4899 0%, #f472b6 100%);
+    }
+    .class-card__level {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      padding: 4px 12px;
+      border-radius: 999px;
+      background: rgba(0,0,0,0.5);
+      backdrop-filter: blur(8px);
+      color: #fff;
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .class-card__body {
+      padding: 24px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .class-card__name {
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--ypsma-primary);
+      margin-bottom: 8px;
+    }
+    .class-card__age {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13px;
+      color: var(--ypsma-secondary);
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+    .class-card__desc {
+      font-size: 14px;
+      line-height: 1.7;
+      color: var(--ypsma-text-muted);
+      flex: 1;
+    }
+    .class-card__footer {
+      padding: 16px 24px;
+      border-top: 1px solid #f1f5f9;
+    }
+    .class-card__btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 20px;
+      border-radius: 8px;
+      background: var(--ypsma-primary);
+      color: #fff;
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.2s;
+    }
+    .class-card__btn:hover {
+      background: var(--ypsma-primary-light);
+      transform: translateY(-1px);
+    }
+
+    /* ── PROGRAM UNGGULAN CARDS ── */
+    .program-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 28px;
+    }
+    .program-card {
+      background: #fff;
+      border-radius: var(--ypsma-radius);
+      box-shadow: var(--ypsma-shadow);
+      padding: 32px 28px;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .program-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--ypsma-shadow-hover);
+    }
+    .program-card__icon {
+      width: 64px;
+      height: 64px;
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      color: #fff;
+      margin: 0 auto 20px;
+    }
+    .program-card__icon--primary {
+      background: linear-gradient(135deg, var(--ypsma-primary), var(--ypsma-primary-light));
+    }
+    .program-card__icon--secondary {
+      background: linear-gradient(135deg, var(--ypsma-secondary), #FB923C);
+    }
+    .program-card__icon--accent {
+      background: linear-gradient(135deg, var(--ypsma-accent), #E5BE6A);
+    }
+    .program-card__title {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--ypsma-primary);
+      margin-bottom: 12px;
+    }
+    .program-card__desc {
+      font-size: 14px;
+      line-height: 1.7;
+      color: var(--ypsma-text-muted);
+      margin-bottom: 20px;
+    }
+    .program-card__link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--ypsma-secondary);
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: gap 0.2s;
+    }
+    .program-card__link:hover {
+      gap: 12px;
+    }
+
+    /* ── CTA SECTION ── */
+    .kelaskami-cta {
+      text-align: center;
+      padding: 80px 24px;
+      background: linear-gradient(135deg, var(--ypsma-primary) 0%, var(--ypsma-primary-light) 100%);
+      color: #fff;
+    }
+    .kelaskami-cta__title {
+      font-size: clamp(26px, 4vw, 36px);
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 16px;
+    }
+    .kelaskami-cta__desc {
+      font-size: 16px;
+      opacity: 0.9;
+      max-width: 560px;
+      margin: 0 auto 32px;
+      line-height: 1.7;
+    }
+    .kelaskami-cta__actions {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .kelaskami-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 28px;
+      border-radius: 10px;
+      font-size: 15px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .kelaskami-btn--primary {
+      background: var(--ypsma-secondary);
+      color: #fff;
+    }
+    .kelaskami-btn--primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 24px rgba(249,115,22,0.4);
+    }
+    .kelaskami-btn--outline {
+      border: 2px solid rgba(255,255,255,0.3);
+      color: #fff;
+      background: rgba(255,255,255,0.08);
+    }
+    .kelaskami-btn--outline:hover {
+      border-color: rgba(255,255,255,0.6);
+      background: rgba(255,255,255,0.15);
+      transform: translateY(-2px);
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 768px) {
+      .kelaskami-hero {
+        min-height: 360px;
+        padding: 120px 20px 60px;
+      }
+      .kelaskami-section {
+        padding: 60px 20px;
+      }
+      .class-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+      .program-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+      .kelaskami-cta {
+        padding: 60px 20px;
+      }
+      .kelaskami-cta__actions {
+        flex-direction: column;
+        align-items: center;
+      }
+      .kelaskami-btn {
+        width: 100%;
+        max-width: 300px;
+        justify-content: center;
+      }
+    }
+    @media (min-width: 769px) and (max-width: 1024px) {
+      .class-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       NAVIGATION
+       ═══════════════════════════════════════════════════════════ -->
+  <header class="header">
+    <div class="container">
+      <a href="index.html" class="header__logo">
+        <span class="header__logo-text">YPSMA</span>
+      </a>
+      <nav class="nav" id="nav">
+        <a href="../index.html" class="nav__link">Beranda</a>
+        <a href="#program" class="nav__link">Program</a>
+        <a href="#berita" class="nav__link">Berita</a>
+        <a href="#kegiatan" class="nav__link">Kegiatan</a>
+        <a href="about.html" class="nav__link">Tentang Kami</a>
+        <a href="kelas-kami.html" class="nav__link nav__link--active">Kelas Kami</a>
+        <a href="#kontak" class="nav__link">Hubungi Kami</a>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span class="hamburger__line"></span>
+        <span class="hamburger__line"></span>
+        <span class="hamburger__line"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation -->
+  <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation">
+    <a href="../index.html" class="mobile-nav__link">Beranda</a>
+    <a href="#program" class="mobile-nav__link">Program</a>
+    <a href="#berita" class="mobile-nav__link">Berita</a>
+    <a href="#kegiatan" class="mobile-nav__link">Kegiatan</a>
+    <a href="about.html" class="mobile-nav__link">Tentang Kami</a>
+    <a href="kelas-kami.html" class="mobile-nav__link">Kelas Kami</a>
+    <a href="#kontak" class="mobile-nav__link">Hubungi Kami</a>
+  </nav>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       HERO: KELAS KAMI
+       ═══════════════════════════════════════════════════════════ -->
+  <section class="kelaskami-hero">
+    <div class="kelaskami-hero__content">
+      <div class="kelaskami-hero__badge">
+        <i class="fa-solid fa-school"></i> 1A YPSMA
+      </div>
+      <h1 class="kelaskami-hero__title">
+        Kelas <span>Kami</span>
+      </h1>
+      <p class="kelaskami-hero__subtitle">
+        Mengenal lebih dekat kelas-kelas di YPSMA — dari Taman Kanak-Kanak hingga Sekolah Dasar. Setiap kelas dirancang untuk membentuk karakter Islami yang berilmu dan beramal.
+      </p>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       KELAS GRID
+       ═══════════════════════════════════════════════════════════ -->
+  <section class="kelaskami-section" id="kelas">
+    <div class="kelaskami-container">
+      <div class="kelaskami-section-header">
+        <span class="kelaskami-section-header__badge">Kelas Kami</span>
+        <h2 class="kelaskami-section-header__title">Kenali Setiap Kelas</h2>
+        <p class="kelaskami-section-header__desc">
+          YPSMA menyediakan jenjang pendidikan dari TK hingga Sekolah Dasar dengan kurikulum Islami yang terintegrasi.
+        </p>
+      </div>
+
+      <div class="class-grid">
+
+        <!-- TK A -->
+        <div class="class-card">
+          <div class="class-card__image">
+            <div class="class-card__placeholder class-card__placeholder--tk-a">
+              <i class="fa-solid fa-baby"></i>
+            </div>
+            <span class="class-card__level">TK A</span>
+          </div>
+          <div class="class-card__body">
+            <h3 class="class-card__name">TK A — Kelompok Bermain</h3>
+            <span class="class-card__age">
+              <i class="fa-regular fa-calendar"></i> Usia 4–5 Tahun
+            </span>
+            <p class="class-card__desc">
+              Kelas pengenalan awal dengan pendekatan bermain sambil belajar. Anak-anak mulai mengenal huruf hijaiyah, doa harian, dan kemandirian dasar dalam suasana penuh kasih sayang.
+            </p>
+          </div>
+          <div class="class-card__footer">
+            <a href="#" class="class-card__btn">
+              Lihat Detail <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- TK B -->
+        <div class="class-card">
+          <div class="class-card__image">
+            <div class="class-card__placeholder class-card__placeholder--tk-b">
+              <i class="fa-solid fa-child-reaching"></i>
+            </div>
+            <span class="class-card__level">TK B</span>
+          </div>
+          <div class="class-card__body">
+            <h3 class="class-card__name">TK B — Kelompok Sembilan</h3>
+            <span class="class-card__age">
+              <i class="fa-regular fa-calendar"></i> Usia 5–6 Tahun
+            </span>
+            <p class="class-card__desc">
+              Persiapan menuju sekolah dasar. Anak-anak mulai mengenal baca tulis Al-Qur'an, berhitung dasar, dan keterampilan sosial melalui kegiatan kelompok yang menyenangkan.
+            </p>
+          </div>
+          <div class="class-card__footer">
+            <a href="#" class="class-card__btn">
+              Lihat Detail <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Kelas 1 -->
+        <div class="class-card">
+          <div class="class-card__image">
+            <div class="class-card__placeholder class-card__placeholder--kls-1">
+              <i class="fa-solid fa-book-open"></i>
+            </div>
+            <span class="class-card__level">Kelas 1</span>
+          </div>
+          <div class="class-card__body">
+            <h3 class="class-card__name">Kelas 1 — Permata Cinta</h3>
+            <span class="class-card__age">
+              <i class="fa-regular fa-calendar"></i> Usia 6–7 Tahun
+            </span>
+            <p class="class-card__desc">
+              Tahun pertama sekolah dasar dengan fondasi literasi dan numerasi yang kuat. Program Tahfidz dimulai dari Juz 30 dan pembelajaran Akidah-Akhlak secara menyeluruh.
+            </p>
+          </div>
+          <div class="class-card__footer">
+            <a href="#" class="class-card__btn">
+              Lihat Detail <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Kelas 2 -->
+        <div class="class-card">
+          <div class="class-card__image">
+            <div class="class-card__placeholder class-card__placeholder--kls-2">
+              <i class="fa-solid fa-seedling"></i>
+            </div>
+            <span class="class-card__level">Kelas 2</span>
+          </div>
+          <div class="class-card__body">
+            <h3 class="class-card__name">Kelas 2 — Cahaya Keimanan</h3>
+            <span class="class-card__age">
+              <i class="fa-regular fa-calendar"></i> Usia 7–8 Tahun
+            </span>
+            <p class="class-card__desc">
+              Penguatan kemampuan membaca Al-Qur'an dengan tajwid yang benar. Pembelajaran Fiqih dasar dan mulai berlatih shalat berjamaah di masjid sekolah.
+            </p>
+          </div>
+          <div class="class-card__footer">
+            <a href="#" class="class-card__btn">
+              Lihat Detail <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Kelas 3 -->
+        <div class="class-card">
+          <div class="class-card__image">
+            <div class="class-card__placeholder class-card__placeholder--kls-3">
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <span class="class-card__level">Kelas 3</span>
+          </div>
+          <div class="class-card__body">
+            <h3 class="class-card__name">Kelas 3 — Bintang Penyinar</h3>
+            <span class="class-card__age">
+              <i class="fa-regular fa-calendar"></i> Usia 8–9 Tahun
+            </span>
+            <p class="class-card__desc">
+              Pembelajaran lebih mendalam dengan target hafalan yang lebih besar. Santri mulai aktif dalam lomba tilawah, pidato bahasa Arab, dan kegiatan leadership.
+            </p>
+          </div>
+          <div class="class-card__footer">
+            <a href="#" class="class-card__btn">
+              Lihat Detail <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Kelas 4 -->
+        <div class="class-card">
+          <div class="class-card__image">
+            <div class="class-card__placeholder class-card__placeholder--kls-4">
+              <i class="fa-solid fa-gem"></i>
+            </div>
+            <span class="class-card__level">Kelas 4</span>
+          </div>
+          <div class="class-card__body">
+            <h3 class="class-card__name">Kelas 4 — Permata Keutamaan</h3>
+            <span class="class-card__age">
+              <i class="fa-regular fa-calendar"></i> Usia 9–10 Tahun
+            </span>
+            <p class="class-card__desc">
+              Pengembangan pemahaman Al-Qur'an dan Hadits. Program ini memperkuat kemampuan analisis, berpikir kritis, dan kemandirian santri dalam menuntut ilmu.
+            </p>
+          </div>
+          <div class="class-card__footer">
+            <a href="#" class="class-card__btn">
+              Lihat Detail <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       PROGRAM UNGGULAN
+       ═══════════════════════════════════════════════════════════ -->
+  <section class="kelaskami-section kelaskami-section--alt" id="program">
+    <div class="kelaskami-container">
+      <div class="kelaskami-section-header">
+        <span class="kelaskami-section-header__badge">Keunggulan</span>
+        <h2 class="kelaskami-section-header__title">Program Unggulan</h2>
+        <p class="kelaskami-section-header__desc">
+          Tiga pilar utama pendidikan di YPSMA yang membentuk santri beriman, berilmu, dan beramal.
+        </p>
+      </div>
+
+      <div class="program-grid">
+
+        <!-- Tahfidz Al-Qur'an -->
+        <div class="program-card">
+          <div class="program-card__icon program-card__icon--primary">
+            <i class="fa-solid fa-book-quran"></i>
+          </div>
+          <h3 class="program-card__title">Tahfidz Al-Qur'an</h3>
+          <p class="program-card__desc">
+            Program menghafal Al-Qur'an dengan metode mujahadah dan pendampingan intensif oleh ustadz/ustadzah yang berpengalaman. Target hafalan disesuaikan dengan jenjang kelas.
+          </p>
+          <a href="#" class="program-card__link">
+            Selengkapnya <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+
+        <!-- Pembelajaran Digital -->
+        <div class="program-card">
+          <div class="program-card__icon program-card__icon--secondary">
+            <i class="fa-solid fa-laptop-code"></i>
+          </div>
+          <h3 class="program-card__title">Pembelajaran Digital</h3>
+          <p class="program-card__desc">
+            Integrasi teknologi dalam proses belajar mengajar dengan platform e-learning interaktif dan akses materi 24 jam untuk pendampingan belajar di rumah.
+          </p>
+          <a href="#" class="program-card__link">
+            Selengkapnya <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+
+        <!-- Ekstrakurikuler -->
+        <div class="program-card">
+          <div class="program-card__icon program-card__icon--accent">
+            <i class="fa-solid fa-futbol"></i>
+          </div>
+          <h3 class="program-card__title">Ekstrakurikuler</h3>
+          <p class="program-card__desc">
+            Pengembangan bakat dan minat melalui kegiatan ekstrakurikuler: tilawah, pidato bahasa Arab/Inggris, olahraga, dan seni Islam.
+          </p>
+          <a href="#" class="program-card__link">
+            Selengkapnya <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       CTA: KUNJUNGI KAMI
+       ═══════════════════════════════════════════════════════════ -->
+  <section class="kelaskami-cta">
+    <div class="kelaskami-container">
+      <h2 class="kelaskami-cta__title">
+        Kunjungi YPSMA dan Rasakan Suasananya
+      </h2>
+      <p class="kelaskami-cta__desc">
+        Kami mengundang Bapak/Ibu untuk datang langsung ke YPSMA dan melihat bagaimana proses belajar mengajar berlangsung. Jadwalkan kunjungan Anda sekarang!
+      </p>
+      <div class="kelaskami-cta__actions">
+        <a href="https://wa.me/6281234567890" class="kelaskami-btn kelaskami-btn--primary" target="_blank" rel="noopener">
+          <i class="fa-brands fa-whatsapp"></i> Hubungi via WhatsApp
+        </a>
+        <a href="https://maps.google.com/?q=Jl.+Pendidikan+No.+123+Ciparay+Bandung" class="kelaskami-btn kelaskami-btn--outline" target="_blank" rel="noopener">
+          <i class="fa-solid fa-location-dot"></i> Lihat di Google Maps
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       FOOTER
+       ═══════════════════════════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="index.html" class="footer__brand-logo">
+            <span class="footer__brand-logo-text">YPSMA</span>
+          </a>
+          <p class="footer__brand-desc">Yayasan Pendidikan Shafiyyatul Amaliyyah — Membangun generasi Islami yang berilmu dan beramal melalui pendidikan berkualitas berbasis Al-Qur'an dan sunnah.</p>
+          <div class="footer__social">
+            <a href="#" class="footer__social-link" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="footer__social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="footer__social-link" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://wa.me/6281234567890" class="footer__social-link" aria-label="WhatsApp" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i></a>
+          </div>
+        </div>
+        <div>
+          <h3 class="footer__heading">Tautan Cepat</h3>
+          <ul class="footer__links">
+            <li><a href="index.html" class="footer__link">Beranda</a></li>
+            <li><a href="programs.html" class="footer__link">Program</a></li>
+            <li><a href="articles.html" class="footer__link">Berita</a></li>
+            <li><a href="about.html" class="footer__link">Tentang Kami</a></li>
+            <li><a href="contact.html" class="footer__link">Hubungi Kami</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="footer__heading">Program Kami</h3>
+          <ul class="footer__links">
+            <li><a href="programs.html" class="footer__link">Tahfidz Al-Qur'an</a></li>
+            <li><a href="programs.html" class="footer__link">Pembelajaran Digital</a></li>
+            <li><a href="programs.html" class="footer__link">Ekstrakurikuler</a></li>
+            <li><a href="programs.html" class="footer__link">Bimbingan Belajar</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="footer__heading">Kontak</h3>
+          <ul class="footer__contact-list">
+            <li class="footer__contact-item">
+              <i class="fa-solid fa-location-dot footer__contact-icon"></i>
+              <span>Jl. Pendidikan No. 123, Kec. Ciparay, Kab. Bandung, Jawa Barat 40391</span>
+            </li>
+            <li class="footer__contact-item">
+              <i class="fa-solid fa-envelope footer__contact-icon"></i>
+              <a href="mailto:info@ypsma.sch.id">info@ypsma.sch.id</a>
+            </li>
+            <li class="footer__contact-item">
+              <i class="fa-solid fa-phone footer__contact-icon"></i>
+              <a href="tel:+622212345678">(022) 1234-5678</a>
+            </li>
+            <li class="footer__contact-item">
+              <i class="fa-brands fa-whatsapp footer__contact-icon"></i>
+              <a href="https://wa.me/6281234567890" target="_blank" rel="noopener">0812-3456-7890</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copyright">&copy; 2024 YPSMA. All rights reserved.</p>
+        <div class="footer__bottom-links">
+          <a href="#" class="footer__link">Kebijakan Privasi</a>
+          <a href="#" class="footer__link">Syarat & Ketentuan</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       BACK TO TOP
+       ═══════════════════════════════════════════════════════════ -->
+  <button class="back-to-top" id="back-to-top" aria-label="Kembali ke atas">
+    <i class="fa-solid fa-chevron-up"></i>
+  </button>
+
+  <!-- Scripts -->
+  <script src="../js/main.js"></script>
+</body>
+</html>

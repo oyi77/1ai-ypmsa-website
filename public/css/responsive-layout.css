@@ -1,0 +1,316 @@
+/* ============================================================
+   1AI × YPSMA — Responsive Layout
+   Mobile-first grid system with container queries
+   ============================================================ */
+
+/* --- Grid System --- */
+.grid {
+  display: grid;
+  gap: var(--space-6);
+}
+
+.grid-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* Auto-fit responsive grids */
+.grid-auto-fit {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.grid-auto-fill {
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+}
+
+/* --- Flex Utilities --- */
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.items-start {
+  align-items: flex-start;
+}
+
+.items-end {
+  align-items: flex-end;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-end {
+  justify-content: flex-end;
+}
+
+.gap-1 { gap: var(--space-1); }
+.gap-2 { gap: var(--space-2); }
+.gap-3 { gap: var(--space-3); }
+.gap-4 { gap: var(--space-4); }
+.gap-6 { gap: var(--space-6); }
+.gap-8 { gap: var(--space-8); }
+
+/* --- Container Queries --- */
+@container (min-width: 640px) {
+  .container-sm { max-width: 640px; }
+}
+
+@container (min-width: 768px) {
+  .container-md { max-width: 768px; }
+}
+
+@container (min-width: 1024px) {
+  .container-lg { max-width: 1024px; }
+}
+
+@container (min-width: 1280px) {
+  .container-xl { max-width: 1280px; }
+}
+
+/* --- Responsive Breakpoints (Mobile-First) --- */
+
+/* Small phones (up to 374px) */
+@media (max-width: 374px) {
+  :root {
+    --container-padding: 1rem;
+  }
+  
+  section {
+    padding: var(--space-16) 0;
+  }
+  
+  .grid-2,
+  .grid-3,
+  .grid-4 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Mobile (375px - 767px) */
+@media (min-width: 375px) and (max-width: 767px) {
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
+  
+  .grid-3 {
+    grid-template-columns: 1fr;
+  }
+  
+  .grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Tablet (768px - 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .grid-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Desktop (1024px - 1279px) */
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .grid-4 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Wide desktop (1280px+) */
+@media (min-width: 1280px) {
+  .grid-4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* --- Section Padding Responsive --- */
+@media (max-width: 767px) {
+  section {
+    padding: var(--space-16) 0;
+  }
+  
+  .section-header {
+    margin-bottom: var(--space-10);
+  }
+}
+
+@media (min-width: 768px) {
+  section {
+    padding: var(--space-24) 0;
+  }
+  
+  .section-header {
+    margin-bottom: var(--space-16);
+  }
+}
+
+/* --- Hide/Show Responsive --- */
+@media (max-width: 767px) {
+  .hide-mobile {
+    display: none !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .show-mobile-only {
+    display: none !important;
+  }
+}
+
+@media (max-width: 1023px) {
+  .hide-tablet {
+    display: none !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .show-tablet-only {
+    display: none !important;
+  }
+}
+
+/* --- Spacing Responsive --- */
+@media (max-width: 767px) {
+  .space-responsive {
+    gap: var(--space-4);
+  }
+}
+
+@media (min-width: 768px) {
+  .space-responsive {
+    gap: var(--space-8);
+  }
+}
+
+/* --- Text Alignment Responsive --- */
+@media (max-width: 767px) {
+  .text-center-mobile {
+    text-align: center;
+  }
+  
+  .text-left-mobile {
+    text-align: left;
+  }
+}
+
+/* --- Aspect Ratio Utilities --- */
+.aspect-square {
+  aspect-ratio: 1;
+}
+
+.aspect-video {
+  aspect-ratio: 16 / 9;
+}
+
+.aspect-photo {
+  aspect-ratio: 4 / 3;
+}
+
+/* --- Object Fit --- */
+.object-cover {
+  object-fit: cover;
+}
+
+.object-contain {
+  object-fit: contain;
+}
+
+/* --- Overflow --- */
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.overflow-auto {
+  overflow: auto;
+}
+
+/* --- Position Utilities --- */
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.fixed {
+  position: fixed;
+}
+
+.sticky {
+  position: sticky;
+}
+
+/* --- Width/Height --- */
+.w-full {
+  width: 100%;
+}
+
+.h-full {
+  height: 100%;
+}
+
+.min-h-screen {
+  min-height: 100vh;
+}
+
+/* --- Container Responsive --- */
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+}
+
+@media (max-width: 767px) {
+  .container {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .container {
+    padding: 0 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding: 0 2rem;
+  }
+}

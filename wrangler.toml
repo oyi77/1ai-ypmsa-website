@@ -1,15 +1,13 @@
-name = "ypsma-website"
+name = "1ai-ypmsa-website"
 compatibility_date = "2026-07-11"
 
-[site]
-bucket = "./public"
-
-[[pages_build_output_dir]]
-output_dir = "./public"
+pages_build_output_dir = "./public"
 
 [vars]
 MIDTRANS_ENV = "production"
 
-# Secrets (set via CF Dashboard → Pages → Settings → Environment variables):
-# MIDTRANS_SERVER_KEY = "Mid-server-..."
-# MIDTRANS_CLIENT_KEY = "Mid-client-bmsuCQQOdxgsx82_"
+# Secrets set via Cloudflare API (2026-07-12):
+#   MIDTRANS_SERVER_KEY = secret_text
+#   MIDTRANS_CLIENT_KEY = secret_text
+# Set via `curl -X PATCH .../pages/projects/1ai-ypmsa-website`
+# Build image v1 required (v2/v3 broken on this account)

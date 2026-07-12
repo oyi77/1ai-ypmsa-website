@@ -5,5 +5,11 @@
   "scripts": {
     "build": "mkdir -p dist && cp -fR public/* dist/",
     "clean": "rm -rf dist"
+  },
+  "dependencies": {
+    "@astrojs/tailwind": "6.0.2",
+    "@fontsource/inter": "^5.2.8",
+    "@fontsource/plus-jakarta-sans": "^5.2.8",
+    "astro-icon": "^1.1.5"
   }
 }
