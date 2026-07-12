@@ -1,15 +1,4 @@
-# Clean URL redirects for LP pages
-/lp-beasiswa         /lp-beasiswa.html         301
-/lp-beasiswa-santri  /lp-beasiswa-santri.html  301
-/lp-wakaf-sumur      /lp-wakaf-sumur.html      301
-/lp-sedekah-pangan   /lp-sedekah-pangan.html   301
-/lp-sedekah-sehat    /lp-sedekah-sehat.html    301
-/lp-sedekah-sembako  /lp-sedekah-sembako.html  301
-/lp-patungan-listrik /lp-patungan-listrik.html 301
-/lp-titip-doa        /lp-titip-doa.html        301
-/lp-ramadan          /lp-ramadan.html          301
-
-# Donation success
+# Donation success clean URLs
 /sukses              /donate-success.html       301
 /terima-kasih        /donate-success.html       301
 
