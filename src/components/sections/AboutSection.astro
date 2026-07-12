@@ -7,8 +7,9 @@ import { ORG_SHORT } from '../../lib/constants';
     <div class="grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-16 items-center">
       <!-- Left Column (60%) -->
       <div class="lg:col-span-3">
-        <h2 class="section-heading text-3xl md:text-4xl font-bold text-primary-800 font-heading mb-6">
-          Tentang {ORG_SHORT}
+        <span class="inline-block text-sm font-semibold text-coral-500 uppercase tracking-widest mb-3">Tentang Kami</span>
+        <h2 class="text-3xl md:text-4xl font-bold text-primary-800 font-heading mb-6">
+          {ORG_SHORT}
         </h2>
 
         <div class="space-y-4 text-neutral-600 leading-relaxed">
@@ -57,33 +58,26 @@ import { ORG_SHORT } from '../../lib/constants';
         </a>
       </div>
 
-      <!-- Right Column (40%) - Decorative Card -->
+      <!-- Right Column (40%) - Founder Photo Card -->
       <div class="lg:col-span-2">
-        <div class="bg-primary-100 rounded-xl p-8 md:p-10 relative">
-          <!-- Decorative quote mark -->
-          <svg
-            class="absolute top-4 right-4 w-12 h-12 text-primary-200"
-            viewBox="0 0 24 24"
-            fill="currentColor"
-            aria-hidden="true"
-          >
-            <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
-          </svg>
-
-          <blockquote class="text-lg md:text-xl text-primary-700 font-medium leading-relaxed italic">
-            "Pendidikan adalah senjata paling ampuh untuk mengubah dunia"
-          </blockquote>
-
-          <div class="mt-6 pt-6 border-t border-primary-200">
-            <div class="flex items-center gap-3">
-              <div class="w-12 h-12 bg-primary-300 rounded-full flex items-center justify-center text-primary-800 font-bold text-lg">
-                Y
-              </div>
-              <div>
-                <p class="font-semibold text-primary-800 text-sm">YPSM Jombang</p>
-                <p class="text-primary-500 text-xs">Sejak 1968</p>
-              </div>
+        <div class="relative">
+          <!-- Founder photo -->
+          <div class="rounded-xl overflow-hidden shadow-strong bg-primary-100">
+            <img
+              src="/images/campaigns/pendiri.jpg"
+              alt="Foto Pendiri YPSM Jombang"
+              class="w-full h-auto object-cover"
+              loading="lazy"
+            />
+            <div class="p-5 bg-white">
+              <p class="font-bold text-primary-800 text-lg">Pendiri YPSM</p>
+              <p class="text-neutral-500 text-sm">Yayasan Pendidikan & Sosial Ma'arif</p>
             </div>
+          </div>
+
+          <!-- Badge -->
+          <div class="absolute -top-3 -right-3 bg-secondary-500 text-white px-4 py-1.5 rounded-full text-sm font-bold shadow-soft">
+            Sejak 1968
           </div>
         </div>
       </div>
