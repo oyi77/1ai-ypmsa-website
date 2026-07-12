@@ -17,4 +17,4 @@ jobs:
         with:
           apiToken: ${{ secrets.CF_API_TOKEN }}
           accountId: ${{ secrets.CF_ACCOUNT_ID }}
-          command: pages deploy public --project-name=1ai-ypmsa-website --branch=main --commit-dirty=true
+          command: pages deploy --project-name=1ai-ypmsa-website --branch=main --commit-dirty=true ./dist

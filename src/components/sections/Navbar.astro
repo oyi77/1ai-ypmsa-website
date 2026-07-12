@@ -1,0 +1,140 @@
+---
+import { SITE_NAME, NAV_ITEMS } from '../../lib/constants';
+---
+
+<header class="fixed top-0 left-0 right-0 z-[var(--z-navbar)] glass border-b border-white/10">
+  <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16 lg:h-20">
+      <!-- Logo -->
+      <a href="/" class="flex items-center gap-3 shrink-0">
+        <img
+          src="/images/logoypma.png"
+          alt={SITE_NAME}
+          class="h-8 w-auto lg:h-10"
+          width="40"
+          height="40"
+        />
+        <span class="text-lg lg:text-xl font-bold text-primary-800 font-heading">{SITE_NAME}</span>
+      </a>
+
+      <!-- Desktop Nav -->
+      <ul class="hidden lg:flex items-center gap-8">
+        {
+          NAV_ITEMS.map((item) => (
+            <li>
+              <a
+                href={item.href}
+                class="text-neutral-600 hover:text-secondary-500 transition-colors duration-200 font-medium text-sm"
+              >
+                {item.label}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+
+      <!-- Desktop CTA -->
+      <a
+        id="donate-nav-cta"
+        href="/donasi/"
+        class="hidden lg:inline-flex items-center bg-coral-500 hover:bg-coral-600 text-white px-6 py-2.5 rounded-lg font-semibold text-sm transition-all duration-200 shadow-soft hover:shadow-medium"
+      >
+        Donasi Sekarang
+      </a>
+
+      <!-- Mobile Hamburger -->
+      <button
+        id="nav-toggle"
+        class="lg:hidden p-2 text-neutral-600 hover:text-primary-700 transition-colors"
+        aria-label="Toggle navigation menu"
+      >
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <line id="hamburger-line1" x1="3" y1="7" x2="21" y2="7" />
+          <line id="hamburger-line2" x1="3" y1="12" x2="21" y2="12" />
+          <line id="hamburger-line3" x1="3" y1="17" x2="21" y2="17" />
+        </svg>
+      </button>
+    </div>
+  </nav>
+</header>
+
+<!-- Mobile Drawer Overlay -->
+<div
+  id="nav-overlay"
+  class="fixed inset-0 bg-black/50 z-[calc(var(--z-navbar)+1)] opacity-0 pointer-events-none transition-opacity duration-300 lg:hidden"
+  aria-hidden="true"
+></div>
+
+<!-- Mobile Drawer -->
+<aside
+  id="nav-drawer"
+  class="fixed top-0 left-0 h-full w-72 max-w-[80vw] bg-white z-[calc(var(--z-navbar)+2)] -translate-x-full transition-transform duration-300 ease-in-out lg:hidden shadow-strong"
+  aria-label="Mobile navigation"
+>
+  <div class="flex flex-col h-full p-6">
+    <!-- Drawer header -->
+    <div class="flex items-center justify-between mb-8">
+      <div class="flex items-center gap-3">
+        <img src="/images/logoypma.png" alt={SITE_NAME} class="h-8 w-auto" width="40" height="40" />
+        <span class="text-lg font-bold text-primary-800 font-heading">{SITE_NAME}</span>
+      </div>
+      <button id="nav-close" class="p-1 text-neutral-400 hover:text-neutral-600 transition-colors" aria-label="Close menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <line x1="6" y1="6" x2="18" y2="18" />
+          <line x1="18" y1="6" x2="6" y2="18" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Nav Links -->
+    <ul class="flex-1 flex flex-col gap-1">
+      {
+        NAV_ITEMS.map((item) => (
+          <li>
+            <a
+              href={item.href}
+              class="block px-4 py-3 text-neutral-700 hover:text-secondary-500 hover:bg-neutral-50 rounded-lg transition-all duration-200 font-medium"
+            >
+              {item.label}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+
+    <!-- Mobile CTA -->
+    <a
+      href="/donasi/"
+      class="block text-center bg-coral-500 hover:bg-coral-600 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-200 mt-4"
+    >
+      Donasi Sekarang
+    </a>
+  </div>
+</aside>
+
+<script>
+  const toggle = document.getElementById('nav-toggle');
+  const close = document.getElementById('nav-close');
+  const drawer = document.getElementById('nav-drawer');
+  const overlay = document.getElementById('nav-overlay');
+
+  function openMenu() {
+    drawer.classList.remove('-translate-x-full');
+    overlay.classList.remove('opacity-0', 'pointer-events-none');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeMenu() {
+    drawer.classList.add('-translate-x-full');
+    overlay.classList.add('opacity-0', 'pointer-events-none');
+    document.body.style.overflow = '';
+  }
+
+  toggle?.addEventListener('click', openMenu);
+  close?.addEventListener('click', closeMenu);
+  overlay?.addEventListener('click', closeMenu);
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeMenu();
+  });
+</script>

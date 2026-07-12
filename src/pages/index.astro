@@ -1,28 +1,36 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
-import Navbar from '../components/Navbar.astro';
-import Hero from '../components/Hero.astro';
-import AboutSection from '../components/AboutSection.astro';
-import VisionMission from '../components/VisionMission.astro';
-import StatsSection from '../components/StatsSection.astro';
-import ProgramSection from '../components/ProgramSection.astro';
-import GallerySection from '../components/GallerySection.astro';
-import TestimonialSection from '../components/TestimonialSection.astro';
-import CTASection from '../components/CTASection.astro';
-import Footer from '../components/Footer.astro';
+import Navbar from '../components/sections/Navbar.astro';
+import Hero from '../components/sections/Hero.astro';
+import TrustBar from '../components/sections/TrustBar.astro';
+import AboutSection from '../components/sections/AboutSection.astro';
+import StatsSection from '../components/sections/StatsSection.astro';
+import ProgramSection from '../components/sections/ProgramSection.astro';
+import TestimonialSection from '../components/sections/TestimonialSection.astro';
+import GallerySection from '../components/sections/GallerySection.astro';
+import DonationCalculator from '../components/sections/DonationCalculator.astro';
+import BlogPreview from '../components/sections/BlogPreview.astro';
+import CTASection from '../components/sections/CTASection.astro';
+import Footer from '../components/sections/Footer.astro';
+import StickyDonateButton from '../components/islands/StickyDonateButton';
 ---
 
 <MainLayout>
   <Navbar />
   <main>
     <Hero />
+    <TrustBar />
     <AboutSection />
-    <VisionMission />
     <StatsSection />
     <ProgramSection />
-    <GallerySection />
     <TestimonialSection />
+    <GallerySection />
+    <DonationCalculator />
+    <BlogPreview />
     <CTASection />
   </main>
   <Footer />
+
+  <!-- Interactive Islands -->
+  <StickyDonateButton client:load />
 </MainLayout>

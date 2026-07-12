@@ -1,0 +1,110 @@
+---
+import { ORG_SHORT } from '../../lib/constants';
+---
+
+<section class="bg-primary-900 text-white py-20">
+  <div class="max-w-4xl mx-auto px-4">
+    <!-- Section Heading -->
+    <div class="text-center mb-10">
+      <h2 class="text-3xl md:text-4xl font-heading font-bold text-white">
+        Hitung Zakat & Sedekah
+      </h2>
+      <p class="text-neutral-300 mt-3 max-w-lg mx-auto">
+        Kalkulator sederhana untuk menghitung zakat mal
+      </p>
+    </div>
+
+    <!-- Calculator Card -->
+    <div class="bg-white/10 backdrop-blur-sm rounded-xl p-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+        <!-- Input: Total Harta -->
+        <div>
+          <label for="total-harta" class="block text-sm font-medium text-neutral-200 mb-2">
+            Total Harta (Rp)
+          </label>
+          <input
+            id="total-harta"
+            type="number"
+            inputmode="numeric"
+            placeholder="Masukkan total harta Anda"
+            class="w-full p-3 rounded-lg border border-white/20 bg-white/5 text-white placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-secondary-500 focus:border-transparent"
+          />
+        </div>
+
+        <!-- Input: Emas -->
+        <div>
+          <label for="emas-dimiliki" class="block text-sm font-medium text-neutral-200 mb-2">
+            Emas yang dimiliki (gram)
+          </label>
+          <input
+            id="emas-dimiliki"
+            type="number"
+            inputmode="numeric"
+            placeholder="Contoh: 100"
+            class="w-full p-3 rounded-lg border border-white/20 bg-white/5 text-white placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-secondary-500 focus:border-transparent"
+          />
+        </div>
+      </div>
+
+      <!-- Calculate Button -->
+      <button
+        id="hitung-zakat"
+        class="bg-secondary-500 text-primary-900 font-bold py-3 px-8 rounded-lg hover:bg-secondary-400 transition-colors"
+      >
+        Hitung
+      </button>
+
+      <!-- Result Display -->
+      <div id="hasil-zakat" class="mt-6 hidden">
+        <div class="bg-white/5 rounded-lg p-4">
+          <p class="text-sm text-neutral-300 mb-1">Zakat yang harus dibayar:</p>
+          <p id="jumlah-zakat" class="text-2xl font-bold text-secondary-400">
+            Rp 0
+          </p>
+        </div>
+      </div>
+
+      <!-- Footnote -->
+      <p class="text-xs text-neutral-400 mt-4">
+        Nisab zakat mengacu pada harga emas Rp 1.000.000/gram (85 gram = Rp 85.000.000)
+      </p>
+    </div>
+  </div>
+</section>
+
+<script>
+  (function () {
+    const nisab = 85 * 1000000;
+
+    const totalHarta = document.getElementById('total-harta');
+    const emasDimiliki = document.getElementById('emas-dimiliki');
+    const hitungBtn = document.getElementById('hitung-zakat');
+    const hasilDiv = document.getElementById('hasil-zakat');
+    const jumlahZakat = document.getElementById('jumlah-zakat');
+
+    function hitung() {
+      const harta = parseFloat(totalHarta.value) || 0;
+      const emas = parseFloat(emasDimiliki.value) || 0;
+      const hartaEmas = emas * 1000000;
+      const total = harta + hartaEmas;
+
+      if (total >= nisab) {
+        const zakat = total * 0.025;
+        jumlahZakat.textContent = 'Rp ' + zakat.toLocaleString('id-ID');
+        hasilDiv.classList.remove('hidden');
+      } else {
+        jumlahZakat.textContent = 'Belum mencapai nisab';
+        hasilDiv.classList.remove('hidden');
+      }
+    }
+
+    hitungBtn.addEventListener('click', hitung);
+
+    // Also calculate on Enter key
+    [totalHarta, emasDimiliki].forEach(function (input) {
+      input.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter') hitung();
+      });
+    });
+  })();
+</script>

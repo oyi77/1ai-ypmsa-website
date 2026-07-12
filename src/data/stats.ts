@@ -1,21 +1,19 @@
 export interface Stat {
-  label: string;
   value: string;
-  icon?: string;
+  label: string;
+  icon: string;
 }
 
-export const heroStats: Stat[] = [
-  { label: 'Tahun Melayani', value: '26+', icon: 'calendar' },
-  { label: 'Program Aktif', value: '15+', icon: 'programs' },
-  { label: 'Penerima Manfaat', value: '2.500+', icon: 'people' },
-  { label: 'Donasi Terkumpul', value: 'Rp 850 Jt', icon: 'donation' },
+export const stats: Stat[] = [
+  { value: '3000+', label: 'Alumni', icon: 'graduation' },
+  { value: '640+', label: 'Santri Aktif', icon: 'students' },
+  { value: '58', label: 'Tahun Berdiri', icon: 'calendar' },
+  { value: '25+', label: 'Hafidz/Hafidzah', icon: 'quran' },
 ];
 
 export const impactStats: Stat[] = [
-  { label: 'Santri TPA', value: '150+' },
-  { label: 'Keluarga Terbantu', value: '500+' },
-  { label: 'Beasiswa Aktif', value: '200+' },
-  { label: 'Bencana Ditangani', value: '30+' },
-  { label: 'Relawan Aktif', value: '75' },
-  { label: 'Kajian/Bulan', value: '4' },
+  { value: '85%', label: 'Dana Tersalurkan ke Program', icon: 'chart' },
+  { value: '300+', label: 'Santri Dapat Beasiswa', icon: 'scholarship' },
+  { value: '50+', label: 'Tenaga Pendidik', icon: 'teachers' },
+  { value: '100%', label: 'Transparan & Terpercaya', icon: 'shield' },
 ];

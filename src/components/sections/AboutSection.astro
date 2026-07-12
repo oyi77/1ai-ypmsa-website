@@ -1,0 +1,92 @@
+---
+import { ORG_SHORT } from '../../lib/constants';
+---
+
+<section id="tentang" class="py-20 bg-white">
+  <div class="max-w-6xl mx-auto px-4">
+    <div class="grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-16 items-center">
+      <!-- Left Column (60%) -->
+      <div class="lg:col-span-3">
+        <h2 class="section-heading text-3xl md:text-4xl font-bold text-primary-800 font-heading mb-6">
+          Tentang {ORG_SHORT}
+        </h2>
+
+        <div class="space-y-4 text-neutral-600 leading-relaxed">
+          <p>
+            Yayasan Pendidikan &amp; Sosial Ma'arif (YPSM) Jombang adalah lembaga nirlaba yang
+            berfokus pada pendidikan Islam berkualitas. Berdiri sejak 1968, yayasan kami mengelola
+            empat lembaga pendidikan: RA Perwanida, MI Miftahul Ulum, SMP Plus Ma'arif, dan
+            Pondok Pesantren Tahfidz Al-Qur'an (PPTQ).
+          </p>
+          <p>
+            Kami percaya bahwa setiap anak berhak mendapatkan pendidikan yang memadukan ilmu
+            pengetahuan, nilai-nilai keislaman, dan akhlak mulia. Dengan dukungan para donatur
+            dan tenaga pendidik profesional, YPSM terus berkomitmen mencetak generasi unggul
+            yang siap menghadapi tantangan zaman.
+          </p>
+          <p class="font-semibold text-primary-700">
+            Sejak 1968, YPSM telah menjadi rumah pendidikan yang melahirkan 3.000+ alumni berprestasi.
+          </p>
+        </div>
+
+        <!-- Impact numbers inline -->
+        <div class="flex flex-wrap gap-6 mt-8">
+          {
+            [
+              { value: '640+', label: 'Santri Aktif' },
+              { value: '50+', label: 'Tenaga Pendidik' },
+              { value: '4', label: 'Lembaga Pendidikan' },
+            ].map((item) => (
+              <div class="flex items-center gap-3">
+                <span class="text-2xl md:text-3xl font-bold text-secondary-500 font-heading">{item.value}</span>
+                <span class="text-sm text-neutral-500">{item.label}</span>
+              </div>
+            ))
+          }
+        </div>
+
+        <a
+          href="/tentang-kami/"
+          class="inline-flex items-center gap-2 mt-8 text-secondary-600 hover:text-secondary-700 font-semibold transition-colors duration-200"
+        >
+          Selengkapnya
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14" />
+            <path d="m12 5 7 7-7 7" />
+          </svg>
+        </a>
+      </div>
+
+      <!-- Right Column (40%) - Decorative Card -->
+      <div class="lg:col-span-2">
+        <div class="bg-primary-100 rounded-xl p-8 md:p-10 relative">
+          <!-- Decorative quote mark -->
+          <svg
+            class="absolute top-4 right-4 w-12 h-12 text-primary-200"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            aria-hidden="true"
+          >
+            <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+          </svg>
+
+          <blockquote class="text-lg md:text-xl text-primary-700 font-medium leading-relaxed italic">
+            "Pendidikan adalah senjata paling ampuh untuk mengubah dunia"
+          </blockquote>
+
+          <div class="mt-6 pt-6 border-t border-primary-200">
+            <div class="flex items-center gap-3">
+              <div class="w-12 h-12 bg-primary-300 rounded-full flex items-center justify-center text-primary-800 font-bold text-lg">
+                Y
+              </div>
+              <div>
+                <p class="font-semibold text-primary-800 text-sm">YPSM Jombang</p>
+                <p class="text-primary-500 text-xs">Sejak 1968</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

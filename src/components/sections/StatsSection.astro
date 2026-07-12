@@ -1,0 +1,56 @@
+---
+import { impactStats } from '../../data/stats';
+---
+
+<section class="bg-primary-900 text-white py-16">
+  <div class="max-w-6xl mx-auto px-4">
+    <!-- Section heading -->
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold font-heading mb-3">Statistik &amp; Dampak</h2>
+      <p class="text-white/60 max-w-2xl mx-auto">
+        Transparansi adalah komitmen kami. Berikut capaian dan dampak nyata dari program-program YPSM.
+      </p>
+    </div>
+
+    <!-- Stats Grid -->
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-6">
+      {
+        impactStats.map((stat) => (
+          <div class="group bg-white/5 backdrop-blur-sm rounded-xl p-6 text-center transition-all duration-300 hover:scale-105 hover:bg-white/10 border border-white/10">
+            <!-- Icon placeholder -->
+            <div class="w-14 h-14 mx-auto mb-4 bg-white/10 rounded-full flex items-center justify-center group-hover:bg-secondary-500/20 transition-colors duration-300">
+              <span class="text-xl text-secondary-400">
+                {
+                  stat.icon === 'chart' ? '📊' :
+                  stat.icon === 'scholarship' ? '🎓' :
+                  stat.icon === 'teachers' ? '👨‍🏫' :
+                  stat.icon === 'shield' ? '🛡️' : '📌'
+                }
+              </span>
+            </div>
+            <p class="text-4xl font-bold text-white font-heading mb-1">{stat.value}</p>
+            <p class="text-white/60 text-sm">{stat.label}</p>
+          </div>
+        ))
+      }
+    </div>
+
+    <!-- Progress Bar -->
+    <div class="mt-12 bg-white/10 rounded-xl p-6 md:p-8">
+      <div class="flex items-center justify-between mb-3">
+        <span class="text-white/80 font-medium text-sm">Dana Tersalurkan ke Program</span>
+        <span class="text-secondary-400 font-bold">85%</span>
+      </div>
+      <div class="w-full bg-white/10 rounded-full h-4 overflow-hidden">
+        <div
+          class="h-full rounded-full bg-gradient-to-r from-secondary-500 to-secondary-400 transition-all duration-1000"
+          style="width: 85%"
+        ></div>
+      </div>
+      <p class="text-white/50 text-xs mt-3">
+        Dari total donasi yang terkumpul, 85% disalurkan langsung ke program pendidikan dan sosial.
+        10% untuk operasional, dan 5% sebagai cadangan.
+      </p>
+    </div>
+  </div>
+</section>

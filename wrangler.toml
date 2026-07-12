@@ -1,7 +1,6 @@
 name = "1ai-ypmsa-website"
 compatibility_date = "2026-07-11"
-
-pages_build_output_dir = "./public"
+pages_build_output_dir = "./dist"
 
 [vars]
 MIDTRANS_ENV = "production"

@@ -1,0 +1,60 @@
+---
+// Testimonial testimonials section - YPSM Jombang
+
+export interface Testimonial {
+  quote: string;
+  author: string;
+  role: string;
+}
+
+const testimonials: Testimonial[] = [
+  {
+    quote: 'Anak saya betah belajar di MI Miftahul Ulum. Gurunya sabar dan kurikulumnya seimbang antara ilmu umum dan agama.',
+    author: 'Ibu Dewi',
+    role: 'Wali Santri',
+  },
+  {
+    quote: 'Program Tahfidz di PPTQ sangat bagus. Saya sudah hafal 15 juz dalam 2 tahun. Lingkungannya mendukung banget.',
+    author: 'Ahmad Fauzi',
+    role: 'Santri PPTQ',
+  },
+  {
+    quote: 'YPSM konsisten mendidik generasi berakhlak. Saya donatur tetap sejak 2018 dan selalu transparan laporan dananya.',
+    author: 'Bapak H. Sulaiman',
+    role: 'Donatur',
+  },
+];
+---
+
+<section id="testimoni" class="bg-neutral-50 py-20">
+  <div class="max-w-6xl mx-auto px-4">
+    <h2 class="section-heading section-heading-center text-center text-3xl md:text-4xl font-bold text-primary-900 mb-14">
+      Apa Kata Mereka
+    </h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {
+        testimonials.map((t) => (
+          <div class="bg-white rounded-xl p-8 shadow-soft card-hover border-l-4 border-secondary-500 flex flex-col">
+            <div class="text-4xl font-bold text-secondary-500/30 leading-none mb-2">&bdquo;</div>
+            <p class="italic text-neutral-600 mb-6 leading-relaxed flex-1">{t.quote}</p>
+
+            <div class="flex items-center gap-1 mb-4 text-secondary-500">
+              <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+            </div>
+
+            <div class="flex items-center gap-3">
+              <div class="w-12 h-12 rounded-full bg-primary-900 text-white flex items-center justify-center font-bold text-lg shrink-0">
+                {t.author.charAt(0)}
+              </div>
+              <div>
+                <div class="font-semibold text-primary-900 text-sm">{t.author}</div>
+                <div class="text-xs text-neutral-500">{t.role}</div>
+              </div>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>

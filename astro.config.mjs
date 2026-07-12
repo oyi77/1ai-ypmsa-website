@@ -1,6 +1,6 @@
 import { defineConfig } from 'astro/config';
 import react from '@astrojs/react';
-import tailwindcss from '@tailwindcss/astro';
+import tailwind from '@astrojs/tailwind';
 import sitemap from '@astrojs/sitemap';
 import { SITE_URL } from './src/lib/constants';
 
@@ -8,7 +8,7 @@ export default defineConfig({
   site: SITE_URL,
   integrations: [
     react(),
-    tailwindcss(),
+    tailwind(),
     sitemap(),
   ],
   markdown: {

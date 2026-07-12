@@ -1,0 +1,71 @@
+---
+// Gallery moments section - YPSM Jombang
+
+interface GalleryItem {
+  label: string;
+  icon: string; // SVG path string
+  span: 'normal' | 'tall';
+}
+
+const items: GalleryItem[] = [
+  {
+    label: 'Kelas Tahfidz',
+    icon: 'M3.5 5.5h17M3.5 12h17M3.5 18.5h17',
+    span: 'tall',
+  },
+  {
+    label: 'Outbound Santri',
+    icon: 'M12 3c-1.5 0-3 .9-3 2.5C9 6 9 7 9 7v1c0 .5.5 1 1 1h4c.5 0 1-.5 1-1V7c0-1.6-1.5-2.5-3-2.5zM8 13l2 2 4-4',
+    span: 'normal',
+  },
+  {
+    label: 'Guru & Santri',
+    icon: 'M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm0 4c1.7 0 3 1.3 3 3s-1.3 3-3 3-3-1.3-3-3 1.3-3 3-3zm0 14c-2.5 0-4.7-1.3-6-3.2 0-2 4-3.1 6-3.1s6 1.1 6 3.1c-1.3 1.9-3.5 3.2-6 3.2z',
+    span: 'normal',
+  },
+  {
+    label: 'Kegiatan Malam Bina Iman',
+    icon: 'M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17l-6.2 3.2L7 14.2 2 9.3l6.9-1z',
+    span: 'tall',
+  },
+  {
+    label: 'Ekstrakurikuler',
+    icon: 'M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10h10V12C22 6.48 17.52 2 12 2zm-1 15H9V9h2v8zm4 0h-2V9h2v8z',
+    span: 'normal',
+  },
+  {
+    label: 'Wisuda Tahfidz',
+    icon: 'M12 2l2.4 4.8L20 7.6l-4 4 1 5.4-5-2.6-5 2.6 1-5.4-4-4 5.6-.8z',
+    span: 'tall',
+  },
+];
+---
+
+<section class="py-20" id="gallery">
+  <div class="max-w-6xl mx-auto px-4">
+    <h2 class="section-heading section-heading-center text-center text-3xl md:text-4xl font-bold text-primary-900 mb-14">
+      Momen Pendidikan
+    </h2>
+
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-4 auto-rows-[200px]">
+      {
+        items.map((item) => (
+          <div
+            class="group relative rounded-xl overflow-hidden bg-gradient-to-br from-primary-900/10 to-primary-900/20 flex flex-col items-center justify-center gap-2 cursor-pointer transition-all duration-500 hover:shadow-strong card-hover"
+            class:list={[item.span === 'tall' && 'row-span-2']}
+          >
+            <!-- Icon -->
+            <svg class="w-10 h-10 text-primary-700/30 transition-transform duration-500 group-hover:scale-110" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d={item.icon} />
+            </svg>
+
+            <!-- Label overlay -->
+            <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-primary-900/80 via-primary-900/30 to-transparent p-4 pt-10">
+              <span class="text-white font-semibold text-sm md:text-base block text-center">{item.label}</span>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>
