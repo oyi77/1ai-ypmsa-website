@@ -151,6 +151,59 @@
   <!-- End Meta Pixel Code -->
 
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Nonprofit",
+      "name": "YPSMA",
+      "url": "https://ypsma.or.id",
+      "description": "Yayasan Peduli Sosial dan Masa Depan Anak",
+      "logo": "https://ypsma.or.id/assets/logo.png"
+    },
+    {
+      "@type": "FAQPage",
+      "name": "Beasiswa Pendidikan YPSMA",
+      "description": "Program beasiswa untuk pelajar kurang mampu agar bisa melanjutkan pendidikan.",
+      "url": "https://ypsma.or.id/lp-beasiswa",
+      "mainEntity": [
+  {
+    "@type": "Question",
+    "name": "Siapa yang berhak menerima beasiswa?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Pelajar dari keluarga kurang mampu yang memiliki prestasi akademik dan membutuhkan bantuan biaya pendidikan."
+    }
+  },
+  {
+    "@type": "Question",
+    "name": "Bagaimana cara mendaftar beasiswa?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Klik tombol donasi dan pilih nominal. Untuk pendaftaran penerima, hubungi WhatsApp kami."
+    }
+  },
+  {
+    "@type": "Question",
+    "name": "Apakah donasi beasiswa bisa dikurangkan dari pajak?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "YPSMA sedang dalam proses sertifikasi. Konfirmasi via WhatsApp untuk detail."
+    }
+  }
+]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type":"ListItem","position":1,"name":"Beranda","item":"https://ypsma.or.id"},
+        {"@type":"ListItem","position":2,"name":"Beasiswa Pendidikan YPSMA","item":"https://ypsma.or.id/lp-beasiswa"}
+      ]
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -366,5 +419,29 @@
 [data-midtrans]:disabled { opacity: .7; cursor: not-allowed; pointer-events: none; }
 </style>
 
+
+<script>
+(function(){
+  // A/B CTA click tracking
+  var variant = Math.random() < 0.5 ? 'A' : 'B';
+  document.documentElement.dataset.abVariant = variant;
+  
+  document.addEventListener('click', function(e){
+    var btn = e.target.closest('[class*="btn-donate"],[class*="cta-donate"],[id*="donate-btn"],[class*="btn-primary"]');
+    if (!btn) return;
+    if (typeof gtag !== 'undefined') {
+      gtag('event', 'donate_click', {
+        event_category: 'CTA',
+        event_label: window.location.pathname,
+        ab_variant: variant,
+        button_text: btn.textContent.trim().slice(0,50)
+      });
+    }
+    if (typeof fbq !== 'undefined') {
+      fbq('track', 'InitiateCheckout', { content_name: window.location.pathname });
+    }
+  });
+})();
+</script>
 </body>
 </html>

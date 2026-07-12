@@ -288,6 +288,51 @@
   /></noscript>
   <!-- End Meta Pixel Code -->
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Nonprofit",
+      "name": "YPSMA",
+      "url": "https://ypsma.or.id",
+      "description": "Yayasan Peduli Sosial dan Masa Depan Anak",
+      "logo": "https://ypsma.or.id/assets/logo.png"
+    },
+    {
+      "@type": "FAQPage",
+      "name": "Patungan Listrik Yatim YPSMA",
+      "description": "Bantu bayarkan tagihan listrik rumah tangga yatim dan dhuafa agar tetap terang.",
+      "url": "https://ypsma.or.id/lp-patungan-listrik",
+      "mainEntity": [
+  {
+    "@type": "Question",
+    "name": "Siapa yang dibantu program patungan listrik?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Keluarga yatim dan dhuafa yang kesulitan membayar tagihan listrik bulanan."
+    }
+  },
+  {
+    "@type": "Question",
+    "name": "Berapa nominal yang dibutuhkan per keluarga?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Rata-rata Rp 50.000 - Rp 150.000 per bulan per keluarga."
+    }
+  }
+]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type":"ListItem","position":1,"name":"Beranda","item":"https://ypsma.or.id"},
+        {"@type":"ListItem","position":2,"name":"Patungan Listrik Yatim YPSMA","item":"https://ypsma.or.id/lp-patungan-listrik"}
+      ]
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -625,5 +670,29 @@
 [data-midtrans]:disabled { opacity: .7; cursor: not-allowed; pointer-events: none; }
 </style>
 
+
+<script>
+(function(){
+  // A/B CTA click tracking
+  var variant = Math.random() < 0.5 ? 'A' : 'B';
+  document.documentElement.dataset.abVariant = variant;
+  
+  document.addEventListener('click', function(e){
+    var btn = e.target.closest('[class*="btn-donate"],[class*="cta-donate"],[id*="donate-btn"],[class*="btn-primary"]');
+    if (!btn) return;
+    if (typeof gtag !== 'undefined') {
+      gtag('event', 'donate_click', {
+        event_category: 'CTA',
+        event_label: window.location.pathname,
+        ab_variant: variant,
+        button_text: btn.textContent.trim().slice(0,50)
+      });
+    }
+    if (typeof fbq !== 'undefined') {
+      fbq('track', 'InitiateCheckout', { content_name: window.location.pathname });
+    }
+  });
+})();
+</script>
 </body>
 </html>

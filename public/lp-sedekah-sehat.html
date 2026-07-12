@@ -660,5 +660,29 @@
 [data-midtrans]:disabled { opacity: .7; cursor: not-allowed; pointer-events: none; }
 </style>
 
+
+<script>
+(function(){
+  // A/B CTA click tracking
+  var variant = Math.random() < 0.5 ? 'A' : 'B';
+  document.documentElement.dataset.abVariant = variant;
+  
+  document.addEventListener('click', function(e){
+    var btn = e.target.closest('[class*="btn-donate"],[class*="cta-donate"],[id*="donate-btn"],[class*="btn-primary"]');
+    if (!btn) return;
+    if (typeof gtag !== 'undefined') {
+      gtag('event', 'donate_click', {
+        event_category: 'CTA',
+        event_label: window.location.pathname,
+        ab_variant: variant,
+        button_text: btn.textContent.trim().slice(0,50)
+      });
+    }
+    if (typeof fbq !== 'undefined') {
+      fbq('track', 'InitiateCheckout', { content_name: window.location.pathname });
+    }
+  });
+})();
+</script>
 </body>
 </html>
