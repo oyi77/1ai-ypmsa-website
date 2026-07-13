@@ -6,8 +6,8 @@ import { impactStats } from '../../data/stats';
   <div class="max-w-6xl mx-auto px-4">
     <!-- Section heading -->
     <div class="text-center mb-12">
-      <h2 class="text-3xl md:text-4xl font-bold font-heading mb-3">Statistik &amp; Dampak</h2>
-      <p class="text-white/60 max-w-2xl mx-auto">
+      <h2 class="text-3xl md:text-4xl font-bold font-heading mb-3" data-i18n="stats.title">Statistik &amp; Dampak</h2>
+      <p class="text-white/60 max-w-2xl mx-auto" data-i18n="stats.subtitle">
         Transparansi adalah komitmen kami. Berikut capaian dan dampak nyata dari program-program YPSM.
       </p>
     </div>
@@ -29,7 +29,7 @@ import { impactStats } from '../../data/stats';
               </span>
             </div>
             <p class="text-4xl font-bold text-white font-heading mb-1">{stat.value}</p>
-            <p class="text-white/60 text-sm">{stat.label}</p>
+            <p class="text-white/60 text-sm" data-i18n={stat.key}>{stat.label}</p>
           </div>
         ))
       }
@@ -38,7 +38,7 @@ import { impactStats } from '../../data/stats';
     <!-- Progress Bar -->
     <div class="mt-12 bg-white/10 rounded-xl p-6 md:p-8">
       <div class="flex items-center justify-between mb-3">
-        <span class="text-white/80 font-medium text-sm">Dana Tersalurkan ke Program</span>
+        <span class="text-white/80 font-medium text-sm" data-i18n="stats.fundDistributed">Dana Tersalurkan ke Program</span>
         <span class="text-secondary-400 font-bold">85%</span>
       </div>
       <div class="w-full bg-white/10 rounded-full h-4 overflow-hidden">
@@ -47,7 +47,7 @@ import { impactStats } from '../../data/stats';
           style="width: 85%"
         ></div>
       </div>
-      <p class="text-white/50 text-xs mt-3">
+      <p class="text-white/50 text-xs mt-3" data-i18n="stats.fundDetail">
         Dari total donasi yang terkumpul, 85% disalurkan langsung ke program pendidikan dan sosial.
         10% untuk operasional, dan 5% sebagai cadangan.
       </p>

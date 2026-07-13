@@ -2,6 +2,7 @@ export interface Stat {
   value: string;
   label: string;
   icon: string;
+  key?: string;
 }
 
 export const stats: Stat[] = [
@@ -12,8 +13,9 @@ export const stats: Stat[] = [
 ];
 
 export const impactStats: Stat[] = [
-  { value: '85%', label: 'Dana Tersalurkan ke Program', icon: 'chart' },
-  { value: '300+', label: 'Santri Dapat Beasiswa', icon: 'scholarship' },
-  { value: '50+', label: 'Tenaga Pendidik', icon: 'teachers' },
-  { value: '100%', label: 'Transparan & Terpercaya', icon: 'shield' },
+  { value: '85%', label: 'Dana Tersalurkan ke Program', icon: 'chart', key: 'stats.impactDistributed' },
+  { value: '300+', label: 'Santri Dapat Beasiswa', icon: 'scholarship', key: 'stats.impactScholarship' },
+  { value: '50+', label: 'Tenaga Pendidik', icon: 'teachers', key: 'stats.impactEducators' },
+  { value: '100%', label: 'Transparan & Terpercaya', icon: 'shield', key: 'stats.impactTrust' },
 ];
+

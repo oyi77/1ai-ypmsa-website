@@ -2,14 +2,19 @@
 interface Props {
   title?: string;
   description?: string;
+  canonical?: string;
+  ogImage?: string;
 }
 
 const {
   title = 'YPSM Jombang — Yayasan Pendidikan & Sosial Ma\'arif',
-  description = 'Yayasan Pendidikan dan Sosial Ma\'arif (YPSM) Jombang — mengelola RA Perwanida, MI Miftahul Ulum, SMP Plus Ma\'arif, dan PPTQ. Berdiri sejak 1968, mencetak 3.000+ alumni berprestasi.'
+  description = 'Yayasan Pendidikan dan Sosial Ma\'arif (YPSM) Jombang — mengelola RA Perwanida, MI Miftahul Ulum, SMP Plus Ma\'arif, dan PPTQ. Berdiri sejak 1968, mencetak 3.000+ alumni berprestasi.',
+  canonical,
+  ogImage = '/images/campaigns/Berdoa.webp',
 } = Astro.props;
 
-// Midtrans client key — loaded via cf env or fallback
+const pageUrl = new URL(Astro.url.pathname, 'https://ypsma.org').href;
+const canonicalUrl = canonical || pageUrl;
 const midtransClientKey = import.meta.env.PUBLIC_MIDTRANS_CLIENT_KEY || 'Mid-client-xxx';
 ---
 
@@ -21,20 +26,24 @@ const midtransClientKey = import.meta.env.PUBLIC_MIDTRANS_CLIENT_KEY || 'Mid-cli
     <meta name="description" content={description} />
     <meta name="theme-color" content="#0D3F3C" />
     <link rel="icon" type="image/webp" href="/logo-ypsma.webp" />
-    <link rel="canonical" href="https://ypsma.org/" />
+    <link rel="canonical" href={canonicalUrl} />
 
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:url" content="https://ypsma.org/" />
-    <meta property="og:image" content="https://ypsma.org/images/campaigns/Berdoa.png" />
+    <meta property="og:url" content={pageUrl} />
+    <meta property="og:image" content={`https://ypsma.org${ogImage}`} />
     <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preload" href="/images/campaigns/IMG_1860.webp" as="image" />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="prefetch" href="/program/" />
+    <link rel="prefetch" href="/tentang-kami/" />
+    <link rel="prefetch" href="/transparansi/" />
 
     <title>{title}</title>
 
@@ -42,11 +51,71 @@ const midtransClientKey = import.meta.env.PUBLIC_MIDTRANS_CLIENT_KEY || 'Mid-cli
     <script type="application/ld+json" set:html={JSON.stringify({
       "@context": "https://schema.org",
       "@graph": [
-        { "@type": "Organization", "name": "Yayasan Pendidikan & Sosial Ma'arif Jombang", "alternateName": "YPSM", "url": "https://ypsma.org", "logo": "https://ypsma.org/logo-ypsma.webp", "description": "Yayasan pendidikan Islam berkualitas yang mengelola 4 unit pendidikan di Jombang sejak 1968", "foundingDate": "1968", "address": { "@type": "PostalAddress", "streetAddress": "Ds. Gondek, Mojowarno", "addressLocality": "Mojowarno", "addressRegion": "Jawa Timur", "postalCode": "61475", "addressCountry": "ID" }, "email": "pptqdarussalamgondek@gmail.com", "telephone": "+6282234551160" },
-        { "@type": "EducationalOrganization", "name": "MI Miftahul Ulum", "description": "Madrasah Ibtidaiyah swasta di Gondek, Mojowarno", "foundingDate": "1968" },
-        { "@type": "EducationalOrganization", "name": "RA Perwanida", "description": "PAUD/TK Islam di Gondek, Mojowarno", "foundingDate": "1980" },
-        { "@type": "EducationalOrganization", "name": "PPTQ Darussalam", "description": "Pondok Pesantren Tahfidzhul Qur'an di Ngelo, Gondek", "foundingDate": "2015" },
-        { "@type": "EducationalOrganization", "name": "SMP Plus Ma'arif", "description": "SMP swasta di bawah naungan YPSM Jombang", "foundingDate": "1988" }
+        {
+          "@type": "Organization",
+          "name": "Yayasan Pendidikan & Sosial Ma'arif Jombang",
+          "alternateName": "YPSM",
+          "url": "https://ypsma.org",
+          "logo": "https://ypsma.org/logo-ypsma.webp",
+          "description": "Yayasan pendidikan Islam berkualitas yang mengelola 4 unit pendidikan di Jombang sejak 1968",
+          "foundingDate": "1968",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Ds. Gondek, Mojowarno",
+            "addressLocality": "Mojowarno",
+            "addressRegion": "Jawa Timur",
+            "postalCode": "61475",
+            "addressCountry": "ID"
+          },
+          "email": "pptqdarussalamgondek@gmail.com",
+          "telephone": "+6282234551160",
+          "sameAs": [
+            "https://www.instagram.com/ypsm.jombang",
+            "https://www.facebook.com/ypsm.jombang",
+            "https://www.youtube.com/@ypsmjombang",
+            "https://www.tiktok.com/@ypsmjombang"
+          ]
+        },
+        {
+          "@type": "EducationalOrganization",
+          "name": "MI Miftahul Ulum",
+          "description": "Madrasah Ibtidaiyah swasta di Gondek, Mojowarno",
+          "foundingDate": "1968"
+        },
+        {
+          "@type": "EducationalOrganization",
+          "name": "RA Perwanida",
+          "description": "PAUD/TK Islam di Gondek, Mojowarno",
+          "foundingDate": "1980"
+        },
+        {
+          "@type": "EducationalOrganization",
+          "name": "PPTQ Darussalam",
+          "description": "Pondok Pesantren Tahfidzhul Qur'an di Ngelo, Gondek",
+          "foundingDate": "2015"
+        },
+        {
+          "@type": "EducationalOrganization",
+          "name": "SMP Plus Ma'arif",
+          "description": "SMP swasta di bawah naungan YPSM Jombang",
+          "foundingDate": "1988"
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://ypsma.org/#website",
+          "url": "https://ypsma.org",
+          "name": "YPSM Jombang",
+          "description": "Yayasan Pendidikan dan Sosial Ma'arif Jombang — mengelola RA Perwanida, MI Miftahul Ulum, SMP Plus Ma'arif, dan PPTQ",
+          "inLanguage": "id",
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": {
+              "@type": "EntryPoint",
+              "urlTemplate": "https://ypsma.org/search?q={search_term_string}"
+            },
+            "query-input": "required name=search_term_string"
+          }
+        }
       ]
     })} />
 
@@ -59,7 +128,7 @@ const midtransClientKey = import.meta.env.PUBLIC_MIDTRANS_CLIENT_KEY || 'Mid-cli
     <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=771021905629860&ev=PageView&noscript=1" /></noscript>
     <!-- Global translations -->
     <script is:inline>
-window.__TRANSLATIONS = {"id":{"nav.home":"Beranda","nav.beranda":"Beranda","nav.programs":"Program","nav.program":"Program","nav.about":"Tentang","nav.tentang-kami":"Tentang Kami","nav.contact":"Kontak","nav.kontak":"Kontak","nav.transparansi":"Transparansi","nav.cerita-dampak":"Cerita Dampak","nav.donate":"Donasi Sekarang","hero.title":"Mencetak Generasi Qur'ani yang Unggul & Berkarakter","hero.subtitle":"Yayasan Pendidikan & Sosial Ma'arif (YPSM) — pendidikan Islam berkualitas, peduli sosial, dan pemberdayaan umat sejak 1968.","hero.cta":"Donasi Sekarang","hero.learn":"Pelajari Lebih Lanjut","programs.title":"Program Donasi","programs.subtitle":"Pilih program donasi yang sesuai dengan keinginan Anda untuk memberikan dampak terbaik bagi masyarakat.","cta.santunan.title":"Santunan Ikhlasku","cta.santunan.desc":"Donasi dengan nominal berapapun. Setiap rupiah Anda berarti bagi pendidikan dan kesejahteraan santri.","cta.santunan.cta":"Santun Sekarang","cta.ota.title":"Adopsi Orang Tua Asuh","cta.ota.desc":"Jadi orang tua asuh — Rp300.000/bln untuk biaya pendidikan, makan, dan perlengkapan santri kurang mampu.","cta.ota.cta":"Jadi Orang Tua Asuh","cta.wakaf.title":"Wakaf Abadi Koperasi","cta.wakaf.desc":"Wakaf produktif untuk koperasi yayasan. Hasilnya mendanai operasional pendidikan secara berkelanjutan.","cta.wakaf.cta":"Wakaf Sekarang","cta.title":"Mulai Donasi & Jadi Bagian dari Perubahan","cta.subtitle":"Setiap rupiah yang Anda donasikan akan menjadi cahaya bagi masa depan mereka","calc.title":"Hitung Zakat & Sedekah","calc.subtitle":"Kalkulator sederhana untuk menghitung zakat mal","footer.tagline":"Mencetak generasi Qur'ani yang unggul, berkarakter, dan bermanfaat bagi masyarakat. Berdiri sejak 1968.","footer.address":"Ds. Gondek, Mojowarno, Jombang, Jawa Timur 61475","footer.quicklinks":"Tautan Cepat","footer.follow":"Ikuti Kami","footer.copyright":"Hak Cipta © {year} YPSM Jombang. Seluruh hak dilindungi.","footer.made-with":"Dibuat dengan","donate.title":"Donasi Sekarang"},"en":{"nav.home":"Home","nav.beranda":"Home","nav.programs":"Programs","nav.program":"Programs","nav.about":"About","nav.tentang-kami":"About Us","nav.contact":"Contact","nav.kontak":"Contact","nav.transparansi":"Transparency","nav.cerita-dampak":"Impact Stories","nav.donate":"Donate Now","hero.title":"Raising a Qur'anic Generation of Excellence & Character","hero.subtitle":"Islamic Education & Social Foundation (YPSM) — quality Islamic education, social care, and community empowerment since 1968.","hero.cta":"Donate Now","hero.learn":"Learn More","programs.title":"Donation Programs","programs.subtitle":"Choose a donation program that suits your desire to make the greatest impact for the community.","cta.santunan.title":"Sincerity Donation","cta.santunan.desc":"Donate any amount. Every rupiah counts for the education and welfare of our students.","cta.santunan.cta":"Donate Now","cta.ota.title":"Adopt a Foster Parent","cta.ota.desc":"Become a foster parent — Rp300,000/month for education, meals, and supplies for underprivileged students.","cta.ota.cta":"Become a Foster Parent","cta.wakaf.title":"Cooperative Waqf","cta.wakaf.desc":"Productive endowment for the foundation's cooperative. Proceeds fund educational operations sustainably.","cta.wakaf.cta":"Endow Now","cta.title":"Start Donating & Be Part of the Change","cta.subtitle":"Every rupiah you donate will be a light for their future","calc.title":"Zakat & Charity Calculator","calc.subtitle":"A simple calculator to compute your zakat mal","footer.tagline":"Raising a Qur'anic generation of excellence, character, and benefit to society. Established since 1968.","footer.address":"Ds. Gondek, Mojowarno, Jombang, East Java 61475","footer.quicklinks":"Quick Links","footer.follow":"Follow Us","footer.copyright":"Copyright © {year} YPSM Jombang. All rights reserved.","footer.made-with":"Made with","donate.title":"Donate Now"};
+window.__TRANSLATIONS = {"id": {"nav.home": "Beranda", "nav.beranda": "Beranda", "nav.programs": "Program", "nav.program": "Program", "nav.about": "Tentang", "nav.tentang-kami": "Tentang Kami", "nav.contact": "Kontak", "nav.kontak": "Kontak", "nav.transparansi": "Transparansi", "nav.cerita-dampak": "Cerita Dampak", "nav.donate": "Donasi Sekarang", "hero.title": "Mencetak Generasi Qur'ani yang Unggul & Berkarakter", "hero.subtitle": "Yayasan Pendidikan & Sosial Ma'arif (YPSM) — pendidikan Islam berkualitas, peduli sosial, dan pemberdayaan umat sejak 1968.", "hero.cta": "Donasi Sekarang", "hero.learn": "Pelajari Lebih Lanjut", "programs.title": "Program Donasi", "programs.subtitle": "Pilih program donasi yang sesuai dengan keinginan Anda untuk memberikan dampak terbaik bagi masyarakat.", "cta.santunan.title": "Santunan Ikhlasku", "cta.santunan.desc": "Donasi dengan nominal berapapun. Setiap rupiah Anda berarti bagi pendidikan dan kesejahteraan santri.", "cta.santunan.cta": "Santun Sekarang", "cta.ota.title": "Adopsi Orang Tua Asuh", "cta.ota.desc": "Jadi orang tua asuh — Rp300.000/bln untuk biaya pendidikan, makan, dan perlengkapan santri kurang mampu.", "cta.ota.cta": "Jadi Orang Tua Asuh", "cta.wakaf.title": "Wakaf Abadi Koperasi", "cta.wakaf.desc": "Wakaf produktif untuk koperasi yayasan. Hasilnya mendanai operasional pendidikan secara berkelanjutan.", "cta.wakaf.cta": "Wakaf Sekarang", "cta.title": "Mulai Donasi & Jadi Bagian dari Perubahan", "cta.subtitle": "Setiap rupiah yang Anda donasikan akan menjadi cahaya bagi masa depan mereka", "calc.title": "Hitung Zakat & Sedekah", "calc.subtitle": "Kalkulator sederhana untuk menghitung zakat mal", "calc.totalHarta": "Total Harta (Rp)", "calc.placeholderHarta": "Masukkan total harta Anda", "calc.emasDimiliki": "Emas yang dimiliki (gram)", "calc.placeholderEmas": "Contoh: 100", "calc.calculate": "Hitung", "calc.zakatAmount": "Zakat yang harus dibayar:", "calc.footnote": "Nisab zakat mengacu pada harga emas Rp 1.000.000/gram (85 gram = Rp 85.000.000)", "footer.tagline": "Mencetak generasi Qur'ani yang unggul, berkarakter, dan bermanfaat bagi masyarakat. Berdiri sejak 1968.", "footer.address": "Ds. Gondek, Mojowarno, Jombang, Jawa Timur 61475", "footer.quicklinks": "Tautan Cepat", "footer.follow": "Ikuti Kami", "footer.copyright": "Hak Cipta © {year} YPSM Jombang. Seluruh hak dilindungi.", "footer.made-with": "Dibuat dengan", "donate.title": "Donasi Sekarang", "stats.title": "Statistik & Dampak", "stats.subtitle": "Transparansi adalah komitmen kami. Berikut capaian dan dampak nyata dari program-program YPSM.", "stats.distributed-label": "Dana Tersalurkan ke Program", "stats.distributed-desc": "Dari total donasi yang terkumpul, 85% disalurkan langsung ke program pendidikan dan sosial. 10% untuk operasional, dan 5% sebagai cadangan.", "blog.title": "Cerita & Kegiatan Terbaru", "blog.subtitle": "Ikuti perjalanan YPSM dalam mendidik generasi penerus", "blog.read-more": "Baca Selengkapnya", "blog.view-all": "Lihat Semua Kegiatan", "trust.registered": "Terdaftar di Kemenkumham", "trust.transparent": "Laporan Transparan", "trust.alumni": "3.000+ Alumni", "testimonial.title": "Apa Kata Mereka", "gallery.title": "Galeri", "gallery.subtitle": "Kondisi Nyata YPSM Jombang", "gallery.desc": "Dokumentasi aktivitas dan kondisi santri di Yayasan Pendidikan & Sosial Ma'arif", "hero.explore": "Jelajahi Program", "about.label": "Tentang Kami", "about.cta": "Selengkapnya", "about.statStudents": "Santri Aktif", "about.statEducators": "Tenaga Pendidik", "about.statInstitutions": "Lembaga Pendidikan", "about.founderLabel": "Pendiri YPSM", "about.founderSubtitle": "Yayasan Pendidikan & Sosial Ma'arif", "about.foundedBadge": "Sejak 1968", "programs.cta": "Bantu Program Ini", "programs.methods": "Pilih Cara Donasi", "programs.methods-desc": "Setiap donasi Anda adalah investasi untuk masa depan generasi penerus umat"}, "en": {"nav.home": "Home", "nav.beranda": "Home", "nav.programs": "Programs", "nav.program": "Programs", "nav.about": "About", "nav.tentang-kami": "About Us", "nav.contact": "Contact", "nav.kontak": "Contact", "nav.transparansi": "Transparency", "nav.cerita-dampak": "Impact Stories", "nav.donate": "Donate Now", "hero.title": "Raising a Qur'anic Generation of Excellence & Character", "hero.subtitle": "Islamic Education & Social Foundation (YPSM) — quality Islamic education, social care, and community empowerment since 1968.", "hero.cta": "Donate Now", "hero.learn": "Learn More", "programs.title": "Donation Programs", "programs.subtitle": "Choose a donation program that suits your desire to make the greatest impact for the community.", "cta.santunan.title": "Sincerity Donation", "cta.santunan.desc": "Donate any amount. Every rupiah counts for the education and welfare of our students.", "cta.santunan.cta": "Donate Now", "cta.ota.title": "Adopt a Foster Parent", "cta.ota.desc": "Become a foster parent — Rp300,000/month for education, meals, and supplies for underprivileged students.", "cta.ota.cta": "Become a Foster Parent", "cta.wakaf.title": "Cooperative Waqf", "cta.wakaf.desc": "Productive endowment for the foundation's cooperative. Proceeds fund educational operations sustainably.", "cta.wakaf.cta": "Endow Now", "cta.title": "Start Donating & Be Part of the Change", "cta.subtitle": "Every rupiah you donate will be a light for their future", "calc.title": "Zakat & Charity Calculator", "calc.subtitle": "A simple calculator to compute your zakat mal", "calc.totalHarta": "Total Wealth (IDR)", "calc.placeholderHarta": "Enter your total wealth", "calc.emasDimiliki": "Gold owned (grams)", "calc.placeholderEmas": "Example: 100", "calc.calculate": "Calculate", "calc.zakatAmount": "Zakat to be paid:", "calc.footnote": "Nisab refers to gold price Rp 1,000,000/gram (85 grams = Rp 85,000,000)", "footer.tagline": "Raising a Qur'anic generation of excellence, character, and benefit to society. Established since 1968.", "footer.address": "Ds. Gondek, Mojowarno, Jombang, East Java 61475", "footer.quicklinks": "Quick Links", "footer.follow": "Follow Us", "footer.copyright": "Copyright © {year} YPSM Jombang. All rights reserved.", "footer.made-with": "Made with", "donate.title": "Donate Now", "stats.title": "Statistics & Impact", "stats.subtitle": "Transparency is our commitment. Here are the real achievements and impact of YPSM programs.", "stats.distributed-label": "Funds Distributed to Programs", "stats.distributed-desc": "Of total donations collected, 85% goes directly to education and social programs. 10% for operations, and 5% as reserve.", "blog.title": "Latest Stories & Activities", "blog.subtitle": "Follow YPSM's journey in educating the next generation", "blog.read-more": "Read More", "blog.view-all": "View All Activities", "trust.registered": "Registered at Ministry of Law", "trust.transparent": "Transparent Reports", "trust.alumni": "3,000+ Alumni", "testimonial.title": "What They Say", "gallery.title": "Gallery", "gallery.subtitle": "Real Conditions at YPSM Jombang", "gallery.desc": "Documentation of activities and conditions at Yayasan Pendidikan & Sosial Ma'arif", "hero.explore": "Explore Programs", "about.label": "About Us", "about.cta": "Read More", "about.statStudents": "Active Students", "about.statEducators": "Educators", "about.statInstitutions": "Educational Institutions", "about.founderLabel": "Founder of YPSM", "about.founderSubtitle": "Education & Social Foundation", "about.foundedBadge": "Since 1968", "programs.cta": "Support This Program", "programs.methods": "Choose Donation Method", "programs.methods-desc": "Every donation is an investment for the future of the next generation"}};
 </script>
   </head>
   <body class="font-body antialiased">
@@ -95,6 +164,13 @@ window.__TRANSLATIONS = {"id":{"nav.home":"Beranda","nav.beranda":"Beranda","nav
             var key = el.getAttribute('data-i18n');
             if (keys[lang] && keys[lang][key]) {
               el.textContent = keys[lang][key];
+            }
+          });
+          // Translate all data-i18n-placeholder elements
+          document.querySelectorAll('[data-i18n-placeholder]').forEach(function(el) {
+            var key = el.getAttribute('data-i18n-placeholder');
+            if (keys[lang] && keys[lang][key]) {
+              el.placeholder = keys[lang][key];
             }
           });
           // Hide/show lang-specific spans

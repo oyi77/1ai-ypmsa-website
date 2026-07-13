@@ -19,7 +19,7 @@ import { ORG_SHORT } from '../../lib/constants';
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
         <!-- Input: Total Harta -->
         <div>
-          <label for="total-harta" class="block text-sm font-medium text-neutral-200 mb-2">
+          <label for="total-harta" class="block text-sm font-medium text-neutral-200 mb-2" data-i18n="calc.totalHarta">
             Total Harta (Rp)
           </label>
           <input
@@ -27,13 +27,14 @@ import { ORG_SHORT } from '../../lib/constants';
             type="number"
             inputmode="numeric"
             placeholder="Masukkan total harta Anda"
+            data-i18n-placeholder="calc.placeholderHarta"
             class="w-full p-3 rounded-lg border border-white/20 bg-white/5 text-white placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-secondary-500 focus:border-transparent"
           />
         </div>
 
         <!-- Input: Emas -->
         <div>
-          <label for="emas-dimiliki" class="block text-sm font-medium text-neutral-200 mb-2">
+          <label for="emas-dimiliki" class="block text-sm font-medium text-neutral-200 mb-2" data-i18n="calc.emasDimiliki">
             Emas yang dimiliki (gram)
           </label>
           <input
@@ -41,15 +42,17 @@ import { ORG_SHORT } from '../../lib/constants';
             type="number"
             inputmode="numeric"
             placeholder="Contoh: 100"
+            data-i18n-placeholder="calc.placeholderEmas"
             class="w-full p-3 rounded-lg border border-white/20 bg-white/5 text-white placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-secondary-500 focus:border-transparent"
           />
-        </div>
       </div>
+        </div>
 
       <!-- Calculate Button -->
       <button
         id="hitung-zakat"
         class="bg-secondary-500 text-primary-900 font-bold py-3 px-8 rounded-lg hover:bg-secondary-400 transition-colors"
+        data-i18n="calc.calculate"
       >
         Hitung
       </button>
@@ -57,7 +60,7 @@ import { ORG_SHORT } from '../../lib/constants';
       <!-- Result Display -->
       <div id="hasil-zakat" class="mt-6 hidden">
         <div class="bg-white/5 rounded-lg p-4">
-          <p class="text-sm text-neutral-300 mb-1">Zakat yang harus dibayar:</p>
+          <p class="text-sm text-neutral-300 mb-1" data-i18n="calc.zakatAmount">Zakat yang harus dibayar:</p>
           <p id="jumlah-zakat" class="text-2xl font-bold text-secondary-400">
             Rp 0
           </p>
@@ -65,7 +68,7 @@ import { ORG_SHORT } from '../../lib/constants';
       </div>
 
       <!-- Footnote -->
-      <p class="text-xs text-neutral-400 mt-4">
+      <p class="text-xs text-neutral-400 mt-4" data-i18n="calc.footnote">
         Nisab zakat mengacu pada harga emas Rp 1.000.000/gram (85 gram = Rp 85.000.000)
       </p>
     </div>

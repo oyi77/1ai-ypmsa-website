@@ -7,8 +7,11 @@ export default function LanguageSwitcher() {
   useEffect(() => {
     document.documentElement.lang = lang;
     setLangCookie(lang);
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const key = el.getAttribute('data-i18n');
+      if (key) el.textContent = t(key, lang);
+    });
   }, [lang]);
-
   const toggle = () => {
     const next: Lang = lang === 'id' ? 'en' : 'id';
     setLangState(next);

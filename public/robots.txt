@@ -1,4 +1,3 @@
 User-agent: *
 Allow: /
-
-Sitemap: https://ypsma.org/sitemap.xml
+Sitemap: https://ypsma.org/sitemap-index.xml

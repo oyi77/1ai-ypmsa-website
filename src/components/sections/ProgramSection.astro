@@ -54,7 +54,7 @@ import { programs, donationTiers } from '../../data/programs';
               href={`/program/${program.slug}/`}
               class="text-coral-500 font-semibold text-sm hover:underline inline-flex items-center gap-1 mt-auto"
             >
-              Bantu Program Ini
+              <span data-i18n="programs.support">Bantu Program Ini</span>
               <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
@@ -66,10 +66,10 @@ import { programs, donationTiers } from '../../data/programs';
 
     <!-- Donation Tiers Section -->
     <div class="text-center mb-10">
-      <h3 class="section-heading section-heading-center text-2xl md:text-3xl text-primary-900 inline-block">
+      <h3 class="section-heading section-heading-center text-2xl md:text-3xl text-primary-900 inline-block" data-i18n="programs.donateTitle">
         Pilih Cara Donasi
       </h3>
-      <p class="text-neutral-600 mt-4 max-w-xl mx-auto">
+      <p class="text-neutral-600 mt-4 max-w-xl mx-auto" data-i18n="programs.donateSubtitle">
         Setiap donasi Anda adalah investasi untuk masa depan generasi penerus umat
       </p>
     </div>

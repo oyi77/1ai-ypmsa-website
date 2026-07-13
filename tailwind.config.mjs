@@ -59,8 +59,11 @@ export default {
         glow: '0 0 30px rgba(13, 148, 136, 0.3)',
         'glow-gold': '0 0 25px rgba(212, 175, 55, 0.3)',
       },
+      zIndex: {
+        '60': '60',
+        '70': '70',
+      },
       animation: {
-        'fade-in-up': 'fadeInUp 0.6s ease-out forwards',
         'fade-in-left': 'fadeInLeft 0.6s ease-out forwards',
         'fade-in-right': 'fadeInRight 0.6s ease-out forwards',
         'pulse-soft': 'pulseSoft 2s infinite',

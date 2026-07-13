@@ -9,9 +9,11 @@ import { ORG_SHORT } from '../../lib/constants';
       <div class="lg:col-span-2 order-first lg:order-last">
         <div class="relative">
           <img
-            src="/images/IMG_7500.jpeg"
+            src="/images/IMG_7500.webp"
             alt="Suasana Belajar Santri YPSM"
             class="w-full h-auto rounded-2xl shadow-lg object-cover aspect-[4/3]"
+            width="800"
+            height="600"
             loading="lazy"
           />
           <div class="absolute -bottom-4 -left-4 bg-primary-600 text-white px-6 py-3 rounded-xl text-sm font-semibold shadow-lg">
@@ -21,7 +23,7 @@ import { ORG_SHORT } from '../../lib/constants';
       </div>
       <!-- Left Column (60%) -->
       <div class="lg:col-span-3">
-        <span class="inline-block text-sm font-semibold text-coral-500 uppercase tracking-widest mb-3">Tentang Kami</span>
+        <span class="inline-block text-sm font-semibold text-coral-500 uppercase tracking-widest mb-3" data-i18n="about.label">Tentang Kami</span>
         <h2 class="text-3xl md:text-4xl font-bold text-primary-800 font-heading mb-6">
           {ORG_SHORT}
         </h2>
@@ -48,23 +50,22 @@ import { ORG_SHORT } from '../../lib/constants';
         <div class="flex flex-wrap gap-6 mt-8">
           {
             [
-              { value: '640+', label: 'Santri Aktif' },
-              { value: '50+', label: 'Tenaga Pendidik' },
-              { value: '4', label: 'Lembaga Pendidikan' },
+              { value: '640+', label: 'Santri Aktif', key: 'about.statStudents' },
+              { value: '50+', label: 'Tenaga Pendidik', key: 'about.statEducators' },
+              { value: '4', label: 'Lembaga Pendidikan', key: 'about.statInstitutions' },
             ].map((item) => (
               <div class="flex items-center gap-3">
                 <span class="text-2xl md:text-3xl font-bold text-secondary-500 font-heading">{item.value}</span>
-                <span class="text-sm text-neutral-500">{item.label}</span>
+                <span class="text-sm text-neutral-500" data-i18n={item.key}>{item.label}</span>
               </div>
             ))
           }
         </div>
 
-        <a
-          href="/tentang-kami/"
+        <a href="/tentang-kami/"
           class="inline-flex items-center gap-2 mt-8 text-secondary-600 hover:text-secondary-700 font-semibold transition-colors duration-200"
         >
-          Selengkapnya
+          <span data-i18n="about.cta">Selengkapnya</span>
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
             <path d="M5 12h14" />
             <path d="m12 5 7 7-7 7" />
@@ -78,19 +79,21 @@ import { ORG_SHORT } from '../../lib/constants';
           <!-- Founder photo -->
           <div class="rounded-xl overflow-hidden shadow-strong bg-primary-100">
             <img
-              src="/images/campaigns/pendiri.jpg"
+              src="/images/campaigns/pendiri.webp"
               alt="Foto Pendiri YPSM Jombang"
               class="w-full h-auto object-cover"
+              width="400"
+              height="500"
               loading="lazy"
             />
             <div class="p-5 bg-white">
-              <p class="font-bold text-primary-800 text-lg">Pendiri YPSM</p>
-              <p class="text-neutral-500 text-sm">Yayasan Pendidikan & Sosial Ma'arif</p>
+              <p class="font-bold text-primary-800 text-lg" data-i18n="about.founderLabel">Pendiri YPSM</p>
+              <p class="text-neutral-500 text-sm" data-i18n="about.founderSubtitle">Yayasan Pendidikan & Sosial Ma'arif</p>
             </div>
           </div>
 
           <!-- Badge -->
-          <div class="absolute -top-3 -right-3 bg-secondary-500 text-white px-4 py-1.5 rounded-full text-sm font-bold shadow-soft">
+          <div class="absolute -top-3 -right-3 bg-secondary-500 text-white px-4 py-1.5 rounded-full text-sm font-bold shadow-soft" data-i18n="about.foundedBadge">
             Sejak 1968
           </div>
         </div>

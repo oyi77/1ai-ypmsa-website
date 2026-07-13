@@ -19,7 +19,7 @@ import { CAMPAIGNS } from '../../data/campaigns';
         {CAMPAIGNS.map(c => (
           <a href={`/program/${c.slug}/`} class="group block bg-white rounded-xl overflow-hidden shadow-soft hover:shadow-strong transition-all duration-200 hover:-translate-y-1 border border-neutral-100">
             <div class="aspect-[16/9] overflow-hidden">
-              <img src={c.heroImage} alt={c.title} class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+              <img src={c.heroImage} alt={c.title} width="800" height="450" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
             </div>
             <div class="p-6">
               <span class="text-xs font-medium text-secondary-600 bg-secondary-50 px-3 py-1 rounded-full">{c.badge}</span>

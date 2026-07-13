@@ -15,11 +15,11 @@ const { campaign } = Astro.props;
 const { title, subtitle, description, ogTitle, ogDescription, heroImage, badge, stats, stories, budgetLabel, budgetItems, budgetTotal, galleryImages, tiers, faqs } = campaign;
 ---
 
-<MainLayout title={ogTitle} description={ogDescription}>
+<MainLayout title={ogTitle} description={ogDescription} canonical={`https://ypsma.org/program/${campaign.slug}/`}>
   <!-- Hero -->
   <section class="relative min-h-[70vh] flex items-center overflow-hidden">
     <div class="absolute inset-0 z-0">
-      <img src={heroImage} alt={title} class="w-full h-full object-cover" />
+      <img src={heroImage} alt={title} width="1200" height="800" class="w-full h-full object-cover" />
     </div>
     <div class="absolute inset-0 bg-gradient-to-br from-primary-900/95 via-primary-800/90 to-primary-700/85 z-10" />
     <div class="relative z-20 container mx-auto px-4 py-20 text-white">
@@ -89,7 +89,7 @@ const { title, subtitle, description, ogTitle, ogDescription, heroImage, badge, 
       <div class="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-5xl mx-auto">
         {galleryImages.map(img => (
           <div class="aspect-[4/3] rounded-xl overflow-hidden">
-            <img src={img} alt="" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+            <img src={img} alt="" width="800" height="600" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
           </div>
         ))}
       </div>
@@ -148,6 +148,31 @@ const { title, subtitle, description, ogTitle, ogDescription, heroImage, badge, 
       </div>
     </div>
   </section>
+
+  <!-- FAQ Structured Data -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqs.map(f => ({
+      "@type": "Question",
+      "name": f.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": f.answer
+      }
+    }))
+  })} />
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Beranda", "item": "https://ypsma.org" },
+      { "@type": "ListItem", "position": 2, "name": "Program", "item": "https://ypsma.org/program/" },
+      { "@type": "ListItem", "position": 3, "name": title, "item": `https://ypsma.org/program/${campaign.slug}/` }
+    ]
+  })} />
 
   <StickyDonateButton client:load />
 </MainLayout>
