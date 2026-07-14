@@ -155,7 +155,7 @@ export const CAMPAIGNS: Campaign[] = [
     description: 'Harga kertas melonjak imbas kurs Dolar. Bantu sedekahkan 1 mushaf Al-Qur\'an hafalan untuk santri dan siswa YPSMA. Rp 100.000/mushaf.',
     ogTitle: 'Sedekah Al-Qur\'an YPSMA — 600 Mushaf untuk Penghafal Al-Qur\'an',
     ogDescription: 'Harga kertas naik imbas Dolar. Bantu sedekahkan Al-Qur\'an hafalan untuk 600 santri dan siswa YPSMA.',
-    heroImage: '/images/drive-new/wisuda/wisuda-1.webp',
+    heroImage: '/images/drive-new/wisuda/alquran-thumb.webp',
     badge: 'Program Sedekah Al-Qur\'an — Satu Kali',
     stats: [
       { value: '600', label: 'Mushaf Dibutuhkan' },
@@ -413,7 +413,7 @@ export const CAMPAIGNS: Campaign[] = [
     description: 'Pembangunan sumur bor dalam dan 8 pintu kamar mandi/WC baru. Saat ini 2 kamar mandi dipakai bergantian oleh 600 orang — darurat!',
     ogTitle: 'Sumur Air Bersih & MCK YPSMA — Akhiri Krisis Kamar Mandi 600 Santri',
     ogDescription: 'Bangun sumur bor dalam dan 8 kamar mandi baru. Saat ini 2 kamar mandi untuk 600 orang — situasi darurat!',
-    heroImage: '/images/drive-new/sarpras/11.webp',
+    heroImage: '/images/drive-new/sarpras/sumur-thumb.webp',
     badge: 'Program Infrastruktur — Satu Kali',
     stats: [
       { value: '600', label: 'Santri & Siswa' },
