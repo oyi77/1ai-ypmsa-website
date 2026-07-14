@@ -149,3 +149,27 @@
 - Content: Rp 500,000
 - Payment fees: Rp 420,000
 - Email: Rp 250,000
+
+
+---
+
+## ✅ CSR PROPOSALS — SENT (2026-07-14)
+
+5 CSR proposals sent from admin@ypsma.org via grahainsanmandiri@gmail.com SMTP:
+
+| Target | Email | Proposal | Status |
+|--------|-------|----------|--------|
+| Bank Jatim | bankjatim@bankjatim.co.id | csr_bankjatim.md | sent |
+| BSI | cs@bsimashlahat.or.id | csr_bsi.md | sent |
+| Pertamina | corpcs@pertamina.com | csr_pertamina.md | sent |
+| PLN | plnpeduli@pln.co.id | csr_pln.md | sent |
+| SIG | csr@sig.id | csr_sig.md | sent |
+
+**Post-send tasks:**
+- Check inbox in ~3-5 days for replies
+- Follow-up with a phone call to CSR division (0321 - 493147 admin number)
+- If no reply in 2 weeks, re-send with "Follow-up" subject
+- Track responses in proposals/contact_log.md
+- Send proposals as PDF attachment (render from MD) in follow-up batch
+
+**Resend script:** `python3 scripts/send_csr_proposals.py`

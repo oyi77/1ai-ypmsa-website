@@ -2,6 +2,7 @@
 import MainLayout from '../../layouts/MainLayout.astro';
 import { CAMPAIGNS } from '../../data/campaigns';
 import CampaignDonateButton from '../../components/islands/CampaignDonateButton';
+import PhotoSlideshow from '../../components/islands/PhotoSlideshow';
 import StickyDonateButton from '../../components/islands/StickyDonateButton';
 
 export async function getStaticPaths() {
@@ -203,13 +204,9 @@ const { title, subtitle, description, ogTitle, ogDescription, heroImage, badge, 
         <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary-900 mb-4">Lihat Kondisi Nyata</h2>
         <p class="text-lg text-neutral-600 max-w-2xl mx-auto">Foto-foto ini diambil langsung di lokasi — bukan dari internet.</p>
       </div>
-      <div class="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-5xl mx-auto">
-        {galleryImages.map(img => (
-          <a href={img} target="_blank" class="block aspect-[4/3] rounded-xl overflow-hidden group">
-            <img src={img} alt="" width="800" height="600" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
-          </a>
-        ))}
-      </div>
+      {galleryImages.length > 0 && (
+        <PhotoSlideshow images={galleryImages} alt="Dokumentasi kondisi" client:load />
+      )}
     </div>
   </section>
 
