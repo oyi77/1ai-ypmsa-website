@@ -136,7 +136,7 @@ export const CAMPAIGNS: Campaign[] = [
       { name: 'Mbah Waginah', role: 'Juru Masak', quote: 'Saya masak untuk anak-anak ini sudah 10 tahun. Rasanya seperti masak untuk anak cucu sendiri. Saya rela bangun jam 3 subuh biar nasi hangat siap untuk mereka.' },
     ],
     campaignUpdate: {
-      status: 'Aktif — Rutin Bulanan',
+      status: 'berjalan',
       progress: 55,
       note: 'Harga beras rata-rata Rp 13.500/kg. Satu karung 50kg bertahan 2 hari untuk 600 orang. Kami butuh dana rutin setiap bulan untuk menjaga stok dapur tetap aman.',
       date: 'Juli 2026',
@@ -220,7 +220,7 @@ export const CAMPAIGNS: Campaign[] = [
       { name: 'Nyai Hj. Romlah', role: 'Pengasuh Pondok', quote: 'Anak-anak tidak pernah mengeluh. Mereka tetap semangat meski mushafnya robek. Sayang sekali kalau semangat mereka tidak kita dukung dengan Al-Qur\'an yang layak.' },
     ],
     campaignUpdate: {
-      status: 'Aktif — Distribusi Bertahap',
+      status: 'berjalan',
       progress: 30,
       note: 'Dari target 600 mushaf, 180 sudah terbeli dan didistribusikan. Sisa 420 mushaf masih menunggu donasi. Target distribusi semua mushaf: Oktober 2026.',
       date: 'Juli 2026',
@@ -310,7 +310,7 @@ export const CAMPAIGNS: Campaign[] = [
       { name: 'Nyai Hj. Romlah', role: 'Pengasuh Pondok', quote: 'Banyak calon santri harus kami tolak setiap tahun karena keterbatasan dana. Setiap orang tua asuh baru berarti satu anak lagi yang bisa merasakan pendidikan pesantren.' },
     ],
     campaignUpdate: {
-      status: 'Aktif — Berkelanjutan',
+      status: 'berjalan',
       progress: 40,
       note: '237 santri aktif saat ini. 65 di antaranya adalah anak dhuafa dengan SPP gratis sepenuhnya dari donor. Kami masih memiliki 30 calon santri dhuafa di waiting list yang menunggu orang tua asuh.',
       date: 'Juli 2026',
@@ -394,7 +394,7 @@ export const CAMPAIGNS: Campaign[] = [
       { name: 'Nyai Hj. Romlah', role: 'Pengasuh Pondok', quote: 'Saya tidak ingin santri-santri saya belajar dalam gelap. Mereka datang dengan semangat mencari ilmu, kita wajib fasilitasi.' },
     ],
     campaignUpdate: {
-      status: 'Aktif — Rutin Bulanan',
+      status: 'berjalan',
       progress: 45,
       note: 'Setiap bulan rata-rata tercapai 45% dari target listrik Rp 5,9 juta. Sisanya ditutup dari dana internal yayasan.',
       date: 'Juli 2026',
@@ -482,7 +482,7 @@ export const CAMPAIGNS: Campaign[] = [
       { name: 'Bapak Kepala Desa', role: 'Kepala Desa Gondek', quote: 'Yayasan ini sudah memberikan kontribusi besar bagi desa kami. Wajar jika desa mendukung penuh pembangunan MCK ini.' },
     ],
     campaignUpdate: {
-      status: 'Aktif — Penggalangan Dana',
+      status: 'berjalan',
       progress: 22,
       note: 'Tim teknis sudah survey titik pengeboran. Kontraktor siap eksekusi begitu dana terkumpul 50%. Estimasi pembangunan 2 bulan.',
       date: 'Juli 2026',
@@ -574,7 +574,7 @@ export const CAMPAIGNS: Campaign[] = [
       { name: 'Nyai Hj. Romlah', role: 'Pengasuh Pondok', quote: 'Kasur kempis saya biarkan masih bisa dipakai, tapi meja-kursi patah dan atap bocor harus segera diperbaiki. Demi kenyamanan anak-anak dalam belajar.' },
     ],
     campaignUpdate: {
-      status: 'Aktif — Penggalangan Dana',
+      status: 'berjalan',
       progress: 15,
       note: 'Perbaikan darurat atap kelas 1 sudah dilakukan dengan dana swadaya guru. Masih tersisa atap kelas 2, 40 meja-kursi baru, dan 25 kasur.',
       date: 'Juli 2026',
@@ -592,7 +592,7 @@ export const CAMPAIGNS: Campaign[] = [
     description: 'Sampah dari 600 orang per hari sangat besar. Butuh motor roda 3, bak sampah beton, dan sistem pembuangan teratur.',
     ogTitle: 'Pengelolaan Sampah YPSMA — Atasi Sampah 600 Santri',
     ogDescription: 'Pengadaan motor roda 3, TPS beton, dan sistem pengelolaan sampah untuk 600 santri dan siswa.',
-    heroImage: '/images/campaigns/IMG_1860.webp',
+    heroImage: '/images/campaigns/photo_2026-07-12_19-28-52.webp',
     badge: 'Program Lingkungan — Satu Kali',
     stats: [
       { value: '600', label: 'Orang per Hari' },
@@ -625,8 +625,10 @@ export const CAMPAIGNS: Campaign[] = [
     ],
     budgetTotal: 'Rp 52.941.176',
     galleryImages: [
-      '/images/campaigns/IMG_1860.webp',
-      '/images/campaigns/IMG_1829.webp',
+      '/images/IMG_7500.webp',
+      '/images/IMG_7575.webp',
+      '/images/campaigns/IMG_1879.webp',
+      '/images/campaigns/photo_2026-07-12_19-28-52.webp',
     ],
     tiers: [
       { amount: 50000, label: '50rb', impact: '1 tong sampah besar ½' },
@@ -649,15 +651,15 @@ export const CAMPAIGNS: Campaign[] = [
       age: '15 tahun',
       asal: 'Kelas 9 PPTQ',
       story: 'Fatimah adalah ketua regu kebersihan asrama putri. Setiap pagi ia memimpin 10 santri membersihkan lingkungan. Ia sering mengeluh karena sampah menumpuk dan tidak ada tempat pembuangan yang layak. "Saya malu kalau ada tamu datang melihat lingkungan kami," katanya.',
+      photo: '/images/campaigns/IMG_1879.webp',
       quote: 'Kami ingin belajar di lingkungan yang bersih dan sehat. Tolong bantu kami, Kak.',
-      photo: '/images/drive-new/wisuda/wisuda-3.webp',
     },
     testimoni: [
       { name: 'Ustadz Mahmud', role: 'Kepala Asrama Putra', quote: 'Sebagai pengasuh yang setiap hari melihat kondisi ini, saya sangat berharap program ini segera terwujud. Kesehatan santri adalah prioritas kami.' },
       { name: 'Nyai Hj. Romlah', role: 'Pengasuh Pondok', quote: 'Kebersihan sebagian dari iman. Kami sudah lama ingin memperbaiki sistem pengelolaan sampah, semoga Allah kirimkan donatur yang peduli.' },
     ],
     campaignUpdate: {
-      status: 'Aktif — Penggalangan Dana',
+      status: 'berjalan',
       progress: 12,
       note: 'Survey lokasi TPS sudah dilakukan. Harga motor roda 3 naik 15% karena kenaikan suku cadang impor.',
       date: 'Juli 2026',
@@ -675,7 +677,7 @@ export const CAMPAIGNS: Campaign[] = [
     description: 'Santunan rutin untuk 58 anak yatim piatu (10 di yayasan, 48 di sekitar). Per anak Rp 300.000 berupa tunai dan sembako. Harga sembako naik imbas Dolar.',
     ogTitle: 'Sedekah Anak Yatim YPSMA — Santunan 58 Anak Yatim',
     ogDescription: 'Santunan rutin untuk 58 anak yatim piatu. Rp 300.000/anak berupa tunai dan sembako.',
-    heroImage: '/images/campaigns/IMG_1860.webp',
+    heroImage: '/images/IMG_7558.webp',
     badge: 'Program Anak Yatim — Rutin Bulanan',
     stats: [
       { value: '58', label: 'Anak Yatim' },
@@ -707,8 +709,10 @@ export const CAMPAIGNS: Campaign[] = [
     ],
     budgetTotal: 'Rp 20.470.588',
     galleryImages: [
-      '/images/campaigns/IMG_1860.webp',
-      '/images/campaigns/IMG_1829.webp',
+      '/images/IMG_7558.webp',
+      '/images/IMG_7593.webp',
+      '/images/campaigns/IMG_1887.webp',
+      '/images/campaigns/IMG_1799.webp',
     ],
     tiers: [
       { amount: 50000, label: '50rb', impact: '1/6 santunan 1 anak yatim' },
@@ -732,15 +736,15 @@ export const CAMPAIGNS: Campaign[] = [
       age: '9 tahun',
       asal: 'Desa Mojowarno',
       story: 'Ayah Aisyah meninggal setahun lalu karena sakit. Ibunya bekerja serabutan sebagai buruh cuci. Aisyah, duduk di kelas 3 SD, hampir putus sekolah karena tidak punya seragam dan buku. Santunan yayasan menjadi satu-satunya harapan ia tetap bisa sekolah.',
+      photo: '/images/campaigns/IMG_1887.webp',
       quote: 'Kakak, terima kasih sudah peduli sama aku. Aku mau sekolah biar bisa bantu ibu.',
-      photo: '/images/drive-new/wisuda/wisuda-1.webp',
     },
     testimoni: [
       { name: 'Ustadzah Farida', role: 'Pembina Anak Yatim YPSMA', quote: 'Anak-anak yatim di sini sangat bersyukur setiap kali menerima santunan. Bukan soal uangnya, tapi karena mereka tahu masih ada yang peduli.' },
       { name: 'Bapak Sutikno', role: 'Kakek dari 2 anak yatim asuh', quote: 'Saya sudah tua, tidak bisa bekerja keras. Santunan ini sangat berarti untuk cucu-cucu saya. Semoga donatur dibalas berlipat ganda oleh Allah.' },
     ],
     campaignUpdate: {
-      status: 'Aktif — Rutin Bulanan',
+      status: 'berjalan',
       progress: 35,
       note: 'Bulan lalu 58 anak menerima santunan Rp 300.000 masing-masing (tunai + sembako). Bulan ini baru terkumpul 35% dari target.',
       date: 'Juli 2026',

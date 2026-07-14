@@ -48,7 +48,7 @@
     "addressCountry": "ID"
   },
   "telephone": "+62-321-493147",
-  "email": "info@ypsma.org",
+  "email": "cs@ypsma.org",
   "sameAs": [
     "https://www.youtube.com/@YPSMAJombang",
     "https://www.instagram.com/ypsmajombang"
@@ -695,4 +695,4 @@ fbq('track', 'PageView');
 ---
 
 **Contact for Implementation Support:**  
-📧 info@ypsma.org | 📱 0321-493147 | 🌐 ypsma.org
+📧 cs@ypsma.org | 📱 0321-493147 | 🌐 ypsma.org

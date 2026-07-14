@@ -28,4 +28,4 @@ Landing page resmi YPSM — Yayasan Pendidikan dan Sosial Ma'arif.
 ## Kontak
 - Alamat: Jl. Diponegoro No. 34, Gondek, Mojowarno, Jombang 61475
 - Telepon: 0321-493147
-- Email: info@ypsma.org
+- Email: cs@ypsma.org

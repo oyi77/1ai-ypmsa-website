@@ -57,7 +57,7 @@
    ```bash
    cd ~/projects/1ai-payment
    # Generate API key for YPSMA
-   npm run generate-key -- --client=ypsma --email=info@ypsma.org
+   npm run generate-key -- --client=ypsma --email=cs@ypsma.org
    ```
 
 2. **Configure gateway routing**
@@ -134,7 +134,7 @@
 - AHU: 0026672.AH.01.04.Tahun 2020
 - Admin: 082234551160
 - Bank: BRI 058501000742563
-- Email: info@ypsma.org
+- Email: cs@ypsma.org
 - Address: Jl.Diponegoro No.34 Rt.1 Rw.6 Gondek Mojowarno Jombang 61475
 
 ### Website
