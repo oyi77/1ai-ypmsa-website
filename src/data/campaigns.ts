@@ -501,7 +501,7 @@ export const CAMPAIGNS: Campaign[] = [
     description: 'Perbaikan atap bocor, meja-kursi rusak, pengecatan, dan kasur asrama. Seluruhnya terdampak kenaikan harga material bangunan.',
     ogTitle: 'Sarana Prasarana YPSMA — Perbaiki Fasilitas 600 Siswa',
     ogDescription: 'Perbaikan atap bocor, meja-kursi, pengecatan, dan kasur asrama yang terdampak kenaikan harga material.',
-    heroImage: '/images/drive-new/sarpras/1.webp',
+    heroImage: '/images/drive-new/sarpras/sarpras-thumb.webp',
     badge: 'Program Sarpras — Satu Kali',
     stats: [
       { value: '600', label: 'Siswa Terdampak' },
@@ -592,7 +592,7 @@ export const CAMPAIGNS: Campaign[] = [
     description: 'Sampah dari 600 orang per hari sangat besar. Butuh motor roda 3, bak sampah beton, dan sistem pembuangan teratur.',
     ogTitle: 'Pengelolaan Sampah YPSMA — Atasi Sampah 600 Santri',
     ogDescription: 'Pengadaan motor roda 3, TPS beton, dan sistem pengelolaan sampah untuk 600 santri dan siswa.',
-    heroImage: '/images/campaigns/photo_2026-07-12_19-28-52.webp',
+    heroImage: '/images/drive-new/sampah-thumb.webp',
     badge: 'Program Lingkungan — Satu Kali',
     stats: [
       { value: '600', label: 'Orang per Hari' },
@@ -678,7 +678,7 @@ export const CAMPAIGNS: Campaign[] = [
     description: 'Santunan rutin untuk 58 anak yatim piatu (10 di yayasan, 48 di sekitar). Per anak Rp 300.000 berupa tunai dan sembako. Harga sembako naik imbas Dolar.',
     ogTitle: 'Sedekah Anak Yatim YPSMA — Santunan 58 Anak Yatim',
     ogDescription: 'Santunan rutin untuk 58 anak yatim piatu. Rp 300.000/anak berupa tunai dan sembako.',
-    heroImage: '/images/IMG_7558.webp',
+    heroImage: '/images/drive-new/yatim-thumb.webp',
     badge: 'Program Anak Yatim — Rutin Bulanan',
     stats: [
       { value: '58', label: 'Anak Yatim' },
