@@ -14,6 +14,17 @@
 
 **Git commit**: feat: SEO foundations + contact/bank updates + donation optimization
 
+
+---
+
+### Phase 2: CSR Pipeline Automation (Done)
+- [x] csr_config.yaml with 12 companies + YPSMA Profile
+- [x] csr_pipeline.py — research → enrich → submit + --dry-run
+- [x] cron_csr.sh wrapper for weekly cron job
+- [x] 14 proposal files generated (12 companies + pertamina/2 + bankjatim/2)
+- [x] Dry-run verified (research→enrich→submit, all 12 emails previewed)
+
+**Git commit**: feat: csr pipeline with research, enrich, submit stages + cron wrapper
 ---
 
 ## 🚀 NEXT: Google Search Console (Week 1)

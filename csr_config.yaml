@@ -1,0 +1,278 @@
+# CSR Pipeline Configuration — YPSMA
+# Used by scripts/csr_pipeline.py for research → enrich → submit pipeline
+# Yamllint: disable rule:line-length
+
+ypsma:
+  name: Yayasan Pendidikan dan Sosial Ma'arif
+  acronym: YPSMA
+  aka: "YPSMA (Yayasan Pendidikan dan Sosial Ma'arif)"
+  legal_name: Yayasan Pendidikan dan Sosial Ma'arif
+  established: 1966
+  legal_year: 1999
+  ahu: AHU-0026672.AH.01.04.Tahun 2020
+  leader: Drs. H. Syamsun Huda Amir
+  founder: KH. Muhammad Hatta Qodir
+  address: Jl Diponegoro RT 001 RW 006, Dsn Ngelo, Ds. Gondek, Kec. Mojowarno, Jombang 61475
+  phone: "0321 - 493147"
+  whatsapp: "082234551160"
+  email: admin@ypsma.org
+  website: https://ypsma.org
+  total_students: 574
+  total_staff: 69
+  units:
+    - name: RA Fajrul Islam
+      year: 1980
+      type: RA/TK
+      teachers: 5
+      students: 50
+    - name: MI Sulamuddiniyah
+      year: 1966
+      type: MI/SD
+      teachers: 18
+      students: 178
+    - name: SMP YPM Mojowarno
+      year: 1988
+      type: SMP
+      teachers: 13
+      students: 113
+    - name: PPTQ Darussalam
+      year: 2015
+      type: PPTQ/Pesantren
+      teachers: 33
+      students: 233
+  donation:
+    sociabuzz: https://sociabuzz.com/ypsma/tribe
+    bank_account:
+      bank: BRI
+      number: "0585-01-000742-56-3"
+      name: Yayasan Pendidikan Dan Sosial Maarif
+    qris_url: https://ypsma.org
+    wa_donasi: "0321-493147"
+
+# Target companies for CSR proposals
+# Links: CSR websites for research stage
+companies:
+  - key: bankjatim
+    name: Bank Jatim
+    legal_name: PT Bank Pembangunan Daerah Jawa Timur Tbk
+    sector: Perbankan BPD
+    csr_name: Bank Jatim Peduli
+    csr_focus:
+      - Pendidikan
+      - Beasiswa
+      - UMKM
+      - Sosial Keagamaan
+    email: bankjatim@bankjatim.co.id
+    csr_website: https://www.bankjatim.co.id
+    proposal_file: proposals/csr_bankjatim.md
+    programs:
+      - renovasi_kelas
+      - beasiswa
+    total_amount: "Rp 235.000.000"
+
+  - key: bsi
+    name: Bank Syariah Indonesia
+    legal_name: PT Bank Syariah Indonesia Tbk
+    sector: Perbankan Syariah
+    csr_name: BSI Mashlahat
+    csr_focus:
+      - Pendidikan
+      - Pemberdayaan Ekonomi
+      - Sosial Keagamaan
+      - Lingkungan
+    email: cs@bsimashlahat.or.id
+    csr_website: https://www.bsimashlahat.or.id
+    proposal_file: proposals/csr_bsi.md
+    programs:
+      - renovasi_kelas
+      - beasiswa
+    total_amount: "Rp 235.000.000"
+
+  - key: pertamina
+    name: Pertamina
+    legal_name: PT Pertamina (Persero)
+    sector: Energi & Migas
+    csr_name: Pertamina Peduli (TJSL)
+    csr_focus:
+      - Pendidikan
+      - Lingkungan
+      - Pemberdayaan Masyarakat
+      - Kesehatan
+    email: corpcs@pertamina.com
+    csr_website: https://www.pertamina.com
+    proposal_file: proposals/csr_pertamina.md
+    programs:
+      - renovasi_kelas
+      - beasiswa
+    total_amount: "Rp 235.000.000"
+
+  - key: pln
+    name: PLN
+    legal_name: PT Perusahaan Listrik Negara (Persero)
+    sector: Energi & Kelistrikan
+    csr_name: PLN Peduli
+    csr_focus:
+      - Pendidikan
+      - Lingkungan
+      - Pemberdayaan UMKM
+      - Infrastruktur Sosial
+    email: plnpeduli@pln.co.id
+    csr_website: https://www.pln.co.id
+    proposal_file: proposals/csr_pln.md
+    programs:
+      - renovasi_kelas
+      - beasiswa
+    total_amount: "Rp 235.000.000"
+
+  - key: sig
+    name: PT Semen Indonesia (SIG)
+    legal_name: PT Semen Indonesia (Persero) Tbk
+    sector: Material Bangunan
+    csr_name: SIG Peduli
+    csr_focus:
+      - Pendidikan
+      - Infrastruktur Sosial
+      - Lingkungan
+      - Pemberdayaan Masyarakat
+    email: csr@sig.id
+    csr_website: https://www.semenindonesia.com
+    proposal_file: proposals/csr_sig.md
+    programs:
+      - renovasi_kelas
+      - beasiswa
+    total_amount: "Rp 235.000.000"
+
+  - key: telkom
+    name: Telkom Indonesia
+    legal_name: PT Telkom Indonesia (Persero) Tbk
+    sector: Telekomunikasi & Digital
+    csr_name: Telkom Peduli
+    csr_focus:
+      - Pendidikan Digital
+      - Literasi Digital
+      - Infrastruktur TIK
+      - Kewirausahaan Digital
+    email: sustainability@telkom.co.id
+    csr_website: https://www.telkom.co.id
+    proposal_file: proposals/csr_telkom.md
+    programs:
+      - lab_komputer
+      - literasi_digital
+    total_amount: "Rp 200.000.000"
+
+  - key: bca
+    name: Bank Central Asia (BCA)
+    legal_name: PT Bank Central Asia Tbk
+    sector: Perbankan Swasta
+    csr_name: Bakti BCA
+    csr_focus:
+      - Pendidikan (Smart Libraries)
+      - Kesehatan
+      - Bencana Alam
+      - Pelestarian Budaya
+    email: halobca@bca.co.id
+    csr_website: https://www.bca.co.id
+    proposal_file: proposals/csr_bca.md
+    programs:
+      - renovasi_kelas
+      - beasiswa
+    total_amount: "Rp 235.000.000"
+
+  - key: mandiri
+    name: Bank Mandiri
+    legal_name: PT Bank Mandiri (Persero) Tbk
+    sector: Perbankan BUMN
+    csr_name: Mandiri Peduli
+    csr_focus:
+      - Pendidikan
+      - Pemberdayaan Ekonomi
+      - Kesehatan
+      - Infrastruktur Sosial
+    email: customer.care@bankmandiri.co.id
+    csr_website: https://www.bankmandiri.co.id
+    proposal_file: proposals/csr_mandiri.md
+    programs:
+      - beasiswa
+      - taman_bacaan
+    total_amount: "Rp 145.000.000"
+
+  - key: bri
+    name: Bank Rakyat Indonesia (BRI)
+    legal_name: PT Bank Rakyat Indonesia (Persero) Tbk
+    sector: Perbankan BUMN
+    csr_name: BRI Peduli / YBM BRILiaN
+    csr_focus:
+      - Pendidikan (Cares for Schools)
+      - Beasiswa (YBM BRILiaN)
+      - Pemberdayaan UMKM
+      - Sosial Keagamaan
+    email: bri@bri.co.id
+    csr_website: https://www.bri.co.id
+    proposal_file: proposals/csr_bri.md
+    programs:
+      - renovasi_sekolah
+      - beasiswa
+      - pemberdayaan_ekonomi
+    total_amount: "Rp 320.000.000"
+
+  - key: bni
+    name: Bank Negara Indonesia (BNI)
+    legal_name: PT Bank Negara Indonesia (Persero) Tbk
+    sector: Perbankan BUMN
+    csr_name: BNI Peduli
+    csr_focus:
+      - Pendidikan
+      - Kewirausahaan
+      - Lingkungan
+      - Sosial Keagamaan
+    email: bni@bni.co.id
+    csr_website: https://www.bni.co.id
+    proposal_file: proposals/csr_bni.md
+    programs:
+      - beasiswa
+      - pondok_pesantren
+    total_amount: "Rp 175.000.000"
+
+  - key: kai
+    name: PT Kereta Api Indonesia
+    legal_name: PT Kereta Api Indonesia (Persero)
+    sector: Transportasi
+    csr_name: TJSL KAI
+    csr_focus:
+      - Pendidikan
+      - Keselamatan Transportasi
+      - Lingkungan
+      - Pemberdayaan Masyarakat
+    email: csr@kai.id
+    csr_website: https://www.kai.id
+    proposal_file: proposals/csr_kai.md
+    programs:
+      - beasiswa
+      - renovasi_kelas
+    total_amount: "Rp 175.000.000"
+
+  - key: astra
+    name: Astra International
+    legal_name: PT Astra International Tbk
+    sector: Konglomerasi Otomotif & Alat Berat
+    csr_name: Yayasan Pendidikan Astra Michael D. Ruslim / Astra for Education
+    csr_focus:
+      - Pendidikan Vokasi
+      - Kewirausahaan
+      - Beasiswa
+      - Pengembangan SDM
+    email: info@astra.co.id
+    csr_website: https://www.astra.co.id
+    proposal_file: proposals/csr_astra.md
+    programs:
+      - beasiswa
+      - kewirausahaan_santri
+    total_amount: "Rp 114.000.000"
+
+# SMTP / Email config
+smtp:
+  host: smtp.gmail.com
+  port: 587
+  user: grahainsanmandiri@gmail.com
+  from_addr: admin@ypsma.org
+  from_name: "YPSMA - Yayasan Pendidikan dan Sosial Ma'arif"
