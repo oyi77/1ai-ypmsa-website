@@ -1,0 +1,795 @@
+- key: adhikarya
+  name: Adhi Karya
+  email: adhi@adhi.co.id
+  proposal: proposals/csr_adhikarya.md
+  timestamp: '2026-07-15T08:00:05.009804'
+- key: agrinasjaladrinusant
+  name: PT Agrinas Jaladri Nusantara (Persero)
+  email: csr@agrinas.id
+  proposal: proposals/csr_agrinasjaladrinusant.md
+  timestamp: '2026-07-15T15:24:23.928820'
+- key: agrinaspalmanusantar
+  name: PT Agrinas Palma Nusantara (Persero)
+  email: csr@agrinas.id
+  proposal: proposals/csr_agrinaspalmanusantar.md
+  timestamp: '2026-07-15T15:24:55.346009'
+- key: agrinaspangannusanta
+  name: PT Agrinas Pangan Nusantara (Persero)
+  email: csr@agrinas.id
+  proposal: proposals/csr_agrinaspangannusanta.md
+  timestamp: '2026-07-15T15:25:26.728370'
+- key: amartakarya
+  name: PT Amarta Karya (Persero)
+  email: csr@waskita.co.id
+  proposal: proposals/csr_amartakarya.md
+  timestamp: '2026-07-15T15:25:54.573783'
+- key: anekagasindustri
+  name: PT Aneka Gas Industri (Persero)
+  email: info@samatorgas.com
+  proposal: proposals/csr_anekagasindustri.md
+  timestamp: '2026-07-15T15:26:25.864033'
+- key: anekatambang
+  name: PT Aneka Tambang (Persero) Tbk
+  email: csr@antam.com
+  proposal: proposals/csr_anekatambang.md
+  timestamp: '2026-07-15T15:27:31.515256'
+- key: angkasapurai
+  name: PT Angkasa Pura I (Persero)
+  email: info@angkasapura1.co.id
+  proposal: proposals/csr_angkasapurai.md
+  timestamp: '2026-07-15T15:28:02.973751'
+- key: angkasapuraii
+  name: PT Angkasa Pura II (Persero)
+  email: info@angkasapura1.co.id
+  proposal: proposals/csr_angkasapuraii.md
+  timestamp: '2026-07-15T15:28:34.297716'
+- key: asdpindonesiaferry
+  name: PT ASDP Indonesia Ferry (Persero)
+  email: csr@asdp.co.id
+  proposal: proposals/csr_asdpindonesiaferry.md
+  timestamp: '2026-07-15T15:27:00.048661'
+- key: astra
+  name: Astra International
+  email: info@astra.co.id
+  proposal: proposals/csr_astra.md
+  timestamp: '2026-07-15T08:04:21.214673'
+- key: asuransijasaindonesi
+  name: PT Asuransi Jasa Indonesia (Persero)
+  email: info@asuransijasaindonesia.co.id
+  proposal: proposals/csr_asuransijasaindonesi.md
+  timestamp: '2026-07-15T15:29:05.638491'
+- key: asuransijiwasraya
+  name: PT Asuransi Jiwasraya (Persero)
+  email: csr@jiwasraya.co.id
+  proposal: proposals/csr_asuransijiwasraya.md
+  timestamp: '2026-07-15T15:29:36.984241'
+- key: asuransikerugianjasa
+  name: PT Asuransi Kerugian Jasa Raharja (Persero)
+  email: csr@jasaraharja.co.id
+  proposal: proposals/csr_asuransikerugianjasa.md
+  timestamp: '2026-07-15T15:30:08.488627'
+- key: asuransikesehatanind
+  name: PT Asuransi Kesehatan Indonesia (Persero)
+  email: info@askes.co.id
+  proposal: proposals/csr_asuransikesehatanind.md
+  timestamp: '2026-07-15T15:30:39.931775'
+- key: asuransikreditindone
+  name: PT Asuransi Kredit Indonesia (Persero)
+  email: info@asuransikreditindonesia.co.id
+  proposal: proposals/csr_asuransikreditindone.md
+  timestamp: '2026-07-15T15:31:11.212943'
+- key: asuransisosialangkat
+  name: PT Asuransi Sosial Angkatan Bersenjata Republik Indonesia (Persero)
+  email: csr@asabri.co.id
+  proposal: proposals/csr_asuransisosialangkat.md
+  timestamp: '2026-07-15T15:31:42.520725'
+- key: aviasipariwisataindo
+  name: PT Aviasi Pariwisata Indonesia (Persero)
+  email: csr@injourney.id
+  proposal: proposals/csr_aviasipariwisataindo.md
+  timestamp: '2026-07-15T15:32:13.853464'
+- key: bahanapakaryaindustr
+  name: PT Bahana Pakarya Industri Strategis (Persero)
+  email: info@bpiskarya.co.id
+  proposal: proposals/csr_bahanapakaryaindustr.md
+  timestamp: '2026-07-15T15:32:45.138818'
+- key: bahanapembinaanusaha
+  name: PT Bahana Pembinaan Usaha Indonesia (Persero)
+  email: info@bpui.co.id
+  proposal: proposals/csr_bahanapembinaanusaha.md
+  timestamp: '2026-07-15T15:33:16.441338'
+- key: balitv
+  name: Bali TV
+  email: pemirsa@balitv.tv
+  proposal: proposals/csr_balitv.md
+  timestamp: '2026-07-15T08:08:39.109623'
+- key: bankbjb
+  name: Bank BJB
+  email: bjbcare@bankbjb.co.id
+  proposal: proposals/csr_bankbjb.md
+  timestamp: '2026-07-15T08:12:55.959953'
+- key: bankbumidaya
+  name: PT Bank Bumi Daya (Persero)
+  email: info@bankbumidaya.co.id
+  proposal: proposals/csr_bankbumidaya.md
+  timestamp: '2026-07-15T15:33:47.794328'
+- key: bankdagangnegara
+  name: PT Bank Dagang Negara (Persero)
+  email: info@bankdagangnegara.co.id
+  proposal: proposals/csr_bankdagangnegara.md
+  timestamp: '2026-07-15T15:34:19.136061'
+- key: bankeksporimporindon
+  name: PT Bank Ekspor Impor Indonesia (Persero)
+  email: info@bankeksporindonesia.co.id
+  proposal: proposals/csr_bankeksporimporindon.md
+  timestamp: '2026-07-15T15:34:50.509824'
+- key: bankeksporindonesia
+  name: PT Bank Ekspor Indonesia (Persero)
+  email: csr@indonesiaeximbank.go.id
+  proposal: proposals/csr_bankeksporindonesia.md
+  timestamp: '2026-07-15T15:35:21.832681'
+- key: bankjatim
+  name: Bank Jatim
+  email: bankjatim@bankjatim.co.id
+  proposal: proposals/csr_bankjatim.md
+  timestamp: '2026-07-15T08:17:12.923913'
+- key: banknegaraindonesia
+  name: PT Bank Negara Indonesia (Persero) Tbk
+  email: bni@bni.co.id
+  proposal: proposals/csr_banknegaraindonesia.md
+  timestamp: '2026-07-15T15:35:53.200266'
+- key: bankpembangunanindon
+  name: PT Bank Pembangunan Indonesia (Persero)
+  email: info@bankpembangunanindonesia.co.id
+  proposal: proposals/csr_bankpembangunanindon.md
+  timestamp: '2026-07-15T15:36:24.565233'
+- key: bankrakyatindonesia
+  name: PT Bank Rakyat Indonesia (Persero) Tbk
+  email: bri@bri.co.id
+  proposal: proposals/csr_bankrakyatindonesia.md
+  timestamp: '2026-07-15T15:36:56.000559'
+- key: banksyariahindonesia
+  name: PT Bank Syariah Indonesia (Persero) Tbk
+  email: cs@bsimashlahat.or.id
+  proposal: proposals/csr_banksyariahindonesia.md
+  timestamp: '2026-07-15T15:36:59.545826'
+- key: banktabungannegara
+  name: PT Bank Tabungan Negara (Persero) Tbk
+  email: info@btn.co.id
+  proposal: proposals/csr_banktabungannegara.md
+  timestamp: '2026-07-15T15:37:31.063538'
+- key: barata
+  name: Barata Indonesia
+  email: info@barata.com
+  proposal: proposals/csr_barata.md
+  timestamp: '2026-07-15T08:21:28.345825'
+- key: bca
+  name: Bank Central Asia (BCA)
+  email: halobca@bca.co.id
+  proposal: proposals/csr_bca.md
+  timestamp: '2026-07-15T08:25:46.072855'
+- key: berdikari
+  name: PT Berdikari (Persero)
+  email: csr@berdikari.co.id
+  proposal: proposals/csr_berdikari.md
+  timestamp: '2026-07-15T15:38:02.887311'
+- key: bhandagharareksa
+  name: PT Bhanda Ghara Reksa (Persero)
+  email: info@bgrlogistics.co.id
+  proposal: proposals/csr_bhandagharareksa.md
+  timestamp: '2026-07-15T15:38:34.458864'
+- key: binakarya
+  name: PT Bina Karya (Persero)
+  email: info@binakarya.co.id
+  proposal: proposals/csr_binakarya.md
+  timestamp: '2026-07-15T15:39:06.065552'
+- key: biofarma
+  name: PT Bio Farma (Persero)
+  email: corcom@biofarma.co.id
+  proposal: proposals/csr_biofarma.md
+  timestamp: '2026-07-15T15:39:37.693702'
+- key: biroklasifikasiindon
+  name: PT Biro Klasifikasi Indonesia (Persero)
+  email: csr@bki.co.id
+  proposal: proposals/csr_biroklasifikasiindon.md
+  timestamp: '2026-07-15T15:40:09.135765'
+- key: bluebird
+  name: Blue Bird
+  email: customercare@bluebirdgroup.com
+  proposal: proposals/csr_bluebird.md
+  timestamp: '2026-07-15T08:30:03.321001'
+- key: bni
+  name: Bank Negara Indonesia (BNI)
+  email: bni@bni.co.id
+  proposal: proposals/csr_bni.md
+  timestamp: '2026-07-15T08:34:20.102323'
+- key: bomabismaindra
+  name: PT Boma Bisma Indra (Persero)
+  email: info@bomabismaindra.co.id
+  proposal: proposals/csr_bomabismaindra.md
+  timestamp: '2026-07-15T15:40:40.680774'
+- key: brantasabipraya
+  name: Brantas Abipraya
+  email: brap@brantas-abipraya.co.id
+  proposal: proposals/csr_brantasabipraya.md
+  timestamp: '2026-07-15T08:38:37.494956'
+- key: bri
+  name: Bank Rakyat Indonesia (BRI)
+  email: bri@bri.co.id
+  proposal: proposals/csr_bri.md
+  timestamp: '2026-07-15T08:42:54.223975'
+- key: bsi
+  name: Bank Syariah Indonesia
+  email: cs@bsimashlahat.or.id
+  proposal: proposals/csr_bsi.md
+  timestamp: '2026-07-15T08:47:11.922417'
+- key: bukitasam
+  name: PT Bukit Asam (Persero) Tbk
+  email: info@bukitasam.co.id
+  proposal: proposals/csr_bukitasam.md
+  timestamp: '2026-07-15T15:41:12.044822'
+- key: dahana
+  name: PT Dahana (Persero)
+  email: csr@dahana.co.id
+  proposal: proposals/csr_dahana.md
+  timestamp: '2026-07-15T15:41:43.414907'
+- key: danareksa
+  name: PT Danareksa (Persero)
+  email: csr@danareksa.co.id
+  proposal: proposals/csr_danareksa.md
+  timestamp: '2026-07-15T15:42:46.289695'
+- key: danatabungandanasura
+  name: PT Dana Tabungan dan Asuransi Pegawai Negeri (Persero)
+  email: csr@taspen.co.id
+  proposal: proposals/csr_danatabungandanasura.md
+  timestamp: '2026-07-15T15:42:14.982093'
+- key: dirgantaraindonesia
+  name: PT Dirgantara Indonesia (Persero)
+  email: info@dirgantara-indonesia.co.id
+  proposal: proposals/csr_dirgantaraindonesia.md
+  timestamp: '2026-07-15T15:43:17.690006'
+- key: djakartalloyd
+  name: PT Djakarta Lloyd (Persero)
+  email: csr@djakartalloyd.co.id
+  proposal: proposals/csr_djakartalloyd.md
+  timestamp: '2026-07-15T15:43:49.180741'
+- key: dokdanperkapalankodj
+  name: PT Dok dan Perkapalan Kodja Bahari (Persero)
+  email: info@kodjabahari.co.id
+  proposal: proposals/csr_dokdanperkapalankodj.md
+  timestamp: '2026-07-15T15:44:20.615950'
+- key: dokdanperkapalansura
+  name: PT Dok dan Perkapalan Surabaya (Persero)
+  email: info@dps.co.id
+  proposal: proposals/csr_dokdanperkapalansura.md
+  timestamp: '2026-07-15T15:44:51.997890'
+- key: eksploitasidanindust
+  name: PT Eksploitasi dan Industri Hutan I (Persero)
+  email: csr@perhutani.co.id
+  proposal: proposals/csr_eksploitasidanindust.md
+  timestamp: '2026-07-15T15:45:23.694039'
+- key: eksploitasidanindust_ii
+  name: PT Eksploitasi dan Industri Hutan II (Persero)
+  email: csr@perhutani.co.id
+  proposal: proposals/csr_eksploitasidanindust_ii.md
+  timestamp: '2026-07-15T15:45:55.015675'
+- key: eksploitasidanindust_iii
+  name: PT Eksploitasi dan Industri Hutan III (Persero)
+  email: csr@perhutani.co.id
+  proposal: proposals/csr_eksploitasidanindust_iii.md
+  timestamp: '2026-07-15T15:46:26.394800'
+- key: eksploitasidanindust_iv
+  name: PT Eksploitasi dan Industri Hutan IV (Persero)
+  email: csr@perhutani.co.id
+  proposal: proposals/csr_eksploitasidanindust_iv.md
+  timestamp: '2026-07-15T15:46:57.707975'
+- key: eksploitasidanindust_v
+  name: PT Eksploitasi dan Industri Hutan V (Persero)
+  email: csr@perhutani.co.id
+  proposal: proposals/csr_eksploitasidanindust_v.md
+  timestamp: '2026-07-15T15:47:00.643735'
+- key: energymanagementindo
+  name: PT Energy Management Indonesia (Persero)
+  email: info@emi.co.id
+  proposal: proposals/csr_energymanagementindo.md
+  timestamp: '2026-07-15T15:47:32.058174'
+- key: garam
+  name: PT Garam (Persero)
+  email: csr@garam.co.id
+  proposal: proposals/csr_garam.md
+  timestamp: '2026-07-15T15:48:03.522880'
+- key: garudaindonesia
+  name: PT Garuda Indonesia (Persero) Tbk
+  email: info@garuda-indonesia.com
+  proposal: proposals/csr_garudaindonesia.md
+  timestamp: '2026-07-15T15:48:35.148035'
+- key: geodipaenergi
+  name: PT Geo Dipa Energi (Persero)
+  email: info@geodipa.co.id
+  proposal: proposals/csr_geodipaenergi.md
+  timestamp: '2026-07-15T15:49:06.545951'
+- key: hotelindonesianatour
+  name: PT Hotel Indonesia Natour (Persero)
+  email: csr@hin.co.id
+  proposal: proposals/csr_hotelindonesianatour.md
+  timestamp: '2026-07-15T15:49:37.910837'
+- key: hutamakarya
+  name: PT Hutama Karya (Persero)
+  email: info@hutamakarya.com
+  proposal: proposals/csr_hutamakarya.md
+  timestamp: '2026-07-15T15:50:09.287503'
+- key: indahkarya
+  name: PT Indah Karya (Persero)
+  email: info@indahkarya.co.id
+  proposal: proposals/csr_indahkarya.md
+  timestamp: '2026-07-15T15:50:40.657542'
+- key: indonesiaasahanalumi
+  name: PT Indonesia Asahan Aluminium (Persero)
+  email: csr@inalum.co.id
+  proposal: proposals/csr_indonesiaasahanalumi.md
+  timestamp: '2026-07-15T15:51:12.087677'
+- key: indonesiafarma
+  name: PT Indonesia Farma (Persero) Tbk
+  email: info@indonesiafarma.co.id
+  proposal: proposals/csr_indonesiafarma.md
+  timestamp: '2026-07-15T15:51:43.517715'
+- key: indosat
+  name: PT Indosat (Persero) Tbk
+  email: info@indosat.co.id
+  proposal: proposals/csr_indosat.md
+  timestamp: '2026-07-15T15:52:14.901342'
+- key: industrigelas
+  name: PT Industri Gelas (Persero)
+  email: info@ptig.co.id
+  proposal: proposals/csr_industrigelas.md
+  timestamp: '2026-07-15T15:52:46.296429'
+- key: industrikapalindones
+  name: PT Industri Kapal Indonesia (Persero)
+  email: info@iki.co.id
+  proposal: proposals/csr_industrikapalindones.md
+  timestamp: '2026-07-15T15:53:17.646638'
+- key: industrikeretaapi
+  name: PT Industri Kereta Api (Persero)
+  email: csr@inka.co.id
+  proposal: proposals/csr_industrikeretaapi.md
+  timestamp: '2026-07-15T15:53:48.976967'
+- key: industrinuklirindone
+  name: PT Industri Nuklir Indonesia (Persero)
+  email: info@ptin.co.id
+  proposal: proposals/csr_industrinuklirindone.md
+  timestamp: '2026-07-15T15:54:20.358448'
+- key: industripesawatterba
+  name: PT Industri Pesawat Terbang Nusantara (Persero)
+  email: info@iptn.co.id
+  proposal: proposals/csr_industripesawatterba.md
+  timestamp: '2026-07-15T15:54:51.779549'
+- key: industrisandangnusan
+  name: PT Industri Sandang Nusantara (Persero)
+  email: info@industrisandangnusantara.com
+  proposal: proposals/csr_industrisandangnusan.md
+  timestamp: '2026-07-15T15:55:23.171972'
+- key: industritelekomunika
+  name: PT Industri Telekomunikasi Indonesia (Persero)
+  email: info@intelkom.co.id
+  proposal: proposals/csr_industritelekomunika.md
+  timestamp: '2026-07-15T15:55:54.561944'
+- key: inka
+  name: INKA
+  email: sekretariat@inka.co.id
+  proposal: proposals/csr_inka.md
+  timestamp: '2026-07-15T08:51:27.486322'
+- key: istakakarya
+  name: PT Istaka Karya (Persero)
+  email: info@istaka.co.id
+  proposal: proposals/csr_istakakarya.md
+  timestamp: '2026-07-15T15:56:26.045738'
+- key: jaminankreditindones
+  name: PT Jaminan Kredit Indonesia (Persero)
+  email: info@jaminankreditindonesia.co.id
+  proposal: proposals/csr_jaminankreditindones.md
+  timestamp: '2026-07-15T15:56:57.600486'
+- key: jaminansosialtenagak
+  name: PT Jaminan Sosial Tenaga Kerja (Persero)
+  email: info@bpjsketenagakerjaan.go.id
+  proposal: proposals/csr_jaminansosialtenagak.md
+  timestamp: '2026-07-15T15:57:00.905426'
+- key: jasamarga
+  name: PT Jasa Marga (Persero) Tbk
+  email: info@jasamarga.com
+  proposal: proposals/csr_jasamarga.md
+  timestamp: '2026-07-15T15:57:32.334860'
+- key: jtv
+  name: JTV Surabaya
+  email: portal@jtv.co.id
+  proposal: proposals/csr_jtv.md
+  timestamp: '2026-07-15T08:55:45.107591'
+- key: kai
+  name: PT Kereta Api Indonesia
+  email: csr@kai.id
+  proposal: proposals/csr_kai.md
+  timestamp: '2026-07-15T09:00:01.998669'
+- key: kawasanberikatnusant
+  name: PT Kawasan Berikat Nusantara (Persero)
+  email: info@kbn.co.id
+  proposal: proposals/csr_kawasanberikatnusant.md
+  timestamp: '2026-07-15T15:58:03.810216'
+- key: kawasanindustrimakas
+  name: PT Kawasan Industri Makassar (Persero)
+  email: info@kima.co.id
+  proposal: proposals/csr_kawasanindustrimakas.md
+  timestamp: '2026-07-15T15:58:35.340059'
+- key: kawasanindustrimedan
+  name: PT Kawasan Industri Medan (Persero)
+  email: info@kawahara.co.id
+  proposal: proposals/csr_kawasanindustrimedan.md
+  timestamp: '2026-07-15T15:59:06.637606'
+- key: kawasanindustriwijay
+  name: PT Kawasan Industri Wijayakusuma (Persero)
+  email: info@kiw.co.id
+  proposal: proposals/csr_kawasanindustriwijay.md
+  timestamp: '2026-07-15T15:59:37.992089'
+- key: keretaapiindonesia
+  name: PT Kereta Api Indonesia (Persero)
+  email: csr@kai.id
+  proposal: proposals/csr_keretaapiindonesia.md
+  timestamp: '2026-07-15T16:00:09.757865'
+- key: kertaskraftaceh
+  name: PT Kertas Kraft Aceh (Persero)
+  email: info@ptkka.co.id
+  proposal: proposals/csr_kertaskraftaceh.md
+  timestamp: '2026-07-15T16:00:41.299742'
+- key: kertasleces
+  name: PT Kertas Leces (Persero)
+  email: info@kertasleces.co.id
+  proposal: proposals/csr_kertasleces.md
+  timestamp: '2026-07-15T16:01:12.876972'
+- key: kertaspadalarang
+  name: PT Kertas Padalarang (Persero)
+  email: info@ktp.co.id
+  proposal: proposals/csr_kertaspadalarang.md
+  timestamp: '2026-07-15T16:01:44.324259'
+- key: kimiafarma
+  name: Kimia Farma
+  email: corsec@kimiafarma.co.id
+  proposal: proposals/csr_kimiafarma.md
+  timestamp: '2026-07-15T09:04:19.498023'
+- key: kliringberjangkaindo
+  name: PT Kliring Berjangka Indonesia (Persero)
+  email: info@kbi.co.id
+  proposal: proposals/csr_kliringberjangkaindo.md
+  timestamp: '2026-07-15T16:02:15.888229'
+- key: krakatausteel
+  name: PT Krakatau Steel (Persero) Tbk
+  email: corsec@krakatausteel.com
+  proposal: proposals/csr_krakatausteel.md
+  timestamp: '2026-07-15T16:02:47.438252'
+- key: lenindustri
+  name: Len Industri
+  email: komunikasi.korporasi@len.co.id
+  proposal: proposals/csr_lenindustri.md
+  timestamp: '2026-07-15T09:08:37.063967'
+- key: mandiri
+  name: Bank Mandiri
+  email: customer.care@bankmandiri.co.id
+  proposal: proposals/csr_mandiri.md
+  timestamp: '2026-07-15T09:12:54.579366'
+- key: merpatinusantaraairl
+  name: PT Merpati Nusantara Airlines (Persero)
+  email: csr@merpati.co.id
+  proposal: proposals/csr_merpatinusantaraairl.md
+  timestamp: '2026-07-15T16:03:18.903997'
+- key: mesingayaelectrodant
+  name: PT Mesin Gaya Electro dan Trading (Persero)
+  email: info@ptmeg.co.id
+  proposal: proposals/csr_mesingayaelectrodant.md
+  timestamp: '2026-07-15T16:03:50.381506'
+- key: mineralindustriindon
+  name: PT Mineral Industri Indonesia (Persero)
+  email: info@minerba.co.id
+  proposal: proposals/csr_mineralindustriindon.md
+  timestamp: '2026-07-15T16:04:21.776820'
+- key: nindyakarya
+  name: PT Nindya Karya (Persero)
+  email: info@nindyakarya.co.id
+  proposal: proposals/csr_nindyakarya.md
+  timestamp: '2026-07-15T16:04:53.599986'
+- key: palindonesia
+  name: PT PAL Indonesia (Persero)
+  email: info@pal.co.id
+  proposal: proposals/csr_palindonesia.md
+  timestamp: '2026-07-15T16:05:25.193957'
+- key: pegadaian
+  name: PT Pegadaian (Persero)
+  email: csr@pegadaian.co.id
+  proposal: proposals/csr_pegadaian.md
+  timestamp: '2026-07-15T16:05:56.938188'
+- key: pelabuhanindonesia
+  name: PT Pelabuhan Indonesia (Persero)
+  email: customer.care@pelindo.co.id
+  proposal: proposals/csr_pelabuhanindonesia.md
+  timestamp: '2026-07-15T16:06:28.544890'
+- key: pelabuhanindonesiai
+  name: PT Pelabuhan Indonesia I (Persero)
+  email: csr@pelindo.co.id
+  proposal: proposals/csr_pelabuhanindonesiai.md
+  timestamp: '2026-07-15T16:07:00.090694'
+- key: pelabuhanindonesiaii
+  name: PT Pelabuhan Indonesia II (Persero)
+  email: csr@pelindo.co.id
+  proposal: proposals/csr_pelabuhanindonesiaii.md
+  timestamp: '2026-07-15T16:07:03.932761'
+- key: pelabuhanindonesiaii_iii
+  name: PT Pelabuhan Indonesia III (Persero)
+  email: csr@pelindo.co.id
+  proposal: proposals/csr_pelabuhanindonesiaii_iii.md
+  timestamp: '2026-07-15T16:07:35.834919'
+- key: pelabuhanindonesiaiv
+  name: PT Pelabuhan Indonesia IV (Persero)
+  email: csr@pelindo.co.id
+  proposal: proposals/csr_pelabuhanindonesiaiv.md
+  timestamp: '2026-07-15T16:08:07.784382'
+- key: pelayaranbahteraadhi
+  name: PT Pelayaran Bahtera Adhiguna (Persero)
+  email: info@bahteraadhiguna.co.id
+  proposal: proposals/csr_pelayaranbahteraadhi.md
+  timestamp: '2026-07-15T16:08:39.184008'
+- key: pelayarannasionalind
+  name: PT Pelayaran Nasional Indonesia (Persero)
+  email: info@pelni.co.id
+  proposal: proposals/csr_pelayarannasionalind.md
+  timestamp: '2026-07-15T16:09:10.698439'
+- key: pelindo
+  name: Pelabuhan Indonesia
+  email: customer.care@pelindo.co.id
+  proposal: proposals/csr_pelindo.md
+  timestamp: '2026-07-15T09:17:11.005645'
+- key: pembangunanperumahan
+  name: PT Pembangunan Perumahan (Persero) Tbk
+  email: info@pp.co.id
+  proposal: proposals/csr_pembangunanperumahan.md
+  timestamp: '2026-07-15T16:09:42.136000'
+- key: penerbitandanperceta
+  name: PT Penerbitan dan Percetakan Balai Pustaka (Persero)
+  email: csr@balaipustaka.co.id
+  proposal: proposals/csr_penerbitandanperceta.md
+  timestamp: '2026-07-15T16:10:45.099104'
+- key: penerbitdantokobukup
+  name: PT Penerbit dan Toko Buku Pradnya Paramita (Persero)
+  email: csr@pradnyaparamita.co.id
+  proposal: proposals/csr_penerbitdantokobukup.md
+  timestamp: '2026-07-15T16:10:13.570919'
+- key: pengembanganarmadani
+  name: PT Pengembangan Armada Niaga Nasional (Persero)
+  email: csr@pann-persero.co.id
+  proposal: proposals/csr_pengembanganarmadani.md
+  timestamp: '2026-07-15T16:11:16.786111'
+- key: pengembanganpariwisa
+  name: PT Pengembangan Pariwisata Indonesia (Persero)
+  email: csr@injourney.id
+  proposal: proposals/csr_pengembanganpariwisa.md
+  timestamp: '2026-07-15T16:11:48.440565'
+- key: pengerukanindonesia
+  name: PT Pengerukan Indonesia (Persero)
+  email: info@pengerukan-indonesia.co.id
+  proposal: proposals/csr_pengerukanindonesia.md
+  timestamp: '2026-07-15T16:12:20.398309'
+- key: pengusahaandaerahind
+  name: PT Pengusahaan Daerah Industri Pulau Batam (Persero)
+  email: csr@bpbatam.go.id
+  proposal: proposals/csr_pengusahaandaerahind.md
+  timestamp: '2026-07-15T16:12:51.830481'
+- key: penjaminaninfrastruk
+  name: PT Penjaminan Infrastruktur Indonesia (Persero)
+  email: csr@ptpii.co.id
+  proposal: proposals/csr_penjaminaninfrastruk.md
+  timestamp: '2026-07-15T16:13:23.174677'
+- key: perikananindonesia
+  name: PT Perikanan Indonesia (Persero)
+  email: info@perikanan-indonesia.co.id
+  proposal: proposals/csr_perikananindonesia.md
+  timestamp: '2026-07-15T16:13:54.929446'
+- key: perikanannusantara
+  name: PT Perikanan Nusantara (Persero)
+  email: csr@perinus.co.id
+  proposal: proposals/csr_perikanannusantara.md
+  timestamp: '2026-07-15T16:14:26.667526'
+- key: perkebunannusantarai
+  name: PT Perkebunan Nusantara I (Persero)
+  email: info@ptpn.co.id
+  proposal: proposals/csr_perkebunannusantarai.md
+  timestamp: '2026-07-15T16:14:58.284623'
+- key: perkebunannusantarai_ii
+  name: PT Perkebunan Nusantara II (Persero)
+  email: info@ptpn.co.id
+  proposal: proposals/csr_perkebunannusantarai_ii.md
+  timestamp: '2026-07-15T16:15:29.868627'
+- key: perkebunannusantarai_iii
+  name: PT Perkebunan Nusantara III (Persero)
+  email: info@ptpn.co.id
+  proposal: proposals/csr_perkebunannusantarai_iii.md
+  timestamp: '2026-07-15T16:16:01.461110'
+- key: perkebunannusantarai_iv
+  name: PT Perkebunan Nusantara IV (Persero)
+  email: info@ptpn.co.id
+  proposal: proposals/csr_perkebunannusantarai_iv.md
+  timestamp: '2026-07-15T16:16:32.904747'
+- key: perkebunannusantarai_ix
+  name: PT Perkebunan Nusantara IX (Persero)
+  email: info@ptpn.co.id
+  proposal: proposals/csr_perkebunannusantarai_ix.md
+  timestamp: '2026-07-15T16:17:04.680402'
+- key: perkebunannusantarav
+  name: PT Perkebunan Nusantara V (Persero)
+  email: info@ptpn.co.id
+  proposal: proposals/csr_perkebunannusantarav.md
+  timestamp: '2026-07-15T16:17:08.260265'
+- key: perkebunannusantarav_vi
+  name: PT Perkebunan Nusantara VI (Persero)
+  email: info@ptpn.co.id
+  proposal: proposals/csr_perkebunannusantarav_vi.md
+  timestamp: '2026-07-15T16:17:39.756888'
+- key: perkebunannusantarav_vii
+  name: PT Perkebunan Nusantara VII (Persero)
+  email: info@ptpn.co.id
+  proposal: proposals/csr_perkebunannusantarav_vii.md
+  timestamp: '2026-07-15T16:18:11.580102'
+- key: perkebunannusantarav_viii
+  name: PT Perkebunan Nusantara VIII (Persero)
+  email: info@ptpn.co.id
+  proposal: proposals/csr_perkebunannusantarav_viii.md
+  timestamp: '2026-07-15T16:18:43.099755'
+- key: perkebunannusantarax
+  name: PT Perkebunan Nusantara X (Persero)
+  email: info@ptpn.co.id
+  proposal: proposals/csr_perkebunannusantarax.md
+  timestamp: '2026-07-15T16:19:14.549659'
+- key: perkebunannusantarax_xi
+  name: PT Perkebunan Nusantara XI (Persero)
+  email: info@ptpn.co.id
+  proposal: proposals/csr_perkebunannusantarax_xi.md
+  timestamp: '2026-07-15T16:19:46.068311'
+- key: perkebunannusantarax_xii
+  name: PT Perkebunan Nusantara XII (Persero)
+  email: info@ptpn.co.id
+  proposal: proposals/csr_perkebunannusantarax_xii.md
+  timestamp: '2026-07-15T16:20:17.658537'
+- key: perkebunannusantarax_xiii
+  name: PT Perkebunan Nusantara XIII (Persero)
+  email: info@ptpn.co.id
+  proposal: proposals/csr_perkebunannusantarax_xiii.md
+  timestamp: '2026-07-15T16:20:49.565019'
+- key: perkebunannusantarax_xiv
+  name: PT Perkebunan Nusantara XIV (Persero)
+  email: info@ptpn.co.id
+  proposal: proposals/csr_perkebunannusantarax_xiv.md
+  timestamp: '2026-07-15T16:21:21.446169'
+- key: permodalannasionalma
+  name: PT Permodalan Nasional Madani (Persero)
+  email: info@pnmpersero.co.id
+  proposal: proposals/csr_permodalannasionalma.md
+  timestamp: '2026-07-15T16:21:53.172183'
+- key: pertamina
+  name: Pertamina
+  email: corpcs@pertamina.com
+  proposal: proposals/csr_pertamina.md
+  timestamp: '2026-07-15T09:21:26.799583'
+- key: pertani
+  name: PT Pertani (Persero)
+  email: info@pertani.co.id
+  proposal: proposals/csr_pertani.md
+  timestamp: '2026-07-15T16:22:24.699529'
+- key: peruri
+  name: Perum Peruri
+  email: info@peruri.co.id
+  proposal: proposals/csr_peruri.md
+  timestamp: '2026-07-15T09:25:43.920814'
+- key: perusahaangasnegara
+  name: PT Perusahaan Gas Negara (Persero) Tbk
+  email: csr@pgn.co.id
+  proposal: proposals/csr_perusahaangasnegara.md
+  timestamp: '2026-07-15T16:22:56.253291'
+- key: perusahaanlistrikneg
+  name: PT Perusahaan Listrik Negara (Persero)
+  email: plnpeduli@pln.co.id
+  proposal: proposals/csr_perusahaanlistrikneg.md
+  timestamp: '2026-07-15T16:23:27.759071'
+- key: perusahaanpengelolaa
+  name: PT Perusahaan Pengelola Aset (Persero)
+  email: info@ppapersero.co.id
+  proposal: proposals/csr_perusahaanpengelolaa.md
+  timestamp: '2026-07-15T16:23:59.348441'
+- key: perusahaanperdaganga
+  name: PT Perusahaan Perdagangan Indonesia (Persero)
+  email: info@ppi.co.id
+  proposal: proposals/csr_perusahaanperdaganga.md
+  timestamp: '2026-07-15T16:24:30.906566'
+- key: petrokimiagresik
+  name: PT Petrokimia Gresik (Persero)
+  email: csr@petrokimia-gresik.com
+  proposal: proposals/csr_petrokimiagresik.md
+  timestamp: '2026-07-15T16:25:02.387139'
+- key: pindad
+  name: Pindad
+  email: info@pindad.com
+  proposal: proposals/csr_pindad.md
+  timestamp: '2026-07-15T09:30:00.828915'
+- key: pln
+  name: PLN
+  email: plnpeduli@pln.co.id
+  proposal: proposals/csr_pln.md
+  timestamp: '2026-07-15T09:34:18.286089'
+- key: posindonesia
+  name: PT Pos Indonesia (Persero)
+  email: info@posindonesia.co.id
+  proposal: proposals/csr_posindonesia.md
+  timestamp: '2026-07-15T16:25:34.028912'
+- key: pradnyaparamita
+  name: PT Pradnya Paramita (Persero)
+  email: csr@pradnyaparamita.co.id
+  proposal: proposals/csr_pradnyaparamita.md
+  timestamp: '2026-07-15T16:26:05.612581'
+- key: primissima
+  name: PT Primissima (Persero)
+  email: csr@primissima.co.id
+  proposal: proposals/csr_primissima.md
+  timestamp: '2026-07-15T16:26:37.241086'
+- key: produksifilmnegara
+  name: PT Produksi Film Negara (Persero)
+  email: info@pfn.co.id
+  proposal: proposals/csr_produksifilmnegara.md
+  timestamp: '2026-07-15T16:27:08.626253'
+- key: pupukindonesia
+  name: Pupuk Indonesia
+  email: info@pupuk-indonesia.com
+  proposal: proposals/csr_pupukindonesia.md
+  timestamp: '2026-07-15T09:38:35.306568'
+- key: pupukiskandarmuda
+  name: PT Pupuk Iskandar Muda (Persero)
+  email: konsumen@pupuk-indonesia.com
+  proposal: proposals/csr_pupukiskandarmuda.md
+  timestamp: '2026-07-15T16:27:11.945799'
+- key: pupukkalimantantimur
+  name: PT Pupuk Kalimantan Timur (Persero)
+  email: konsumen@pupuk-indonesia.com
+  proposal: proposals/csr_pupukkalimantantimur.md
+  timestamp: '2026-07-15T16:27:43.414452'
+- key: pupukkujang
+  name: PT Pupuk Kujang (Persero)
+  email: konsumen@pupuk-indonesia.com
+  proposal: proposals/csr_pupukkujang.md
+  timestamp: '2026-07-15T16:28:14.858096'
+- key: pupuksriwijaya
+  name: PT Pupuk Sriwijaya (Persero)
+  email: konsumen@pupuk-indonesia.com
+  proposal: proposals/csr_pupuksriwijaya.md
+  timestamp: '2026-07-15T16:28:46.450748'
+- key: rajawalinusantaraind
+  name: PT Rajawali Nusantara Indonesia (Persero)
+  email: info@rni.co.id
+  proposal: proposals/csr_rajawalinusantaraind.md
+  timestamp: '2026-07-15T16:29:18.081323'
+- key: reasuransiindonesiau
+  name: PT Reasuransi Indonesia Utama (Persero)
+  email: info@reindonesia.co.id
+  proposal: proposals/csr_reasuransiindonesiau.md
+  timestamp: '2026-07-15T16:29:49.572036'
+- key: sig
+  name: PT Semen Indonesia (SIG)
+  email: csr@sig.id
+  proposal: proposals/csr_sig.md
+  timestamp: '2026-07-15T09:42:52.817814'
+- key: telkom
+  name: Telkom Indonesia
+  email: sustainability@telkom.co.id
+  proposal: proposals/csr_telkom.md
+  timestamp: '2026-07-15T09:47:08.364834'
+- key: waskita
+  name: Waskita Karya
+  email: corporate.secretary@waskita.co.id
+  proposal: proposals/csr_waskita.md
+  timestamp: '2026-07-15T09:51:26.583800'
+- key: wijayakarya
+  name: Wijaya Karya
+  email: CSR@wikamail.id
+  proposal: proposals/csr_wijayakarya.md
+  timestamp: '2026-07-15T09:55:44.994584'

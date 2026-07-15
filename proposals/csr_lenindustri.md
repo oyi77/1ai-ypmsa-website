@@ -28,7 +28,16 @@ Kami mengajukan kemitraan CSR melalui **TJSL Len Industri** untuk mendukung pend
 
 ## Program yang Diajukan
 
-_[DRAFT — silakan sesuaikan program dan anggaran dengan prioritas CSR Len Industri]_
+## Rencana Anggaran (RAB)
+
+Berikut estimasi anggaran program yang diajukan:
+
+| Program | Estimasi Biaya |
+|---------|--------------|
+| Beasiswa 50 Siswa/Santri × 12 bln | Rp 60.000.000 |
+| laboratorium_sekolah | (estimasi menyusul) |
+| **Total** | **Rp 60.000.000** |
+
 
 Program-program yang kami ajukan:
 

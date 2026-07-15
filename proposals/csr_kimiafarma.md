@@ -28,7 +28,15 @@ Kami mengajukan kemitraan CSR melalui **Kimia Farma Peduli** untuk mendukung pen
 
 ## Program yang Diajukan
 
-_[DRAFT — silakan sesuaikan program dan anggaran dengan prioritas CSR Kimia Farma]_
+## Rencana Anggaran (RAB)
+
+Berikut estimasi anggaran program yang diajukan:
+
+| Program | Estimasi Biaya |
+|---------|--------------|
+| Beasiswa 50 Siswa/Santri × 12 bln | Rp 60.000.000 |
+| **Total** | **Rp 60.000.000** |
+
 
 Program-program yang kami ajukan:
 

@@ -1,0 +1,449 @@
+[08:00:00] Starting staggered send: 28 companies, ~257s interval
+[08:00:00] [1/28] Sending adhikarya...
+CSR Pipeline — outreach stage
+
+============================================================
+STAGE: outreach — send proposals via SMTP
+============================================================
+
+  ✓ Connected to smtp.gmail.com:587 as grahainsanmandiri@gmail.com
+
+  [✓] Adhi Karya → adhi@adhi.co.id
+
+  Summary: 1 sent, 0 skipped (already sent), 0 errors
+
+Pipeline complete.
+
+  Wait 252s before next...
+[08:04:17] [2/28] Sending astra...
+CSR Pipeline — outreach stage
+
+============================================================
+STAGE: outreach — send proposals via SMTP
+============================================================
+
+  ✓ Connected to smtp.gmail.com:587 as grahainsanmandiri@gmail.com
+
+  [✓] Astra International → info@astra.co.id
+
+  Summary: 1 sent, 0 skipped (already sent), 0 errors
+
+Pipeline complete.
+
+  Wait 253s before next...
+[08:08:34] [3/28] Sending balitv...
+CSR Pipeline — outreach stage
+
+============================================================
+STAGE: outreach — send proposals via SMTP
+============================================================
+
+  ✓ Connected to smtp.gmail.com:587 as grahainsanmandiri@gmail.com
+
+  [✓] Bali TV → pemirsa@balitv.tv
+
+  Summary: 1 sent, 0 skipped (already sent), 0 errors
+
+Pipeline complete.
+
+  Wait 252s before next...
+[08:12:51] [4/28] Sending bankbjb...
+CSR Pipeline — outreach stage
+
+============================================================
+STAGE: outreach — send proposals via SMTP
+============================================================
+
+  ✓ Connected to smtp.gmail.com:587 as grahainsanmandiri@gmail.com
+
+  [✓] Bank BJB → bjbcare@bankbjb.co.id
+
+  Summary: 1 sent, 0 skipped (already sent), 0 errors
+
+Pipeline complete.
+
+  Wait 252s before next...
+[08:17:08] [5/28] Sending bankjatim...
+CSR Pipeline — outreach stage
+
+============================================================
+STAGE: outreach — send proposals via SMTP
+============================================================
+
+  ✓ Connected to smtp.gmail.com:587 as grahainsanmandiri@gmail.com
+
+  [✓] Bank Jatim → bankjatim@bankjatim.co.id
+
+  Summary: 1 sent, 0 skipped (already sent), 0 errors
+
+Pipeline complete.
+
+  Wait 252s before next...
+[08:21:25] [6/28] Sending barata...
+CSR Pipeline — outreach stage
+
+============================================================
+STAGE: outreach — send proposals via SMTP
+============================================================
+
+  ✓ Connected to smtp.gmail.com:587 as grahainsanmandiri@gmail.com
+
+  [✓] Barata Indonesia → info@barata.com
+
+  Summary: 1 sent, 0 skipped (already sent), 0 errors
+
+Pipeline complete.
+
+  Wait 254s before next...
+[08:25:42] [7/28] Sending bca...
+CSR Pipeline — outreach stage
+
+============================================================
+STAGE: outreach — send proposals via SMTP
+============================================================
+
+  ✓ Connected to smtp.gmail.com:587 as grahainsanmandiri@gmail.com
+
+  [✓] Bank Central Asia (BCA) → halobca@bca.co.id
+
+  Summary: 1 sent, 0 skipped (already sent), 0 errors
+
+Pipeline complete.
+
+  Wait 253s before next...
+[08:29:59] [8/28] Sending bluebird...
+CSR Pipeline — outreach stage
+
+============================================================
+STAGE: outreach — send proposals via SMTP
+============================================================
+
+  ✓ Connected to smtp.gmail.com:587 as grahainsanmandiri@gmail.com
+
+  [✓] Blue Bird → customercare@bluebirdgroup.com
+
+  Summary: 1 sent, 0 skipped (already sent), 0 errors
+
+Pipeline complete.
+
+  Wait 253s before next...
+[08:34:16] [9/28] Sending bni...
+CSR Pipeline — outreach stage
+
+============================================================
+STAGE: outreach — send proposals via SMTP
+============================================================
+
+  ✓ Connected to smtp.gmail.com:587 as grahainsanmandiri@gmail.com
+
+  [✓] Bank Negara Indonesia (BNI) → bni@bni.co.id
+
+  Summary: 1 sent, 0 skipped (already sent), 0 errors
+
+Pipeline complete.
+
+  Wait 253s before next...
+[08:38:33] [10/28] Sending brantasabipraya...
+CSR Pipeline — outreach stage
+
+============================================================
+STAGE: outreach — send proposals via SMTP
+============================================================
+
+  ✓ Connected to smtp.gmail.com:587 as grahainsanmandiri@gmail.com
+
+  [✓] Brantas Abipraya → brap@brantas-abipraya.co.id
+
+  Summary: 1 sent, 0 skipped (already sent), 0 errors
+
+Pipeline complete.
+
+  Wait 253s before next...
+[08:42:50] [11/28] Sending bri...
+CSR Pipeline — outreach stage
+
+============================================================
+STAGE: outreach — send proposals via SMTP
+============================================================
+
+  ✓ Connected to smtp.gmail.com:587 as grahainsanmandiri@gmail.com
+
+  [✓] Bank Rakyat Indonesia (BRI) → bri@bri.co.id
+
+  Summary: 1 sent, 0 skipped (already sent), 0 errors
+
+Pipeline complete.
+
+  Wait 253s before next...
+[08:47:07] [12/28] Sending bsi...
+CSR Pipeline — outreach stage
+
+============================================================
+STAGE: outreach — send proposals via SMTP
+============================================================
+
+  ✓ Connected to smtp.gmail.com:587 as grahainsanmandiri@gmail.com
+
+  [✓] Bank Syariah Indonesia → cs@bsimashlahat.or.id
+
+  Summary: 1 sent, 0 skipped (already sent), 0 errors
+
+Pipeline complete.
+
+  Wait 252s before next...
+[08:51:24] [13/28] Sending inka...
+CSR Pipeline — outreach stage
+
+============================================================
+STAGE: outreach — send proposals via SMTP
+============================================================
+
+  ✓ Connected to smtp.gmail.com:587 as grahainsanmandiri@gmail.com
+
+  [✓] INKA → sekretariat@inka.co.id
+
+  Summary: 1 sent, 0 skipped (already sent), 0 errors
+
+Pipeline complete.
+
+  Wait 254s before next...
+[08:55:41] [14/28] Sending jtv...
+CSR Pipeline — outreach stage
+
+============================================================
+STAGE: outreach — send proposals via SMTP
+============================================================
+
+  ✓ Connected to smtp.gmail.com:587 as grahainsanmandiri@gmail.com
+
+  [✓] JTV Surabaya → portal@jtv.co.id
+
+  Summary: 1 sent, 0 skipped (already sent), 0 errors
+
+Pipeline complete.
+
+  Wait 253s before next...
+[08:59:58] [15/28] Sending kai...
+CSR Pipeline — outreach stage
+
+============================================================
+STAGE: outreach — send proposals via SMTP
+============================================================
+
+  ✓ Connected to smtp.gmail.com:587 as grahainsanmandiri@gmail.com
+
+  [✓] PT Kereta Api Indonesia → csr@kai.id
+
+  Summary: 1 sent, 0 skipped (already sent), 0 errors
+
+Pipeline complete.
+
+  Wait 253s before next...
+[09:04:15] [16/28] Sending kimiafarma...
+CSR Pipeline — outreach stage
+
+============================================================
+STAGE: outreach — send proposals via SMTP
+============================================================
+
+  ✓ Connected to smtp.gmail.com:587 as grahainsanmandiri@gmail.com
+
+  [✓] Kimia Farma → corsec@kimiafarma.co.id
+
+  Summary: 1 sent, 0 skipped (already sent), 0 errors
+
+Pipeline complete.
+
+  Wait 253s before next...
+[09:08:32] [17/28] Sending lenindustri...
+CSR Pipeline — outreach stage
+
+============================================================
+STAGE: outreach — send proposals via SMTP
+============================================================
+
+  ✓ Connected to smtp.gmail.com:587 as grahainsanmandiri@gmail.com
+
+  [✓] Len Industri → komunikasi.korporasi@len.co.id
+
+  Summary: 1 sent, 0 skipped (already sent), 0 errors
+
+Pipeline complete.
+
+  Wait 252s before next...
+[09:12:49] [18/28] Sending mandiri...
+CSR Pipeline — outreach stage
+
+============================================================
+STAGE: outreach — send proposals via SMTP
+============================================================
+
+  ✓ Connected to smtp.gmail.com:587 as grahainsanmandiri@gmail.com
+
+  [✓] Bank Mandiri → customer.care@bankmandiri.co.id
+
+  Summary: 1 sent, 0 skipped (already sent), 0 errors
+
+Pipeline complete.
+
+  Wait 252s before next...
+[09:17:06] [19/28] Sending pelindo...
+CSR Pipeline — outreach stage
+
+============================================================
+STAGE: outreach — send proposals via SMTP
+============================================================
+
+  ✓ Connected to smtp.gmail.com:587 as grahainsanmandiri@gmail.com
+
+  [✓] Pelabuhan Indonesia → customer.care@pelindo.co.id
+
+  Summary: 1 sent, 0 skipped (already sent), 0 errors
+
+Pipeline complete.
+
+  Wait 252s before next...
+[09:21:23] [20/28] Sending pertamina...
+CSR Pipeline — outreach stage
+
+============================================================
+STAGE: outreach — send proposals via SMTP
+============================================================
+
+  ✓ Connected to smtp.gmail.com:587 as grahainsanmandiri@gmail.com
+
+  [✓] Pertamina → corpcs@pertamina.com
+
+  Summary: 1 sent, 0 skipped (already sent), 0 errors
+
+Pipeline complete.
+
+  Wait 253s before next...
+[09:25:40] [21/28] Sending peruri...
+CSR Pipeline — outreach stage
+
+============================================================
+STAGE: outreach — send proposals via SMTP
+============================================================
+
+  ✓ Connected to smtp.gmail.com:587 as grahainsanmandiri@gmail.com
+
+  [✓] Perum Peruri → info@peruri.co.id
+
+  Summary: 1 sent, 0 skipped (already sent), 0 errors
+
+Pipeline complete.
+
+  Wait 253s before next...
+[09:29:57] [22/28] Sending pindad...
+CSR Pipeline — outreach stage
+
+============================================================
+STAGE: outreach — send proposals via SMTP
+============================================================
+
+  ✓ Connected to smtp.gmail.com:587 as grahainsanmandiri@gmail.com
+
+  [✓] Pindad → info@pindad.com
+
+  Summary: 1 sent, 0 skipped (already sent), 0 errors
+
+Pipeline complete.
+
+  Wait 253s before next...
+[09:34:14] [23/28] Sending pln...
+CSR Pipeline — outreach stage
+
+============================================================
+STAGE: outreach — send proposals via SMTP
+============================================================
+
+  ✓ Connected to smtp.gmail.com:587 as grahainsanmandiri@gmail.com
+
+  [✓] PLN → plnpeduli@pln.co.id
+
+  Summary: 1 sent, 0 skipped (already sent), 0 errors
+
+Pipeline complete.
+
+  Wait 253s before next...
+[09:38:31] [24/28] Sending pupukindonesia...
+CSR Pipeline — outreach stage
+
+============================================================
+STAGE: outreach — send proposals via SMTP
+============================================================
+
+  ✓ Connected to smtp.gmail.com:587 as grahainsanmandiri@gmail.com
+
+  [✓] Pupuk Indonesia → info@pupuk-indonesia.com
+
+  Summary: 1 sent, 0 skipped (already sent), 0 errors
+
+Pipeline complete.
+
+  Wait 253s before next...
+[09:42:48] [25/28] Sending sig...
+CSR Pipeline — outreach stage
+
+============================================================
+STAGE: outreach — send proposals via SMTP
+============================================================
+
+  ✓ Connected to smtp.gmail.com:587 as grahainsanmandiri@gmail.com
+
+  [✓] PT Semen Indonesia (SIG) → csr@sig.id
+
+  Summary: 1 sent, 0 skipped (already sent), 0 errors
+
+Pipeline complete.
+
+  Wait 252s before next...
+[09:47:05] [26/28] Sending telkom...
+CSR Pipeline — outreach stage
+
+============================================================
+STAGE: outreach — send proposals via SMTP
+============================================================
+
+  ✓ Connected to smtp.gmail.com:587 as grahainsanmandiri@gmail.com
+
+  [✓] Telkom Indonesia → sustainability@telkom.co.id
+
+  Summary: 1 sent, 0 skipped (already sent), 0 errors
+
+Pipeline complete.
+
+  Wait 254s before next...
+[09:51:22] [27/28] Sending waskita...
+CSR Pipeline — outreach stage
+
+============================================================
+STAGE: outreach — send proposals via SMTP
+============================================================
+
+  ✓ Connected to smtp.gmail.com:587 as grahainsanmandiri@gmail.com
+
+  [✓] Waskita Karya → corporate.secretary@waskita.co.id
+
+  Summary: 1 sent, 0 skipped (already sent), 0 errors
+
+Pipeline complete.
+
+  Wait 253s before next...
+[09:55:39] [28/28] Sending wijayakarya...
+CSR Pipeline — outreach stage
+
+============================================================
+STAGE: outreach — send proposals via SMTP
+============================================================
+
+  ✓ Connected to smtp.gmail.com:587 as grahainsanmandiri@gmail.com
+
+  [✓] Wijaya Karya → CSR@wikamail.id
+
+  Summary: 1 sent, 0 skipped (already sent), 0 errors
+
+Pipeline complete.
+
+[09:55:45] All done.

@@ -23,6 +23,7 @@ import os
 import smtplib
 import subprocess
 import sys
+import time
 import textwrap
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
@@ -129,9 +130,11 @@ def _canonical_bumn_name(text):
 def _try_domain_patterns(name):
     """Try common domain patterns for a company, return first that resolves."""
     slug = name.lower().replace(' ', '').replace('(persero)', '').replace('.', '').strip()
+    # Truncate slug to DNS safe length (max 63 chars per label)
+    slug = slug[:63]
     slugs = [slug]
     # Also try hyphenated
-    slug_h = name.lower().replace(' ', '-').replace('(persero)', '').replace('.', '').strip()
+    slug_h = name.lower().replace(' ', '-').replace('(persero)', '').replace('.', '').strip()[:63]
     if slug_h != slug:
         slugs.append(slug_h)
     domains = []
@@ -149,6 +152,8 @@ def _try_domain_patterns(name):
             socket.getaddrinfo(d, 80, socket.AF_INET, socket.SOCK_STREAM)
             return f'https://{d}'
         except OSError:
+            continue
+        except UnicodeEncodeError:
             continue
     return None
 
@@ -440,7 +445,7 @@ _DRAFT_TEMPLATE = textwrap.dedent("""\
 
     ## Ringkasan Eksekutif
 
-    YPSMA mengelola {ypsma[total_students]} siswa/santri di {len(ypsma[units])} unit pendidikan di Mojowarno, Jombang.
+    YPSMA mengelola {ypsma[total_students]} siswa/santri di {ypsma_unit_count} unit pendidikan di Mojowarno, Jombang.
     Kami mengajukan kemitraan CSR melalui **{company[csr_name]}** untuk mendukung pendidikan dan pemberdayaan masyarakat.
 
     ## Profil Yayasan
@@ -451,7 +456,7 @@ _DRAFT_TEMPLATE = textwrap.dedent("""\
     | Alamat | {ypsma[address]} |
     | Tahun Berdiri | {ypsma[established]} |
     | Legalitas | SK Kemenkumham {ypsma[ahu]} |
-    | Unit Pendidikan | {_units_summary(ypsma)} |
+    | Unit Pendidikan | {units_summary} |
     | Total | {ypsma[total_students]} jiwa |
     | Guru/Pengurus | {ypsma[total_staff]} orang |
 
@@ -461,12 +466,12 @@ _DRAFT_TEMPLATE = textwrap.dedent("""\
 
     Program-program yang kami ajukan:
 
-    {_programs_desc(company)}
+    {programs_desc}
 
     ## Kesesuaian dengan Program CSR {company[csr_name]}
 
     {company[csr_name]} memiliki fokus pada:
-    {_focus_list(company)}
+    {focus_list}
 
     Program yang kami ajukan sejalan dengan fokus CSR tersebut. Detail lengkap RAB
     dan dokumen pendukung tersedia dan dapat dikirimkan sesuai permintaan.
@@ -570,10 +575,19 @@ def stage_draft(cfg, companies, dry_run, force):
             generated += 1
             continue
 
-        # Generate from template
+        # Precompute template helpers
+        ypsma_unit_count = len(ypsma.get('units', []))
+        units_summary = _units_summary(ypsma)
+        programs_desc = _programs_desc(c)
+        focus_list = _focus_list(c)
+
         content = _DRAFT_TEMPLATE.format(
             company=c,
             ypsma=ypsma,
+            ypsma_unit_count=ypsma_unit_count,
+            units_summary=units_summary,
+            programs_desc=programs_desc,
+            focus_list=focus_list,
         )
 
         # Write
@@ -902,7 +916,12 @@ def _build_email(comp_name, proposal_path, to_email, greeting, dry_run=False):
     with open(proposal_path) as f:
         proposal_text = f.read()
 
-    title = proposal_text.split('\n')[0].replace('# PROPOSAL CSR — ', '').strip()
+    # Find the actual title — skip HTML comment lines at top
+    title = 'Program CSR'
+    for line in proposal_text.split('\n'):
+        if line.startswith('# PROPOSAL CSR — '):
+            title = line.replace('# PROPOSAL CSR — ', '').strip()
+            break
     html_body = _md_to_html(proposal_text)
 
     html = f"""<!DOCTYPE html><html><head><meta charset="UTF-8"></head>
@@ -967,6 +986,7 @@ def stage_outreach(cfg, companies, dry_run, force=False):
             smtp_conn.login(SMTP_USER, SMTP_PASS)
             print(f"  ✓ Connected to {SMTP_HOST}:{SMTP_PORT} as {SMTP_USER}\n")
         except Exception as e:
+
             print(f"  ✗ SMTP connection failed: {e}\n")
             return
 
@@ -1015,10 +1035,21 @@ def stage_outreach(cfg, companies, dry_run, force=False):
             print(f"  [✓] {comp_name} → {to_email}")
             _mark_sent(key, comp_name, to_email, pf)
             sent += 1
+            # Stagger: avoid Gmail spam filter
+            if sent % 20 == 0:
+                try:
+                    smtp_conn.quit()
+                except Exception:
+                    pass
+                smtp_conn = smtplib.SMTP(SMTP_HOST, SMTP_PORT)
+                smtp_conn.starttls()
+                smtp_conn.login(SMTP_USER, SMTP_PASS)
+                print(f"    [reconnect] fresh connection after {sent} sends")
+            else:
+                time.sleep(30)
         except Exception as e:
             print(f"  [✗] {comp_name} → {to_email}: {e}")
             errors += 1
-
     if smtp_conn:
         smtp_conn.quit()
 

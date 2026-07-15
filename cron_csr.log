@@ -1,0 +1,58 @@
+[2026-07-15 08:00:01] CSR pipeline start
+CSR Pipeline — all stage
+
+============================================================
+STAGE: research
+============================================================
+
+  [✓] Bank Jatim (bankjatim)
+         Email di config: bankjatim@bankjatim.co.id
+         CSR Program: Bank Jatim Peduli
+Traceback (most recent call last):
+  File "/home/openclaw/projects/1ai-ypsma-website/scripts/csr_pipeline.py", line 1181, in <module>
+    main()
+    ~~~~^^
+  File "/home/openclaw/projects/1ai-ypsma-website/scripts/csr_pipeline.py", line 1165, in main
+    stage_research(cfg, companies, args.dry_run)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/openclaw/projects/1ai-ypsma-website/scripts/csr_pipeline.py", line 366, in stage_research
+    domain_ok = _check_domain(email)
+  File "/home/openclaw/projects/1ai-ypsma-website/scripts/csr_pipeline.py", line 298, in _check_domain
+    import dns.resolver
+  File "/home/openclaw/.local/lib/python3.13/site-packages/dns/resolver.py", line 30, in <module>
+    import dns._ddr
+  File "/home/openclaw/.local/lib/python3.13/site-packages/dns/_ddr.py", line 12, in <module>
+    import dns.nameserver
+  File "/home/openclaw/.local/lib/python3.13/site-packages/dns/nameserver.py", line 4, in <module>
+    import dns.asyncquery
+  File "/home/openclaw/.local/lib/python3.13/site-packages/dns/asyncquery.py", line 34, in <module>
+    import dns.quic
+  File "/home/openclaw/.local/lib/python3.13/site-packages/dns/quic/__init__.py", line 10, in <module>
+    from dns.quic._asyncio import AsyncioQuicConnection as AsyncioQuicConnection
+  File "/home/openclaw/.local/lib/python3.13/site-packages/dns/quic/_asyncio.py", line 9, in <module>
+    import aioquic.h3.connection  # type: ignore
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/aioquic/h3/connection.py", line 19, in <module>
+    from aioquic.quic.connection import QuicConnection, stream_is_unidirectional
+  File "/usr/lib/python3/dist-packages/aioquic/quic/connection.py", line 21, in <module>
+    from .. import tls
+  File "/usr/lib/python3/dist-packages/aioquic/tls.py", line 26, in <module>
+    import service_identity
+  File "/usr/lib/python3/dist-packages/service_identity/__init__.py", line 5, in <module>
+    from . import cryptography, hazmat, pyopenssl
+  File "/usr/lib/python3/dist-packages/service_identity/pyopenssl.py", line 23, in <module>
+    from OpenSSL.crypto import X509
+  File "/home/openclaw/.local/lib/python3.13/site-packages/OpenSSL/__init__.py", line 8, in <module>
+    from OpenSSL import SSL, crypto
+  File "/home/openclaw/.local/lib/python3.13/site-packages/OpenSSL/SSL.py", line 34, in <module>
+    from OpenSSL.crypto import (
+    ...<6 lines>...
+    )
+  File "/home/openclaw/.local/lib/python3.13/site-packages/OpenSSL/crypto.py", line 774, in <module>
+    class X509Extension:
+    ...<163 lines>...
+            return _ffi.buffer(char_result, result_length)[:]
+  File "/home/openclaw/.local/lib/python3.13/site-packages/OpenSSL/crypto.py", line 855, in X509Extension
+    _lib.GEN_EMAIL: "email",
+    ^^^^^^^^^^^^^^
+AttributeError: module 'lib' has no attribute 'GEN_EMAIL'

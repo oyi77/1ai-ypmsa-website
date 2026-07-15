@@ -28,7 +28,16 @@ Kami mengajukan kemitraan CSR melalui **TJSL Adhi Karya** untuk mendukung pendid
 
 ## Program yang Diajukan
 
-_[DRAFT — silakan sesuaikan program dan anggaran dengan prioritas CSR Adhi Karya]_
+## Rencana Anggaran (RAB)
+
+Berikut estimasi anggaran program yang diajukan:
+
+| Program | Estimasi Biaya |
+|---------|--------------|
+| Beasiswa 50 Siswa/Santri × 12 bln | Rp 60.000.000 |
+| Renovasi 3 Ruang Kelas + Perpustakaan | Rp 185.000.000 |
+| **Total** | **Rp 245.000.000** |
+
 
 Program-program yang kami ajukan:
 

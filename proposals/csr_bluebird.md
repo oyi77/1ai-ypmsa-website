@@ -28,7 +28,15 @@ Kami mengajukan kemitraan CSR melalui **Blue Bird Peduli** untuk mendukung pendi
 
 ## Program yang Diajukan
 
-_[DRAFT — silakan sesuaikan program dan anggaran dengan prioritas CSR Blue Bird]_
+## Rencana Anggaran (RAB)
+
+Berikut estimasi anggaran program yang diajukan:
+
+| Program | Estimasi Biaya |
+|---------|--------------|
+| Beasiswa 50 Siswa/Santri × 12 bln | Rp 60.000.000 |
+| **Total** | **Rp 60.000.000** |
+
 
 Program-program yang kami ajukan:
 

@@ -1,8 +1,8 @@
 #!/bin/bash
-# cron_csr.sh — Weekly CSR pipeline runner
-# Schedule: 0 9 * * 1 /home/openclaw/projects/1ai-ypsma-website/scripts/cron_csr.sh
+# cron_csr.sh — Daily CSR pipeline runner
+# Schedule: 0 8 * * * /home/openclaw/projects/1ai-ypsma-website/scripts/cron_csr.sh
 #
-# Sources .env for SMTP credentials, runs research→draft→enrich→outreach.
+# Sources .env for SMTP credentials, runs research→draft→enrich→outreach→discover.
 # Logs to cron_csr.log in project root.
 
 set -euo pipefail
@@ -26,7 +26,7 @@ if [ -z "${SMTP_PASS:-}" ]; then
     exit 1
 fi
 
-# Run pipeline
+# Run full pipeline (research → draft → enrich → outreach → discover)
 python3 scripts/csr_pipeline.py --stage all >> "$LOG" 2>&1
 
 echo "  Done: $?" >>"$LOG"

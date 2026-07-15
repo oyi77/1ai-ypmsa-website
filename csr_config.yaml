@@ -1,518 +1,2445 @@
-# CSR Pipeline Configuration — YPSMA
-# Used by scripts/csr_pipeline.py for research → enrich → submit pipeline
-# Yamllint: disable rule:line-length
-
 ypsma:
   name: Yayasan Pendidikan dan Sosial Ma'arif
   acronym: YPSMA
-  aka: "YPSMA (Yayasan Pendidikan dan Sosial Ma'arif)"
+  aka: YPSMA (Yayasan Pendidikan dan Sosial Ma'arif)
   legal_name: Yayasan Pendidikan dan Sosial Ma'arif
   established: 1966
   legal_year: 1999
   ahu: AHU-0026672.AH.01.04.Tahun 2020
   leader: Drs. H. Syamsun Huda Amir
   founder: KH. Muhammad Hatta Qodir
-  address: Jl Diponegoro RT 001 RW 006, Dsn Ngelo, Ds. Gondek, Kec. Mojowarno, Jombang 61475
-  phone: "0321 - 493147"
-  whatsapp: "082234551160"
+  address: Jl Diponegoro RT 001 RW 006, Dsn Ngelo, Ds. Gondek, Kec. Mojowarno, Jombang
+    61475
+  phone: 0321 - 493147
+  whatsapp: 082234551160
   email: admin@ypsma.org
   website: https://ypsma.org
   total_students: 574
   total_staff: 69
   units:
-    - name: RA Fajrul Islam
-      year: 1980
-      type: RA/TK
-      teachers: 5
-      students: 50
-    - name: MI Sulamuddiniyah
-      year: 1966
-      type: MI/SD
-      teachers: 18
-      students: 178
-    - name: SMP YPM Mojowarno
-      year: 1988
-      type: SMP
-      teachers: 13
-      students: 113
-    - name: PPTQ Darussalam
-      year: 2015
-      type: PPTQ/Pesantren
-      teachers: 33
-      students: 233
+  - name: RA Fajrul Islam
+    year: 1980
+    type: RA/TK
+    teachers: 5
+    students: 50
+  - name: MI Sulamuddiniyah
+    year: 1966
+    type: MI/SD
+    teachers: 18
+    students: 178
+  - name: SMP YPM Mojowarno
+    year: 1988
+    type: SMP
+    teachers: 13
+    students: 113
+  - name: PPTQ Darussalam
+    year: 2015
+    type: PPTQ/Pesantren
+    teachers: 33
+    students: 233
   donation:
     sociabuzz: https://sociabuzz.com/ypsma/tribe
     bank_account:
       bank: BRI
-      number: "0585-01-000742-56-3"
+      number: 0585-01-000742-56-3
       name: Yayasan Pendidikan Dan Sosial Maarif
     qris_url: https://ypsma.org
-    wa_donasi: "0321-493147"
-
-# Target companies for CSR proposals
-# Links: CSR websites for research stage
+    wa_donasi: 0321-493147
 companies:
-  - key: bankjatim
-    name: Bank Jatim
-    legal_name: PT Bank Pembangunan Daerah Jawa Timur Tbk
-    sector: Perbankan BPD
-    csr_name: Bank Jatim Peduli
-    csr_focus:
-      - Pendidikan
-      - Beasiswa
-      - UMKM
-      - Sosial Keagamaan
-    email: bankjatim@bankjatim.co.id
-    csr_website: https://www.bankjatim.co.id
-    proposal_file: proposals/csr_bankjatim.md
-    programs:
-      - renovasi_kelas
-      - beasiswa
-    total_amount: "Rp 235.000.000"
-
-  - key: bsi
-    name: Bank Syariah Indonesia
-    legal_name: PT Bank Syariah Indonesia Tbk
-    sector: Perbankan Syariah
-    csr_name: BSI Mashlahat
-    csr_focus:
-      - Pendidikan
-      - Pemberdayaan Ekonomi
-      - Sosial Keagamaan
-      - Lingkungan
-    email: cs@bsimashlahat.or.id
-    csr_website: https://www.bsimashlahat.or.id
-    proposal_file: proposals/csr_bsi.md
-    programs:
-      - renovasi_kelas
-      - beasiswa
-    total_amount: "Rp 235.000.000"
-
-  - key: pertamina
-    name: Pertamina
-    legal_name: PT Pertamina (Persero)
-    sector: Energi & Migas
-    csr_name: Pertamina Peduli (TJSL)
-    csr_focus:
-      - Pendidikan
-      - Lingkungan
-      - Pemberdayaan Masyarakat
-      - Kesehatan
-    email: corpcs@pertamina.com
-    csr_website: https://www.pertamina.com
-    proposal_file: proposals/csr_pertamina.md
-    programs:
-      - renovasi_kelas
-      - beasiswa
-    total_amount: "Rp 235.000.000"
-
-  - key: pln
-    name: PLN
-    legal_name: PT Perusahaan Listrik Negara (Persero)
-    sector: Energi & Kelistrikan
-    csr_name: PLN Peduli
-    csr_focus:
-      - Pendidikan
-      - Lingkungan
-      - Pemberdayaan UMKM
-      - Infrastruktur Sosial
-    email: plnpeduli@pln.co.id
-    csr_website: https://www.pln.co.id
-    proposal_file: proposals/csr_pln.md
-    programs:
-      - renovasi_kelas
-      - beasiswa
-    total_amount: "Rp 235.000.000"
-
-  - key: sig
-    name: PT Semen Indonesia (SIG)
-    legal_name: PT Semen Indonesia (Persero) Tbk
-    sector: Material Bangunan
-    csr_name: SIG Peduli
-    csr_focus:
-      - Pendidikan
-      - Infrastruktur Sosial
-      - Lingkungan
-      - Pemberdayaan Masyarakat
-    email: csr@sig.id
-    csr_website: https://www.semenindonesia.com
-    proposal_file: proposals/csr_sig.md
-    programs:
-      - renovasi_kelas
-      - beasiswa
-    total_amount: "Rp 235.000.000"
-
-  - key: telkom
-    name: Telkom Indonesia
-    legal_name: PT Telkom Indonesia (Persero) Tbk
-    sector: Telekomunikasi & Digital
-    csr_name: Telkom Peduli
-    csr_focus:
-      - Pendidikan Digital
-      - Literasi Digital
-      - Infrastruktur TIK
-      - Kewirausahaan Digital
-    email: sustainability@telkom.co.id
-    csr_website: https://www.telkom.co.id
-    proposal_file: proposals/csr_telkom.md
-    programs:
-      - lab_komputer
-      - literasi_digital
-    total_amount: "Rp 200.000.000"
-
-  - key: bca
-    name: Bank Central Asia (BCA)
-    legal_name: PT Bank Central Asia Tbk
-    sector: Perbankan Swasta
-    csr_name: Bakti BCA
-    csr_focus:
-      - Pendidikan (Smart Libraries)
-      - Kesehatan
-      - Bencana Alam
-      - Pelestarian Budaya
-    email: halobca@bca.co.id
-    csr_website: https://www.bca.co.id
-    proposal_file: proposals/csr_bca.md
-    programs:
-      - renovasi_kelas
-      - beasiswa
-    total_amount: "Rp 235.000.000"
-
-  - key: mandiri
-    name: Bank Mandiri
-    legal_name: PT Bank Mandiri (Persero) Tbk
-    sector: Perbankan BUMN
-    csr_name: Mandiri Peduli
-    csr_focus:
-      - Pendidikan
-      - Pemberdayaan Ekonomi
-      - Kesehatan
-      - Infrastruktur Sosial
-    email: customer.care@bankmandiri.co.id
-    csr_website: https://www.bankmandiri.co.id
-    proposal_file: proposals/csr_mandiri.md
-    programs:
-      - beasiswa
-      - taman_bacaan
-    total_amount: "Rp 145.000.000"
-
-  - key: bri
-    name: Bank Rakyat Indonesia (BRI)
-    legal_name: PT Bank Rakyat Indonesia (Persero) Tbk
-    sector: Perbankan BUMN
-    csr_name: BRI Peduli / YBM BRILiaN
-    csr_focus:
-      - Pendidikan (Cares for Schools)
-      - Beasiswa (YBM BRILiaN)
-      - Pemberdayaan UMKM
-      - Sosial Keagamaan
-    email: bri@bri.co.id
-    csr_website: https://www.bri.co.id
-    proposal_file: proposals/csr_bri.md
-    programs:
-      - renovasi_sekolah
-      - beasiswa
-      - pemberdayaan_ekonomi
-    total_amount: "Rp 320.000.000"
-
-  - key: bni
-    name: Bank Negara Indonesia (BNI)
-    legal_name: PT Bank Negara Indonesia (Persero) Tbk
-    sector: Perbankan BUMN
-    csr_name: BNI Peduli
-    csr_focus:
-      - Pendidikan
-      - Kewirausahaan
-      - Lingkungan
-      - Sosial Keagamaan
-    email: bni@bni.co.id
-    csr_website: https://www.bni.co.id
-    proposal_file: proposals/csr_bni.md
-    programs:
-      - beasiswa
-      - pondok_pesantren
-    total_amount: "Rp 175.000.000"
-
-  - key: kai
-    name: PT Kereta Api Indonesia
-    legal_name: PT Kereta Api Indonesia (Persero)
-    sector: Transportasi
-    csr_name: TJSL KAI
-    csr_focus:
-      - Pendidikan
-      - Keselamatan Transportasi
-      - Lingkungan
-      - Pemberdayaan Masyarakat
-    email: csr@kai.id
-    csr_website: https://www.kai.id
-    proposal_file: proposals/csr_kai.md
-    programs:
-      - beasiswa
-      - renovasi_kelas
-    total_amount: "Rp 175.000.000"
-
-  - key: astra
-    name: Astra International
-    legal_name: PT Astra International Tbk
-    sector: Konglomerasi Otomotif & Alat Berat
-    csr_name: Yayasan Pendidikan Astra Michael D. Ruslim / Astra for Education
-    csr_focus:
-      - Pendidikan Vokasi
-      - Kewirausahaan
-      - Beasiswa
-      - Pengembangan SDM
-    email: info@astra.co.id
-    csr_website: https://www.astra.co.id
-    proposal_file: proposals/csr_astra.md
-    programs:
-      - beasiswa
-      - kewirausahaan_santri
-    total_amount: "Rp 114.000.000"
-
-  # ── NEW: BUMN/BUMD LPDP Awardee Recipients (discovered via research) ──
-
-  - key: adhikarya
-    name: Adhi Karya
-    legal_name: PT Adhi Karya (Persero) Tbk
-    sector: Konstruksi & Infrastruktur
-    csr_name: TJSL Adhi Karya
-    csr_focus:
-      - Pendidikan
-      - Infrastruktur Sosial
-      - Pemberdayaan Masyarakat
-      - Lingkungan
-    email: adhi@adhi.co.id
-    programs:
-      - renovasi_kelas
-      - beasiswa
-    total_amount: "Rp 175.000.000"
-
-  - key: balitv
-    name: Bali TV
-    legal_name: PT Bali TV
-    sector: Media & Penyiaran
-    csr_name: CSR Bali TV
-    csr_focus:
-      - Pendidikan
-      - Literasi Media
-      - Kebudayaan Bali
-    email: pemirsa@balitv.tv
-    programs:
-      - beasiswa
-    total_amount: "Rp 75.000.000"
-
-  - key: bankbjb
-    name: Bank BJB
-    legal_name: PT Bank Pembangunan Daerah Jawa Barat dan Banten Tbk
-    sector: Perbankan BPD
-    csr_name: BJB Peduli
-    csr_focus:
-      - Pendidikan
-      - Beasiswa
-      - UMKM
-      - Sosial Keagamaan
-    email: bjbcare@bankbjb.co.id
-    programs:
-      - beasiswa
-      - renovasi_kelas
-    total_amount: "Rp 175.000.000"
-
-  - key: barata
-    name: Barata Indonesia
-    legal_name: PT Barata Indonesia (Persero)
-    sector: Industri & Manufaktur
-    csr_name: TJSL Barata Indonesia
-    csr_focus:
-      - Pendidikan Vokasi
-      - Pemberdayaan Masyarakat
-      - Lingkungan
-    email: info@barata.com
-    programs:
-      - beasiswa
-    total_amount: "Rp 150.000.000"
-
-  - key: bluebird
-    name: Blue Bird
-    legal_name: PT Blue Bird Tbk
-    sector: Transportasi
-    csr_name: Blue Bird Peduli
-    csr_focus:
-      - Pendidikan
-      - Lingkungan
-      - Pemberdayaan Masyarakat
-    email: customercare@bluebirdgroup.com
-    programs:
-      - beasiswa
-    total_amount: "Rp 100.000.000"
-
-  - key: brantasabipraya
-    name: Brantas Abipraya
-    legal_name: PT Brantas Abipraya (Persero)
-    sector: Konstruksi & Infrastruktur
-    csr_name: TJSL Brantas Abipraya
-    csr_focus:
-      - Pendidikan
-      - Infrastruktur Sosial
-      - Pemberdayaan Masyarakat
-    email: brap@brantas-abipraya.co.id
-    programs:
-      - beasiswa
-      - renovasi_kelas
-    total_amount: "Rp 150.000.000"
-
-  - key: inka
-    name: INKA
-    legal_name: PT INKA (Persero)
-    sector: Industri Perkeretaapian
-    csr_name: TJSL INKA
-    csr_focus:
-      - Pendidikan Vokasi
-      - Pemberdayaan Masyarakat
-      - Lingkungan
-    email: sekretariat@inka.co.id
-    programs:
-      - beasiswa
-      - renovasi_kelas
-    total_amount: "Rp 150.000.000"
-
-  - key: jtv
-    name: JTV Surabaya
-    legal_name: PT Jawa Pos Media Televisi
-    sector: Media & Penyiaran
-    csr_name: CSR JTV
-    csr_focus:
-      - Pendidikan
-      - Literasi Media
-      - Budaya Jawa Timur
-    email: portal@jtv.co.id
-    programs:
-      - beasiswa
-    total_amount: "Rp 75.000.000"
-
-  - key: kimiafarma
-    name: Kimia Farma
-    legal_name: PT Kimia Farma (Persero) Tbk
-    sector: Farmasi & Kesehatan
-    csr_name: Kimia Farma Peduli
-    csr_focus:
-      - Pendidikan Kesehatan
-      - Kesehatan Masyarakat
-      - Lingkungan
-    email: corsec@kimiafarma.co.id
-    programs:
-      - beasiswa
-    total_amount: "Rp 150.000.000"
-
-  - key: lenindustri
-    name: Len Industri
-    legal_name: PT Len Industri (Persero)
-    sector: Elektronik & Telematika
-    csr_name: TJSL Len Industri
-    csr_focus:
-      - Pendidikan Teknologi
-      - Inovasi Digital
-      - Pemberdayaan Masyarakat
-    email: komunikasi.korporasi@len.co.id
-    programs:
-      - beasiswa
-      - laboratorium_sekolah
-    total_amount: "Rp 150.000.000"
-
-  - key: pelindo
-    name: Pelabuhan Indonesia
-    legal_name: PT Pelabuhan Indonesia (Persero)
-    sector: Transportasi & Logistik Maritim
-    csr_name: Pelindo Peduli
-    csr_focus:
-      - Pendidikan
-      - Pemberdayaan Masyarakat Pesisir
-      - Lingkungan
-    email: customer.care@pelindo.co.id
-    programs:
-      - beasiswa
-      - renovasi_kelas
-    total_amount: "Rp 200.000.000"
-
-  - key: peruri
-    name: Perum Peruri
-    legal_name: Perusahaan Umum Percetakan Uang Republik Indonesia
-    sector: Percetakan & Keamanan Dokumen
-    csr_name: TJSL Peruri
-    csr_focus:
-      - Pendidikan
-      - Pemberdayaan Masyarakat
-      - Lingkungan
-    email: info@peruri.co.id
-    programs:
-      - beasiswa
-    total_amount: "Rp 150.000.000"
-
-  - key: pindad
-    name: Pindad
-    legal_name: PT Pindad (Persero)
-    sector: Industri Pertahanan & Manufaktur
-    csr_name: Pindad Peduli
-    csr_focus:
-      - Pendidikan Vokasi
-      - Pemberdayaan Masyarakat
-      - Lingkungan
-    email: info@pindad.com
-    programs:
-      - beasiswa
-      - renovasi_kelas
-    total_amount: "Rp 175.000.000"
-
-  - key: pupukindonesia
-    name: Pupuk Indonesia
-    legal_name: PT Pupuk Indonesia (Persero)
-    sector: Pupuk & Pertanian
-    csr_name: TJSL Pupuk Indonesia
-    csr_focus:
-      - Pendidikan
-      - Pemberdayaan Petani
-      - Lingkungan
-      - Ketahanan Pangan
-    email: info@pupuk-indonesia.com
-    programs:
-      - beasiswa
-    total_amount: "Rp 200.000.000"
-
-  - key: waskita
-    name: Waskita Karya
-    legal_name: PT Waskita Karya (Persero) Tbk
-    sector: Konstruksi & Infrastruktur
-    csr_name: TJSL Waskita Karya
-    csr_focus:
-      - Pendidikan
-      - Infrastruktur Sosial
-      - Pemberdayaan Masyarakat
-      - Lingkungan
-    email: corporate.secretary@waskita.co.id
-    programs:
-      - renovasi_kelas
-      - beasiswa
-    total_amount: "Rp 175.000.000"
-
-  - key: wijayakarya
-    name: Wijaya Karya
-    legal_name: PT Wijaya Karya (Persero) Tbk
-    sector: Konstruksi & Infrastruktur
-    csr_name: TJSL WIKA
-    csr_focus:
-      - Pendidikan
-      - Infrastruktur Sosial
-      - Pemberdayaan Masyarakat
-      - Lingkungan
-    email: CSR@wikamail.id
-    programs:
-      - beasiswa
-      - renovasi_kelas
-    total_amount: "Rp 200.000.000"
-
-# SMTP / Email config
+- key: bankjatim
+  name: Bank Jatim
+  legal_name: PT Bank Pembangunan Daerah Jawa Timur Tbk
+  sector: Perbankan BPD
+  csr_name: Bank Jatim Peduli
+  csr_focus:
+  - Pendidikan
+  - Beasiswa
+  - UMKM
+  - Sosial Keagamaan
+  email: bankjatim@bankjatim.co.id
+  csr_website: https://www.bankjatim.co.id
+  proposal_file: proposals/csr_bankjatim.md
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  total_amount: Rp 235.000.000
+- key: bsi
+  name: Bank Syariah Indonesia
+  legal_name: PT Bank Syariah Indonesia Tbk
+  sector: Perbankan Syariah
+  csr_name: BSI Mashlahat
+  csr_focus:
+  - Pendidikan
+  - Pemberdayaan Ekonomi
+  - Sosial Keagamaan
+  - Lingkungan
+  email: cs@bsimashlahat.or.id
+  csr_website: https://www.bsimashlahat.or.id
+  proposal_file: proposals/csr_bsi.md
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  total_amount: Rp 235.000.000
+- key: pertamina
+  name: Pertamina
+  legal_name: PT Pertamina (Persero)
+  sector: Energi & Migas
+  csr_name: Pertamina Peduli (TJSL)
+  csr_focus:
+  - Pendidikan
+  - Lingkungan
+  - Pemberdayaan Masyarakat
+  - Kesehatan
+  email: corpcs@pertamina.com
+  csr_website: https://www.pertamina.com
+  proposal_file: proposals/csr_pertamina.md
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  total_amount: Rp 235.000.000
+- key: pln
+  name: PLN
+  legal_name: PT Perusahaan Listrik Negara (Persero)
+  sector: Energi & Kelistrikan
+  csr_name: PLN Peduli
+  csr_focus:
+  - Pendidikan
+  - Lingkungan
+  - Pemberdayaan UMKM
+  - Infrastruktur Sosial
+  email: plnpeduli@pln.co.id
+  csr_website: https://www.pln.co.id
+  proposal_file: proposals/csr_pln.md
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  total_amount: Rp 235.000.000
+- key: sig
+  name: PT Semen Indonesia (SIG)
+  legal_name: PT Semen Indonesia (Persero) Tbk
+  sector: Material Bangunan
+  csr_name: SIG Peduli
+  csr_focus:
+  - Pendidikan
+  - Infrastruktur Sosial
+  - Lingkungan
+  - Pemberdayaan Masyarakat
+  email: csr@sig.id
+  csr_website: https://www.semenindonesia.com
+  proposal_file: proposals/csr_sig.md
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  total_amount: Rp 235.000.000
+- key: telkom
+  name: Telkom Indonesia
+  legal_name: PT Telkom Indonesia (Persero) Tbk
+  sector: Telekomunikasi & Digital
+  csr_name: Telkom Peduli
+  csr_focus:
+  - Pendidikan Digital
+  - Literasi Digital
+  - Infrastruktur TIK
+  - Kewirausahaan Digital
+  email: sustainability@telkom.co.id
+  csr_website: https://www.telkom.co.id
+  proposal_file: proposals/csr_telkom.md
+  programs:
+  - lab_komputer
+  - literasi_digital
+  total_amount: Rp 200.000.000
+- key: bca
+  name: Bank Central Asia (BCA)
+  legal_name: PT Bank Central Asia Tbk
+  sector: Perbankan Swasta
+  csr_name: Bakti BCA
+  csr_focus:
+  - Pendidikan (Smart Libraries)
+  - Kesehatan
+  - Bencana Alam
+  - Pelestarian Budaya
+  email: halobca@bca.co.id
+  csr_website: https://www.bca.co.id
+  proposal_file: proposals/csr_bca.md
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  total_amount: Rp 235.000.000
+- key: mandiri
+  name: Bank Mandiri
+  legal_name: PT Bank Mandiri (Persero) Tbk
+  sector: Perbankan BUMN
+  csr_name: Mandiri Peduli
+  csr_focus:
+  - Pendidikan
+  - Pemberdayaan Ekonomi
+  - Kesehatan
+  - Infrastruktur Sosial
+  email: customer.care@bankmandiri.co.id
+  csr_website: https://www.bankmandiri.co.id
+  proposal_file: proposals/csr_mandiri.md
+  programs:
+  - beasiswa
+  - taman_bacaan
+  total_amount: Rp 145.000.000
+- key: bri
+  name: Bank Rakyat Indonesia (BRI)
+  legal_name: PT Bank Rakyat Indonesia (Persero) Tbk
+  sector: Perbankan BUMN
+  csr_name: BRI Peduli / YBM BRILiaN
+  csr_focus:
+  - Pendidikan (Cares for Schools)
+  - Beasiswa (YBM BRILiaN)
+  - Pemberdayaan UMKM
+  - Sosial Keagamaan
+  email: bri@bri.co.id
+  csr_website: https://www.bri.co.id
+  proposal_file: proposals/csr_bri.md
+  programs:
+  - renovasi_sekolah
+  - beasiswa
+  - pemberdayaan_ekonomi
+  total_amount: Rp 320.000.000
+- key: bni
+  name: Bank Negara Indonesia (BNI)
+  legal_name: PT Bank Negara Indonesia (Persero) Tbk
+  sector: Perbankan BUMN
+  csr_name: BNI Peduli
+  csr_focus:
+  - Pendidikan
+  - Kewirausahaan
+  - Lingkungan
+  - Sosial Keagamaan
+  email: bni@bni.co.id
+  csr_website: https://www.bni.co.id
+  proposal_file: proposals/csr_bni.md
+  programs:
+  - beasiswa
+  - pondok_pesantren
+  total_amount: Rp 175.000.000
+- key: kai
+  name: PT Kereta Api Indonesia
+  legal_name: PT Kereta Api Indonesia (Persero)
+  sector: Transportasi
+  csr_name: TJSL KAI
+  csr_focus:
+  - Pendidikan
+  - Keselamatan Transportasi
+  - Lingkungan
+  - Pemberdayaan Masyarakat
+  email: csr@kai.id
+  csr_website: https://www.kai.id
+  proposal_file: proposals/csr_kai.md
+  programs:
+  - beasiswa
+  - renovasi_kelas
+  total_amount: Rp 175.000.000
+- key: astra
+  name: Astra International
+  legal_name: PT Astra International Tbk
+  sector: Konglomerasi Otomotif & Alat Berat
+  csr_name: Yayasan Pendidikan Astra Michael D. Ruslim / Astra for Education
+  csr_focus:
+  - Pendidikan Vokasi
+  - Kewirausahaan
+  - Beasiswa
+  - Pengembangan SDM
+  email: info@astra.co.id
+  csr_website: https://www.astra.co.id
+  proposal_file: proposals/csr_astra.md
+  programs:
+  - beasiswa
+  - kewirausahaan_santri
+  total_amount: Rp 114.000.000
+- key: adhikarya
+  name: Adhi Karya
+  legal_name: PT Adhi Karya (Persero) Tbk
+  sector: Konstruksi & Infrastruktur
+  csr_name: TJSL Adhi Karya
+  csr_focus:
+  - Pendidikan
+  - Infrastruktur Sosial
+  - Pemberdayaan Masyarakat
+  - Lingkungan
+  email: adhi@adhi.co.id
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  total_amount: Rp 175.000.000
+  csr_website: https://adhikarya.com
+  proposal_file: proposals/csr_adhikarya.md
+- key: balitv
+  name: Bali TV
+  legal_name: PT Bali TV
+  sector: Media & Penyiaran
+  csr_name: CSR Bali TV
+  csr_focus:
+  - Pendidikan
+  - Literasi Media
+  - Kebudayaan Bali
+  email: pemirsa@balitv.tv
+  programs:
+  - beasiswa
+  total_amount: Rp 75.000.000
+  csr_website: https://balitv.com
+  proposal_file: proposals/csr_balitv.md
+- key: bankbjb
+  name: Bank BJB
+  legal_name: PT Bank Pembangunan Daerah Jawa Barat dan Banten Tbk
+  sector: Perbankan BPD
+  csr_name: BJB Peduli
+  csr_focus:
+  - Pendidikan
+  - Beasiswa
+  - UMKM
+  - Sosial Keagamaan
+  email: bjbcare@bankbjb.co.id
+  programs:
+  - beasiswa
+  - renovasi_kelas
+  total_amount: Rp 175.000.000
+  csr_website: https://bankbjb.co.id
+  proposal_file: proposals/csr_bankbjb.md
+- key: barata
+  name: Barata Indonesia
+  legal_name: PT Barata Indonesia (Persero)
+  sector: Industri & Manufaktur
+  csr_name: TJSL Barata Indonesia
+  csr_focus:
+  - Pendidikan Vokasi
+  - Pemberdayaan Masyarakat
+  - Lingkungan
+  email: info@barata.com
+  programs:
+  - beasiswa
+  total_amount: Rp 150.000.000
+  csr_website: https://barata.com
+  proposal_file: proposals/csr_barata.md
+- key: bluebird
+  name: Blue Bird
+  legal_name: PT Blue Bird Tbk
+  sector: Transportasi
+  csr_name: Blue Bird Peduli
+  csr_focus:
+  - Pendidikan
+  - Lingkungan
+  - Pemberdayaan Masyarakat
+  email: customercare@bluebirdgroup.com
+  programs:
+  - beasiswa
+  total_amount: Rp 100.000.000
+  csr_website: https://bluebird.co.id
+  proposal_file: proposals/csr_bluebird.md
+- key: brantasabipraya
+  name: Brantas Abipraya
+  legal_name: PT Brantas Abipraya (Persero)
+  sector: Konstruksi & Infrastruktur
+  csr_name: TJSL Brantas Abipraya
+  csr_focus:
+  - Pendidikan
+  - Infrastruktur Sosial
+  - Pemberdayaan Masyarakat
+  email: brap@brantas-abipraya.co.id
+  programs:
+  - beasiswa
+  - renovasi_kelas
+  total_amount: Rp 150.000.000
+  csr_website: https://brantasabipraya.com
+  proposal_file: proposals/csr_brantasabipraya.md
+- key: inka
+  name: INKA
+  legal_name: PT INKA (Persero)
+  sector: Industri Perkeretaapian
+  csr_name: TJSL INKA
+  csr_focus:
+  - Pendidikan Vokasi
+  - Pemberdayaan Masyarakat
+  - Lingkungan
+  email: sekretariat@inka.co.id
+  programs:
+  - beasiswa
+  - renovasi_kelas
+  total_amount: Rp 150.000.000
+  csr_website: https://inka.co.id
+  proposal_file: proposals/csr_inka.md
+- key: jtv
+  name: JTV Surabaya
+  legal_name: PT Jawa Pos Media Televisi
+  sector: Media & Penyiaran
+  csr_name: CSR JTV
+  csr_focus:
+  - Pendidikan
+  - Literasi Media
+  - Budaya Jawa Timur
+  email: portal@jtv.co.id
+  programs:
+  - beasiswa
+  total_amount: Rp 75.000.000
+  csr_website: https://jtv.co.id
+  proposal_file: proposals/csr_jtv.md
+- key: kimiafarma
+  name: Kimia Farma
+  legal_name: PT Kimia Farma (Persero) Tbk
+  sector: Farmasi & Kesehatan
+  csr_name: Kimia Farma Peduli
+  csr_focus:
+  - Pendidikan Kesehatan
+  - Kesehatan Masyarakat
+  - Lingkungan
+  email: corsec@kimiafarma.co.id
+  programs:
+  - beasiswa
+  total_amount: Rp 150.000.000
+  csr_website: https://kimiafarma.co.id
+  proposal_file: proposals/csr_kimiafarma.md
+- key: lenindustri
+  name: Len Industri
+  legal_name: PT Len Industri (Persero)
+  sector: Elektronik & Telematika
+  csr_name: TJSL Len Industri
+  csr_focus:
+  - Pendidikan Teknologi
+  - Inovasi Digital
+  - Pemberdayaan Masyarakat
+  email: komunikasi.korporasi@len.co.id
+  programs:
+  - beasiswa
+  - laboratorium_sekolah
+  total_amount: Rp 150.000.000
+  csr_website: https://len.co.id
+  proposal_file: proposals/csr_lenindustri.md
+- key: pelindo
+  name: Pelabuhan Indonesia
+  legal_name: PT Pelabuhan Indonesia (Persero)
+  sector: Transportasi & Logistik Maritim
+  csr_name: Pelindo Peduli
+  csr_focus:
+  - Pendidikan
+  - Pemberdayaan Masyarakat Pesisir
+  - Lingkungan
+  email: customer.care@pelindo.co.id
+  programs:
+  - beasiswa
+  - renovasi_kelas
+  total_amount: Rp 200.000.000
+  csr_website: https://pelindo.co.id
+  proposal_file: proposals/csr_pelindo.md
+- key: peruri
+  name: Perum Peruri
+  legal_name: Perusahaan Umum Percetakan Uang Republik Indonesia
+  sector: Percetakan & Keamanan Dokumen
+  csr_name: TJSL Peruri
+  csr_focus:
+  - Pendidikan
+  - Pemberdayaan Masyarakat
+  - Lingkungan
+  email: info@peruri.co.id
+  programs:
+  - beasiswa
+  total_amount: Rp 150.000.000
+  csr_website: https://peruri.co.id
+  proposal_file: proposals/csr_peruri.md
+- key: pindad
+  name: Pindad
+  legal_name: PT Pindad (Persero)
+  sector: Industri Pertahanan & Manufaktur
+  csr_name: Pindad Peduli
+  csr_focus:
+  - Pendidikan Vokasi
+  - Pemberdayaan Masyarakat
+  - Lingkungan
+  email: info@pindad.com
+  programs:
+  - beasiswa
+  - renovasi_kelas
+  total_amount: Rp 175.000.000
+  csr_website: https://pindad.com
+  proposal_file: proposals/csr_pindad.md
+- key: pupukindonesia
+  name: Pupuk Indonesia
+  legal_name: PT Pupuk Indonesia (Persero)
+  sector: Pupuk & Pertanian
+  csr_name: TJSL Pupuk Indonesia
+  csr_focus:
+  - Pendidikan
+  - Pemberdayaan Petani
+  - Lingkungan
+  - Ketahanan Pangan
+  email: info@pupuk-indonesia.com
+  programs:
+  - beasiswa
+  total_amount: Rp 200.000.000
+  csr_website: https://pupukindonesia.id
+  proposal_file: proposals/csr_pupukindonesia.md
+- key: waskita
+  name: Waskita Karya
+  legal_name: PT Waskita Karya (Persero) Tbk
+  sector: Konstruksi & Infrastruktur
+  csr_name: TJSL Waskita Karya
+  csr_focus:
+  - Pendidikan
+  - Infrastruktur Sosial
+  - Pemberdayaan Masyarakat
+  - Lingkungan
+  email: corporate.secretary@waskita.co.id
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  total_amount: Rp 175.000.000
+  csr_website: https://waskita.co.id
+  proposal_file: proposals/csr_waskita.md
+- key: wijayakarya
+  name: Wijaya Karya
+  legal_name: PT Wijaya Karya (Persero) Tbk
+  sector: Konstruksi & Infrastruktur
+  csr_name: TJSL WIKA
+  csr_focus:
+  - Pendidikan
+  - Infrastruktur Sosial
+  - Pemberdayaan Masyarakat
+  - Lingkungan
+  email: CSR@wikamail.id
+  programs:
+  - beasiswa
+  - renovasi_kelas
+  total_amount: Rp 200.000.000
+  csr_website: https://wika.co.id
+  proposal_file: proposals/csr_wijayakarya.md
+- key: asdpindonesiaferry
+  name: PT ASDP Indonesia Ferry (Persero)
+  csr_website: https://asdp.id
+  email: csr@asdp.co.id
+  proposal_file: proposals/csr_asdpindonesiaferry.md
+  csr_name: PT ASDP Indonesia Ferry (Persero)
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: agrinasjaladrinusant
+  name: PT Agrinas Jaladri Nusantara (Persero)
+  csr_website: https://agrinas.id
+  email: csr@agrinas.id
+  proposal_file: proposals/csr_agrinasjaladrinusant.md
+  csr_name: PT Agrinas Jaladri Nusantara (Persero)
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: agrinaspalmanusantar
+  name: PT Agrinas Palma Nusantara (Persero)
+  csr_website: https://agrinas.id
+  email: csr@agrinas.id
+  proposal_file: proposals/csr_agrinaspalmanusantar.md
+  csr_name: PT Agrinas Palma Nusantara (Persero)
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: agrinaspangannusanta
+  name: PT Agrinas Pangan Nusantara (Persero)
+  csr_website: https://agrinas.id
+  email: csr@agrinas.id
+  proposal_file: proposals/csr_agrinaspangannusanta.md
+  csr_name: PT Agrinas Pangan Nusantara (Persero)
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: amartakarya
+  name: PT Amarta Karya (Persero)
+  csr_website: ''
+  email: csr@waskita.co.id
+  proposal_file: proposals/csr_amartakarya.md
+  csr_name: PT Amarta Karya (Persero)
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: anekagasindustri
+  name: PT Aneka Gas Industri (Persero)
+  csr_website: https://www.samatorgas.com
+  email: info@samatorgas.com
+  proposal_file: proposals/csr_anekagasindustri.md
+  csr_name: PT Aneka Gas Industri (Persero)
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: anekatambang
+  name: PT Aneka Tambang (Persero) Tbk
+  csr_website: https://antam.com
+  email: csr@antam.com
+  proposal_file: proposals/csr_anekatambang.md
+  csr_name: PT Aneka Tambang (Persero) Tbk
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: angkasapurai
+  name: PT Angkasa Pura I (Persero)
+  csr_website: https://angkasapura1.co.id
+  email: info@angkasapura1.co.id
+  proposal_file: proposals/csr_angkasapurai.md
+  csr_name: PT Angkasa Pura I (Persero)
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: angkasapuraii
+  name: PT Angkasa Pura II (Persero)
+  csr_website: https://angkasapura1.co.id
+  email: info@angkasapura1.co.id
+  proposal_file: proposals/csr_angkasapuraii.md
+  csr_name: PT Angkasa Pura II (Persero)
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: asuransijasaindonesi
+  name: PT Asuransi Jasa Indonesia (Persero)
+  csr_website: https://asuransijasaindonesia.co.id
+  email: info@asuransijasaindonesia.co.id
+  proposal_file: proposals/csr_asuransijasaindonesi.md
+  csr_name: PT Asuransi Jasa Indonesia (Persero)
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: asuransijiwasraya
+  name: PT Asuransi Jiwasraya (Persero)
+  csr_website: https://jiwasraya.co.id
+  email: csr@jiwasraya.co.id
+  proposal_file: proposals/csr_asuransijiwasraya.md
+  csr_name: PT Asuransi Jiwasraya (Persero)
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: asuransikerugianjasa
+  name: PT Asuransi Kerugian Jasa Raharja (Persero)
+  csr_website: https://www.jasaraharja.co.id
+  email: csr@jasaraharja.co.id
+  proposal_file: proposals/csr_asuransikerugianjasa.md
+  csr_name: PT Asuransi Kerugian Jasa Raharja (Persero)
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: asuransikesehatanind
+  name: PT Asuransi Kesehatan Indonesia (Persero)
+  csr_website: https://askes.co.id
+  email: info@askes.co.id
+  proposal_file: proposals/csr_asuransikesehatanind.md
+  csr_name: PT Asuransi Kesehatan Indonesia (Persero)
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: asuransikreditindone
+  name: PT Asuransi Kredit Indonesia (Persero)
+  csr_website: https://asuransikreditindonesia.co.id
+  email: info@asuransikreditindonesia.co.id
+  proposal_file: proposals/csr_asuransikreditindone.md
+  csr_name: PT Asuransi Kredit Indonesia (Persero)
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: asuransisosialangkat
+  name: PT Asuransi Sosial Angkatan Bersenjata Republik Indonesia (Persero)
+  csr_website: https://www.asabri.co.id
+  email: csr@asabri.co.id
+  proposal_file: proposals/csr_asuransisosialangkat.md
+  csr_name: PT Asuransi Sosial Angkatan Bersenjata Republik Indonesia (Persero)
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: aviasipariwisataindo
+  name: PT Aviasi Pariwisata Indonesia (Persero)
+  csr_website: https://injourney.id
+  email: csr@injourney.id
+  proposal_file: proposals/csr_aviasipariwisataindo.md
+  csr_name: PT Aviasi Pariwisata Indonesia (Persero)
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: bahanapakaryaindustr
+  name: PT Bahana Pakarya Industri Strategis (Persero)
+  csr_website: https://www.bpiskarya.co.id
+  email: info@bpiskarya.co.id
+  proposal_file: proposals/csr_bahanapakaryaindustr.md
+  csr_name: PT Bahana Pakarya Industri Strategis (Persero)
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: bahanapembinaanusaha
+  name: PT Bahana Pembinaan Usaha Indonesia (Persero)
+  csr_website: https://bpui.co.id
+  email: info@bpui.co.id
+  proposal_file: proposals/csr_bahanapembinaanusaha.md
+  csr_name: PT Bahana Pembinaan Usaha Indonesia (Persero)
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: bankbumidaya
+  name: PT Bank Bumi Daya (Persero)
+  csr_website: https://bankbumidaya.co.id
+  email: info@bankbumidaya.co.id
+  proposal_file: proposals/csr_bankbumidaya.md
+  csr_name: PT Bank Bumi Daya (Persero)
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: bankdagangnegara
+  name: PT Bank Dagang Negara (Persero)
+  csr_website: https://bankdagangnegara.co.id
+  email: info@bankdagangnegara.co.id
+  proposal_file: proposals/csr_bankdagangnegara.md
+  csr_name: PT Bank Dagang Negara (Persero)
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: bankeksporimporindon
+  name: PT Bank Ekspor Impor Indonesia (Persero)
+  csr_website: https://bankeksporindonesia.co.id
+  email: info@bankeksporindonesia.co.id
+  proposal_file: proposals/csr_bankeksporimporindon.md
+  csr_name: PT Bank Ekspor Impor Indonesia (Persero)
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: bankeksporindonesia
+  name: PT Bank Ekspor Indonesia (Persero)
+  csr_website: https://www.indonesiaeximbank.go.id
+  email: csr@indonesiaeximbank.go.id
+  proposal_file: proposals/csr_bankeksporindonesia.md
+  csr_name: PT Bank Ekspor Indonesia (Persero)
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: banknegaraindonesia
+  name: PT Bank Negara Indonesia (Persero) Tbk
+  csr_website: ''
+  email: bni@bni.co.id
+  proposal_file: proposals/csr_banknegaraindonesia.md
+  csr_name: PT Bank Negara Indonesia (Persero) Tbk
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: bankpembangunanindon
+  name: PT Bank Pembangunan Indonesia (Persero)
+  csr_website: https://bankpembangunanindonesia.co.id
+  email: info@bankpembangunanindonesia.co.id
+  proposal_file: proposals/csr_bankpembangunanindon.md
+  csr_name: PT Bank Pembangunan Indonesia (Persero)
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: bankrakyatindonesia
+  name: PT Bank Rakyat Indonesia (Persero) Tbk
+  csr_website: ''
+  email: bri@bri.co.id
+  proposal_file: proposals/csr_bankrakyatindonesia.md
+  csr_name: PT Bank Rakyat Indonesia (Persero) Tbk
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: banksyariahindonesia
+  name: PT Bank Syariah Indonesia (Persero) Tbk
+  csr_website: ''
+  email: cs@bsimashlahat.or.id
+  proposal_file: proposals/csr_banksyariahindonesia.md
+  csr_name: PT Bank Syariah Indonesia (Persero) Tbk
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: banktabungannegara
+  name: PT Bank Tabungan Negara (Persero) Tbk
+  csr_website: https://btn.co.id
+  email: info@btn.co.id
+  proposal_file: proposals/csr_banktabungannegara.md
+  csr_name: PT Bank Tabungan Negara (Persero) Tbk
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: berdikari
+  name: PT Berdikari (Persero)
+  csr_website: https://ptberdikari.co.id
+  email: csr@berdikari.co.id
+  proposal_file: proposals/csr_berdikari.md
+  csr_name: PT Berdikari (Persero)
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: bhandagharareksa
+  name: PT Bhanda Ghara Reksa (Persero)
+  csr_website: https://bgrlogistics.co.id
+  email: info@bgrlogistics.co.id
+  proposal_file: proposals/csr_bhandagharareksa.md
+  csr_name: PT Bhanda Ghara Reksa (Persero)
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: binakarya
+  name: PT Bina Karya (Persero)
+  csr_website: https://binakarya.com
+  email: info@binakarya.co.id
+  proposal_file: proposals/csr_binakarya.md
+  csr_name: PT Bina Karya (Persero)
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: biofarma
+  name: PT Bio Farma (Persero)
+  csr_website: https://biofarma.co.id
+  email: corcom@biofarma.co.id
+  proposal_file: proposals/csr_biofarma.md
+  csr_name: PT Bio Farma (Persero)
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: biroklasifikasiindon
+  name: PT Biro Klasifikasi Indonesia (Persero)
+  csr_website: https://bki.co.id
+  email: csr@bki.co.id
+  proposal_file: proposals/csr_biroklasifikasiindon.md
+  csr_name: PT Biro Klasifikasi Indonesia (Persero)
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: bomabismaindra
+  name: PT Boma Bisma Indra (Persero)
+  csr_website: https://bomabismaindra.co.id
+  email: info@bomabismaindra.co.id
+  proposal_file: proposals/csr_bomabismaindra.md
+  csr_name: PT Boma Bisma Indra (Persero)
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: bukitasam
+  name: PT Bukit Asam (Persero) Tbk
+  csr_website: https://bukitasam.co.id
+  email: info@bukitasam.co.id
+  proposal_file: proposals/csr_bukitasam.md
+  csr_name: PT Bukit Asam (Persero) Tbk
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: dahana
+  name: PT Dahana (Persero)
+  csr_website: https://dahana.id
+  email: csr@dahana.co.id
+  proposal_file: proposals/csr_dahana.md
+  csr_name: PT Dahana (Persero)
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: danatabungandanasura
+  name: PT Dana Tabungan dan Asuransi Pegawai Negeri (Persero)
+  csr_website: https://taspen.co.id
+  email: csr@taspen.co.id
+  proposal_file: proposals/csr_danatabungandanasura.md
+  csr_name: PT Dana Tabungan dan Asuransi Pegawai Negeri (Persero)
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: danareksa
+  name: PT Danareksa (Persero)
+  csr_website: https://danareksa.co.id
+  email: csr@danareksa.co.id
+  proposal_file: proposals/csr_danareksa.md
+  csr_name: PT Danareksa (Persero)
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: dirgantaraindonesia
+  name: PT Dirgantara Indonesia (Persero)
+  csr_website: https://dirgantara-indonesia.co.id
+  email: info@dirgantara-indonesia.co.id
+  proposal_file: proposals/csr_dirgantaraindonesia.md
+  csr_name: PT Dirgantara Indonesia (Persero)
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: djakartalloyd
+  name: PT Djakarta Lloyd (Persero)
+  csr_website: https://djakartalloyd.co.id
+  email: csr@djakartalloyd.co.id
+  proposal_file: proposals/csr_djakartalloyd.md
+  csr_name: PT Djakarta Lloyd (Persero)
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: dokdanperkapalankodj
+  name: PT Dok dan Perkapalan Kodja Bahari (Persero)
+  csr_website: https://kodjabahari.co.id
+  email: info@kodjabahari.co.id
+  proposal_file: proposals/csr_dokdanperkapalankodj.md
+  csr_name: PT Dok dan Perkapalan Kodja Bahari (Persero)
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: dokdanperkapalansura
+  name: PT Dok dan Perkapalan Surabaya (Persero)
+  csr_website: https://dps.co.id
+  email: info@dps.co.id
+  proposal_file: proposals/csr_dokdanperkapalansura.md
+  csr_name: PT Dok dan Perkapalan Surabaya (Persero)
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: eksploitasidanindust
+  name: PT Eksploitasi dan Industri Hutan I (Persero)
+  csr_website: https://www.perhutani.co.id
+  email: csr@perhutani.co.id
+  proposal_file: proposals/csr_eksploitasidanindust.md
+  csr_name: PT Eksploitasi dan Industri Hutan I (Persero)
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: eksploitasidanindust_ii
+  name: PT Eksploitasi dan Industri Hutan II (Persero)
+  csr_website: https://www.perhutani.co.id
+  email: csr@perhutani.co.id
+  proposal_file: proposals/csr_eksploitasidanindust_ii.md
+  csr_name: PT Eksploitasi dan Industri Hutan II (Persero)
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: eksploitasidanindust_iii
+  name: PT Eksploitasi dan Industri Hutan III (Persero)
+  csr_website: https://www.perhutani.co.id
+  email: csr@perhutani.co.id
+  proposal_file: proposals/csr_eksploitasidanindust_iii.md
+  csr_name: PT Eksploitasi dan Industri Hutan III (Persero)
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: eksploitasidanindust_iv
+  name: PT Eksploitasi dan Industri Hutan IV (Persero)
+  csr_website: https://www.perhutani.co.id
+  email: csr@perhutani.co.id
+  proposal_file: proposals/csr_eksploitasidanindust_iv.md
+  csr_name: PT Eksploitasi dan Industri Hutan IV (Persero)
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: eksploitasidanindust_v
+  name: PT Eksploitasi dan Industri Hutan V (Persero)
+  csr_website: https://www.perhutani.co.id
+  email: csr@perhutani.co.id
+  proposal_file: proposals/csr_eksploitasidanindust_v.md
+  csr_name: PT Eksploitasi dan Industri Hutan V (Persero)
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: energymanagementindo
+  name: PT Energy Management Indonesia (Persero)
+  csr_website: https://emi.co.id
+  email: info@emi.co.id
+  proposal_file: proposals/csr_energymanagementindo.md
+  csr_name: PT Energy Management Indonesia (Persero)
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: garam
+  name: PT Garam (Persero)
+  csr_website: https://ptgaram.com
+  email: csr@garam.co.id
+  proposal_file: proposals/csr_garam.md
+  csr_name: PT Garam (Persero)
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: garudaindonesia
+  name: PT Garuda Indonesia (Persero) Tbk
+  csr_website: https://garuda-indonesia.com
+  email: info@garuda-indonesia.com
+  proposal_file: proposals/csr_garudaindonesia.md
+  csr_name: PT Garuda Indonesia (Persero) Tbk
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: geodipaenergi
+  name: PT Geo Dipa Energi (Persero)
+  csr_website: https://geodipa.co.id
+  email: info@geodipa.co.id
+  proposal_file: proposals/csr_geodipaenergi.md
+  csr_name: PT Geo Dipa Energi (Persero)
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: hotelindonesianatour
+  name: PT Hotel Indonesia Natour (Persero)
+  csr_website: https://hin.co.id
+  email: csr@hin.co.id
+  proposal_file: proposals/csr_hotelindonesianatour.md
+  csr_name: PT Hotel Indonesia Natour (Persero)
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: hutamakarya
+  name: PT Hutama Karya (Persero)
+  csr_website: https://hutamakarya.com
+  email: info@hutamakarya.com
+  proposal_file: proposals/csr_hutamakarya.md
+  csr_name: PT Hutama Karya (Persero)
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: indahkarya
+  name: PT Indah Karya (Persero)
+  csr_website: https://indahkarya.co.id
+  email: info@indahkarya.co.id
+  proposal_file: proposals/csr_indahkarya.md
+  csr_name: PT Indah Karya (Persero)
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: indonesiaasahanalumi
+  name: PT Indonesia Asahan Aluminium (Persero)
+  csr_website: https://inalum.id
+  email: csr@inalum.co.id
+  proposal_file: proposals/csr_indonesiaasahanalumi.md
+  csr_name: PT Indonesia Asahan Aluminium (Persero)
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: indonesiafarma
+  name: PT Indonesia Farma (Persero) Tbk
+  csr_website: https://indonesiafarma.co.id
+  email: info@indonesiafarma.co.id
+  proposal_file: proposals/csr_indonesiafarma.md
+  csr_name: PT Indonesia Farma (Persero) Tbk
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: indosat
+  name: PT Indosat (Persero) Tbk
+  csr_website: https://indosat.co.id
+  email: info@indosat.co.id
+  proposal_file: proposals/csr_indosat.md
+  csr_name: PT Indosat (Persero) Tbk
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: industrigelas
+  name: PT Industri Gelas (Persero)
+  csr_website: https://ptig.co.id
+  email: info@ptig.co.id
+  proposal_file: proposals/csr_industrigelas.md
+  csr_name: PT Industri Gelas (Persero)
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: industrikapalindones
+  name: PT Industri Kapal Indonesia (Persero)
+  csr_website: https://iki.co.id
+  email: info@iki.co.id
+  proposal_file: proposals/csr_industrikapalindones.md
+  csr_name: PT Industri Kapal Indonesia (Persero)
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: industrikeretaapi
+  name: PT Industri Kereta Api (Persero)
+  csr_website: https://inka.co.id
+  email: csr@inka.co.id
+  proposal_file: proposals/csr_industrikeretaapi.md
+  csr_name: PT Industri Kereta Api (Persero)
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: industrinuklirindone
+  name: PT Industri Nuklir Indonesia (Persero)
+  csr_website: https://ptin.co.id
+  email: info@ptin.co.id
+  proposal_file: proposals/csr_industrinuklirindone.md
+  csr_name: PT Industri Nuklir Indonesia (Persero)
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: industripesawatterba
+  name: PT Industri Pesawat Terbang Nusantara (Persero)
+  csr_website: https://iptn.co.id
+  email: info@iptn.co.id
+  proposal_file: proposals/csr_industripesawatterba.md
+  csr_name: PT Industri Pesawat Terbang Nusantara (Persero)
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: industrisandangnusan
+  name: PT Industri Sandang Nusantara (Persero)
+  csr_website: https://industrisandangnusantara.com
+  email: info@industrisandangnusantara.com
+  proposal_file: proposals/csr_industrisandangnusan.md
+  csr_name: PT Industri Sandang Nusantara (Persero)
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: industritelekomunika
+  name: PT Industri Telekomunikasi Indonesia (Persero)
+  csr_website: https://intelkom.co.id
+  email: info@intelkom.co.id
+  proposal_file: proposals/csr_industritelekomunika.md
+  csr_name: PT Industri Telekomunikasi Indonesia (Persero)
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: istakakarya
+  name: PT Istaka Karya (Persero)
+  csr_website: https://istaka.co.id
+  email: info@istaka.co.id
+  proposal_file: proposals/csr_istakakarya.md
+  csr_name: PT Istaka Karya (Persero)
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: jaminankreditindones
+  name: PT Jaminan Kredit Indonesia (Persero)
+  csr_website: https://jaminankreditindonesia.co.id
+  email: info@jaminankreditindonesia.co.id
+  proposal_file: proposals/csr_jaminankreditindones.md
+  csr_name: PT Jaminan Kredit Indonesia (Persero)
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: jaminansosialtenagak
+  name: PT Jaminan Sosial Tenaga Kerja (Persero)
+  csr_website: https://bpjsketenagakerjaan.go.id
+  email: info@bpjsketenagakerjaan.go.id
+  proposal_file: proposals/csr_jaminansosialtenagak.md
+  csr_name: PT Jaminan Sosial Tenaga Kerja (Persero)
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: jasamarga
+  name: PT Jasa Marga (Persero) Tbk
+  csr_website: https://jasamarga.com
+  email: info@jasamarga.com
+  proposal_file: proposals/csr_jasamarga.md
+  csr_name: PT Jasa Marga (Persero) Tbk
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: kawasanberikatnusant
+  name: PT Kawasan Berikat Nusantara (Persero)
+  csr_website: https://kbn.co.id
+  email: info@kbn.co.id
+  proposal_file: proposals/csr_kawasanberikatnusant.md
+  csr_name: PT Kawasan Berikat Nusantara (Persero)
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: kawasanindustrimakas
+  name: PT Kawasan Industri Makassar (Persero)
+  csr_website: https://kim.co.id
+  email: info@kima.co.id
+  proposal_file: proposals/csr_kawasanindustrimakas.md
+  csr_name: PT Kawasan Industri Makassar (Persero)
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: kawasanindustrimedan
+  name: PT Kawasan Industri Medan (Persero)
+  csr_website: https://kawahara.co.id
+  email: info@kawahara.co.id
+  proposal_file: proposals/csr_kawasanindustrimedan.md
+  csr_name: PT Kawasan Industri Medan (Persero)
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: kawasanindustriwijay
+  name: PT Kawasan Industri Wijayakusuma (Persero)
+  csr_website: https://kiw.co.id
+  email: info@kiw.co.id
+  proposal_file: proposals/csr_kawasanindustriwijay.md
+  csr_name: PT Kawasan Industri Wijayakusuma (Persero)
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: keretaapiindonesia
+  name: PT Kereta Api Indonesia (Persero)
+  csr_website: ''
+  email: csr@kai.id
+  proposal_file: proposals/csr_keretaapiindonesia.md
+  csr_name: PT Kereta Api Indonesia (Persero)
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: kertaskraftaceh
+  name: PT Kertas Kraft Aceh (Persero)
+  csr_website: https://ptkka.co.id
+  email: info@ptkka.co.id
+  proposal_file: proposals/csr_kertaskraftaceh.md
+  csr_name: PT Kertas Kraft Aceh (Persero)
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: kertasleces
+  name: PT Kertas Leces (Persero)
+  csr_website: https://kertasleces.co.id
+  email: info@kertasleces.co.id
+  proposal_file: proposals/csr_kertasleces.md
+  csr_name: PT Kertas Leces (Persero)
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: kertaspadalarang
+  name: PT Kertas Padalarang (Persero)
+  csr_website: https://ktp.co.id
+  email: info@ktp.co.id
+  proposal_file: proposals/csr_kertaspadalarang.md
+  csr_name: PT Kertas Padalarang (Persero)
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: kliringberjangkaindo
+  name: PT Kliring Berjangka Indonesia (Persero)
+  csr_website: https://kbi.co.id
+  email: info@kbi.co.id
+  proposal_file: proposals/csr_kliringberjangkaindo.md
+  csr_name: PT Kliring Berjangka Indonesia (Persero)
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: krakatausteel
+  name: PT Krakatau Steel (Persero) Tbk
+  csr_website: https://krakatausteel.com
+  email: corsec@krakatausteel.com
+  proposal_file: proposals/csr_krakatausteel.md
+  csr_name: PT Krakatau Steel (Persero) Tbk
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: merpatinusantaraairl
+  name: PT Merpati Nusantara Airlines (Persero)
+  csr_website: https://merpati.co.id
+  email: csr@merpati.co.id
+  proposal_file: proposals/csr_merpatinusantaraairl.md
+  csr_name: PT Merpati Nusantara Airlines (Persero)
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: mesingayaelectrodant
+  name: PT Mesin Gaya Electro dan Trading (Persero)
+  csr_website: https://ptmeg.co.id
+  email: info@ptmeg.co.id
+  proposal_file: proposals/csr_mesingayaelectrodant.md
+  csr_name: PT Mesin Gaya Electro dan Trading (Persero)
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: mineralindustriindon
+  name: PT Mineral Industri Indonesia (Persero)
+  csr_website: https://minerba.co.id
+  email: info@minerba.co.id
+  proposal_file: proposals/csr_mineralindustriindon.md
+  csr_name: PT Mineral Industri Indonesia (Persero)
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: nindyakarya
+  name: PT Nindya Karya (Persero)
+  csr_website: https://nindyakarya.co.id
+  email: info@nindyakarya.co.id
+  proposal_file: proposals/csr_nindyakarya.md
+  csr_name: PT Nindya Karya (Persero)
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: palindonesia
+  name: PT PAL Indonesia (Persero)
+  csr_website: https://pal.co.id
+  email: info@pal.co.id
+  proposal_file: proposals/csr_palindonesia.md
+  csr_name: PT PAL Indonesia (Persero)
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: pegadaian
+  name: PT Pegadaian (Persero)
+  csr_website: https://pegadaian.co.id
+  email: csr@pegadaian.co.id
+  proposal_file: proposals/csr_pegadaian.md
+  csr_name: PT Pegadaian (Persero)
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: pelabuhanindonesia
+  name: PT Pelabuhan Indonesia (Persero)
+  csr_website: ''
+  email: customer.care@pelindo.co.id
+  proposal_file: proposals/csr_pelabuhanindonesia.md
+  csr_name: PT Pelabuhan Indonesia (Persero)
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: pelabuhanindonesiai
+  name: PT Pelabuhan Indonesia I (Persero)
+  csr_website: https://pelindo.co.id
+  email: csr@pelindo.co.id
+  proposal_file: proposals/csr_pelabuhanindonesiai.md
+  csr_name: PT Pelabuhan Indonesia I (Persero)
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: pelabuhanindonesiaii
+  name: PT Pelabuhan Indonesia II (Persero)
+  csr_website: https://pelindo.co.id
+  email: csr@pelindo.co.id
+  proposal_file: proposals/csr_pelabuhanindonesiaii.md
+  csr_name: PT Pelabuhan Indonesia II (Persero)
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: pelabuhanindonesiaii_iii
+  name: PT Pelabuhan Indonesia III (Persero)
+  csr_website: https://pelindo.co.id
+  email: csr@pelindo.co.id
+  proposal_file: proposals/csr_pelabuhanindonesiaii_iii.md
+  csr_name: PT Pelabuhan Indonesia III (Persero)
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: pelabuhanindonesiaiv
+  name: PT Pelabuhan Indonesia IV (Persero)
+  csr_website: https://pelindo.co.id
+  email: csr@pelindo.co.id
+  proposal_file: proposals/csr_pelabuhanindonesiaiv.md
+  csr_name: PT Pelabuhan Indonesia IV (Persero)
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: pelayaranbahteraadhi
+  name: PT Pelayaran Bahtera Adhiguna (Persero)
+  csr_website: https://bahteraadhiguna.co.id
+  email: info@bahteraadhiguna.co.id
+  proposal_file: proposals/csr_pelayaranbahteraadhi.md
+  csr_name: PT Pelayaran Bahtera Adhiguna (Persero)
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: pelayarannasionalind
+  name: PT Pelayaran Nasional Indonesia (Persero)
+  csr_website: https://pelni.co.id
+  email: info@pelni.co.id
+  proposal_file: proposals/csr_pelayarannasionalind.md
+  csr_name: PT Pelayaran Nasional Indonesia (Persero)
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: pembangunanperumahan
+  name: PT Pembangunan Perumahan (Persero) Tbk
+  csr_website: https://pp.co.id
+  email: info@pp.co.id
+  proposal_file: proposals/csr_pembangunanperumahan.md
+  csr_name: PT Pembangunan Perumahan (Persero) Tbk
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: penerbitdantokobukup
+  name: PT Penerbit dan Toko Buku Pradnya Paramita (Persero)
+  csr_website: https://pradnyaparamita.co.id
+  email: csr@pradnyaparamita.co.id
+  proposal_file: proposals/csr_penerbitdantokobukup.md
+  csr_name: PT Penerbit dan Toko Buku Pradnya Paramita (Persero)
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: penerbitandanperceta
+  name: PT Penerbitan dan Percetakan Balai Pustaka (Persero)
+  csr_website: https://balaipustaka.co.id
+  email: csr@balaipustaka.co.id
+  proposal_file: proposals/csr_penerbitandanperceta.md
+  csr_name: PT Penerbitan dan Percetakan Balai Pustaka (Persero)
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: pengembanganarmadani
+  name: PT Pengembangan Armada Niaga Nasional (Persero)
+  csr_website: https://www.pann-persero.co.id
+  email: csr@pann-persero.co.id
+  proposal_file: proposals/csr_pengembanganarmadani.md
+  csr_name: PT Pengembangan Armada Niaga Nasional (Persero)
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: pengembanganpariwisa
+  name: PT Pengembangan Pariwisata Indonesia (Persero)
+  csr_website: https://itdc.co.id
+  email: csr@injourney.id
+  proposal_file: proposals/csr_pengembanganpariwisa.md
+  csr_name: PT Pengembangan Pariwisata Indonesia (Persero)
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: pengerukanindonesia
+  name: PT Pengerukan Indonesia (Persero)
+  csr_website: https://pengerukan-indonesia.co.id
+  email: info@pengerukan-indonesia.co.id
+  proposal_file: proposals/csr_pengerukanindonesia.md
+  csr_name: PT Pengerukan Indonesia (Persero)
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: pengusahaandaerahind
+  name: PT Pengusahaan Daerah Industri Pulau Batam (Persero)
+  csr_website: https://www.bpbatam.go.id
+  email: csr@bpbatam.go.id
+  proposal_file: proposals/csr_pengusahaandaerahind.md
+  csr_name: PT Pengusahaan Daerah Industri Pulau Batam (Persero)
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: penjaminaninfrastruk
+  name: PT Penjaminan Infrastruktur Indonesia (Persero)
+  csr_website: https://www.ptpii.co.id
+  email: csr@ptpii.co.id
+  proposal_file: proposals/csr_penjaminaninfrastruk.md
+  csr_name: PT Penjaminan Infrastruktur Indonesia (Persero)
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: perikananindonesia
+  name: PT Perikanan Indonesia (Persero)
+  csr_website: https://perikanan-indonesia.co.id
+  email: info@perikanan-indonesia.co.id
+  proposal_file: proposals/csr_perikananindonesia.md
+  csr_name: PT Perikanan Indonesia (Persero)
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: perikanannusantara
+  name: PT Perikanan Nusantara (Persero)
+  csr_website: https://perinus.co.id
+  email: csr@perinus.co.id
+  proposal_file: proposals/csr_perikanannusantara.md
+  csr_name: PT Perikanan Nusantara (Persero)
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: perkebunannusantarai
+  name: PT Perkebunan Nusantara I (Persero)
+  csr_website: https://ptpn.co.id
+  email: info@ptpn.co.id
+  proposal_file: proposals/csr_perkebunannusantarai.md
+  csr_name: PT Perkebunan Nusantara I (Persero)
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: perkebunannusantarai_ii
+  name: PT Perkebunan Nusantara II (Persero)
+  csr_website: https://ptpn.co.id
+  email: info@ptpn.co.id
+  proposal_file: proposals/csr_perkebunannusantarai_ii.md
+  csr_name: PT Perkebunan Nusantara II (Persero)
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: perkebunannusantarai_iii
+  name: PT Perkebunan Nusantara III (Persero)
+  csr_website: https://ptpn.co.id
+  email: info@ptpn.co.id
+  proposal_file: proposals/csr_perkebunannusantarai_iii.md
+  csr_name: PT Perkebunan Nusantara III (Persero)
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: perkebunannusantarai_iv
+  name: PT Perkebunan Nusantara IV (Persero)
+  csr_website: https://ptpn.co.id
+  email: info@ptpn.co.id
+  proposal_file: proposals/csr_perkebunannusantarai_iv.md
+  csr_name: PT Perkebunan Nusantara IV (Persero)
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: perkebunannusantarai_ix
+  name: PT Perkebunan Nusantara IX (Persero)
+  csr_website: https://ptpn.co.id
+  email: info@ptpn.co.id
+  proposal_file: proposals/csr_perkebunannusantarai_ix.md
+  csr_name: PT Perkebunan Nusantara IX (Persero)
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: perkebunannusantarav
+  name: PT Perkebunan Nusantara V (Persero)
+  csr_website: https://ptpn.co.id
+  email: info@ptpn.co.id
+  proposal_file: proposals/csr_perkebunannusantarav.md
+  csr_name: PT Perkebunan Nusantara V (Persero)
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: perkebunannusantarav_vi
+  name: PT Perkebunan Nusantara VI (Persero)
+  csr_website: https://ptpn.co.id
+  email: info@ptpn.co.id
+  proposal_file: proposals/csr_perkebunannusantarav_vi.md
+  csr_name: PT Perkebunan Nusantara VI (Persero)
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: perkebunannusantarav_vii
+  name: PT Perkebunan Nusantara VII (Persero)
+  csr_website: https://ptpn.co.id
+  email: info@ptpn.co.id
+  proposal_file: proposals/csr_perkebunannusantarav_vii.md
+  csr_name: PT Perkebunan Nusantara VII (Persero)
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: perkebunannusantarav_viii
+  name: PT Perkebunan Nusantara VIII (Persero)
+  csr_website: https://ptpn.co.id
+  email: info@ptpn.co.id
+  proposal_file: proposals/csr_perkebunannusantarav_viii.md
+  csr_name: PT Perkebunan Nusantara VIII (Persero)
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: perkebunannusantarax
+  name: PT Perkebunan Nusantara X (Persero)
+  csr_website: https://ptpn.co.id
+  email: info@ptpn.co.id
+  proposal_file: proposals/csr_perkebunannusantarax.md
+  csr_name: PT Perkebunan Nusantara X (Persero)
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: perkebunannusantarax_xi
+  name: PT Perkebunan Nusantara XI (Persero)
+  csr_website: https://ptpn.co.id
+  email: info@ptpn.co.id
+  proposal_file: proposals/csr_perkebunannusantarax_xi.md
+  csr_name: PT Perkebunan Nusantara XI (Persero)
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: perkebunannusantarax_xii
+  name: PT Perkebunan Nusantara XII (Persero)
+  csr_website: https://ptpn.co.id
+  email: info@ptpn.co.id
+  proposal_file: proposals/csr_perkebunannusantarax_xii.md
+  csr_name: PT Perkebunan Nusantara XII (Persero)
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: perkebunannusantarax_xiii
+  name: PT Perkebunan Nusantara XIII (Persero)
+  csr_website: https://ptpn.co.id
+  email: info@ptpn.co.id
+  proposal_file: proposals/csr_perkebunannusantarax_xiii.md
+  csr_name: PT Perkebunan Nusantara XIII (Persero)
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: perkebunannusantarax_xiv
+  name: PT Perkebunan Nusantara XIV (Persero)
+  csr_website: https://ptpn.co.id
+  email: info@ptpn.co.id
+  proposal_file: proposals/csr_perkebunannusantarax_xiv.md
+  csr_name: PT Perkebunan Nusantara XIV (Persero)
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: permodalannasionalma
+  name: PT Permodalan Nasional Madani (Persero)
+  csr_website: https://pnmpersero.co.id
+  email: info@pnmpersero.co.id
+  proposal_file: proposals/csr_permodalannasionalma.md
+  csr_name: PT Permodalan Nasional Madani (Persero)
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: pertani
+  name: PT Pertani (Persero)
+  csr_website: https://pertani.co.id
+  email: info@pertani.co.id
+  proposal_file: proposals/csr_pertani.md
+  csr_name: PT Pertani (Persero)
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: perusahaangasnegara
+  name: PT Perusahaan Gas Negara (Persero) Tbk
+  csr_website: https://pgn.co.id
+  email: csr@pgn.co.id
+  proposal_file: proposals/csr_perusahaangasnegara.md
+  csr_name: PT Perusahaan Gas Negara (Persero) Tbk
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: perusahaanlistrikneg
+  name: PT Perusahaan Listrik Negara (Persero)
+  csr_website: ''
+  email: plnpeduli@pln.co.id
+  proposal_file: proposals/csr_perusahaanlistrikneg.md
+  csr_name: PT Perusahaan Listrik Negara (Persero)
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: perusahaanpengelolaa
+  name: PT Perusahaan Pengelola Aset (Persero)
+  csr_website: https://ppapersero.co.id
+  email: info@ppapersero.co.id
+  proposal_file: proposals/csr_perusahaanpengelolaa.md
+  csr_name: PT Perusahaan Pengelola Aset (Persero)
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: perusahaanperdaganga
+  name: PT Perusahaan Perdagangan Indonesia (Persero)
+  csr_website: https://ppi.co.id
+  email: info@ppi.co.id
+  proposal_file: proposals/csr_perusahaanperdaganga.md
+  csr_name: PT Perusahaan Perdagangan Indonesia (Persero)
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: petrokimiagresik
+  name: PT Petrokimia Gresik (Persero)
+  csr_website: https://petrokimia-gresik.com
+  email: csr@petrokimia-gresik.com
+  proposal_file: proposals/csr_petrokimiagresik.md
+  csr_name: PT Petrokimia Gresik (Persero)
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: posindonesia
+  name: PT Pos Indonesia (Persero)
+  csr_website: https://posindonesia.co.id
+  email: info@posindonesia.co.id
+  proposal_file: proposals/csr_posindonesia.md
+  csr_name: PT Pos Indonesia (Persero)
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: pradnyaparamita
+  name: PT Pradnya Paramita (Persero)
+  csr_website: https://pradnyaparamita.co.id
+  email: csr@pradnyaparamita.co.id
+  proposal_file: proposals/csr_pradnyaparamita.md
+  csr_name: PT Pradnya Paramita (Persero)
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: primissima
+  name: PT Primissima (Persero)
+  csr_website: https://primissima.co.id
+  email: csr@primissima.co.id
+  proposal_file: proposals/csr_primissima.md
+  csr_name: PT Primissima (Persero)
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: produksifilmnegara
+  name: PT Produksi Film Negara (Persero)
+  csr_website: http://pfn.co.id
+  email: info@pfn.co.id
+  proposal_file: proposals/csr_produksifilmnegara.md
+  csr_name: PT Produksi Film Negara (Persero)
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: pupukiskandarmuda
+  name: PT Pupuk Iskandar Muda (Persero)
+  csr_website: https://ptpim.co.id
+  email: konsumen@pupuk-indonesia.com
+  proposal_file: proposals/csr_pupukiskandarmuda.md
+  csr_name: PT Pupuk Iskandar Muda (Persero)
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: pupukkalimantantimur
+  name: PT Pupuk Kalimantan Timur (Persero)
+  csr_website: https://pupukkaltim.com
+  email: konsumen@pupuk-indonesia.com
+  proposal_file: proposals/csr_pupukkalimantantimur.md
+  csr_name: PT Pupuk Kalimantan Timur (Persero)
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: pupukkujang
+  name: PT Pupuk Kujang (Persero)
+  csr_website: https://pupukkujang.co.id
+  email: konsumen@pupuk-indonesia.com
+  proposal_file: proposals/csr_pupukkujang.md
+  csr_name: PT Pupuk Kujang (Persero)
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: pupuksriwijaya
+  name: PT Pupuk Sriwijaya (Persero)
+  csr_website: https://pupuksriwijaya.com
+  email: konsumen@pupuk-indonesia.com
+  proposal_file: proposals/csr_pupuksriwijaya.md
+  csr_name: PT Pupuk Sriwijaya (Persero)
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: rajawalinusantaraind
+  name: PT Rajawali Nusantara Indonesia (Persero)
+  csr_website: https://rni.co.id
+  email: info@rni.co.id
+  proposal_file: proposals/csr_rajawalinusantaraind.md
+  csr_name: PT Rajawali Nusantara Indonesia (Persero)
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: reasuransiindonesiau
+  name: PT Reasuransi Indonesia Utama (Persero)
+  csr_website: https://reindonesia.co.id
+  email: info@reindonesia.co.id
+  proposal_file: proposals/csr_reasuransiindonesiau.md
+  csr_name: PT Reasuransi Indonesia Utama (Persero)
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: sanghyangseri
+  name: PT Sang Hyang Seri (Persero)
+  csr_website: https://ptsanghyangseri.co.id
+  email: csr@sanghyangseri.co.id
+  proposal_file: proposals/csr_sanghyangseri.md
+  csr_name: PT Sang Hyang Seri (Persero)
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: saranakarya
+  name: PT Sarana Karya (Persero)
+  csr_website: https://sarana.co.id
+  email: info@saranakarya.co.id
+  proposal_file: proposals/csr_saranakarya.md
+  csr_name: PT Sarana Karya (Persero)
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: saranamultiinfrastru
+  name: PT Sarana Multi Infrastruktur (Persero)
+  csr_website: https://ptsmico.id
+  email: info@ptsmico.id
+  proposal_file: proposals/csr_saranamultiinfrastru.md
+  csr_name: PT Sarana Multi Infrastruktur (Persero)
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: saranamultigriyafina
+  name: PT Sarana Multigriya Finansial (Persero)
+  csr_website: https://smf.co.id
+  email: info@smf.co.id
+  proposal_file: proposals/csr_saranamultigriyafina.md
+  csr_name: PT Sarana Multigriya Finansial (Persero)
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: sarinah
+  name: PT Sarinah (Persero)
+  csr_website: https://sarinah.co.id
+  email: csr@sarinah.co.id
+  proposal_file: proposals/csr_sarinah.md
+  csr_name: PT Sarinah (Persero)
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: semenbaturaja
+  name: PT Semen Baturaja (Persero) Tbk
+  csr_website: https://semenbaturaja.co.id
+  email: csr@semenbaturaja.co.id
+  proposal_file: proposals/csr_semenbaturaja.md
+  csr_name: PT Semen Baturaja (Persero) Tbk
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: semengresik
+  name: PT Semen Gresik (Persero) Tbk
+  csr_website: https://semengresik.co.id
+  email: info@semengresik.co.id
+  proposal_file: proposals/csr_semengresik.md
+  csr_name: PT Semen Gresik (Persero) Tbk
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: semenindonesia
+  name: PT Semen Indonesia (Persero) Tbk
+  csr_website: https://semenindonesia.com
+  email: info@semenindonesia.com
+  proposal_file: proposals/csr_semenindonesia.md
+  csr_name: PT Semen Indonesia (Persero) Tbk
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: semenkupang
+  name: PT Semen Kupang (Persero)
+  csr_website: https://semenkupang.co.id
+  email: info@semenkupang.co.id
+  proposal_file: proposals/csr_semenkupang.md
+  csr_name: PT Semen Kupang (Persero)
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: semenpadang
+  name: PT Semen Padang (Persero)
+  csr_website: https://semenpadang.co.id
+  email: csr@semenpadang.co.id
+  proposal_file: proposals/csr_semenpadang.md
+  csr_name: PT Semen Padang (Persero)
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: sementonasa
+  name: PT Semen Tonasa (Persero)
+  csr_website: https://sementonasa.co.id
+  email: csr@sementonasa.co.id
+  proposal_file: proposals/csr_sementonasa.md
+  csr_name: PT Semen Tonasa (Persero)
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: superintendingcompan
+  name: PT Superintending Company of Indonesia (Persero)
+  csr_website: https://succofindo.co.id
+  email: info@succofindo.co.id
+  proposal_file: proposals/csr_superintendingcompan.md
+  csr_name: PT Superintending Company of Indonesia (Persero)
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: surveyorindonesia
+  name: PT Surveyor Indonesia (Persero)
+  csr_website: https://surveyorindonesia.co.id
+  email: info@surveyorindonesia.co.id
+  proposal_file: proposals/csr_surveyorindonesia.md
+  csr_name: PT Surveyor Indonesia (Persero)
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: tamanwisatacandiboro
+  name: PT Taman Wisata Candi Borobudur, Prambanan, dan Ratu Boko (Persero)
+  csr_website: https://borobudurpark.com
+  email: info@borobudurpark.com
+  proposal_file: proposals/csr_tamanwisatacandiboro.md
+  csr_name: PT Taman Wisata Candi Borobudur, Prambanan, dan Ratu Boko (Persero)
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: tambangbatubarabukit
+  name: PT Tambang Batubara Bukit Asam (Persero)
+  csr_website: https://bukitasam.co.id
+  email: info@bukitasam.co.id
+  proposal_file: proposals/csr_tambangbatubarabukit.md
+  csr_name: PT Tambang Batubara Bukit Asam (Persero)
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: telekomunikasiindone
+  name: PT Telekomunikasi Indonesia (Persero) Tbk
+  csr_website: ''
+  email: sustainability@telkom.co.id
+  proposal_file: proposals/csr_telekomunikasiindone.md
+  csr_name: PT Telekomunikasi Indonesia (Persero) Tbk
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: televisirepublikindo
+  name: PT Televisi Republik Indonesia (Persero)
+  csr_website: https://tvri.go.id
+  email: info@tvri.go.id
+  proposal_file: proposals/csr_televisirepublikindo.md
+  csr_name: PT Televisi Republik Indonesia (Persero)
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: timah
+  name: PT Timah (Persero) Tbk
+  csr_website: https://timah.com
+  email: corsec@timah.co.id
+  proposal_file: proposals/csr_timah.md
+  csr_name: PT Timah (Persero) Tbk
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: varunatirtaprakasya
+  name: PT Varuna Tirta Prakasya (Persero)
+  csr_website: https://varunatirta.co.id
+  email: info@varunatirta.co.id
+  proposal_file: proposals/csr_varunatirtaprakasya.md
+  csr_name: PT Varuna Tirta Prakasya (Persero)
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: bulog
+  name: Perum BULOG
+  csr_website: https://bulog.co.id
+  email: csr@bulog.co.id
+  proposal_file: proposals/csr_bulog.md
+  csr_name: Perum BULOG
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: damri
+  name: Perum DAMRI
+  csr_website: https://damri.co.id
+  email: csr@damri.co.id
+  proposal_file: proposals/csr_damri.md
+  csr_name: Perum DAMRI
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: jasatirtai
+  name: Perum Jasa Tirta I
+  csr_website: https://jasatirta1.co.id
+  email: csr@jasatirtai.co.id
+  proposal_file: proposals/csr_jasatirtai.md
+  csr_name: Perum Jasa Tirta I
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: jasatirtaii
+  name: Perum Jasa Tirta II
+  csr_website: https://jasatirta1.co.id
+  email: csr@jasatirtaii.co.id
+  proposal_file: proposals/csr_jasatirtaii.md
+  csr_name: Perum Jasa Tirta II
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: kehutanannegara
+  name: Perum Kehutanan Negara
+  csr_website: https://perhutani.co.id
+  email: csr@perhutani.co.id
+  proposal_file: proposals/csr_kehutanannegara.md
+  csr_name: Perum Kehutanan Negara
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: lembagakantorberitan
+  name: Perum Lembaga Kantor Berita Nasional Antara
+  csr_website: https://antaranews.com
+  email: csr@antara.co.id
+  proposal_file: proposals/csr_lembagakantorberitan.md
+  csr_name: Perum Lembaga Kantor Berita Nasional Antara
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: lembagapenyelenggara
+  name: Perum Lembaga Penyelenggara Pelayanan Navigasi Penerbangan Indonesia
+  csr_website: https://airnavindonesia.co.id
+  email: komunikasi.korporasi@len.co.id
+  proposal_file: proposals/csr_lembagapenyelenggara.md
+  csr_name: Perum Lembaga Penyelenggara Pelayanan Navigasi Penerbangan Indonesia
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: pembangunanperumahan_2
+  name: Perum Pembangunan Perumahan Nasional
+  csr_website: https://pp.co.id
+  email: info@pp.co.id
+  proposal_file: proposals/csr_pembangunanperumahan_2.md
+  csr_name: Perum Pembangunan Perumahan Nasional
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: pengangkutanpenumpan
+  name: Perum Pengangkutan Penumpang Djakarta
+  csr_website: https://ppd.co.id
+  email: info@ppd.co.id
+  proposal_file: proposals/csr_pengangkutanpenumpan.md
+  csr_name: Perum Pengangkutan Penumpang Djakarta
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: percetakannegararepu
+  name: Perum Percetakan Negara Republik Indonesia
+  csr_website: https://perumpercetakannegara.co.id
+  email: info@perumpercetakannegara.co.id
+  proposal_file: proposals/csr_percetakannegararepu.md
+  csr_name: Perum Percetakan Negara Republik Indonesia
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
+- key: percetakanuangrepubl
+  name: Perum Percetakan Uang Republik Indonesia
+  csr_website: https://peruri.co.id
+  email: info@peruri.co.id
+  proposal_file: proposals/csr_percetakanuangrepubl.md
+  csr_name: Perum Percetakan Uang Republik Indonesia
+  programs:
+  - renovasi_kelas
+  - beasiswa
+  sector: BUMN
+  csr_focus: Pendidikan
+  total_amount: Rp 100.000.000
 smtp:
   host: smtp.gmail.com
   port: 587
   user: grahainsanmandiri@gmail.com
   from_addr: admin@ypsma.org
-  from_name: "YPSMA - Yayasan Pendidikan dan Sosial Ma'arif"
+  from_name: YPSMA - Yayasan Pendidikan dan Sosial Ma'arif
