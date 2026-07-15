@@ -83,6 +83,7 @@ export default function DonationForm({ isOpen, onClose, defaultCampaign, default
     onClose();
   }, [resetFormState, onClose, defaultCampaign]);
 
+
   const handleCustomNominalChange = useCallback((value: string) => {
     const cleaned = value.replace(/[^0-9]/g, '');
     setCustomNominal(cleaned);
@@ -149,10 +150,17 @@ export default function DonationForm({ isOpen, onClose, defaultCampaign, default
           });
         }
 
-        // Open Snap popup
         window.snap.pay(data.token, {
-          onSuccess: () => { window.location.href = data.finish_url; },
-          onPending: () => { window.location.href = data.finish_url + '&status=pending'; },
+          onSuccess: () => {
+            const label = defaultCampaignLabel || DONATION_TYPES.find(t => t.id === donationType)?.label || 'Donasi';
+            const msg = `Halo kak, saya ${name} sudah melakukan donasi untuk ${label} sebesar Rp${selectedAmount.toLocaleString('id-ID')}. Mohon konfirmasinya ya, terima kasih.`;
+            window.location.href = `https://wa.me/6282234551160?text=${encodeURIComponent(msg)}`;
+          },
+          onPending: () => {
+            const label = defaultCampaignLabel || DONATION_TYPES.find(t => t.id === donationType)?.label || 'Donasi';
+            const msg = `Halo kak, saya ${name} sudah melakukan donasi untuk ${label} sebesar Rp${selectedAmount.toLocaleString('id-ID')}. Mohon konfirmasinya ya, terima kasih.`;
+            window.location.href = `https://wa.me/6282234551160?text=${encodeURIComponent(msg)}`;
+          },
           onError: () => {
             setErrors({ submit: 'Pembayaran gagal, coba lagi' });
             setSubmitting(false);
@@ -169,7 +177,6 @@ export default function DonationForm({ isOpen, onClose, defaultCampaign, default
       setStep((s) => s + 1);
     }
   }, [step, donationType, nominal, numericCustom, paymentMethod, name, email, phone, selectedAmount]);
-
   const handleBack = useCallback(() => {
     if (step === 2 && defaultCampaign) {
       handleClose();
