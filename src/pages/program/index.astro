@@ -2,43 +2,363 @@
 import MainLayout from '../../layouts/MainLayout.astro';
 import Navbar from '../../components/sections/Navbar.astro';
 import Footer from '../../components/sections/Footer.astro';
-import { CAMPAIGNS } from '../../data/campaigns';
+import TestimonialSection from '../../components/sections/TestimonialSection.astro';
+import FAQSection from '../../components/sections/FAQSection.astro';
+import { CAMPAIGNS, type Campaign } from '../../data/campaigns';
+import { CONTACT_INFO } from '../../lib/constants';
+import { ORG_ESTABLISHED } from '../../lib/constants';
+
+// ── Priority ordering ──────────────────────────────────────────────
+const PRIORITY_SLUGS = [
+  'sedekah-pangan-santri',   // 🥇
+  'orang-tua-asuh',           // 🥈
+  'sedekah-anak-yatim',       // 🥉
+];
+
+const sortCampaigns = (a: Campaign, b: Campaign) => {
+  const ai = PRIORITY_SLUGS.indexOf(a.slug);
+  const bi = PRIORITY_SLUGS.indexOf(b.slug);
+  if (ai !== -1 && bi !== -1) return ai - bi;
+  if (ai !== -1) return -1;
+  if (bi !== -1) return 1;
+  return 0;
+};
+
+const allSorted = [...CAMPAIGNS].sort(sortCampaigns);
+const priorityCampaigns = allSorted.filter(c => PRIORITY_SLUGS.includes(c.slug));
+const otherCampaigns = allSorted.filter(c => !PRIORITY_SLUGS.includes(c.slug));
+
+// ── Helpers ────────────────────────────────────────────────────────
+function parseRupiah(s: string): number {
+  return parseInt(s.replace(/[^\d]/g, ''), 10) || 0;
+}
+function shortRupiah(amount: number): string {
+  if (amount >= 1_000_000) return `Rp ${(amount / 1_000_000).toFixed(1)}jt`;
+  if (amount >= 1_000) return `Rp ${(amount / 1_000).toFixed(0)}rb`;
+  return `Rp ${amount}`;
+}
+
+const CTA_LABELS: Record<string, string> = {
+  'sedekah-pangan-santri': 'Beri Makan Santri',
+  'sedekah-al-quran': 'Hadiahkan Al-Qur\'an',
+  'orang-tua-asuh': 'Jadi Orang Tua Asuh',
+  'patungan-listrik': 'Cahayakan Malam Mereka',
+  'sumur-air-bersih': 'Bangun MCK',
+  'sarana-prasarana': 'Bantu Sarpras',
+  'pengelolaan-sampah': 'Kelola Sampah',
+  'sedekah-anak-yatim': 'Santuni Yatim',
+};
+
+function urgencyLabel(progress: number | undefined): { label: string; color: string } | null {
+  if (progress === undefined) return null;
+  if (progress >= 75) return { label: '🔥 Hampir Tercapai', color: 'bg-green-500' };
+  if (progress >= 50) return { label: '⚡ Butuh Sekarang', color: 'bg-coral-500' };
+  if (progress >= 25) return { label: '📢 Masih Berjalan', color: 'bg-secondary-500' };
+  return { label: '🔴 Sangat Membutuhkan', color: 'bg-red-500' };
+}
+
+const trustStats = [
+  { value: `${ORG_ESTABLISHED}`, label: 'Berdiri Sejak' },
+  { value: '600+', label: 'Santri & Siswa Aktif' },
+  { value: '3.000+', label: 'Alumni Tersebar' },
+  { value: 'Terdaftar', label: 'Kemenkumham RI' },
+];
 ---
 
-<MainLayout title="Program Donasi" description="Program donasi YPSMA — bantu pendidikan dan sosial">
+<MainLayout
+  title="Program Donasi — YPSM Jombang"
+  description="Pilih program donasi yang paling menyentuh hati. Santuni pangan, yatim, orang tua asuh, dan kebutuhan santri penghafal Al-Qur'an."
+>
   <Navbar />
-  <section class="py-16 md:py-20 bg-gradient-to-b from-primary-900 to-primary-800 text-white">
-    <div class="container mx-auto px-4 text-center">
-      <h1 class="text-4xl md:text-5xl font-heading font-bold mb-4">Program Donasi</h1>
-      <p class="text-lg text-white/80 max-w-2xl mx-auto">
-        Pilih program donasi yang paling sesuai dengan keinginan Anda. Setiap donasi adalah investasi akhirat yang pahalanya terus mengalir.
+
+  <!-- ════════════════════════════════════════════════════════════════ -->
+  <!-- HERO — emotion-driven                                           -->
+  <!-- ════════════════════════════════════════════════════════════════ -->
+  <section class="relative min-h-[80vh] flex items-center overflow-hidden">
+    <img
+      src="/images/drive-new/makan/bagi-makan-1.webp"
+      alt="Santri sedang makan bersama"
+      width="1920"
+      height="1080"
+      class="absolute inset-0 w-full h-full object-cover"
+      loading="eager"
+    />
+    <div class="absolute inset-0 bg-gradient-to-r from-primary-900/90 via-primary-900/70 to-primary-900/60"></div>
+    <div class="relative z-10 max-w-4xl mx-auto px-4 py-20 text-center">
+      <div class="h-1 w-20 bg-secondary-500 mx-auto rounded mb-4"></div>
+      <div class="inline-block bg-coral-500/20 text-coral-300 text-xs md:text-sm px-3 md:px-4 py-1.5 rounded-full mb-4 md:mb-6 font-medium">
+        🔴 8 Program Prioritas — Semua Butuh Bantuan Anda
+      </div>
+      <h1 class="text-2xl md:text-6xl font-bold text-white font-heading leading-tight mb-3 md:mb-4">
+        <span class="md:hidden">600 Santri Masih Bergantung Pada Kebaikan Anda</span>
+        <span class="hidden md:inline">600 Santri Masih Bergantung<br />
+        <span class="text-secondary-400">Pada Kebaikan Anda</span></span>
+      </h1>
+      <p class="text-sm md:text-lg text-white/80 max-w-3xl mx-auto mb-3 md:mb-4 leading-relaxed">
+        Mereka belajar dan menghafal Al-Qur'an setiap hari. Tapi kebutuhan makan, listrik,
+        air bersih, dan biaya pendidikan masih bergantung pada para donatur seperti Anda.
       </p>
+      <p class="text-xs md:text-base text-white/60 max-w-2xl mx-auto mb-6 md:mb-8 italic">
+        "Cukup <strong class="text-secondary-400">Rp 50.000/hari</strong> = satu santri hafidz bisa terus
+        belajar, makan, &amp; tinggal di pondok."
+      </p>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a
+          href="#program-prioritas"
+          class="bg-coral-500 hover:bg-coral-600 text-white px-10 py-4 rounded-lg font-bold text-lg transition-all duration-200 shadow-soft hover:shadow-medium"
+        >
+          ❤️ Bantu Santri Hafidz Sekarang
+        </a>
+        <a
+          href="#program-lainnya"
+          class="border-2 border-white/30 text-white hover:bg-white/10 px-10 py-4 rounded-lg font-semibold transition-all duration-200"
+        >
+          Lihat Semua Program
+        </a>
+      </div>
     </div>
   </section>
 
-  <section class="py-16 bg-white">
-    <div class="container mx-auto px-4">
-      <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-        {CAMPAIGNS.map(c => (
-          <a href={`/program/${c.slug}/`} class="group block bg-white rounded-xl overflow-hidden shadow-soft hover:shadow-strong transition-all duration-200 hover:-translate-y-1 border border-neutral-100">
-            <div class="aspect-[16/9] overflow-hidden">
-              <img src={c.heroImage} alt={c.title} width="800" height="450" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-            </div>
-            <div class="p-6">
-              <span class="text-xs font-medium text-secondary-600 bg-secondary-50 px-3 py-1 rounded-full">{c.badge}</span>
-              <h3 class="text-xl font-heading font-bold text-primary-900 mt-3 mb-2 group-hover:text-secondary-600 transition-colors">{c.title}</h3>
-              <p class="text-neutral-600 text-sm leading-relaxed mb-4">{c.description}</p>
-              <div class="flex items-center text-sm font-semibold text-secondary-600 group-hover:gap-2 transition-all">
-                Donasi Sekarang
-                <svg class="w-4 h-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                </svg>
-              </div>
-            </div>
-          </a>
+  <!-- ════════════════════════════════════════════════════════════════ -->
+  <!-- TRUST BADGES                                                     -->
+  <!-- ════════════════════════════════════════════════════════════════ -->
+  <section class="bg-white border-b border-neutral-100 py-10">
+    <div class="max-w-5xl mx-auto px-4">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+        {trustStats.map(s => (
+          <div class="text-center">
+            <div class="text-2xl md:text-3xl font-bold text-secondary-600">{s.value}</div>
+            <div class="text-sm text-neutral-500 mt-1">{s.label}</div>
+          </div>
         ))}
       </div>
     </div>
   </section>
+
+  <!-- ════════════════════════════════════════════════════════════════ -->
+  <!-- PROGRAM PRIORITAS — top 3 featured cards with progress bars      -->
+  <!-- ════════════════════════════════════════════════════════════════ -->
+  <section id="program-prioritas" class="bg-gradient-to-b from-primary-900 to-primary-800 text-white py-20">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="text-center mb-4">
+        <span class="inline-block bg-coral-500 text-white text-xs font-bold px-3 py-1 rounded-full mb-3">🔥 Paling Dibutuhkan</span>
+        <h2 class="text-3xl md:text-4xl font-heading font-bold">Program Prioritas</h2>
+        <p class="text-white/60 mt-2 max-w-xl mx-auto">
+          Tiga program yang paling mendesak dan berdampak luas untuk 600 santri
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6 mt-10">
+        {priorityCampaigns.map((c, i) => {
+          const progress = c.campaignUpdate?.progress ?? 0;
+          const budgetNum = parseRupiah(c.budgetTotal);
+          const terkumpul = Math.round(budgetNum * progress / 100);
+          const urgency = urgencyLabel(progress);
+          const cta = CTA_LABELS[c.slug] ?? 'Donasi Sekarang';
+
+          return (
+            <div
+              class={[
+                'relative rounded-2xl overflow-hidden flex flex-col',
+                'bg-white/10 backdrop-blur-sm border border-white/10',
+                'hover:border-secondary-500/50 transition-all duration-300',
+                i === 0 ? 'md:scale-105 ring-2 ring-secondary-500/40' : '',
+              ].join(' ')}
+            >
+              {urgency && (
+                <div class={`absolute top-3 right-3 ${urgency.color} text-white text-[10px] font-bold px-2.5 py-1 rounded-full z-10`}>
+                  {urgency.label}
+                </div>
+              )}
+              <div class="aspect-[16/9] overflow-hidden">
+                <img
+                  src={c.heroImage}
+                  alt={c.title}
+                  width="800"
+                  height="450"
+                  class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                  loading={i === 0 ? 'eager' : 'lazy'}
+                />
+              </div>
+              <div class="p-5 flex flex-col flex-1">
+                <span class="inline-block text-[10px] font-semibold text-secondary-300 bg-secondary-500/10 px-2.5 py-0.5 rounded-full mb-2 w-fit">
+                  {c.badge}
+                </span>
+                <h3 class="text-lg font-bold text-white mb-1.5 leading-snug">{c.title}</h3>
+                <p class="text-white/70 text-sm mb-3 flex-1">{c.subtitle.replace(/\d+/, match => match)}</p>
+                <div class="flex flex-wrap gap-3 mb-3 text-xs">
+                  {c.stats.slice(0, 2).map(s => (
+                    <span class="text-white/60">
+                      <strong class="text-secondary-400">{s.value}</strong> {s.label}
+                    </span>
+                  ))}
+                  {c.donaturCount && (
+                    <span class="text-white/60">
+                      <strong class="text-secondary-400">{c.donaturCount.toLocaleString()}</strong> Donatur
+                    </span>
+                  )}
+                </div>
+                <div class="mb-4">
+                  <div class="flex justify-between text-xs mb-1">
+                    <span class="text-white/70">
+                      Terkumpul: <strong class="text-secondary-400">{shortRupiah(terkumpul)}</strong>
+                    </span>
+                    <span class="text-white/50">Target: {shortRupiah(budgetNum)}</span>
+                  </div>
+                  <div class="w-full bg-white/10 rounded-full h-2.5 overflow-hidden">
+                    <div
+                      class="bg-gradient-to-r from-secondary-500 to-secondary-400 h-2.5 rounded-full transition-all duration-700"
+                      style={`width: ${Math.min(progress, 100)}%`}
+                    ></div>
+                  </div>
+                  <div class="text-right text-xs text-white/50 mt-0.5">{progress}%</div>
+                </div>
+                <a
+                  href={`/program/${c.slug}/`}
+                  class="inline-block bg-coral-500 hover:bg-coral-600 text-white px-5 py-2.5 rounded-lg font-semibold text-sm transition-all duration-200 text-center"
+                >
+                  {cta}
+                </a>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════════════ -->
+  <!-- PROGRAM LAINNYA — remaining 5 compact cards                      -->
+  <!-- ════════════════════════════════════════════════════════════════ -->
+  <section id="program-lainnya" class="bg-neutral-50 py-16">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-2xl md:text-3xl font-heading font-bold text-primary-900 text-center mb-2">
+        Program Lainnya
+      </h2>
+      <p class="text-neutral-500 text-center mb-10 max-w-lg mx-auto text-sm">
+        Program lain yang juga membutuhkan dukungan Anda
+      </p>
+      <div class="grid md:grid-cols-3 gap-6">
+        {otherCampaigns.map(c => {
+          const progress = c.campaignUpdate?.progress ?? 0;
+          const budgetNum = parseRupiah(c.budgetTotal);
+          const terkumpul = Math.round(budgetNum * progress / 100);
+          const urgency = urgencyLabel(progress);
+          const cta = CTA_LABELS[c.slug] ?? 'Donasi Sekarang';
+
+          return (
+            <a
+              href={`/program/${c.slug}/`}
+              class="group block bg-white rounded-xl overflow-hidden shadow-soft hover:shadow-strong transition-all duration-200 hover:-translate-y-1 border border-neutral-100"
+            >
+              <div class="aspect-[16/9] overflow-hidden relative">
+                <img
+                  src={c.heroImage}
+                  alt={c.title}
+                  width="800"
+                  height="450"
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  loading="lazy"
+                />
+                {urgency && (
+                  <div class={`absolute top-2 right-2 ${urgency.color} text-white text-[10px] font-bold px-2 py-0.5 rounded-full`}>
+                    {urgency.label}
+                  </div>
+                )}
+              </div>
+              <div class="p-5">
+                <span class="text-[10px] font-semibold text-secondary-600 bg-secondary-50 px-2 py-0.5 rounded-full">{c.badge}</span>
+                <h3 class="text-base font-bold text-primary-900 mt-2 mb-1 group-hover:text-secondary-600 transition-colors">{c.title}</h3>
+                <p class="text-neutral-600 text-sm leading-relaxed mb-3">{c.subtitle}</p>
+                <div class="mb-3">
+                  <div class="flex justify-between text-xs mb-1">
+                    <span class="text-neutral-400">{shortRupiah(terkumpul)} terkumpul</span>
+                    <span class="text-neutral-400">Target {shortRupiah(budgetNum)}</span>
+                  </div>
+                  <div class="w-full bg-neutral-100 rounded-full h-1.5">
+                    <div class="bg-secondary-500 h-1.5 rounded-full" style={`width: ${Math.min(progress, 100)}%`}></div>
+                  </div>
+                </div>
+                <div class="flex items-center text-sm font-semibold text-secondary-600 group-hover:gap-2 transition-all">
+                  {cta}
+                  <svg class="w-4 h-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                  </svg>
+                </div>
+              </div>
+            </a>
+          );
+        })}
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════════════ -->
+  <!-- TESTIMONI                                                        -->
+  <!-- ════════════════════════════════════════════════════════════════ -->
+  <TestimonialSection />
+
+  <!-- ════════════════════════════════════════════════════════════════ -->
+  <!-- FAQ                                                              -->
+  <!-- ════════════════════════════════════════════════════════════════ -->
+  <FAQSection />
+
+  <!-- ════════════════════════════════════════════════════════════════ -->
+  <!-- FINAL CTA                                                        -->
+  <!-- ════════════════════════════════════════════════════════════════ -->
+  <section class="bg-primary-900 text-white py-20">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <div class="h-1 w-20 bg-secondary-500 mx-auto rounded mb-6"></div>
+      <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">
+        Setiap Detik Berlalu, Mereka Menunggu
+      </h2>
+      <p class="text-white/70 text-lg max-w-2xl mx-auto mb-4 leading-relaxed">
+        600 santri dan siswa bangun setiap pagi dengan semangat menghafal Al-Qur'an.
+        Tapi tanpa dukungan Anda, perjuangan mereka melawan keterbatasan akan semakin berat.
+      </p>
+      <p class="text-secondary-400 font-semibold mb-10">
+        Anda bisa menjadi alasan mereka tersenyum hari ini.
+      </p>
+
+      <div class="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto mb-12">
+        <div class="bg-white/10 backdrop-blur-sm rounded-xl p-8 text-center border border-white/10">
+          <div class="text-5xl mb-4">❤️</div>
+          <h3 class="text-xl font-bold text-white mb-3">Cukupkan Pangan Santri</h3>
+          <p class="text-white/60 mb-6">
+            Rp 50.000 cukup untuk 2 santri makan sehari. Lapar menghambat hafalan — Anda bisa
+            memastikan mereka fokus ngaji dengan perut kenyang.
+          </p>
+          <a
+            href="/program/sedekah-pangan-santri/"
+            class="inline-block bg-coral-500 hover:bg-coral-600 text-white px-6 py-3 rounded-lg font-semibold transition-all w-full"
+          >
+            Beri Makan Santri Hari Ini
+          </a>
+        </div>
+        <div class="bg-white/10 backdrop-blur-sm rounded-xl p-8 text-center border border-secondary-500/30">
+          <div class="text-5xl mb-4">📋</div>
+          <h3 class="text-xl font-bold text-white mb-3">Jadi Wali Santri Yatim</h3>
+          <p class="text-white/60 mb-6">
+            Rp 50.000/bulan — kurang dari Rp 1.700/hari. Jadilah orang tua asuh bagi santri yatim setiap bulannya.
+          </p>
+          <a
+            href="/program/sedekah-anak-yatim/"
+            class="inline-block bg-secondary-500 hover:bg-secondary-600 text-primary-900 px-6 py-3 rounded-lg font-semibold transition-all w-full"
+          >
+            Santuni Anak Yatim Tiap Bulan
+          </a>
+        </div>
+      </div>
+
+      <div class="border-t border-white/10 pt-8">
+        <p class="text-white/50 text-sm">
+          Ada pertanyaan? Hubungi kami via
+          <a href={`https://wa.me/${CONTACT_INFO.wa}`} class="text-secondary-400 underline mx-1">WhatsApp</a>
+          atau lihat <a href="#faq" class="text-secondary-400 underline">FAQ</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
   <Footer />
 </MainLayout>
