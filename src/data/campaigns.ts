@@ -747,10 +747,10 @@ export const CAMPAIGNS: Campaign[] = [
     ],
     tokoh: {
       name: 'Aisyah',
-      age: '9 tahun',
+      age: '19 tahun',
       asal: 'Desa Mojowarno',
       story: 'Ayah Aisyah meninggal setahun lalu karena sakit. Ibunya bekerja serabutan sebagai buruh cuci. Aisyah, duduk di kelas 3 SD, hampir putus sekolah karena tidak punya seragam dan buku. Santunan yayasan menjadi satu-satunya harapan ia tetap bisa sekolah.',
-      photo: '/images/campaigns/aisyah-closeup.webp',
+      photo: '/images/campaigns/aisyah-yatim.webp',
       quote: 'Kakak, terima kasih sudah peduli sama aku. Aku mau sekolah biar bisa bantu ibu.',
     },
     testimoni: [
