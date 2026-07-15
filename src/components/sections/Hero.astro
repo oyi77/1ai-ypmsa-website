@@ -19,29 +19,28 @@
     <!-- Gold divider -->
     <div class="h-1 w-20 bg-secondary-500 mx-auto rounded mb-4"></div>
 
-    <!-- Urgency pill -->
-    <div class="inline-block bg-coral-500/20 text-coral-300 text-sm px-4 py-1.5 rounded-full mb-6 font-medium">
-      🚨 Target Bulanan: Rp 150 Juta — Terkumpul Rp 85 Juta — Sisa 12 Hari Lagi
+    <!-- Urgency pill — simplified, 2 numbers only -->
+    <div class="inline-block bg-coral-500/20 text-coral-300 text-xs md:text-sm px-3 md:px-4 py-1.5 rounded-full mb-4 md:mb-6 font-medium">
+      🚨 Sisa 12 Hari — Target Bulanan: Rp 150 Juta
     </div>
 
-    <!-- Problem Headline — human hook, not institutional -->
-    <h1 class="text-3xl md:text-5xl font-bold text-white font-heading leading-tight mb-4">
-      Jam 03.30, Ahmad sudah bangun menghafal Al-Qur'an.<br class="hidden sm:block" />
-      <span class="text-secondary-400">Tapi sebagian masih belajar</span> di kamar dengan lampu redup.
+    <!-- Headline — shorter on mobile, full on desktop -->
+    <h1 class="text-2xl md:text-5xl font-bold text-white font-heading leading-tight mb-3 md:mb-4">
+      <span class="md:hidden">Jam 03.30, Ahmad sudah bangun menghafal Al-Qur'an.</span>
+      <span class="hidden md:inline">Jam 03.30, Ahmad sudah bangun menghafal Al-Qur'an.<br />
+      <span class="text-secondary-400">Tapi sebagian masih belajar</span> di kamar dengan lampu redup.</span>
     </h1>
 
-    <!-- Subtitle — the human struggle -->
-    <p class="text-lg md:text-xl text-white/80 max-w-3xl mx-auto mb-6 leading-relaxed">
-      Ahmad baru 13 tahun. Hafal 8 juz. Ayahnya meninggal saat ia kelas 2 SD. Setiap hari ia 
-      berjuang menghafal dalam keterbatasan — bersama 249 santri penghafal Qur'an lainnya yang 
-      menanti uluran tangan kita.
+    <!-- Subtitle — focused on the key numbers only -->
+    <p class="text-sm md:text-lg text-white/80 max-w-3xl mx-auto mb-3 md:mb-4 leading-relaxed">
+      Ahmad adalah satu dari <strong class="text-white">249 santri penghafal Qur'an</strong> yang
+      berjuang dalam keterbatasan. Mereka menanti uluran tangan kita.
     </p>
 
-    <!-- Impact line -->
-    <p class="text-base text-white/60 max-w-2xl mx-auto mb-10 italic">
-      "Cukup Rp 50.000/hari = satu santri hafidz bisa terus belajar, makan, & tinggal di pondok."
+    <!-- Impact line — single actionable number -->
+    <p class="text-xs md:text-base text-white/60 max-w-2xl mx-auto mb-6 md:mb-8 italic">
+      "Cukup <strong class="text-secondary-400">Rp 50.000/hari</strong> = satu santri hafidz bisa terus belajar, makan, & tinggal di pondok."
     </p>
-
     <!-- CTAs -->
     <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
       <button
