@@ -155,13 +155,13 @@ export default function DonationForm({ isOpen, onClose, defaultCampaign, default
             if (window.fbq) window.fbq('track', 'Purchase', { value: selectedAmount, currency: 'IDR' });
             const label = defaultCampaignLabel || DONATION_TYPES.find(t => t.id === donationType)?.label || 'Donasi';
             const msg = `Halo kak, saya ${name} sudah melakukan donasi untuk ${label} sebesar Rp${selectedAmount.toLocaleString('id-ID')}. Mohon konfirmasinya ya, terima kasih.`;
-            window.location.href = `https://wa.me/6282234551160?text=${encodeURIComponent(msg)}`;
+            window.location.href = `https://wa.me/6285655713100?text=${encodeURIComponent(msg)}`;
           },
           onPending: () => {
             if (window.fbq) window.fbq('track', 'Purchase', { value: selectedAmount, currency: 'IDR' });
             const label = defaultCampaignLabel || DONATION_TYPES.find(t => t.id === donationType)?.label || 'Donasi';
             const msg = `Halo kak, saya ${name} sudah melakukan donasi untuk ${label} sebesar Rp${selectedAmount.toLocaleString('id-ID')}. Mohon konfirmasinya ya, terima kasih.`;
-            window.location.href = `https://wa.me/6282234551160?text=${encodeURIComponent(msg)}`;
+            window.location.href = `https://wa.me/6285655713100?text=${encodeURIComponent(msg)}`;
           },
           onError: () => {
             setErrors({ submit: 'Pembayaran gagal, coba lagi' });

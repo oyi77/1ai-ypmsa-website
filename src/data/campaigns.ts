@@ -121,7 +121,7 @@ export const CAMPAIGNS: Campaign[] = [
     faqs: [
       { question: 'Apakah donasi saya tersalurkan 100%?', answer: 'Ya, kami transparan. Setiap donasi tercatat dan dilaporkan penggunaannya. Biaya operasional yayasan dipisahkan dan sudah termasuk dalam target donasi (maks 15%).' },
       { question: 'Bisa donasi rutin setiap bulan?', answer: 'Bisa! Anda bisa menjadi donatur tetap dengan nominal berapa pun. Kami kirimkan laporan dampak setiap bulan.' },
-      { question: 'Bagaimana cara konfirmasi transfer?', answer: 'Kirim bukti transfer ke WhatsApp 0822-3455-1160. Kami akan konfirmasi dan doakan.' },
+      { question: 'Bagaimana cara konfirmasi transfer?', answer: 'Kirim bukti transfer ke WhatsApp 0856-5571-3100. Kami akan konfirmasi dan doakan.' },
     ],
     hook: 'Tiap Hari 600 Piring — Tapi Bahan Makanan Makin Mahal, Dapur Mulai Terbebani',
     masalah: [

@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback, useRef } from 'react';
 
-const WA_NUMBER = '6282234551160';
+const WA_NUMBER = '6285655713100';
 const WA_MESSAGE = encodeURIComponent(
   'Assalamu\'alaikum, saya ingin tahu lebih lanjut tentang program donasi YPSM Jombang.'
 );
@@ -129,7 +129,7 @@ export default function DoaModal() {
       setSlide(2);
     } else if (action === 'save') {
       if (window.fbq) window.fbq('track', 'Contact', { content_name: 'Doa Simpan Nomor', content_category: 'doa-modal' });
-      navigator.clipboard.writeText('+62 822-3455-1160').catch(() => {});
+      navigator.clipboard.writeText('+62 856-5571-3100').catch(() => {});
       window.open(WA_URL, '_blank', 'noopener');
       setTimeout(() => setVisible(false), 800);
     }

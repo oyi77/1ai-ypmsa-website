@@ -41,8 +41,8 @@ export const NAV_ITEMS = [
 
 export const CONTACT_INFO = {
   address: 'Jl. Diponegoro Dsn. Ngelo No.34, Gondek, Mojowarno, Jombang, Jawa Timur 61475',
-  phone: '+62 822-3455-1160',
-  wa: '6282234551160',
+  phone: '+62 856-5571-3100',
+  wa: '6285655713100',
   email: 'cs@ypsma.org',
   maps: 'https://maps.app.goo.gl/m9XtLR6eY2Ss71gV9',
   social: {
