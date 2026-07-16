@@ -2,112 +2,101 @@
 import { ORG_SHORT } from '../../lib/constants';
 ---
 
-<section id="donasi" class="bg-primary-900 text-white py-20 border-b border-white/10">
+<!-- Cara Donasi — dark teal -->
+<section id="donasi" class="section-py" style="background: var(--bg-section-dark);">
   <div class="max-w-5xl mx-auto px-4">
+
     <!-- Heading -->
-    <div class="text-center mb-12">
-      <h2 class="text-3xl md:text-4xl font-heading font-bold text-white">
-        Cara Donasi
+    <div class="text-center mb-10">
+      <span class="section-label section-label-white">Cara Donasi</span>
+      <h2 class="text-3xl md:text-4xl font-heading font-bold text-white mb-3">
+        Salurkan Donasi Anda
       </h2>
-      <p class="text-neutral-300 mt-3 max-w-lg mx-auto">
-        Salurkan donasi Anda melalui:
+      <p class="text-white/75 max-w-lg mx-auto">
+        Pilih metode yang paling mudah untuk Anda
       </p>
     </div>
 
     <!-- Cards Row -->
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
-      <!-- Left: Bank Transfer -->
-      <div class="bg-white/10 backdrop-blur rounded-xl p-6">
-        <div class="flex items-center gap-3 mb-4">
-          <!-- Bank building icon -->
-          <svg class="w-8 h-8 text-secondary-400 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M3 21h18"/>
-            <path d="M3 10h18"/>
-            <path d="M12 3l-9 7h18l-9-7z"/>
-            <path d="M8 14h.01"/>
-            <path d="M12 14h.01"/>
-            <path d="M16 14h.01"/>
-          </svg>
-          <h3 class="text-xl font-heading font-bold text-white">
-            Transfer Bank BRI
-          </h3>
-        </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-5 mb-14">
 
-        <div class="space-y-2">
-          <p class="text-sm text-white/60">Nomor Rekening</p>
-          <p class="font-mono text-2xl text-secondary-400 font-bold tracking-wider">
-            058501000742563
-          </p>
-          <p class="text-sm text-white/70">
-            a.n. BRI Yayasan Pendidikan Dan Sosial Maarif
-          </p>
+      <!-- Bank Transfer -->
+      <div class="card-dark p-6">
+        <div class="flex items-center gap-3 mb-5">
+          <div class="w-10 h-10 rounded-xl flex items-center justify-center shrink-0" style="background: rgba(212,175,55,0.15);">
+            <svg class="w-5 h-5" style="color: var(--color-secondary-400);" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 21h18"/><path d="M3 10h18"/><path d="M12 3l-9 7h18l-9-7z"/>
+            </svg>
+          </div>
+          <h3 class="text-base font-bold text-white font-heading">Transfer Bank BRI</h3>
+        </div>
+        <p class="text-xs text-white/65 mb-1 uppercase tracking-wide font-semibold">Nomor Rekening</p>
+        <p class="font-mono text-xl md:text-2xl font-bold mb-2 tracking-wider" style="color: var(--color-secondary-300);">
+          0585-0100-0742-563
+        </p>
+        <p class="text-sm text-white/70 leading-snug">
+          a.n. <strong class="text-white/90">BRI Yayasan Pendidikan Dan Sosial Maarif</strong>
+        </p>
+        <div class="mt-4 pt-4 border-t border-white/10">
+          <p class="text-xs text-white/60">Konfirmasi via WhatsApp setelah transfer</p>
         </div>
       </div>
 
-
-      <!-- Middle: Sociabuzz Online Donation -->
-      <div class="bg-white/10 backdrop-blur rounded-xl p-6">
-        <div class="flex items-center gap-3 mb-4">
-          <!-- Globe/heart icon -->
-          <svg class="w-8 h-8 text-secondary-400 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="12" r="10"/>
-            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10A15.3 15.3 0 0 1 12 2z"/>
-            <path d="M2 12h20"/>
-          </svg>
-          <h3 class="text-xl font-heading font-bold text-white">
-            Donasi Online
-          </h3>
+      <!-- Online Donation -->
+      <div class="card-dark p-6">
+        <div class="flex items-center gap-3 mb-5">
+          <div class="w-10 h-10 rounded-xl flex items-center justify-center shrink-0" style="background: rgba(212,175,55,0.15);">
+            <svg class="w-5 h-5" style="color: var(--color-secondary-400);" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10A15.3 15.3 0 0 1 12 2z"/>
+              <path d="M2 12h20"/>
+            </svg>
+          </div>
+          <h3 class="text-base font-bold text-white font-heading">Donasi Online</h3>
         </div>
-
-        <p class="text-white/70 mb-4">
-          Bayar via GoPay, DANA, OVO, ShopeePay, LinkAja, Transfer Bank, &amp; Kartu
+        <p class="text-white/75 text-sm mb-5 leading-relaxed">
+          Bayar via GoPay, DANA, OVO, ShopeePay, LinkAja, Transfer Bank, &amp; Kartu Kredit.
         </p>
-
         <a
           href="https://sociabuzz.com/ypsma/tribe"
           target="_blank"
           rel="noopener noreferrer"
-          class="inline-block bg-secondary-500 hover:bg-secondary-600 text-primary-900 px-4 py-2 rounded-lg font-semibold transition-colors"
+          class="btn-secondary !text-sm !py-2.5 !px-5 w-full text-center block"
+          onclick="if(window.fbq)fbq('track','Donate',{content_name:'Sociabuzz',content_category:'donasi'});"
         >
           Donasi via Sociabuzz
         </a>
-
-        <p class="text-xs text-white/40 mt-3">
-          Kamu donasi, donasi langsung masuk rekening YPSMA
-        </p>
+        <p class="text-xs text-white/55 mt-3 text-center">Donasi langsung masuk rekening YPSMA</p>
       </div>
-      <!-- Right: Donasi Lain via WA -->
-      <div class="bg-white/10 backdrop-blur rounded-xl p-6">
-        <div class="flex items-center gap-3 mb-4">
-          <!-- Chat icon -->
-          <svg class="w-8 h-8 text-secondary-400 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
-            <line x1="8" y1="10" x2="16" y2="10"/>
-            <line x1="10" y1="14" x2="14" y2="14"/>
-          </svg>
-          <h3 class="text-xl font-heading font-bold text-white">
-            Donasi Lain
-          </h3>
+
+      <!-- WhatsApp -->
+      <div class="card-dark p-6">
+        <div class="flex items-center gap-3 mb-5">
+          <div class="w-10 h-10 rounded-xl flex items-center justify-center shrink-0" style="background: rgba(34,197,94,0.15);">
+            <svg class="w-5 h-5 text-green-400" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+          </div>
+          <h3 class="text-base font-bold text-white font-heading">Donasi Lainnya</h3>
         </div>
-
-        <p class="text-white/70 mb-4">
-          Mau donasi dalam bentuk lain? Silahkan hubungi nomor pengurus YPSM
+        <p class="text-white/75 text-sm mb-5 leading-relaxed">
+          Ingin donasi barang, makanan, atau bentuk lain? Hubungi pengurus langsung via WhatsApp.
         </p>
-
         <a
           href="https://wa.me/6285655713100"
           target="_blank"
           rel="noopener noreferrer"
           onclick="if(window.fbq)fbq('track','Contact',{content_name:'Donasi Lain WA',content_category:'donasi'});"
-          class="inline-flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg font-semibold transition-colors"
+          class="inline-flex items-center justify-center gap-2 w-full py-2.5 px-5 rounded-lg font-semibold text-sm transition-all duration-200 text-white"
+          style="background: #25D366;"
+          onmouseover="this.style.background='#1EBE5A'" onmouseout="this.style.background='#25D366'"
         >
-          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+          </svg>
           Hubungi Pengurus YPSM
         </a>
-
-        <p class="text-xs text-white/40 mt-3">
-          Kami siap membantu donasi dalam bentuk apapun
-        </p>
+        <p class="text-xs text-white/55 mt-3 text-center">0856-5571-3100</p>
       </div>
     </div>
 
@@ -115,35 +104,29 @@ import { ORG_SHORT } from '../../lib/constants';
     <div class="border-t border-white/10 mb-10"></div>
 
     <!-- Donation Tiers -->
-    <div class="text-center mb-8">
-      <h3 class="text-2xl md:text-3xl font-heading font-bold text-white">
-        Nominal Donasi
+    <div class="text-center mb-7">
+      <h3 class="text-xl md:text-2xl font-heading font-bold text-white">
+        Nominal Donasi yang Disarankan
       </h3>
     </div>
 
-    <div class="flex flex-wrap justify-center gap-4">
-      <!-- Tier 1 -->
-      <div class="bg-white/10 rounded-xl p-4 text-center min-w-[160px] flex-1 basis-[160px]">
-        <p class="text-lg font-bold text-white">Rp 50.000</p>
-        <p class="text-sm text-white/60 mt-1">2 santri makan 1 hari</p>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+      <div class="card-dark p-5 text-center">
+        <p class="text-lg font-bold text-white font-heading">Rp 50.000</p>
+        <p class="text-xs text-white/60 mt-1.5 leading-snug">2 santri makan 1 hari</p>
       </div>
-
-      <!-- Tier 2 -->
-      <div class="bg-white/10 rounded-xl p-4 text-center min-w-[160px] flex-1 basis-[160px]">
-        <p class="text-lg font-bold text-white">Rp 100.000</p>
-        <p class="text-sm text-white/60 mt-1">4 santri makan 1 hari</p>
+      <div class="card-dark p-5 text-center">
+        <p class="text-lg font-bold text-white font-heading">Rp 100.000</p>
+        <p class="text-xs text-white/60 mt-1.5 leading-snug">4 santri makan 1 hari</p>
       </div>
-
-      <!-- Tier 3 (Featured) -->
-      <div class="bg-secondary-500/20 border border-secondary-500 rounded-xl p-4 text-center min-w-[160px] flex-1 basis-[160px]">
-        <p class="text-lg font-bold text-secondary-400">Rp 300.000</p>
-        <p class="text-sm text-white/70 mt-1">Stok dapur 3 hari</p>
+      <div class="p-5 text-center rounded-xl border-2" style="background: rgba(212,175,55,0.08); border-color: rgba(212,175,55,0.4);">
+        <p class="text-lg font-bold font-heading" style="color: var(--color-secondary-300);">Rp 300.000</p>
+        <p class="text-xs text-white/70 mt-1.5 leading-snug">Stok dapur 3 hari</p>
+        <span class="inline-block mt-2 text-xs font-bold px-2 py-0.5 rounded-full" style="background: rgba(212,175,55,0.15); color: var(--color-secondary-300);">Terpopuler</span>
       </div>
-
-      <!-- Tier 4 -->
-      <div class="bg-white/10 rounded-xl p-4 text-center min-w-[160px] flex-1 basis-[160px]">
-        <p class="text-lg font-bold text-white">Rp 500.000</p>
-        <p class="text-sm text-white/60 mt-1">Stok dapur 1 minggu</p>
+      <div class="card-dark p-5 text-center">
+        <p class="text-lg font-bold text-white font-heading">Rp 500.000</p>
+        <p class="text-xs text-white/60 mt-1.5 leading-snug">Stok dapur 1 minggu</p>
       </div>
     </div>
   </div>

@@ -580,7 +580,7 @@ companies:
 - key: anekatambang
   name: PT Aneka Tambang (Persero) Tbk
   csr_website: https://antam.com
-  email: csr@antam.com
+  email: corsec@antam.com
   proposal_file: proposals/csr_anekatambang.md
   csr_name: PT Aneka Tambang (Persero) Tbk
   programs:
@@ -688,7 +688,7 @@ companies:
 - key: aviasipariwisataindo
   name: PT Aviasi Pariwisata Indonesia (Persero)
   csr_website: https://injourney.id
-  email: csr@injourney.id
+  email: ppid@injourney.id
   proposal_file: proposals/csr_aviasipariwisataindo.md
   csr_name: PT Aviasi Pariwisata Indonesia (Persero)
   programs:
@@ -1312,7 +1312,7 @@ companies:
 - key: kawasanberikatnusant
   name: PT Kawasan Berikat Nusantara (Persero)
   csr_website: https://kbn.co.id
-  email: info@kbn.co.id
+  email: humas@kbn.co.id
   proposal_file: proposals/csr_kawasanberikatnusant.md
   csr_name: PT Kawasan Berikat Nusantara (Persero)
   programs:
@@ -1324,7 +1324,7 @@ companies:
 - key: kawasanindustrimakas
   name: PT Kawasan Industri Makassar (Persero)
   csr_website: https://kim.co.id
-  email: info@kima.co.id
+  email: csr@kima.co.id
   proposal_file: proposals/csr_kawasanindustrimakas.md
   csr_name: PT Kawasan Industri Makassar (Persero)
   programs:
@@ -1372,7 +1372,7 @@ companies:
 - key: kertaskraftaceh
   name: PT Kertas Kraft Aceh (Persero)
   csr_website: https://ptkka.co.id
-  email: info@ptkka.co.id
+  email: csr@ptkka.co.id
   proposal_file: proposals/csr_kertaskraftaceh.md
   csr_name: PT Kertas Kraft Aceh (Persero)
   programs:
@@ -1384,7 +1384,7 @@ companies:
 - key: kertasleces
   name: PT Kertas Leces (Persero)
   csr_website: https://kertasleces.co.id
-  email: info@kertasleces.co.id
+  email: csr@kertasleces.co.id
   proposal_file: proposals/csr_kertasleces.md
   csr_name: PT Kertas Leces (Persero)
   programs:
@@ -1396,7 +1396,7 @@ companies:
 - key: kertaspadalarang
   name: PT Kertas Padalarang (Persero)
   csr_website: https://ktp.co.id
-  email: info@ktp.co.id
+  email: csr@ktp.co.id
   proposal_file: proposals/csr_kertaspadalarang.md
   csr_name: PT Kertas Padalarang (Persero)
   programs:
@@ -1407,8 +1407,8 @@ companies:
   total_amount: Rp 100.000.000
 - key: kliringberjangkaindo
   name: PT Kliring Berjangka Indonesia (Persero)
-  csr_website: https://kbi.co.id
-  email: info@kbi.co.id
+  csr_website: https://ptkbi.com
+  email: dsp@ptkbi.com
   proposal_file: proposals/csr_kliringberjangkaindo.md
   csr_name: PT Kliring Berjangka Indonesia (Persero)
   programs:
@@ -1456,7 +1456,7 @@ companies:
 - key: mineralindustriindon
   name: PT Mineral Industri Indonesia (Persero)
   csr_website: https://minerba.co.id
-  email: info@minerba.co.id
+  email: csr@minerba.co.id
   proposal_file: proposals/csr_mineralindustriindon.md
   csr_name: PT Mineral Industri Indonesia (Persero)
   programs:
@@ -1468,7 +1468,7 @@ companies:
 - key: nindyakarya
   name: PT Nindya Karya (Persero)
   csr_website: https://nindyakarya.co.id
-  email: info@nindyakarya.co.id
+  email: humas@nindyakarya.co.id
   proposal_file: proposals/csr_nindyakarya.md
   csr_name: PT Nindya Karya (Persero)
   programs:
@@ -1492,7 +1492,7 @@ companies:
 - key: pegadaian
   name: PT Pegadaian (Persero)
   csr_website: https://pegadaian.co.id
-  email: csr@pegadaian.co.id
+  email: sekper.pusat@pegadaian.co.id
   proposal_file: proposals/csr_pegadaian.md
   csr_name: PT Pegadaian (Persero)
   programs:
@@ -1564,7 +1564,7 @@ companies:
 - key: pelayaranbahteraadhi
   name: PT Pelayaran Bahtera Adhiguna (Persero)
   csr_website: https://bahteraadhiguna.co.id
-  email: info@bahteraadhiguna.co.id
+  email: csr@bahteraadhiguna.co.id
   proposal_file: proposals/csr_pelayaranbahteraadhi.md
   csr_name: PT Pelayaran Bahtera Adhiguna (Persero)
   programs:
@@ -1588,7 +1588,7 @@ companies:
 - key: pembangunanperumahan
   name: PT Pembangunan Perumahan (Persero) Tbk
   csr_website: https://pp.co.id
-  email: info@pp.co.id
+  email: corsec@ptpp.co.id
   proposal_file: proposals/csr_pembangunanperumahan.md
   csr_name: PT Pembangunan Perumahan (Persero) Tbk
   programs:
@@ -1600,7 +1600,7 @@ companies:
 - key: penerbitdantokobukup
   name: PT Penerbit dan Toko Buku Pradnya Paramita (Persero)
   csr_website: https://pradnyaparamita.co.id
-  email: csr@pradnyaparamita.co.id
+  email: info@pradnyaparamita.co.id
   proposal_file: proposals/csr_penerbitdantokobukup.md
   csr_name: PT Penerbit dan Toko Buku Pradnya Paramita (Persero)
   programs:
@@ -1612,7 +1612,7 @@ companies:
 - key: penerbitandanperceta
   name: PT Penerbitan dan Percetakan Balai Pustaka (Persero)
   csr_website: https://balaipustaka.co.id
-  email: csr@balaipustaka.co.id
+  email: info@balaipustaka.co.id
   proposal_file: proposals/csr_penerbitandanperceta.md
   csr_name: PT Penerbitan dan Percetakan Balai Pustaka (Persero)
   programs:
@@ -1633,10 +1633,11 @@ companies:
   sector: BUMN
   csr_focus: Pendidikan
   total_amount: Rp 100.000.000
+  note: '[DEFUNCT - Dissolved PP No.43/2024]'
 - key: pengembanganpariwisa
   name: PT Pengembangan Pariwisata Indonesia (Persero)
   csr_website: https://itdc.co.id
-  email: csr@injourney.id
+  email: ppid@injourney.id
   proposal_file: proposals/csr_pengembanganpariwisa.md
   csr_name: PT Pengembangan Pariwisata Indonesia (Persero)
   programs:
@@ -1648,7 +1649,7 @@ companies:
 - key: pengerukanindonesia
   name: PT Pengerukan Indonesia (Persero)
   csr_website: https://pengerukan-indonesia.co.id
-  email: info@pengerukan-indonesia.co.id
+  email: csr@pengerukan-indonesia.co.id
   proposal_file: proposals/csr_pengerukanindonesia.md
   csr_name: PT Pengerukan Indonesia (Persero)
   programs:
@@ -1672,7 +1673,7 @@ companies:
 - key: penjaminaninfrastruk
   name: PT Penjaminan Infrastruktur Indonesia (Persero)
   csr_website: https://www.ptpii.co.id
-  email: csr@ptpii.co.id
+  email: info@ptpii.co.id
   proposal_file: proposals/csr_penjaminaninfrastruk.md
   csr_name: PT Penjaminan Infrastruktur Indonesia (Persero)
   programs:
@@ -1684,7 +1685,7 @@ companies:
 - key: perikananindonesia
   name: PT Perikanan Indonesia (Persero)
   csr_website: https://perikanan-indonesia.co.id
-  email: info@perikanan-indonesia.co.id
+  email: csr@perikanan-indonesia.co.id
   proposal_file: proposals/csr_perikananindonesia.md
   csr_name: PT Perikanan Indonesia (Persero)
   programs:
@@ -1708,7 +1709,7 @@ companies:
 - key: perkebunannusantarai
   name: PT Perkebunan Nusantara I (Persero)
   csr_website: https://ptpn.co.id
-  email: info@ptpn.co.id
+  email: sekretariat@ptpn.id
   proposal_file: proposals/csr_perkebunannusantarai.md
   csr_name: PT Perkebunan Nusantara I (Persero)
   programs:
@@ -1720,7 +1721,7 @@ companies:
 - key: perkebunannusantarai_ii
   name: PT Perkebunan Nusantara II (Persero)
   csr_website: https://ptpn.co.id
-  email: info@ptpn.co.id
+  email: sekretariat@ptpn.id
   proposal_file: proposals/csr_perkebunannusantarai_ii.md
   csr_name: PT Perkebunan Nusantara II (Persero)
   programs:
@@ -1732,7 +1733,7 @@ companies:
 - key: perkebunannusantarai_iii
   name: PT Perkebunan Nusantara III (Persero)
   csr_website: https://ptpn.co.id
-  email: info@ptpn.co.id
+  email: sekretariat@ptpn.id
   proposal_file: proposals/csr_perkebunannusantarai_iii.md
   csr_name: PT Perkebunan Nusantara III (Persero)
   programs:
@@ -1744,7 +1745,7 @@ companies:
 - key: perkebunannusantarai_iv
   name: PT Perkebunan Nusantara IV (Persero)
   csr_website: https://ptpn.co.id
-  email: info@ptpn.co.id
+  email: sekretariat@ptpn.id
   proposal_file: proposals/csr_perkebunannusantarai_iv.md
   csr_name: PT Perkebunan Nusantara IV (Persero)
   programs:
@@ -1756,7 +1757,7 @@ companies:
 - key: perkebunannusantarai_ix
   name: PT Perkebunan Nusantara IX (Persero)
   csr_website: https://ptpn.co.id
-  email: info@ptpn.co.id
+  email: sekretariat@ptpn.id
   proposal_file: proposals/csr_perkebunannusantarai_ix.md
   csr_name: PT Perkebunan Nusantara IX (Persero)
   programs:
@@ -1768,7 +1769,7 @@ companies:
 - key: perkebunannusantarav
   name: PT Perkebunan Nusantara V (Persero)
   csr_website: https://ptpn.co.id
-  email: info@ptpn.co.id
+  email: sekretariat@ptpn.id
   proposal_file: proposals/csr_perkebunannusantarav.md
   csr_name: PT Perkebunan Nusantara V (Persero)
   programs:
@@ -1780,7 +1781,7 @@ companies:
 - key: perkebunannusantarav_vi
   name: PT Perkebunan Nusantara VI (Persero)
   csr_website: https://ptpn.co.id
-  email: info@ptpn.co.id
+  email: sekretariat@ptpn.id
   proposal_file: proposals/csr_perkebunannusantarav_vi.md
   csr_name: PT Perkebunan Nusantara VI (Persero)
   programs:
@@ -1792,7 +1793,7 @@ companies:
 - key: perkebunannusantarav_vii
   name: PT Perkebunan Nusantara VII (Persero)
   csr_website: https://ptpn.co.id
-  email: info@ptpn.co.id
+  email: sekretariat@ptpn.id
   proposal_file: proposals/csr_perkebunannusantarav_vii.md
   csr_name: PT Perkebunan Nusantara VII (Persero)
   programs:
@@ -1804,7 +1805,7 @@ companies:
 - key: perkebunannusantarav_viii
   name: PT Perkebunan Nusantara VIII (Persero)
   csr_website: https://ptpn.co.id
-  email: info@ptpn.co.id
+  email: sekretariat@ptpn.id
   proposal_file: proposals/csr_perkebunannusantarav_viii.md
   csr_name: PT Perkebunan Nusantara VIII (Persero)
   programs:
@@ -1816,7 +1817,7 @@ companies:
 - key: perkebunannusantarax
   name: PT Perkebunan Nusantara X (Persero)
   csr_website: https://ptpn.co.id
-  email: info@ptpn.co.id
+  email: sekretariat@ptpn.id
   proposal_file: proposals/csr_perkebunannusantarax.md
   csr_name: PT Perkebunan Nusantara X (Persero)
   programs:
@@ -1828,7 +1829,7 @@ companies:
 - key: perkebunannusantarax_xi
   name: PT Perkebunan Nusantara XI (Persero)
   csr_website: https://ptpn.co.id
-  email: info@ptpn.co.id
+  email: sekretariat@ptpn.id
   proposal_file: proposals/csr_perkebunannusantarax_xi.md
   csr_name: PT Perkebunan Nusantara XI (Persero)
   programs:
@@ -1840,7 +1841,7 @@ companies:
 - key: perkebunannusantarax_xii
   name: PT Perkebunan Nusantara XII (Persero)
   csr_website: https://ptpn.co.id
-  email: info@ptpn.co.id
+  email: sekretariat@ptpn.id
   proposal_file: proposals/csr_perkebunannusantarax_xii.md
   csr_name: PT Perkebunan Nusantara XII (Persero)
   programs:
@@ -1852,7 +1853,7 @@ companies:
 - key: perkebunannusantarax_xiii
   name: PT Perkebunan Nusantara XIII (Persero)
   csr_website: https://ptpn.co.id
-  email: info@ptpn.co.id
+  email: sekretariat@ptpn.id
   proposal_file: proposals/csr_perkebunannusantarax_xiii.md
   csr_name: PT Perkebunan Nusantara XIII (Persero)
   programs:
@@ -1864,7 +1865,7 @@ companies:
 - key: perkebunannusantarax_xiv
   name: PT Perkebunan Nusantara XIV (Persero)
   csr_website: https://ptpn.co.id
-  email: info@ptpn.co.id
+  email: sekretariat@ptpn.id
   proposal_file: proposals/csr_perkebunannusantarax_xiv.md
   csr_name: PT Perkebunan Nusantara XIV (Persero)
   programs:
@@ -1875,8 +1876,8 @@ companies:
   total_amount: Rp 100.000.000
 - key: permodalannasionalma
   name: PT Permodalan Nasional Madani (Persero)
-  csr_website: https://pnmpersero.co.id
-  email: info@pnmpersero.co.id
+  csr_website: https://pnm.co.id
+  email: info@pnm.co.id
   proposal_file: proposals/csr_permodalannasionalma.md
   csr_name: PT Permodalan Nasional Madani (Persero)
   programs:
@@ -1900,7 +1901,7 @@ companies:
 - key: perusahaangasnegara
   name: PT Perusahaan Gas Negara (Persero) Tbk
   csr_website: https://pgn.co.id
-  email: csr@pgn.co.id
+  email: corsec@pgn.co.id
   proposal_file: proposals/csr_perusahaangasnegara.md
   csr_name: PT Perusahaan Gas Negara (Persero) Tbk
   programs:
@@ -1924,7 +1925,7 @@ companies:
 - key: perusahaanpengelolaa
   name: PT Perusahaan Pengelola Aset (Persero)
   csr_website: https://ppapersero.co.id
-  email: info@ppapersero.co.id
+  email: corpsec@ptppa.com
   proposal_file: proposals/csr_perusahaanpengelolaa.md
   csr_name: PT Perusahaan Pengelola Aset (Persero)
   programs:
@@ -1936,7 +1937,7 @@ companies:
 - key: perusahaanperdaganga
   name: PT Perusahaan Perdagangan Indonesia (Persero)
   csr_website: https://ppi.co.id
-  email: info@ppi.co.id
+  email: csr@ppi.co.id
   proposal_file: proposals/csr_perusahaanperdaganga.md
   csr_name: PT Perusahaan Perdagangan Indonesia (Persero)
   programs:
@@ -1972,7 +1973,7 @@ companies:
 - key: pradnyaparamita
   name: PT Pradnya Paramita (Persero)
   csr_website: https://pradnyaparamita.co.id
-  email: csr@pradnyaparamita.co.id
+  email: info@pradnyaparamita.co.id
   proposal_file: proposals/csr_pradnyaparamita.md
   csr_name: PT Pradnya Paramita (Persero)
   programs:
@@ -1984,7 +1985,7 @@ companies:
 - key: primissima
   name: PT Primissima (Persero)
   csr_website: https://primissima.co.id
-  email: csr@primissima.co.id
+  email: info@primissima.co.id
   proposal_file: proposals/csr_primissima.md
   csr_name: PT Primissima (Persero)
   programs:
@@ -1996,7 +1997,7 @@ companies:
 - key: produksifilmnegara
   name: PT Produksi Film Negara (Persero)
   csr_website: http://pfn.co.id
-  email: info@pfn.co.id
+  email: csr@pfn.co.id
   proposal_file: proposals/csr_produksifilmnegara.md
   csr_name: PT Produksi Film Negara (Persero)
   programs:
@@ -2056,7 +2057,7 @@ companies:
 - key: rajawalinusantaraind
   name: PT Rajawali Nusantara Indonesia (Persero)
   csr_website: https://rni.co.id
-  email: info@rni.co.id
+  email: csr@idfood.co.id
   proposal_file: proposals/csr_rajawalinusantaraind.md
   csr_name: PT Rajawali Nusantara Indonesia (Persero)
   programs:
@@ -2067,8 +2068,8 @@ companies:
   total_amount: Rp 100.000.000
 - key: reasuransiindonesiau
   name: PT Reasuransi Indonesia Utama (Persero)
-  csr_website: https://reindonesia.co.id
-  email: info@reindonesia.co.id
+  csr_website: https://indonesiare.co.id
+  email: cosecretary@indonesiare.co.id
   proposal_file: proposals/csr_reasuransiindonesiau.md
   csr_name: PT Reasuransi Indonesia Utama (Persero)
   programs:

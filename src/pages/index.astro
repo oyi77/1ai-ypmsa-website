@@ -2,12 +2,14 @@
 import MainLayout from '../layouts/MainLayout.astro';
 import Navbar from '../components/sections/Navbar.astro';
 import Hero from '../components/sections/Hero.astro';
-import KondisiSection from '../components/sections/KondisiSection.astro';
-import StatsSection from '../components/sections/StatsSection.astro';
 import TrustBar from '../components/sections/TrustBar.astro';
+import StatsSection from '../components/sections/StatsSection.astro';
 import ProgramSection from '../components/sections/ProgramSection.astro';
-import DonasiSection from '../components/sections/DonasiSection.astro';
+import StorySection from '../components/sections/StorySection.astro';
 import TestimonialSection from '../components/sections/TestimonialSection.astro';
+import AboutSection from '../components/sections/AboutSection.astro';
+import GallerySection from '../components/sections/GallerySection.astro';
+import DonasiSection from '../components/sections/DonasiSection.astro';
 import AyoBantuSection from '../components/sections/AyoBantuSection.astro';
 import FAQSection from '../components/sections/FAQSection.astro';
 import CTASection from '../components/sections/CTASection.astro';
@@ -18,38 +20,43 @@ import StickyDonateButton from '../components/islands/StickyDonateButton';
 <MainLayout>
   <Navbar />
   <main>
+    <!-- 1. Hero — dark overlay on photo -->
     <Hero />
 
-    <!-- Social Proof Strip -->
-    <div class="bg-white border-b border-neutral-100">
-      <div class="max-w-6xl mx-auto px-4 py-4">
-        <div class="flex items-center justify-center gap-6 md:gap-10 text-sm">
-          <span class="text-neutral-500">
-            <strong class="text-primary-700">1.247+</strong> Donatur
-          </span>
-          <span class="w-px h-4 bg-neutral-200 hidden sm:block"></span>
-          <span class="text-neutral-500">
-            <strong class="text-primary-700">600+</strong> Santri Terbantu
-          </span>
-          <span class="w-px h-4 bg-neutral-200 hidden sm:block"></span>
-          <span class="text-neutral-500">
-            <strong class="text-primary-700">98%</strong> Dana Tersalurkan
-          </span>
-        </div>
-      </div>
-    </div>
-    <KondisiSection />
-    <StatsSection />
+    <!-- 2. Trust bar — white -->
     <TrustBar />
-    <TestimonialSection />
+
+    <!-- 3. Stats — soft teal tint -->
+    <StatsSection />
+
+    <!-- 4. Program cards — dark teal -->
     <ProgramSection />
-    <AyoBantuSection />
-    <FAQSection />
+
+    <!-- 5. Story Ahmad — white -->
+    <StorySection />
+
+    <!-- 6. Testimonial — neutral-50 -->
+    <TestimonialSection />
+
+    <!-- 7. About — white -->
+    <AboutSection />
+
+    <!-- 8. Gallery — neutral-50 -->
+    <GallerySection />
+
+    <!-- 9. Cara Donasi — dark teal -->
     <DonasiSection />
+
+    <!-- 10. AyoBantu — soft teal tint -->
+    <AyoBantuSection />
+
+    <!-- 11. FAQ — white -->
+    <FAQSection />
+
+    <!-- 12. CTA final — dark teal -->
     <CTASection />
   </main>
   <Footer />
 
-  <!-- Interactive Islands -->
   <StickyDonateButton client:load />
 </MainLayout>

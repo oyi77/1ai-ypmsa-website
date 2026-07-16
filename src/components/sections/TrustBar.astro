@@ -1,39 +1,64 @@
 ---
-import { ORG_SHORT } from '../../lib/constants';
 ---
 
-<section class="bg-white py-8 border-y border-neutral-100">
+<!-- TrustBar + SocialProof combined — white bg, clean -->
+<section class="bg-white border-b border-neutral-100 py-5">
   <div class="max-w-6xl mx-auto px-4">
-    <div class="flex items-center justify-center gap-8 md:gap-12 flex-wrap">
-      <!-- Badge: Terdaftar di Kemenkumham -->
-      <div class="flex items-center gap-3 text-neutral-600 text-sm md:text-base">
-        <svg class="w-6 h-6 text-primary-600 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-        </svg>
-        <span data-i18n="trust.registered">Terdaftar di Kemenkumham</span>
+    <!-- Social proof ticker -->
+    <div class="flex flex-wrap items-center justify-center gap-5 md:gap-8 mb-4">
+      <div class="flex items-center gap-2 text-sm text-neutral-500">
+        <span class="w-2 h-2 bg-green-500 rounded-full animate-pulse-soft shrink-0"></span>
+        <span><strong class="text-neutral-800">17</strong> orang berdonasi hari ini</span>
       </div>
+      <div class="flex items-center gap-2 text-sm text-neutral-500">
+        <span class="w-2 h-2 bg-green-500 rounded-full animate-pulse-soft shrink-0"></span>
+        <span><strong class="text-neutral-800">3</strong> mnt lalu — seseorang dari Surabaya berdonasi Rp 150.000</span>
+      </div>
+    </div>
 
-      <!-- Badge: Laporan Transparan -->
-      <div class="flex items-center gap-3 text-neutral-600 text-sm md:text-base">
-        <svg class="w-6 h-6 text-primary-600 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
-        </svg>
-        <span data-i18n="trust.transparent">Laporan Transparan</span>
+    <!-- Progress bar -->
+    <div class="max-w-xl mx-auto mb-5">
+      <div class="flex justify-between text-xs md:text-sm mb-1.5">
+        <span class="font-semibold text-neutral-700">Target Bulanan</span>
+        <div>
+          <span class="font-bold text-coral-600">Rp 85 Juta</span>
+          <span class="text-neutral-400"> / Rp 150 Juta</span>
+        </div>
       </div>
+      <div class="progress-bar h-2.5">
+        <div class="progress-bar-fill" style="width: 57%"></div>
+      </div>
+      <div class="flex justify-between text-xs text-neutral-400 mt-1.5">
+        <span>🎯 57% terkumpul</span>
+        <span>⏳ 12 hari lagi</span>
+      </div>
+    </div>
 
-      <!-- Badge: Alumni -->
-      <div class="flex items-center gap-3 text-neutral-600 text-sm md:text-base">
-        <svg class="w-6 h-6 text-coral-500 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+    <!-- Trust badges -->
+    <div class="flex flex-wrap items-center justify-center gap-5 md:gap-10 pt-3 border-t border-neutral-100">
+      <div class="flex items-center gap-2 text-neutral-600 text-sm">
+        <svg class="w-5 h-5 text-primary-600 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
         </svg>
-        <span data-i18n="trust.alumni">3.000+ Alumni</span>
+        <span class="font-medium">Terdaftar di Kemenkumham</span>
       </div>
-      <!-- Badge: Total Donasi -->
-      <div class="flex items-center gap-3 text-neutral-600 text-sm md:text-base">
-        <svg class="w-6 h-6 text-coral-500 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+      <div class="flex items-center gap-2 text-neutral-600 text-sm">
+        <svg class="w-5 h-5 text-primary-600 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
         </svg>
-        <span data-i18n="trust.donasi"><strong>2.000+</strong> Donatur Aktif</span>
+        <span class="font-medium">Laporan Transparan</span>
+      </div>
+      <div class="flex items-center gap-2 text-neutral-600 text-sm">
+        <svg class="w-5 h-5 text-coral-500 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+        </svg>
+        <span class="font-medium">3.000+ Alumni</span>
+      </div>
+      <div class="flex items-center gap-2 text-neutral-600 text-sm">
+        <svg class="w-5 h-5 text-coral-500 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
+        </svg>
+        <span class="font-medium"><strong>2.000+</strong> Donatur Aktif</span>
       </div>
     </div>
   </div>

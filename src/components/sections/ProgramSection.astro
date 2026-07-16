@@ -1,7 +1,6 @@
 ---
 import { CAMPAIGNS } from '../../data/campaigns';
 
-// Emotional headline override per campaign slug
 const HEADLINES: Record<string, { title: string; cta: string }> = {
   'sedekah-pangan-santri': {
     title: '🍚 Jangan Biarkan Santri Menghafal Dalam Keadaan Lapar',
@@ -36,100 +35,106 @@ const HEADLINES: Record<string, { title: string; cta: string }> = {
     cta: 'Santuni Yatim',
   },
 };
+
 const trackView = (slug: string, cat: string) =>
   "if(window.fbq)fbq('track','ViewContent',{content_name:'" + slug + "',content_category:'" + cat + "'});";
-
 ---
 
-<section id="program" class="bg-primary-900 text-white py-20">
+<!-- Program section — dark teal, high contrast -->
+<section id="program" class="section-py" style="background: var(--bg-section-dark);">
   <div class="max-w-6xl mx-auto px-4">
+
     <!-- Section Heading -->
-    <div class="text-center mb-6">
-      <h2 class="text-3xl md:text-4xl font-bold text-white">
-        Program Donasi
+    <div class="text-center mb-10">
+      <span class="section-label section-label-white">Program Donasi</span>
+      <h2 class="text-3xl md:text-4xl font-bold text-white font-heading mb-3">
+        Pilih Program yang Menyentuh Hatimu
       </h2>
-      <p class="text-white/70 mt-3 max-w-2xl mx-auto">
-        Pilih program yang paling menyentuh hati Anda
+      <p class="text-white/75 mt-2 max-w-xl mx-auto leading-relaxed">
+        Setiap program lahir dari kebutuhan nyata. Donasi Anda langsung sampai ke sasaran.
       </p>
     </div>
 
-    <!-- Urgency intro -->
-    <div class="max-w-3xl mx-auto mb-10 text-center">
-      <div class="bg-coral-500/10 border border-coral-500/20 rounded-lg p-4">
-        <p class="text-coral-300 text-sm">
-          ⚠️ Saat ini YPSMA membutuhkan dana untuk 8 program prioritas. Dari pangan santri hingga bangun MCK — setiap donasi Anda berarti.
-        </p>
-      </div>
-    </div>
-
-    <!-- Featured Primary Program: Santunan Anak Yatim -->
+    <!-- Urgency strip -->
     <div class="max-w-3xl mx-auto mb-10">
-      <div class="bg-gradient-to-r from-coral-500/20 to-secondary-500/10 border-2 border-coral-400/30 rounded-2xl p-6 md:p-8 text-center">
-        <span class="inline-block bg-coral-500 text-white text-xs font-bold px-3 py-1 rounded-full mb-3">🎯 Paling Dicari</span>
-        <h3 class="text-xl md:text-2xl font-bold text-white mb-2">Santuni Anak Yatim & Dhuafa</h3>
-        <p class="text-white/70 text-sm mb-4 max-w-xl mx-auto">
-          Dari 250 santri kami, 58 di antaranya adalah yatim. Mereka tetap semangat menghafal Qur'an 
-          meski tanpa ayah. Jadilah orang tua asuh mereka hari ini.
+      <div class="flex items-start gap-3 bg-coral-500/10 border border-coral-500/25 rounded-xl p-4">
+        <span class="text-coral-400 text-lg shrink-0">⚠️</span>
+        <p class="text-white/85 text-sm leading-relaxed">
+          <strong class="text-white">8 program aktif</strong> membutuhkan dana. Dari pangan santri hingga bangun MCK — setiap donasi Anda berarti bagi 250 santri penghafal Qur'an.
         </p>
-        <a
-          href="/program/sedekah-anak-yatim/"
-          class="inline-block bg-coral-500 hover:bg-coral-600 text-white px-8 py-3 rounded-lg font-bold transition-all duration-200"
-        >
-          Santuni 58 Anak Yatim
-        </a>
       </div>
     </div>
 
+    <!-- Featured: Santunan Anak Yatim -->
+    <div class="max-w-3xl mx-auto mb-10">
+      <div class="relative overflow-hidden rounded-2xl border-2 border-coral-400/40" style="background: linear-gradient(135deg, rgba(232,69,60,0.15) 0%, rgba(201,162,39,0.08) 100%);">
+        <!-- Badge -->
+        <div class="absolute top-4 right-4">
+          <span class="bg-coral-500 text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-soft">🎯 Paling Dicari</span>
+        </div>
+        <div class="p-6 md:p-8 text-center">
+          <h3 class="text-xl md:text-2xl font-bold text-white mb-2 font-heading">Santuni Anak Yatim &amp; Dhuafa</h3>
+          <p class="text-white/75 text-sm mb-5 max-w-xl mx-auto leading-relaxed">
+            Dari 250 santri kami, <strong class="text-white">58 di antaranya adalah yatim</strong>. Mereka tetap semangat menghafal Qur'an meski tanpa ayah. Jadilah orang tua asuh mereka hari ini.
+          </p>
+          <a
+            href="/program/sedekah-anak-yatim/"
+            class="btn-primary !text-base !px-8 !py-3.5"
+          >
+            🤲 Santuni 58 Anak Yatim
+          </a>
+        </div>
+      </div>
+    </div>
 
     <!-- Campaign Cards Grid -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-      {
-        CAMPAIGNS.map((campaign) => {
-          const h = HEADLINES[campaign.slug];
-          const displayTitle = h?.title ?? campaign.title;
-          const displayCta = h?.cta ?? 'Donasi';
-          return (
-            <div class="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-secondary-500/50 transition-all duration-300 flex flex-col">
-              <!-- Emotional Headline -->
-              <h3 class="text-lg font-bold text-white mb-2 leading-snug min-h-[3rem]">{displayTitle}</h3>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+      {CAMPAIGNS.map((campaign) => {
+        const h = HEADLINES[campaign.slug];
+        const displayTitle = h?.title ?? campaign.title;
+        const displayCta = h?.cta ?? 'Donasi';
+        return (
+          <div class="card-dark flex flex-col">
+            <!-- Headline -->
+            <h3 class="text-base md:text-lg font-bold text-white mb-2 leading-snug min-h-[2.75rem] px-5 pt-5">{displayTitle}</h3>
 
-              <!-- Subtitle / impact -->
-              <p class="text-white/70 text-sm mb-4 flex-1">{campaign.subtitle}</p>
+            <!-- Subtitle -->
+            <p class="text-white/70 text-sm mb-4 flex-1 leading-relaxed px-5">{campaign.subtitle}</p>
 
-              <!-- Stats -->
-              <div class="flex flex-wrap gap-4 mb-4">
-                {campaign.stats.slice(0,3).map(s => (
-                  <div>
-                    <span class="text-secondary-400 font-bold">{s.value}</span>
-                    <span class="text-white/50 text-sm ml-1">{s.label}</span>
-                  </div>
-                ))}
-              </div>
-
-              <!-- Progress bar placeholder -->
-              <div class="mb-4">
-                <div class="flex justify-between text-xs text-white/50 mb-1">
-                  <span>{campaign.badge}</span>
-                  <span>Target: {campaign.budgetTotal}</span>
+            <!-- Stats row -->
+            <div class="flex flex-wrap gap-x-5 gap-y-1 mb-4 px-5">
+              {campaign.stats.slice(0,3).map(s => (
+                <div class="flex items-baseline gap-1">
+                  <span class="text-secondary-300 font-bold text-sm">{s.value}</span>
+                  <span class="text-white/60 text-xs">{s.label}</span>
                 </div>
-                <div class="w-full bg-white/10 rounded-full h-2">
-                  <div class="bg-secondary-500 h-2 rounded-full" style="width: 65%"></div>
-                </div>
-              </div>
+              ))}
+            </div>
 
-              <!-- CTA -->
+            <!-- Progress -->
+            <div class="mb-4 px-5">
+              <div class="flex justify-between text-xs text-white/60 mb-1.5">
+                <span>{campaign.badge}</span>
+                <span>Target: {campaign.budgetTotal}</span>
+              </div>
+              <div class="w-full rounded-full h-1.5" style="background: rgba(255,255,255,0.1);">
+                <div class="h-1.5 rounded-full" style="width: 65%; background: linear-gradient(90deg, var(--color-coral-500), var(--color-secondary-400));"></div>
+              </div>
+            </div>
+
+            <!-- CTA -->
+            <div class="px-5 pb-5">
               <a
                 href={"/program/" + campaign.slug + "/"}
-                class="inline-block bg-coral-500 hover:bg-coral-600 text-white px-5 py-2.5 rounded-lg font-semibold text-sm transition-all duration-200 text-center"
+                class="btn-primary !text-sm !py-2.5 !px-5 w-full text-center block"
                 onclick={trackView(campaign.slug, 'program-section')}
-                data-campaign-label={campaign.title}
               >
                 {displayCta}
               </a>
             </div>
-          )
-        })
-      }
+          </div>
+        );
+      })}
     </div>
   </div>
 </section>

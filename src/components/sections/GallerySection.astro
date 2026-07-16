@@ -8,19 +8,15 @@ interface GalleryItem {
 }
 
 const items: GalleryItem[] = [
-  // Food distribution — pembagian makan santri
   { src: '/images/drive-new/makan/bagi-makan-1.webp', label: 'Pembagian Makan Santri', span: 'normal' },
   { src: '/images/drive-new/makan/bagi-makan-2.webp', label: 'Santri Makan Siang', span: 'normal' },
   { src: '/images/drive-new/makan/bagi-makan-3.webp', label: 'Antre Makan Santri', span: 'tall' },
   { src: '/images/drive-new/makan/bagi-makan-4.webp', label: 'Kegiatan Dapur Pondok', span: 'normal' },
-  // Pengasuh yayasan
   { src: '/images/drive-new/pengasuh/ibu-nyai-umi-zubaidah.webp', label: 'Ibu Nyai Hj. Umi Zubaidah — Pengasuh YPSM', span: 'tall' },
-  // Graduation — wisuda hafidz
   { src: '/images/drive-new/wisuda/wisuda-1.webp', label: 'Wisuda Hafidz Santriwan', span: 'normal' },
   { src: '/images/drive-new/wisuda/wisuda-2.webp', label: 'Wisuda Hafidz Santriwati', span: 'normal' },
   { src: '/images/drive-new/wisuda/wisuda-3.webp', label: 'Momen Wisuda Hafidz', span: 'tall' },
   { src: '/images/drive-new/wisuda/wisuda-4.webp', label: 'Kebahagiaan Wisuda', span: 'normal' },
-  // Facility conditions — real photos
   { src: '/images/drive-new/sarpras/1.webp', label: 'Kondisi Bangunan Pondok', span: 'tall' },
   { src: '/images/drive-new/sarpras/3.webp', label: 'Fasilitas Belajar Santri', span: 'normal' },
   { src: '/images/drive-new/sarpras/4.webp', label: 'Kondisi Asrama Santri', span: 'normal' },
@@ -28,58 +24,53 @@ const items: GalleryItem[] = [
   { src: '/images/drive-new/sarpras/6.webp', label: 'Suasana di Pondok', span: 'tall' },
   { src: '/images/drive-new/sarpras/7.webp', label: 'Kondisi Lingkungan', span: 'normal' },
   { src: '/images/drive-new/sarpras/8.webp', label: 'Kegiatan Belajar', span: 'normal' },
-  { src: '/images/drive-new/sarpras/9.webp', label: 'Keseharian Santri', span: 'normal' },
-  { src: '/images/drive-new/sarpras/10.webp', label: 'Fasilitas Air Bersih', span: 'tall' },
-  { src: '/images/drive-new/sarpras/11.webp', label: 'Kondisi Kamar Mandi', span: 'normal' },
-  { src: '/images/drive-new/sarpras/12.webp', label: 'Kegiatan Harian di Pondok', span: 'normal' },
 ];
 
-// Natural sort: tall+wide items first for better layout
 const sorted = [...items].sort((a, b) => {
   const order = { tall: 0, wide: 1, normal: 2 };
   return order[a.span] - order[b.span];
 });
 ---
 
-<section class="py-20 bg-neutral-50" id="galeri">
+<section class="section-py bg-neutral-50" id="galeri">
   <div class="max-w-6xl mx-auto px-4">
     <!-- Section Header -->
-    <div class="text-center mb-12">
-      <span class="inline-block text-sm font-semibold text-coral-500 uppercase tracking-widest mb-3" data-i18n="gallery.badge">Galeri</span>
-      <h2 class="text-3xl md:text-4xl font-bold text-primary-900 font-heading mb-4" data-i18n="gallery.title">
+    <div class="text-center mb-10">
+      <span class="section-label section-label-teal" data-i18n="gallery.badge">Galeri</span>
+      <div class="divider-gold"></div>
+      <h2 class="text-3xl md:text-4xl font-bold text-primary-900 font-heading mb-3">
         Kondisi Nyata YPSM Jombang
       </h2>
-      <p class="text-neutral-500 max-w-2xl mx-auto" data-i18n="gallery.subtitle">
+      <p class="text-neutral-600 max-w-xl mx-auto">
         Dokumentasi aktivitas dan kondisi santri di Yayasan Pendidikan &amp; Sosial Ma'arif
       </p>
     </div>
 
     <!-- Masonry Photo Grid -->
     <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 auto-rows-[160px] md:auto-rows-[200px]">
-      {
-        sorted.map((item) => (
-          <a
-            href={item.src}
-            target="_blank"
-            class="group relative rounded-xl overflow-hidden bg-neutral-200 block"
-            class:list={[
-              item.span === 'tall' && 'row-span-2',
-              item.span === 'wide' && 'col-span-2',
-            ]}
-          >
-            <img
-              src={item.src}
-              alt={item.label}
-              loading="lazy"
-              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-            />
-            <!-- Overlay -->
-            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-              <span class="text-white font-semibold text-sm leading-tight">{item.label}</span>
-            </div>
-          </a>
-        ))
-      }
+      {sorted.map((item) => (
+        <a
+          href={item.src}
+          target="_blank"
+          class="group relative rounded-xl overflow-hidden bg-neutral-200 block img-zoom"
+          class:list={[
+            item.span === 'tall' && 'row-span-2',
+            item.span === 'wide' && 'col-span-2',
+          ]}
+        >
+          <img
+            src={item.src}
+            alt={item.label}
+            loading="lazy"
+            class="w-full h-full object-cover"
+          />
+          <!-- Overlay -->
+          <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-3"
+               style="background: linear-gradient(to top, rgba(13,63,60,0.85) 0%, transparent 60%);">
+            <span class="text-white font-semibold text-xs leading-tight">{item.label}</span>
+          </div>
+        </a>
+      ))}
     </div>
   </div>
 </section>

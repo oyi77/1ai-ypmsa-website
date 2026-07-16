@@ -2,100 +2,96 @@
 import { ORG_SHORT } from '../../lib/constants';
 ---
 
-<section id="tentang" class="py-20 bg-white">
+<section id="tentang" class="section-py bg-white">
   <div class="max-w-6xl mx-auto px-4">
-    <div class="grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-16 items-center">
-      <!-- Right Column (40%) - Photo -->
-      <div class="lg:col-span-2 order-first lg:order-last">
-        <div class="relative">
-          <img
-src="/images/drive-new/wisuda/wisuda-4.webp"
-alt="Momen Wisuda Hafidz Santri YPSM"
-            class="w-full h-auto rounded-2xl shadow-lg object-cover aspect-[4/3]"
-            width="800"
-            height="600"
-            loading="lazy"
-          />
-          <div class="absolute -bottom-4 -left-4 bg-primary-600 text-white px-6 py-3 rounded-xl text-sm font-semibold shadow-lg">
-            Momen Wisuda Hafidz Al-Qur'an
-          </div>
-        </div>
-      </div>
-      <!-- Left Column (60%) -->
-      <div class="lg:col-span-3">
-        <span class="inline-block text-sm font-semibold text-coral-500 uppercase tracking-widest mb-3" data-i18n="about.label">Tentang Kami</span>
-        <h2 class="text-3xl md:text-4xl font-bold text-primary-800 font-heading mb-6">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+
+      <!-- Left: Text -->
+      <div>
+        <span class="section-label section-label-coral" data-i18n="about.label">Tentang Kami</span>
+        <div class="divider-gold divider-gold-left"></div>
+        <h2 class="text-3xl md:text-4xl font-bold text-primary-900 font-heading mb-5">
           {ORG_SHORT}
         </h2>
 
         <div class="space-y-4 text-neutral-600 leading-relaxed">
           <p>
             Yayasan Pendidikan &amp; Sosial Ma'arif (YPSM) Jombang adalah lembaga nirlaba yang
-            berfokus pada pendidikan Islam berkualitas. Berdiri sejak 1968, yayasan kami mengelola
+            berfokus pada pendidikan Islam berkualitas. Berdiri sejak <strong class="text-primary-800">1968</strong>, yayasan kami mengelola
             empat lembaga pendidikan: RA Perwanida, MI Miftahul Ulum, SMP Plus Ma'arif, dan
             Pondok Pesantren Tahfidz Al-Qur'an (PPTQ).
           </p>
           <p>
-            Kami percaya bahwa setiap anak berhak mendapatkan pendidikan yang memadukan ilmu
-            pengetahuan, nilai-nilai keislaman, dan akhlak mulia. Dengan dukungan para donatur
-            dan tenaga pendidik profesional, YPSM terus berkomitmen mencetak generasi unggul
-            yang siap menghadapi tantangan zaman.
+            Kami percaya setiap anak berhak mendapatkan pendidikan yang memadukan ilmu
+            pengetahuan, nilai-nilai keislaman, dan akhlak mulia. Dengan dukungan donatur
+            dan tenaga pendidik profesional, YPSM terus mencetak generasi unggul.
           </p>
           <p class="font-semibold text-primary-700">
             Sejak 1968, YPSM telah menjadi rumah pendidikan yang melahirkan 3.000+ alumni berprestasi.
           </p>
         </div>
 
-        <!-- Impact numbers inline -->
-        <div class="flex flex-wrap gap-6 mt-8">
-          {
-            [
-              { value: '640+', label: 'Santri Aktif', key: 'about.statStudents' },
-              { value: '50+', label: 'Tenaga Pendidik', key: 'about.statEducators' },
-              { value: '4', label: 'Lembaga Pendidikan', key: 'about.statInstitutions' },
-            ].map((item) => (
-              <div class="flex items-center gap-3">
-                <span class="text-2xl md:text-3xl font-bold text-secondary-500 font-heading">{item.value}</span>
-                <span class="text-sm text-neutral-500" data-i18n={item.key}>{item.label}</span>
-              </div>
-            ))
-          }
+        <!-- Stats row -->
+        <div class="grid grid-cols-3 gap-4 mt-8 pt-6 border-t border-neutral-100">
+          {[
+            { value: '640+', label: 'Santri Aktif' },
+            { value: '50+',  label: 'Tenaga Pendidik' },
+            { value: '4',    label: 'Lembaga' },
+          ].map((item) => (
+            <div class="text-center">
+              <p class="text-2xl md:text-3xl font-bold font-heading" style="color: var(--color-secondary-500);">{item.value}</p>
+              <p class="text-xs text-neutral-500 mt-0.5 font-medium">{item.label}</p>
+            </div>
+          ))}
         </div>
 
-        <a href="/tentang-kami/"
-          class="inline-flex items-center gap-2 mt-8 text-secondary-600 hover:text-secondary-700 font-semibold transition-colors duration-200"
+        <a
+          href="/tentang-kami/"
+          class="btn-teal inline-flex mt-8"
+          data-i18n="about.cta"
         >
-          <span data-i18n="about.cta">Selengkapnya</span>
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M5 12h14" />
-            <path d="m12 5 7 7-7 7" />
+          Selengkapnya tentang YPSM
+          <svg class="w-4 h-4 ml-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>
           </svg>
         </a>
       </div>
 
-      <!-- Right Column (40%) - Founder Photo Card -->
-      <div class="lg:col-span-5">
-        <div class="relative">
-          <!-- Founder photo -->
-          <div class="rounded-xl overflow-hidden shadow-strong bg-primary-100">
+      <!-- Right: Photos -->
+      <div class="space-y-4">
+        <!-- Main photo -->
+        <div class="relative img-zoom rounded-2xl overflow-hidden shadow-medium">
+          <img
+            src="/images/drive-new/wisuda/wisuda-4.webp"
+            alt="Momen Wisuda Hafidz Santri YPSM"
+            class="w-full h-64 md:h-72 object-cover"
+            width="800"
+            height="600"
+            loading="lazy"
+          />
+          <div class="absolute bottom-0 left-0 right-0 px-4 py-3"
+               style="background: linear-gradient(to top, rgba(13,63,60,0.85), transparent);">
+            <p class="text-white font-semibold text-sm">Momen Wisuda Hafidz Al-Qur'an</p>
+          </div>
+        </div>
+
+        <!-- Founder card — horizontal -->
+        <div class="card-white flex items-center gap-4 p-4">
+          <div class="relative shrink-0">
             <img
               src="/images/drive-new/pengasuh/ibu-nyai-umi-zubaidah.webp"
-              alt="Ibu Nyai Hj. Umi Zubaidah — Pengasuh YPSM"
-              class="w-full h-auto object-cover"
-              width="400"
-              height="500"
+              alt="Ibu Nyai Hj. Umi Zubaidah"
+              class="w-16 h-16 rounded-xl object-cover"
+              width="64"
+              height="64"
               loading="lazy"
             />
-            <div class="p-5 bg-white">
-              <p class="font-bold text-primary-800 text-lg" data-i18n="about.founderLabel">Ibu Nyai Hj. Umi Zubaidah — Pengasuh YPSM</p>
-              <p class="text-neutral-500 text-sm" data-i18n="about.founderSubtitle">Penerus Perjuangan Pendidikan & Sosial Ma'arif</p>
-            </div>
           </div>
-
-          <!-- Badge -->
-          <div class="absolute -top-3 -right-3 bg-secondary-500 text-white px-4 py-1.5 rounded-full text-sm font-bold shadow-soft" data-i18n="about.foundedBadge">
-            Sejak 1968
+          <div class="flex-1 min-w-0">
+            <p class="font-bold text-primary-900 text-sm leading-snug">Ibu Nyai Hj. Umi Zubaidah</p>
+            <p class="text-neutral-500 text-xs mt-0.5">Pengasuh YPSM Jombang</p>
           </div>
+          <span class="shrink-0 text-xs font-bold px-3 py-1 rounded-full" style="background: rgba(201,162,39,0.12); color: var(--color-secondary-700);">Sejak 1968</span>
         </div>
       </div>
     </div>

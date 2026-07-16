@@ -32,34 +32,35 @@ const faqs: FAQItem[] = [
   },
 ];
 ---
-{
-  /* Accordion FAQ — style minimal, interaktif tanpa JS berat */
-}
-<section id="faq" class="bg-white py-20">
+
+<section id="faq" class="section-py bg-white">
   <div class="max-w-3xl mx-auto px-4">
-    <h2 class="text-3xl md:text-4xl font-bold text-primary-900 text-center mb-4">
-      Pertanyaan Umum
-    </h2>
-    <p class="text-neutral-500 text-center mb-12 max-w-lg mx-auto">
-      Masih ragu? Semoga jawaban di bawah membantu Anda memutuskan untuk berbagi.
-    </p>
+    <!-- Heading -->
+    <div class="text-center mb-10">
+      <span class="section-label section-label-coral">FAQ</span>
+      <div class="divider-gold"></div>
+      <h2 class="text-3xl md:text-4xl font-bold text-primary-900 font-heading mb-3">
+        Pertanyaan Umum
+      </h2>
+      <p class="text-neutral-600 max-w-lg mx-auto leading-relaxed">
+        Masih ragu? Semoga jawaban di bawah membantu Anda memutuskan untuk berbagi.
+      </p>
+    </div>
 
     <div class="space-y-3">
-      {
-        faqs.map((item, i) => (
-          <details class="group bg-neutral-50 rounded-lg border border-neutral-100 overflow-hidden transition-all duration-200 open:border-secondary-500/30">
-            <summary class="flex items-center justify-between px-6 py-4 cursor-pointer font-medium text-primary-900 hover:text-secondary-600 transition-colors list-none">
-              <span>{item.q}</span>
-              <svg class="w-5 h-5 text-primary-400 group-open:rotate-180 transition-transform shrink-0 ml-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-              </svg>
-            </summary>
-            <div class="px-6 pb-4 text-neutral-600 leading-relaxed border-t border-neutral-100 pt-3">
-              {item.a}
-            </div>
-          </details>
-        ))
-      }
+      {faqs.map((item) => (
+        <details class="group card-white overflow-hidden transition-all duration-200 open:border-secondary-400/40">
+          <summary class="flex items-center justify-between px-5 md:px-6 py-4 cursor-pointer font-medium text-primary-900 hover:text-secondary-600 transition-colors list-none">
+            <span>{item.q}</span>
+            <svg class="w-5 h-5 text-primary-400 group-open:rotate-180 transition-transform shrink-0 ml-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </summary>
+          <div class="px-5 md:px-6 pb-4 text-neutral-700 leading-relaxed border-t border-neutral-100 pt-3 text-sm">
+            {item.a}
+          </div>
+        </details>
+      ))}
     </div>
   </div>
 </section>
