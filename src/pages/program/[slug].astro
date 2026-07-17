@@ -446,11 +446,10 @@ const waUrl = getWaUrl(campaign.slug).url;
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({
-        event_name: 'ViewContent',
+        event: 'ViewContent',
+        params: _vcParams,
+        url: location.href,
         event_id: _vcId,
-        event_source_url: location.href,
-        user_data: {},
-        custom_data: _vcParams,
       }),
     }).catch(function(){});
   }
