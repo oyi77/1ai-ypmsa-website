@@ -1,0 +1,46 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import Navbar from '../components/sections/Navbar.astro';
+import Footer from '../components/sections/Footer.astro';
+---
+
+<MainLayout
+  title="Halaman Tidak Ditemukan — YPSM Jombang"
+  description="Halaman yang Anda cari tidak ditemukan. Kembali ke beranda YPSM Jombang."
+>
+  <Navbar />
+
+  <section class="min-h-[70vh] flex items-center justify-center bg-gradient-to-b from-primary-900 to-primary-800 text-white py-20">
+    <div class="container mx-auto px-4 text-center">
+      <!-- Animated 404 -->
+      <div class="text-8xl md:text-9xl font-bold font-heading mb-4 opacity-20 select-none">
+        404
+      </div>
+
+      <div class="max-w-md mx-auto">
+        <div class="text-6xl mb-6">🤲</div>
+
+        <h1 class="text-2xl md:text-3xl font-bold font-heading mb-4">
+          Halaman Tidak Ditemukan
+        </h1>
+
+        <p class="text-white/70 mb-8 leading-relaxed">
+          Maaf, halaman yang Anda cari tidak tersedia atau telah dipindahkan.
+          Silakan kembali ke beranda untuk melihat program donasi yang tersedia.
+        </p>
+
+        <a
+          href="/"
+          class="inline-flex items-center gap-2 bg-secondary-500 hover:bg-secondary-600 text-primary-950 font-semibold px-8 py-3.5 rounded-xl transition-all duration-200"
+        >
+          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M19 12H5" /><path d="m12 19-7-7 7-7" />
+          </svg>
+          Kembali ke Beranda
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</MainLayout>
