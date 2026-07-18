@@ -67,6 +67,10 @@ export async function onRequestPost(ctx) {
       `&campaign=${encodeURIComponent(campaign)}` +
       `&amount=${amountInt}`;
 
+    // Server callback URL — 1ai-payment forwards payment events here
+    const callbackUrl =
+      `https://ypsma.org/api/payment/callback`;
+
     // Call 1ai-payment
     const apiKey = env.PAYMENT_API_KEY || 'berkahkarya-ecosystem-2026-secure-key';
     const paymentServiceUrl = env.PAYMENT_SERVICE_URL || 'https://pay.berkahkarya.org';
@@ -98,7 +102,7 @@ export async function onRequestPost(ctx) {
           email: email || undefined,
           phone: phone || undefined,
         },
-        callback_url: finishUrl,
+        callback_url: callbackUrl,
         metadata: {
           campaign,
           source: 'ypsma-website',

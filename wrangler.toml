@@ -14,6 +14,8 @@ META_PIXEL_ID = "771021905629860"
 #   META_ACCESS_TOKEN   = ...
 #
 # ⚠️ 2026-07-17: Keys overwritten during debugging; need re-set.
+#   PAYMENT_WEBHOOK_SECRET  = whsec_... (merchant's webhook_secret)
+#   PAYMENT_API_KEY         = berkahkarya-ecosystem-2026-secure-key
 #    Run: curl -X PATCH .../pages/projects/1ai-ypmsa-website \
 #      -d '{"deployment_configs":{"production":{"env_vars":{
 #        "MIDTRANS_SERVER_KEY":{"type":"secret_text","value":"..."},
