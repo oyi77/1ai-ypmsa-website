@@ -209,22 +209,50 @@
     .hero-video-wrap iframe {
       width: 100%; height: 100%; display: block; border: none;
     }
-    .hero-video-placeholder {
-      width: 100%; height: 100%; display: flex; flex-direction: column;
-      align-items: center; justify-content: center; color: #fff;
-      background: linear-gradient(135deg, #1a1a2e, #16213e);
-      padding: 20px; text-align: center; gap: 12px;
+    .hero-video-wrap {
+      max-width: 560px; margin: 0 auto 28px; border-radius: 16px; overflow: hidden;
+      box-shadow: 0 12px 40px rgba(0,0,0,.3); aspect-ratio: 9/16;
+      background: #000; position: relative;
     }
-    .hero-video-placeholder .play-icon {
-      width: 60px; height: 60px; border-radius: 50%;
-      background: rgba(255,255,255,.15); border: 2px solid rgba(255,255,255,.3);
-      display: flex; align-items: center; justify-content: center;
-      font-size: 24px; transition: background .2s;
+    .hero-video-wrap video {
+      width: 100%; height: 100%; display: block; border: none;
     }
-    .hero-video-placeholder .play-icon:hover { background: rgba(255,255,255,.25); }
-    .hero-video-placeholder .vid-label {
-      font-size: .8125rem; opacity: .7; margin-top: 4px;
+
+    /* ──────── BANK CARD ──────── */
+    .bank-card {
+      background: #fff; border: 1px solid var(--border); border-radius: 14px;
+      padding: 22px 24px; max-width: 380px; margin: 0 auto;
     }
+    .bank-card h4 { font-size: .8125rem; color: var(--text-2); margin-bottom: 6px; }
+    .bank-card .bank-name { font-size: 1.2rem; font-weight: 800; color: var(--ink); }
+    .bank-card .bank-acc {
+      font-size: 1.5rem; font-weight: 900; color: var(--campaign-dark);
+      letter-spacing: 2px; font-family: 'DM Mono', monospace; margin: 4px 0;
+    }
+    .bank-card .bank-an { font-size: .8125rem; color: var(--text-2); }
+    .bank-copy {
+      margin-top: 8px; font-size: .75rem; color: var(--campaign); cursor: pointer;
+    }
+    .bank-copy:hover { text-decoration: underline; }
+
+    /* ──────── WA DONATE ──────── */
+    .btn-wa {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: #25D366; color: #fff !important;
+      font-weight: 700; padding: 10px 20px; border-radius: 8px; font-size: .8125rem;
+      transition: background .15s; border: none; cursor: pointer;
+    }
+    .btn-wa:hover { background: #128C7E; text-decoration: none; }
+    .tier-wa-link {
+      display: block; margin-top: 8px;
+    }
+    .tier-wa-link .btn-wa { font-size: .75rem; padding: 7px 14px; }
+    .divider-donate {
+      display: flex; align-items: center; gap: 12px; margin: 20px 0 12px;
+      color: var(--text-3); font-size: .8125rem;
+    }
+    .divider-donate::before,
+    .divider-donate::after { content: ''; flex: 1; height: 1px; background: var(--border); }
 
     .btn-hero {
       display: inline-flex; align-items: center; gap: 8px;
@@ -500,15 +528,11 @@
       untuk 600 santri penghafal — pahala jariyah yang menerangimu di dunia dan akhirat.
     </p>
 
-    <!-- Video Embed -->
+    <!-- Video — santri mengaji hafalan Al-Qur'an -->
     <div class="hero-video-wrap">
-      <div class="hero-video-placeholder" id="video-placeholder">
-        <div class="play-icon" id="play-btn">▶</div>
-        <p style="font-size:.95rem;font-weight:600">Tonton: Kenapa Sedekah Al-Qur'an?</p>
-        <span class="vid-label">Video 30 detik — Kisah Hafidz & 600 Al-Qur'an usang</span>
-      </div>
-      <video id="hero-video" controls preload="none" style="display:none" poster="/images/drive-new/wisuda/alquran-thumb.webp">
-        <source src="" type="video/mp4" />
+      <video id="hero-video" controls autoplay muted playsinline preload="none"
+        poster="/images/drive-new/wisuda/alquran-thumb.webp">
+        <source src="/videos/hafalan-santri.mp4" type="video/mp4" />
       </video>
     </div>
 
@@ -750,6 +774,24 @@
       </div>
     </div>
 
+    <div class="divider-donate">Atau via <strong>Transfer Bank / WhatsApp</strong></div>
+
+    <div style="text-align:center;margin-bottom:16px">
+      <div class="bank-card">
+        <h4>Bank Syariah Indonesia (BSI)</h4>
+        <div class="bank-name">Yayasan Pendidikan dan Sosial Ma'arif</div>
+        <div class="bank-acc" id="bank-acc-number">822 030 4440</div>
+        <div class="bank-an">a.n. Yayasan Pendidikan dan Sosial Ma'arif</div>
+        <div class="bank-copy" onclick="navigator.clipboard.writeText('8220304440').then(function(){this.textContent='&#x2713; Tersalin!'}).catch(function(){})">📋 Salin nomor rekening</div>
+      </div>
+      <p style="font-size:.8125rem;color:var(--text-2);margin-top:10px">
+        Setelah transfer, konfirmasi via WhatsApp agar kami bisa catat dan doakan:
+      </p>
+      <a href="https://wa.me/6282234551160?text=Assalamualaikum%20saya%20donasi%20Sedekah%20Al-Qur%27an%20via%20transfer%20BSI" target="_blank" rel="noopener" class="btn-wa" style="display:inline-flex;font-size:.875rem;padding:12px 24px">
+        &#x1F4F1; Konfirmasi via WhatsApp
+      </a>
+    </div>
+
     <div class="text-center" style="margin-top:20px">
       <p style="font-size:.8125rem;color:var(--text-2)">💳 Pembayaran via <strong>Midtrans</strong> — BCA, Mandiri, BNI, BRI, QRIS, Alfamart/Indomaret</p>
     </div>
@@ -825,6 +867,20 @@
       <span>✓ 58 Tahun Pengabdian</span>
       <span>✓ Pahala Jariyah Tak Putus</span>
     </div>
+
+    <div class="divider-donate" style="color:#fef3c7;border-color:rgba(255,255,255,.2)">
+      Atau Transfer via <strong>Bank Syariah Indonesia</strong>
+    </div>
+    <div class="bank-card" style="background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);color:#fff">
+      <h4 style="color:#fde68a">BSI</h4>
+      <div class="bank-name" style="color:#fff">Yayasan Pendidikan dan Sosial Ma'arif</div>
+      <div class="bank-acc" style="color:#fde68a">822 030 4440</div>
+      <div class="bank-an" style="color:rgba(255,255,255,.6)">a.n. Yayasan Pendidikan dan Sosial Ma'arif</div>
+    </div>
+    <p style="font-size:.8125rem;color:#fef3c7;margin-top:10px">
+      Konfirmasi setelah transfer:
+      <a href="https://wa.me/6282234551160?text=Assalamualaikum%20saya%20donasi%20Sedekah%20Al-Qur%27an%20via%20transfer%20BSI" target="_blank" rel="noopener" style="color:#25D366;font-weight:700;text-decoration:underline">WhatsApp 082234551160</a>
+    </p>
   </div>
 </section>
 
@@ -857,21 +913,6 @@ document.querySelectorAll('.faq-q').forEach(function(q) {
   });
 });
 
-// Video placeholder → real player (load on click)
-var placeholder = document.getElementById('video-placeholder');
-var video = document.getElementById('hero-video');
-var playBtn = document.getElementById('play-btn');
-
-if (placeholder && video && playBtn) {
-  function loadVideo() {
-    placeholder.style.display = 'none';
-    video.style.display = 'block';
-    video.load();
-    video.play().catch(function(){});
-  }
-  playBtn.addEventListener('click', loadVideo);
-  placeholder.addEventListener('click', loadVideo);
-}
 
 // Header shadow on scroll
 var header = document.querySelector('.lp-header');
@@ -880,8 +921,6 @@ window.addEventListener('scroll', function() {
 }, { passive: true });
 </script>
 
-<!-- Midtrans Snap -->
-<script src="https://app.midtrans.com/snap/snap.js" data-client-key="Mid-client-bmsuCQQOdxgsx82_"></script>
 <script>
 (function () {
   function donate(btn) {
@@ -901,26 +940,8 @@ window.addEventListener('scroll', function() {
     })
     .then(function(r) { return r.json(); })
     .then(function(data) {
-      if (!data.token) throw new Error(data.error || 'Token tidak tersedia');
-      window.snap.pay(data.token, {
-        onSuccess: function(res) {
-          var waText = encodeURIComponent('Assalamualaikum, saya baru selesai donasi ' + campaign + ' sebesar Rp ' + amountInt.toLocaleString('id-ID') + ' via Midtrans. Order ID: ' + (res.order_id || data.order_id) + '. Mohon konfirmasi. Jazakallahu khairan 🤲');
-          window.location.href = 'https://wa.me/' + waNum + '?text=' + waText;
-        },
-        onPending: function(res) {
-          var waText = encodeURIComponent('Assalamualaikum, saya donasi ' + campaign + ' Rp ' + amountInt.toLocaleString('id-ID') + ' masih pending. Order ID: ' + (res.order_id || data.order_id) + '. Mohon bantu konfirmasi.');
-          window.location.href = 'https://wa.me/' + waNum + '?text=' + waText;
-        },
-        onError: function() {
-          btn.disabled = false;
-          btn.innerHTML = origHtml;
-          alert('Pembayaran gagal. Silakan coba lagi.');
-        },
-        onClose: function() {
-          btn.disabled = false;
-          btn.innerHTML = origHtml;
-        }
-      });
+      if (!data.payment_url) throw new Error(data.error || 'Payment URL tidak tersedia');
+      window.location.href = data.payment_url;
     })
     .catch(function(err) {
       btn.disabled = false;
