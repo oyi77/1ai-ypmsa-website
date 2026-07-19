@@ -205,16 +205,11 @@
       box-shadow: 0 12px 40px rgba(0,0,0,.3); aspect-ratio: 9/16;
       background: #000; position: relative;
     }
-    .hero-video-wrap video,
-    .hero-video-wrap iframe {
-      width: 100%; height: 100%; display: block; border: none;
-    }
-    .hero-video-wrap {
-      max-width: 560px; margin: 0 auto 28px; border-radius: 16px; overflow: hidden;
-      box-shadow: 0 12px 40px rgba(0,0,0,.3); aspect-ratio: 9/16;
-      background: #000; position: relative;
-    }
     .hero-video-wrap video {
+      width: 100%; height: 100%; display: block; border: none; object-fit: cover;
+      max-width: 100%;
+    }
+    .hero-video-wrap iframe {
       width: 100%; height: 100%; display: block; border: none;
     }
 
